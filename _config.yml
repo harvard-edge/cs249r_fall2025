@@ -1,0 +1,35 @@
+# Site settings
+title: "Architecture 2.0"
+description: "Agentic Approaches to System Design - CS249r Harvard University Fall 2025"
+baseurl: ""
+url: "https://harvard-edge.github.io"
+repository: "harvard-edge/architecture2"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Using custom layout instead of theme
+
+# Site settings
+description: "Agentic Approaches to System Design - CS249r Harvard University Fall 2025"
+
+# Simple navigation
+show_downloads: false
+
+# Course info
+instructor: "Vijay Janapa Reddi"
+ta: "Chenyu Wang"
+semester: "Fall 2025"
+course_number: "CS249r"
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Plugins (only GitHub Pages compatible ones)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

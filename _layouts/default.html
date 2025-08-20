@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .header {
+            background-color: #A51C30;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .header .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .nav-bar {
+            background-color: #8B1538;
+            padding: 0;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .nav-bar nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-bar nav li {
+            margin: 0;
+        }
+        
+        .nav-bar nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-bar nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .course-info {
+            background-color: #f8f9fa;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .main-content h1 {
+            color: #A51C30;
+            margin-bottom: 1rem;
+        }
+        
+        .main-content h2 {
+            color: #8B1538;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .main-content h3 {
+            color: #A51C30;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .main-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+        
+        .main-content a {
+            color: #A51C30;
+        }
+        
+        .main-content a:hover {
+            color: #8B1538;
+        }
+        
+        .course-goal {
+            background-color: #f8f9fa;
+            border: 2px solid #A51C30;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .course-goal blockquote {
+            border: none;
+            background: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #A51C30;
+            margin: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+        
+        /* Schedule table specific column widths */
+        table th:nth-child(1), table td:nth-child(1) { width: 8%; }  /* Week */
+        table th:nth-child(2), table td:nth-child(2) { width: 15%; } /* Date */
+        table th:nth-child(3), table td:nth-child(3) { width: 32%; } /* Topic */
+        table th:nth-child(4), table td:nth-child(4) { width: 32%; } /* Key Papers */
+        table th:nth-child(5), table td:nth-child(5) { width: 13%; } /* Invited Speaker */
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: #A51C30;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .week-header {
+            background-color: #8B1538 !important;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .section-header {
+            background-color: #A51C30 !important;
+            color: white !important;
+            font-weight: bold !important;
+            font-size: 1.2em !important;
+            text-align: center !important;
+        }
+        
+        .section-header td {
+            background-color: #A51C30 !important;
+            color: white !important;
+            font-weight: bold !important;
+            font-size: 1.2em !important;
+            text-align: center !important;
+            padding: 1.5rem !important;
+        }
+        
+        .paper-title {
+            font-style: italic;
+            color: #555;
+        }
+        
+        blockquote {
+            border-left: 4px solid #A51C30;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Monaco, Consolas, monospace;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .schedule-section {
+            margin: 2rem 0;
+        }
+        
+        .schedule-section h3 {
+            background-color: #A51C30;
+            color: white;
+            padding: 0.75rem 1rem;
+            margin: 0 0 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .schedule-section ul {
+            background-color: #f8f9fa;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            border-left: 4px solid #A51C30;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .nav-bar nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-bar nav a {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .content-wrapper {
+                max-width: 100%;
+            }
+            
+            /* Mobile table adjustments */
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+            }
+            
+            /* Adjust column widths for mobile */
+            table th:nth-child(1), table td:nth-child(1) { width: 8%; }  /* Week */
+            table th:nth-child(2), table td:nth-child(2) { width: 18%; } /* Date */
+            table th:nth-child(3), table td:nth-child(3) { width: 30%; } /* Topic */
+            table th:nth-child(4), table td:nth-child(4) { width: 29%; } /* Key Papers */
+            table th:nth-child(5), table td:nth-child(5) { width: 15%; } /* Invited Speaker */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <a href="/" style="text-decoration: none; color: inherit;">
+                    <h1>Architecture 2.0</h1>
+                    <div class="subtitle">Agentic Approaches to System Design</div>
+                </a>
+            </div>
+            <div style="text-align: right; font-size: 0.9rem;">
+                <strong>CS249r</strong><br>
+                Harvard University • Fall 2025
+            </div>
+        </div>
+    </header>
+    
+    <div class="nav-bar">
+        <div class="nav-content">
+            <nav>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
+                    <li><a href="{{ '/course/schedule' | relative_url }}">📅 Schedule</a></li>
+                    <li><a href="{{ '/course/syllabus' | relative_url }}">📋 Syllabus</a></li>
+                    <li><a href="{{ '/course/assignments' | relative_url }}">📝 Assignments</a></li>
+                    <li><a href="{{ '/content/resources' | relative_url }}">📚 Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <main class="main-content">
+        <div class="content-wrapper">
+            {{ content }}
+        </div>
+    </main>
+</body>
+</html>
