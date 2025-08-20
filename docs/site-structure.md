@@ -5,7 +5,7 @@ This document explains how the Architecture 2.0 course website is organized.
 ## Folder Structure
 
 ```
-architecture2/
+cs249rfall2025/
 ├── index.md                 # Homepage
 ├── _config.yml             # Jekyll configuration
 ├── Gemfile                 # Ruby dependencies

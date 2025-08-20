@@ -1,9 +1,9 @@
 # Site settings
 title: "Architecture 2.0"
 description: "Agentic Approaches to System Design - CS249r Harvard University Fall 2025"
-baseurl: ""
+baseurl: "/cs249rfall2025"
 url: "https://harvard-edge.github.io"
-repository: "harvard-edge/architecture2"
+repository: "harvard-edge/cs249rfall2025"
 
 # Build settings
 markdown: kramdown

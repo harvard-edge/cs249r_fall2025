@@ -10,12 +10,12 @@ This advanced graduate seminar explores how AI agents are transforming computer 
 
 ## Course Website
 
-Visit the full course website at: [https://harvard-edge.github.io/architecture2](https://harvard-edge.github.io/architecture2)
+Visit the full course website at: [https://harvard-edge.github.io/cs249rfall2025](https://harvard-edge.github.io/cs249rfall2025)
 
 ## Repository Structure
 
 ```
-architecture2/
+cs249rfall2025/
 ├── index.md                 # Course homepage
 ├── course/                  # Course administration
 │   ├── schedule.md         # Weekly schedule and readings
