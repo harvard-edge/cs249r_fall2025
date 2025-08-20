@@ -10,9 +10,6 @@ markdown: kramdown
 highlighter: rouge
 # Using custom layout instead of theme
 
-# Site settings
-description: "Agentic Approaches to System Design - CS249r Harvard University Fall 2025"
-
 # Simple navigation
 show_downloads: false
 
