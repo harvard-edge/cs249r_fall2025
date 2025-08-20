@@ -42,3 +42,4 @@ bundle exec jekyll serve
 ## Contact
 
 For questions about the course, contact Prof. Reddi through the course website.
+# Force rebuild Wed Aug 20 18:03:47 EDT 2025
