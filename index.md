@@ -9,11 +9,9 @@ layout: default
 **CS249r: Special Topics in Edge Computing**
 
 **Instructor:** [Vijay Janapa Reddi](https://profvjreddi.github.io/homepage/)  
-**Teaching Assistant:** Chenyu Wang  
-**Time:** Monday/Wednesday [Time TBD] • **Location:** [Room TBD]  
+**Teaching Assistant:** Arya Tschand <aryatschand@g.harvard.edu>  
+**Time:** Monday/Wednesday 2:15-3:45 • **Location:** SEC. Room 6.412  
 **Office Hours:** [Schedule TBD]
-
-*Note: Course schedule and logistics are subject to confirmation. Likely start date is September 3rd or 4th, 2025.*
 
 ---
 
@@ -138,6 +136,7 @@ This is a **research paper reading seminar** focused on advanced topics at the i
 
 ## Contact & Communication
 
+- **Canvas Course Site**: [https://canvas.harvard.edu/courses/165367](https://canvas.harvard.edu/courses/165367)
 - **Course Email**: TBD
 - **Discussion Forum**: TBD
 - **Office Hours**: TBD
