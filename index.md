@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Machine Learning for Computer Systems Design
+# AI Agents for Computer Systems Design
 
 **Harvard University • Fall 2025**  
 **CS249r: Special Topics in Edge Computing**
@@ -18,16 +18,16 @@ layout: default
 {: .course-goal}
 ## Course Goal
 
-For decades, computer systems have been meticulously designed by human experts using intuition, heuristics, and manual optimization. Now we're witnessing a fundamental paradigm shift: machine learning is transforming how we design these systems, from software optimization to chip layout.
+For decades, computer systems have been meticulously designed by human experts using intuition, heuristics, and manual optimization. Now we're witnessing a fundamental paradigm shift: AI agents are transforming how we design these systems, from software optimization to chip layout.
 
-This transformation spans the entire computing stack—from ML systems that optimize compiler passes and generate high-performance code, to reinforcement learning approaches that automatically design processor microarchitectures, to neural networks that solve chip placement and circuit synthesis. We're moving from human-designed heuristics to data-driven design methodologies that can explore solution spaces too large for manual analysis.
+This transformation spans the entire computing stack—from AI agents that optimize compiler passes and generate high-performance code, to reinforcement learning agents that automatically design processor microarchitectures, to neural agents that solve chip placement and circuit synthesis. We're moving from human-designed heuristics to autonomous AI agents that can explore solution spaces too large for manual analysis.
 
 **What you'll learn:**
-- How machine learning techniques are being applied across the complete computing stack
-- Critical analysis of ML-driven design methodologies through systematic literature review
+- How AI agents are being applied across the complete computing stack
+- Critical analysis of agent-driven design methodologies through systematic literature review
 - Research synthesis skills by writing comprehensive survey papers on cutting-edge topics
-- How to identify research gaps and propose future directions in ML for systems design
-- Evaluation frameworks for ML systems in software, architecture, and chip design
+- How to identify research gaps and propose future directions in AI agents for computer systems design
+- Evaluation frameworks for AI agents in software, architecture, and chip design
 - Collaborative research skills through team-based survey projects
 
 ## What is Computer Systems Design?
@@ -60,11 +60,11 @@ The goal is to create AI systems that can design better computing systems than h
 
 ## Course Overview
 
-This course explores **Architecture 2.0** - the paradigm shift from human-designed heuristics to **AI-driven design methodologies**. While conventional courses teach you how existing systems work, this seminar explores how **AI systems will design tomorrow's complete computing stack**.
+This course explores the shift from human-designed heuristics to **autonomous AI agents**. While conventional courses teach you how existing systems work, this seminar explores how **AI agents will design tomorrow's complete computing stack**.
 
-This course connects directly to **CS249r: Special Topics in Edge Computing** by exploring how AI-driven systems design enables the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including CompilerGym (software), ArchGym (architecture), and DREAMPlace (chip design).
+This course is focused on exploring how AI agents enable the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including CompilerGym (software), ArchGym (architecture), and DREAMPlace (chip design).
 
-Students will systematically explore AI applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for AI-driven systems design.
+Students will systematically explore AI agent applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for agent-driven computer systems design.
 
 **Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI systems design complete computing systems rather than analyzing existing implementations.
 

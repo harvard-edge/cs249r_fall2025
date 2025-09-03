@@ -56,8 +56,8 @@ layout: default
 Course overview, vision, and foundational concepts. Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies.
 
 **📋 Foundational Reading:**
-- Arch 2.0 foundation paper
-- Course overview materials
+- [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
+- [A Computer Architect's Guide to Designing Abstractions for Intelligent Systems](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/)
 
 ---
 

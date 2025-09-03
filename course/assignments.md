@@ -55,7 +55,7 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 **Format**: Collaborative research survey in teams of 4-5 students  
 **Scope**: Comprehensive analysis of one thematic area from the course  
-**Goal**: Produce publication-quality survey papers that advance understanding of ML for systems design
+**Goal**: Produce publication-quality survey papers that advance understanding of AI agents for computer systems design
 
 ### Project Structure
 **Three Survey Groups:**
