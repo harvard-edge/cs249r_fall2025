@@ -13,7 +13,7 @@ layout: default
 *AI agents designing the complete computing stack - from code to silicon*
 
 **📖 Reading Reflection Due**: Before each class session  
-**🎯 Discussion Leadership**: Sign up by Week 3
+
 
 ---
 

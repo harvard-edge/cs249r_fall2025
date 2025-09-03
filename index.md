@@ -24,10 +24,11 @@ This transformation spans the entire computing stack—from ML systems that opti
 
 **What you'll learn:**
 - How machine learning techniques are being applied across the complete computing stack
-- Critical analysis of ML-driven design methodologies versus traditional approaches
-- The research landscape and emerging opportunities in ML for systems design
-- How to identify promising research directions in this rapidly evolving field
-- Evaluation frameworks for ML systems in architecture, compilation, and EDA tools
+- Critical analysis of ML-driven design methodologies through systematic literature review
+- Research synthesis skills by writing comprehensive survey papers on cutting-edge topics
+- How to identify research gaps and propose future directions in ML for systems design
+- Evaluation frameworks for ML systems in software, architecture, and chip design
+- Collaborative research skills through team-based survey projects
 
 ## What is Computer Systems Design?
 

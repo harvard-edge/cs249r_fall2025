@@ -107,4 +107,3 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ---
 
-*The goal is to produce research-quality work, not just complete coursework.*
