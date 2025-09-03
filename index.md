@@ -10,7 +10,7 @@ layout: default
 **Instructor:** [Vijay Janapa Reddi](https://profvjreddi.github.io/homepage/)  
 **Teaching Assistant:** Arya Tschand <aryatschand@g.harvard.edu>  
 **Course Staff:** Zishen Wan and Chenyu Wang  
-**Time:** Monday/Wednesday 2:15-3:45 • **Location:** SEC. Room 6.412  
+**Time:** Monday/Wednesday 2:15-3:30 • **Location:** SEC. Room 6.412  
 **Office Hours:** Monday 4-5pm (Instructor), TA hours TBD  
 **Canvas:** [Course Site](https://canvas.harvard.edu/courses/165367)
 

@@ -36,17 +36,16 @@ layout: default
 - [Week 5 — Distributed Systems Integration](#week-5--distributed-systems-integration)
 
 ### Phase 2: AI for Architecture
-- [Week 6 — System Architecture & Microarchitecture](#week-6--system-architecture--microarchitecture)
-- [Week 7 — Architecture Design Space Exploration](#week-7--architecture-design-space-exploration)
-- [Week 8 — Hardware Accelerators & DNN Mappings](#week-8--hardware-accelerators--dnn-mappings)
-- [Week 9 — Memory Systems & Data Management](#week-9--memory-systems--data-management)
-- [Week 10 — LLM Systems & AI Workload Scheduling](#week-10--llm-systems--ai-workload-scheduling)
+- [Week 6 — Performance Prediction and Design Space Exploration](#week-6--performance-prediction-and-design-space-exploration)
+- [Week 7 — Hardware Accelerators & DNN Mappings](#week-7--hardware-accelerators--dnn-mappings)
+- [Week 8 — Memory Systems & Data Management](#week-8--memory-systems--data-management)
+- [Week 9 — LLM Systems & AI Workload Scheduling](#week-9--llm-systems--ai-workload-scheduling)
 
 ### Phase 3: AI for Chip Design
-- [Week 11 — RTL Design & Logic Synthesis](#week-11--rtl-design--logic-synthesis)
-- [Week 12 — Physical Design & Layout](#week-12--physical-design--layout)
-- [Week 13 — Verification & Advanced Chip Design](#week-13--verification--advanced-chip-design)
-- [Week 14 — Final Projects & Integration](#week-14--final-projects--integration)
+- [Week 10 — RTL Design & Logic Synthesis](#week-10--rtl-design--logic-synthesis)
+- [Week 11 — Physical Design & Layout](#week-11--physical-design--layout)
+- [Week 12 — Verification & Advanced Chip Design](#week-12--verification--advanced-chip-design)
+- [Week 13 — Final Projects & Integration](#week-13--final-projects--integration)
 
 ---
 
@@ -129,40 +128,24 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 # Phase 2: AI for Architecture
 *AI agents design how to compute efficiently in hardware*
 
-## Week 6 — System Architecture & Microarchitecture
+## Week 6 — Performance Prediction and Design Space Exploration
 **October 6 & 8**
 
-*Why are we studying this? Architecture design bridges the gap between software requirements and hardware implementation. This week explores: How do we model the complex interactions between different architectural components? Can AI learn to predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
+*Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
 
 **🎯 Presentation Papers:**
 - Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion
-- Dynamic Branch Prediction with Perceptrons
+- ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design
 
 **📚 Context & Background:**
 - DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks
 - NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference
-- DNN-Occu: Predicting GPU Occupancy for Deep Neural Networks
-- Piecewise Linear Branch Prediction
-- Hashed Perceptron
-
-## Week 7 — Architecture Design Space Exploration
-**October 13 & 15**
-
-*Why are we studying this? Traditional architecture design relies on human intuition to navigate exponentially large design spaces. This week examines whether AI can systematically explore spaces too large for human analysis. Key questions: How do we represent architectural design spaces for machine learning? Can AI discover non-obvious design trade-offs? What does it mean for an AI system to "understand" computer architecture?*
-
-**🎯 Presentation Papers:**
-- ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design
-- Learning A Continuous and Reconstructible Latent Space for Hardware Accelerator Design
-
-**📚 Context & Background:**
 - HyperMapper 2.0: Interactive and Adaptive Design Space Exploration for Multi-objective Optimization
 - AutoDSE: Enabling Automatic Design Space Exploration for High-Level Synthesis with Machine Learning
-- HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark
-- Once for All: Train One Network and Specialize it for Efficient Deployment
 - Bayesian Optimization for Accelerator Design Space Exploration
 
-## Week 8 — Hardware Accelerators & DNN Mappings
-**October 20 & 22**
+## Week 7 — Hardware Accelerators & DNN Mappings
+**October 13 & 15**
 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
@@ -177,8 +160,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - MAESTRO: An Open-source Infrastructure for Modeling Dataflows within Deep Learning Accelerators
 - Timeloop: A Systematic Approach to DNN Accelerator Evaluation
 
-## Week 9 — Memory Systems & Data Management
-**October 27 & 29**
+## Week 8 — Memory Systems & Data Management
+**October 20 & 22**
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
@@ -192,8 +175,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - Long Short-Term Memory (LSTM) Based Memory Hardware Prefetcher
 - Lightweight ML-based Runtime Prefetcher Selection (2023)
 
-## Week 10 — LLM Systems & AI Workload Scheduling
-**November 3 & 5**
+## Week 9 — LLM Systems & AI Workload Scheduling
+**October 27 & 29**
 
 *Why are we studying this? AI workloads are a new class of computational patterns that challenge traditional system design assumptions. This week explores: How do we optimize systems for workloads that are themselves AI-driven? What new scheduling challenges emerge with transformer architectures and attention mechanisms? Can we co-design the AI algorithms and the systems that run them?*
 
@@ -211,8 +194,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 # Phase 3: AI for Chip Design
 *AI tools implement the architecture physically in silicon*
 
-## Week 11 — RTL Design & Logic Synthesis
-**November 10 & 12**
+## Week 10 — RTL Design & Logic Synthesis
+**November 3 & 5**
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
@@ -227,8 +210,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - AutoChip: Automating HDL Generation Using LLM Feedback (2023–24)
 - OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis
 
-## Week 12 — Physical Design & Layout
-**November 17 & 19**
+## Week 11 — Physical Design & Layout
+**November 10 & 12**
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
@@ -241,8 +224,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - MaskPlace: Fast Chip Placement via Reinforcement Learning
 - Learning on distributed traces for data center storage systems (routing optimization perspective)
 
-## Week 13 — Verification & Advanced Chip Design
-**November 24**
+## Week 12 — Verification & Advanced Chip Design
+**November 17**
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
@@ -256,12 +239,12 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 
 *November 26: Thanksgiving Break - No Class*
 
-## Week 14 — Final Projects & Integration
-**December 1 & 3**
+## Week 13 — Final Projects & Integration
+**November 24 & December 1**
 
 Student project presentations and course synthesis. Integration of AI techniques across the complete computing stack.
 
-**📝 Projects Due: December 3**
+**📝 Projects Due: December 1**
 
 ---
 
