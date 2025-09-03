@@ -261,6 +261,77 @@
             border-left: 4px solid #A51C30;
         }
         
+        .class-recap {
+            background-color: #f8f9fa;
+            border: 2px solid #A51C30;
+            border-radius: 12px;
+            padding: 0;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(165, 28, 48, 0.15);
+            overflow: hidden;
+        }
+        
+        .class-recap h2 {
+            background: linear-gradient(135deg, #A51C30 0%, #8B1538 100%);
+            color: white;
+            margin: 0;
+            padding: 1.5rem 2rem;
+            font-size: 1.3rem;
+        }
+        
+        .class-recap > p:first-of-type {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            margin: 0;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .class-recap h2 + p {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            margin: 0;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .class-recap > h2:not(:first-child) {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 1rem 2rem;
+            margin: 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .class-recap > p {
+            padding: 1rem 2rem;
+            margin: 0;
+            background-color: white;
+        }
+        
+        .class-recap hr {
+            border: none;
+            border-top: 2px solid #A51C30;
+            margin: 0;
+            background-color: #A51C30;
+        }
+        
+        .class-recap > p:last-of-type {
+            border-bottom: none;
+        }
+        
+        .class-recap summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .class-recap details[open] > *:not(summary) {
+            padding: 1.25rem;
+            background-color: white;
+        }
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -328,6 +399,7 @@
                     <li><a href="/cs249r_fall2025/course/schedule">📅 Schedule</a></li>
                     <li><a href="/cs249r_fall2025/course/syllabus">📋 Syllabus</a></li>
                     <li><a href="/cs249r_fall2025/course/assignments">📝 Assignments</a></li>
+                    <li><a href="/cs249r_fall2025/course/notes">📓 Class Notes</a></li>
                     <li><a href="/cs249r_fall2025/content/resources">📚 Resources</a></li>
                 </ul>
             </nav>
