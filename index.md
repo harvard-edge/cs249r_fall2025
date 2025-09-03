@@ -2,8 +2,7 @@
 layout: default
 ---
 
-# Architecture 2.0
-## Agentic Approaches to System Design
+# Machine Learning for Computer Systems Design
 
 **Harvard University • Fall 2025**  
 **CS249r: Special Topics in Edge Computing**
@@ -18,16 +17,16 @@ layout: default
 {: .course-goal}
 ## Course Goal
 
-For decades, computer systems have been meticulously designed by human experts to enable and accelerate AI workloads. We've optimized processors for neural networks, built specialized accelerators for machine learning, and crafted software stacks to support AI applications. Now we're witnessing a fundamental paradigm shift: AI itself is becoming the architect, designing the very systems that will run future computations.
+For decades, computer systems have been meticulously designed by human experts using intuition, heuristics, and manual optimization. Now we're witnessing a fundamental paradigm shift: machine learning is transforming how we design these systems, from software optimization to chip layout.
 
-This transformation spans the entire computing stack—from agentic systems that optimize compiler passes and generate high-performance code, to AI-driven approaches that automatically design processor microarchitectures and explore vast design spaces, to intelligent tools that use machine learning for chip placement and circuit synthesis. We're moving from human-designed heuristics to agentic design methodologies that can explore solution spaces too large for manual analysis.
+This transformation spans the entire computing stack—from ML systems that optimize compiler passes and generate high-performance code, to reinforcement learning approaches that automatically design processor microarchitectures, to neural networks that solve chip placement and circuit synthesis. We're moving from human-designed heuristics to data-driven design methodologies that can explore solution spaces too large for manual analysis.
 
 **What you'll learn:**
-- How agentic approaches are being applied across the complete computing stack
-- Critical analysis of AI-driven design methodologies versus traditional approaches
-- The research landscape and emerging opportunities in agentic system design
+- How machine learning techniques are being applied across the complete computing stack
+- Critical analysis of ML-driven design methodologies versus traditional approaches
+- The research landscape and emerging opportunities in ML for systems design
 - How to identify promising research directions in this rapidly evolving field
-- Evaluation frameworks for agentic systems in architecture, compilation, and EDA tools
+- Evaluation frameworks for ML systems in architecture, compilation, and EDA tools
 
 ## What is Computer Architecture?
 
@@ -36,13 +35,13 @@ This transformation spans the entire computing stack—from agentic systems that
 Traditional architecture design relies on human expertise, heuristics, and manual optimization across a vast design space with millions of possible configurations.
 
 **In this course, we explore the complete computing stack:**
-1. **AI for Software**: Agents understand *what* needs to be computed efficiently
-2. **AI for Architecture**: Agents design *how* to compute it efficiently in hardware  
-3. **AI for EDA**: Agents implement the architecture *physically* in silicon
+1. **AI for Software**: AI systems understand *what* needs to be computed efficiently
+2. **AI for Architecture**: AI agents design *how* to compute it efficiently in hardware  
+3. **AI for Chip Design**: AI tools implement the architecture *physically* in silicon
 
-## What are Agentic Approaches to System Design?
+## What is Architecture 2.0?
 
-**Agentic approaches** represent intelligent, autonomous systems that can automatically explore, evaluate, and optimize system design spaces. These approaches leverage machine learning techniques—reinforcement learning, neural networks, Bayesian optimization—to:
+**Architecture 2.0** is the paradigm shift where AI systems automatically explore, evaluate, and optimize system design spaces. These AI approaches leverage reinforcement learning, neural networks, and Bayesian optimization to:
 
 - **Design processors** by automatically configuring cache sizes, pipeline depths, and execution units
 - **Optimize compilers** by learning better instruction scheduling and register allocation strategies  
@@ -50,17 +49,17 @@ Traditional architecture design relies on human expertise, heuristics, and manua
 - **Explore design spaces** by intelligently sampling configurations rather than exhaustive search
 - **Predict performance** by learning from simulation data to guide design decisions
 
-The goal is to create agentic systems that can design better computing systems than human experts, while exploring design spaces too large for manual analysis.
+The goal is to create AI systems that can design better computing systems than human experts, while exploring design spaces too large for manual analysis.
 
 ## Course Overview
 
-**Architecture 2.0** represents the paradigm shift from human-designed heuristics to **agentic design methodologies**. While conventional architecture courses teach you how existing systems work, this seminar explores how **agentic approaches will design tomorrow's systems**.
+This course explores **Architecture 2.0** - the paradigm shift from human-designed heuristics to **AI-driven design methodologies**. While conventional architecture courses teach you how existing systems work, this seminar explores how **AI systems will design tomorrow's systems**.
 
-This course connects directly to **CS249r: Special Topics in Edge Computing** by exploring how AI driven architecture design enables the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including ArchGym, DREAMPlace, and CompilerGym.
+This course connects directly to **CS249r: Special Topics in Edge Computing** by exploring how AI-driven architecture design enables the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including ArchGym, DREAMPlace, and CompilerGym.
 
-Students will systematically explore AI applications across complete design abstraction levels from algorithms to circuits while identifying the most promising research directions for AI driven computer systems design.
+Students will systematically explore AI applications across complete design abstraction levels from algorithms to circuits while identifying the most promising research directions for AI-driven computer systems design.
 
-**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI agents design systems rather than analyzing existing architectures.
+**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI systems design systems rather than analyzing existing architectures.
 
 ## Prerequisites & Expectations
 
