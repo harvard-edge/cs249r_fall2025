@@ -8,13 +8,13 @@ layout: default
 
 This course emphasizes **active engagement** with cutting-edge research through three main components:
 
-- **Paper Reading**: Critical analysis of research papers
-- **Labs & Projects**: Hands-on work with AI-for-architecture tools
-- **Discussion Leadership**: Facilitating class discussions
+- **Weekly Reading Reflections**: Individual critical analysis of research papers
+- **Paper Presentations & Discussion Leadership**: Facilitating class discussions and synthesis
+- **Group Survey Paper Project**: Collaborative research surveys advancing the field
 
 ---
 
-## 1. Paper Reading & Reflection (40%)
+## 1. Weekly Reading Reflections (30%)
 
 **Format**: 1-2 page written reflections on assigned readings  
 **Due**: Before each class session  
@@ -27,30 +27,59 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ---
 
-## 2. Labs & Projects (40%)
+## 2. Paper Presentations & Discussion Leadership (30%)
 
-**Components**: 3-4 progressive assignments + final project contributing to **GenAISys**  
-**Tools**: ArchGym, DREAMPlace, CompilerGym, and other AI-for-architecture frameworks  
-**Goal**: Collectively build GenAISys - a unified modular agentic framework for AI-driven computer systems design
+**Format**: Present and lead discussion for assigned papers (individually or in pairs)  
+**Structure**: 20-minute presentation + 20-minute facilitated discussion per paper  
+**Sign-up**: By Week 3
 
-### Project Expectations
-- Each student develops a specific component that fits into the GenAISys modular framework
-- Components span the three thematic areas: AI for Software, AI for Architecture, AI for EDA
-- Final presentations demonstrate how your component integrates with the larger GenAISys vision
-- All projects contribute toward a single coherent research platform
+### Presentation Structure
+**20-Minute Presentation:**
+- Paper summary and key contributions (5-7 minutes)
+- Critical analysis: strengths, limitations, methodology issues (8-10 minutes)
+- Connections to course themes and other papers (3-5 minutes)
+
+**20-Minute Discussion:**
+- Facilitate Q&A and critical discussion
+- Prepare 3-4 provocative discussion questions
+- Guide synthesis and connections to broader themes
+
+### Responsibilities
+- **Preparation**: Meet with instructor 1 week before, prepare slides and discussion questions
+- **Flexibility**: Timing may adjust based on guest speaker availability and class dynamics
+- **Follow-up**: Brief reflection on presentation effectiveness and discussion insights
 
 ---
 
-## 3. Discussion Leadership (20%)
+## 3. Group Survey Paper Project (40%)
 
-**Format**: Lead one class discussion session (individually or in pairs)  
-**Duration**: 45-50 minutes of class session  
-**Sign-up**: By Week 3
+**Format**: Collaborative research survey in teams of 4-5 students  
+**Scope**: Comprehensive analysis of one thematic area from the course  
+**Goal**: Produce publication-quality survey papers that advance understanding of ML for systems design
 
-### Responsibilities
-- **Preparation**: Meet with instructor 1 week before, prepare discussion questions
-- **Facilitation**: Guide discussion, connect to course themes, synthesize insights
-- **Follow-up**: Brief reflection on session effectiveness
+### Project Structure
+**Three Survey Groups:**
+- **Group 1**: AI for Software (Code generation, compiler optimization, distributed systems)
+- **Group 2**: AI for Architecture (Processor design, memory systems, accelerators)  
+- **Group 3**: AI for Chip Design (RTL synthesis, placement & routing, verification)
+
+### Deliverables & Timeline
+**Mid-Semester (Week 8):**
+- Annotated bibliography of 25-30 key papers in your area
+- 3-5 focused research questions your survey will address
+- Preliminary taxonomy or framework for organizing the field
+
+**Final Deliverable (Week 15):**
+- 15-20 page survey paper with original analysis and insights
+- 10-minute group presentation highlighting key findings
+- Individual 2-page reflection on cross-stack connections and future research directions
+
+### Survey Paper Requirements
+- **Comprehensive Coverage**: Systematic review of recent advances (2020-2025)
+- **Critical Analysis**: Strengths, limitations, and gaps in current approaches
+- **Original Insights**: Novel taxonomy, benchmarking analysis, or methodological comparison
+- **Future Directions**: 3-5 concrete research opportunities identified
+- **Publication Quality**: Suitable for submission to ML4Sys workshops or survey journals
 
 ---
 
@@ -58,9 +87,9 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 | Component | Weight | Description |
 |-----------|--------|-------------|
-| Paper Reading & Reflection | 40% | Weekly critical analysis of assigned papers |
-| Labs & Projects | 40% | Hands-on assignments + final research project |
-| Discussion Leadership | 20% | Facilitate class discussions and synthesis |
+| Weekly Reading Reflections | 30% | Individual critical analysis of assigned papers |
+| Group Survey Paper Project | 40% | Collaborative research survey + presentation |
+| Paper Presentations & Discussion Leadership | 30% | Lead class discussions and facilitate synthesis |
 
 ---
 
@@ -68,12 +97,12 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ### Late Work
 - Reading reflections: Reduced credit if late
-- Labs/Projects: Extensions require advance notice
+- Survey paper project: Extensions require advance notice from entire team
 - Discussion leadership: Must reschedule in advance
 
 ### Collaboration
 - **Reading reflections**: Individual work
-- **Labs/Projects**: Collaboration encouraged where appropriate
+- **Survey paper project**: Required group work (4-5 students per team)
 - **Discussion leadership**: Pairs allowed and encouraged
 
 ---

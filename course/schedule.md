@@ -92,7 +92,7 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation
 - CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research
 - MLIR: Scaling Compiler Infrastructure for Domain Specific Computation
-- Learning to Optimize Tensor Programs (NeurIPS'18)
+- Learning to Optimize Tensor Programs
 
 ## Week 4 — GPU Kernels & Parallel Programming
 **September 22 & 24**
@@ -142,8 +142,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks
 - NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference
 - DNN-Occu: Predicting GPU Occupancy for Deep Neural Networks
-- Piecewise Linear Branch Prediction (ISCA'05)
-- Hashed Perceptron (TACO'05)
+- Piecewise Linear Branch Prediction
+- Hashed Perceptron
 
 ## Week 7 — Architecture Design Space Exploration
 **October 13 & 15**
@@ -157,9 +157,9 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 **📚 Context & Background:**
 - HyperMapper 2.0: Interactive and Adaptive Design Space Exploration for Multi-objective Optimization
 - AutoDSE: Enabling Automatic Design Space Exploration for High-Level Synthesis with Machine Learning
-- HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark (ICLR'21)
-- Once for All: Train One Network and Specialize it for Efficient Deployment (ICLR'20)
-- Bayesian Optimization for Accelerator Design Space Exploration (ISLPED'17)
+- HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark
+- Once for All: Train One Network and Specialize it for Efficient Deployment
+- Bayesian Optimization for Accelerator Design Space Exploration
 
 ## Week 8 — Hardware Accelerators & DNN Mappings
 **October 20 & 22**
@@ -171,9 +171,9 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks
 
 **📚 Context & Background:**
-- In-Datacenter Performance Analysis of a Tensor Processing Unit (ISCA'17)
-- SCNN: An Accelerator for Compressed-sparse Convolutional Neural Networks (ISCA'17)
-- MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects (ASPLOS'18)
+- In-Datacenter Performance Analysis of a Tensor Processing Unit
+- SCNN: An Accelerator for Compressed-sparse Convolutional Neural Networks
+- MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects
 - MAESTRO: An Open-source Infrastructure for Modeling Dataflows within Deep Learning Accelerators
 - Timeloop: A Systematic Approach to DNN Accelerator Evaluation
 
@@ -184,11 +184,11 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 
 **🎯 Presentation Papers:**
 - Learning Memory Access Patterns
-- The Case for Learned Index Structures (SIGMOD'18)
+- The Case for Learned Index Structures
 
 **📚 Context & Background:**
-- ALEX: An Updatable Adaptive Learned Index (SIGMOD'20)
-- Designing a Cost-Effective Cache Replacement Policy Using Machine Learning (HPCA'21)
+- ALEX: An Updatable Adaptive Learned Index
+- Designing a Cost-Effective Cache Replacement Policy Using Machine Learning
 - Long Short-Term Memory (LSTM) Based Memory Hardware Prefetcher
 - Lightweight ML-based Runtime Prefetcher Selection (2023)
 
@@ -202,9 +202,9 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - Performance Prediction for Large Systems via Text-to-Text Regression
 
 **📚 Context & Background:**
-- Efficient Memory Management for Large Language Model Serving with PagedAttention (OSDI'24)
-- Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve (OSDI'24)
-- S-LoRA: Serving Thousands of Concurrent LoRA Adapters (MLSys'24)
+- Efficient Memory Management for Large Language Model Serving with PagedAttention
+- Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve
+- S-LoRA: Serving Thousands of Concurrent LoRA Adapters
 
 ---
 
@@ -222,10 +222,10 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 
 **📚 Context & Background:**
 - DRiLLS: Deep Reinforcement Learning for Logic Synthesis (ASP-DAC'20)
-- BOiLS: Bayesian Optimisation for Logic Synthesis (DATE'22)
+- BOiLS: Bayesian Optimisation for Logic Synthesis
 - MasterRTL: Pre-Synthesis PPA Estimation for RTL Designs (ICCAD'22/TCAD'24)
 - AutoChip: Automating HDL Generation Using LLM Feedback (2023–24)
-- OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis (NeurIPS'21)
+- OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis
 
 ## Week 12 — Physical Design & Layout
 **November 17 & 19**
@@ -237,8 +237,8 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for VLSI Placement
 
 **📚 Context & Background:**
-- Chip Placement with Deep Reinforcement Learning (Circuit Training) (Nature'21)
-- MaskPlace: Fast Chip Placement via Reinforcement Learning (NeurIPS'22)
+- Chip Placement with Deep Reinforcement Learning (Circuit Training)
+- MaskPlace: Fast Chip Placement via Reinforcement Learning
 - Learning on distributed traces for data center storage systems (routing optimization perspective)
 
 ## Week 13 — Verification & Advanced Chip Design
