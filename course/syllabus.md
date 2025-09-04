@@ -8,11 +8,11 @@ layout: default
 
 By the end of this course, students will be able to:
 
-1. **Build** AI agents that can automatically design computer architectures across different abstraction levels
-2. **Implement** reinforcement learning and neural network approaches for architecture optimization
-3. **Evaluate** AI-driven design methodologies and compare them to traditional heuristic approaches
-4. **Identify** promising research directions in AI-agent-driven architecture design
-5. **Develop** tools and frameworks for automated architecture exploration and optimization
+1. **Analyze** AI agent methodologies for computer systems design across different abstraction levels
+2. **Evaluate** AI-driven design approaches and compare them to traditional heuristic methods
+3. **Synthesize** research findings through comprehensive literature review and survey writing
+4. **Identify** promising research directions and gaps in AI-agent-driven architecture design
+5. **Communicate** complex technical concepts through presentations and collaborative research
 
 ## Course Structure
 
@@ -42,8 +42,8 @@ See the [Schedule](schedule.md) for detailed weekly topics and readings.
 ### Group Survey Paper Project (40%)
 - Collaborative research survey in teams of 4-5 students
 - Teams focus on one area: AI for Software, AI for Architecture, or AI for Chip Design
-- Mid-semester: Annotated bibliography + research questions
-- Final: 15-20 page survey paper + presentation
+- Individual section contributions with structured checkpoints
+- Final: 15-20 page publication-quality survey paper + presentation
 
 ---
 

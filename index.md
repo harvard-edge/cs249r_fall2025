@@ -89,39 +89,13 @@ This seminar is designed for PhD students and advanced Master's students conduct
 
 ---
 
-## Course Format
+## Course Overview
 
-This is a **research paper reading seminar** focused on advanced topics at the intersection of AI and computer architecture. The course is structured around:
+This course explores the shift from human-designed heuristics to **autonomous AI agents**. While conventional courses teach you how existing systems work, this seminar explores how **AI agents will design tomorrow's complete computing stack**.
 
-**📖 Paper-Intensive Learning:**
-- Students read 2-3 cutting-edge research papers before each class
-- Papers span recent work from top venues (ISCA, MICRO, DAC, MLSys, etc.)
-- Focus on understanding methodology, contributions, and limitations
+This course is focused on exploring how AI agents enable the specialized, efficient systems that edge computing demands. Students will systematically explore AI agent applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for agent-driven computer systems design.
 
-**🎯 Student-Led Presentations & Discussions:**
-- Each student presents and leads discussion for assigned papers (20 min presentation + 20 min discussion)
-- Presenters prepare critical analysis, discussion questions, and facilitate synthesis
-- Flexible timing based on guest speaker availability and class dynamics
-- Emphasis on critical analysis rather than passive consumption
-
-**🔬 Research-Oriented Approach:**
-- Advanced topics assume strong technical background
-- Papers selected for research relevance and methodological innovation
-- Goal is to identify research gaps and future opportunities
-
-**📝 Active Participation:**
-- Weekly reading reflections (1-2 pages) due before each class
-- Group survey paper project synthesizing research across the computing stack
-- Individual reflection papers connecting themes to personal research interests
-
-**🔬 Research Project & Assignments:**
-- **Group Survey Papers**: Teams of 4-5 students write comprehensive survey papers
-- Each group covers one phase: AI for Software, AI for Architecture, or AI for Chip Design
-- Mid-semester deliverable: Annotated bibliography + research questions
-- Final deliverable: 15-20 page survey paper + presentation
-- Goal is to produce publication-quality surveys that advance the field
-
-**Note:** This is not a traditional lecture-based course. Students drive the learning through paper analysis, critical discussion, and research synthesis. The course is designed for students who want to produce research outcomes, not just complete coursework.
+**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI systems design complete computing systems rather than analyzing existing implementations.
 
 ---
 
