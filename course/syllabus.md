@@ -28,20 +28,22 @@ See the [Schedule](schedule.md) for detailed weekly topics and readings.
 
 ## Assignments & Grading
 
-### Paper Reading & Reflection (40%)
+### Weekly Reading Reflections (30%)
 - Weekly 1-2 page reflections on assigned papers
 - Due before each class session
 - Focus on critical analysis and connections to course themes
 
-### Labs & Projects (40%)
-- Hands-on assignments with tools like ArchGym, DREAMPlace, CompilerGym
-- All projects contribute components to **GenAISys** - a unified modular agentic framework
-- Progressive assignments building toward integrated final system
-
-### Discussion Leadership (20%)
+### Paper Presentations & Discussion Leadership (30%)
 - Each student leads discussion for 1-2 sessions during the semester
+- Present and lead discussion for assigned papers (individually or in pairs)
 - Prepare questions, facilitate debate, synthesize insights
 - Sign up by Week 3
+
+### Group Survey Paper Project (40%)
+- Collaborative research survey in teams of 4-5 students
+- Teams focus on one area: AI for Software, AI for Architecture, or AI for Chip Design
+- Mid-semester: Annotated bibliography + research questions
+- Final: 15-20 page survey paper + presentation
 
 ---
 

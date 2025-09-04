@@ -83,16 +83,6 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ---
 
-## Grading Breakdown
-
-| Component | Weight | Description |
-|-----------|--------|-------------|
-| Weekly Reading Reflections | 30% | Individual critical analysis of assigned papers |
-| Group Survey Paper Project | 40% | Collaborative research survey + presentation |
-| Paper Presentations & Discussion Leadership | 30% | Lead class discussions and facilitate synthesis |
-
----
-
 ## Course Policies
 
 ### Late Work
