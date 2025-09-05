@@ -94,6 +94,12 @@
         .content-wrapper {
             max-width: 900px;
             margin: 0 auto;
+            padding-top: 1rem;
+        }
+        
+        /* Consistent spacing for all pages */
+        .content-wrapper > *:first-child {
+            margin-top: 0;
         }
         
         .course-info {
@@ -107,19 +113,56 @@
         
         .main-content h1 {
             color: #A51C30;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            border-bottom: 2px solid #A51C30;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        /* Ensure consistent page title styling */
+        .content-wrapper > h1:first-child {
+            color: #A51C30;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            border-bottom: 3px solid #A51C30;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
         }
         
         .main-content h2 {
-            color: #8B1538;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            color: #A51C30;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 0 0.5rem 0;
+            border-top: 3px solid #A51C30;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .main-content h2:first-of-type {
+            margin-top: 1rem;
+            border-top: none;
         }
         
         .main-content h3 {
+            color: #8B1538;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem 0 0.75rem 1rem;
+            border-left: 4px solid #A51C30;
+            background-color: #f8f9fa;
+            font-size: 1.3rem;
+        }
+        
+        .main-content h4 {
             color: #A51C30;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
         
         .main-content p {
@@ -319,6 +362,70 @@
             background-color: #A51C30;
         }
         
+        /* Unified header styling applied above */
+        
+        .pipeline-diagram {
+            background-color: #f8f9fa;
+            border: 2px solid #A51C30;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .pipeline-diagram pre {
+            margin: 0;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        .rationale-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid #A51C30;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .checkpoint-list {
+            border-left: 3px solid #A51C30;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .checkpoint-list h4 {
+            color: #A51C30;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Better spacing for lists */
+        .main-content ul {
+            margin-bottom: 1.5rem;
+        }
+        
+        .main-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Reduce visual noise */
+        .main-content hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Consistent styling for horizontal rules after headers */
+        h1 + hr, h2 + hr {
+            margin-top: 1rem;
+            border-top: 1px solid #A51C30;
+            opacity: 0.3;
+        }
+        
         .class-recap > p:last-of-type {
             border-bottom: none;
         }
@@ -381,7 +488,7 @@
             <div>
                 <a href="/cs249r_fall2025/" style="text-decoration: none; color: inherit;">
                     <h1>Architecture 2.0</h1>
-                    <div class="subtitle">Machine Learning for Computer Systems Design</div>
+                    <div class="subtitle">Agentic AI for Computer Systems Design</div>
                 </a>
             </div>
             <div style="text-align: right; font-size: 0.9rem;">
@@ -396,10 +503,10 @@
             <nav>
                 <ul>
                     <li><a href="/cs249r_fall2025/">🏠 Home</a></li>
-                    <li><a href="/cs249r_fall2025/course/schedule">📅 Schedule</a></li>
                     <li><a href="/cs249r_fall2025/course/syllabus">📋 Syllabus</a></li>
-                    <li><a href="/cs249r_fall2025/course/notes">📓 Class Notes</a></li>
+                    <li><a href="/cs249r_fall2025/course/schedule">📅 Schedule</a></li>
                     <li><a href="/cs249r_fall2025/course/assignments">📝 Assignments</a></li>
+                    <li><a href="/cs249r_fall2025/course/notes">📓 Class Notes</a></li>
                     <li><a href="/cs249r_fall2025/content/resources">📚 Resources</a></li>
                 </ul>
             </nav>

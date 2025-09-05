@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# AI Agents for Computer Systems Design
+# Agentic AI for Computer Systems Design
 
 **Harvard University • Fall 2025**  
 **CS249r: Special Topics in Edge Computing**
@@ -19,16 +19,16 @@ layout: default
 {: .course-goal}
 ## Course Goal
 
-For decades, computer systems have been meticulously designed by human experts using intuition, heuristics, and manual optimization. Now we're witnessing a fundamental paradigm shift: AI agents are transforming how we design these systems, from software optimization to chip layout.
+For decades, computer systems have been meticulously designed by human experts using intuition, heuristics, and manual optimization. Now we're witnessing a fundamental paradigm shift: agentic AI systems are transforming how we design these systems, from software optimization to chip layout.
 
 This transformation spans the entire computing stack—from AI agents that optimize compiler passes and generate high-performance code, to reinforcement learning agents that automatically design processor microarchitectures, to neural agents that solve chip placement and circuit synthesis. We're moving from human-designed heuristics to autonomous AI agents that can explore solution spaces too large for manual analysis.
 
 **What you'll learn:**
-- How AI agents are being applied across the complete computing stack
-- Critical analysis of agent-driven design methodologies through systematic literature review
+- How agentic AI systems are being applied across the complete computing stack
+- Critical analysis of agentic design methodologies through systematic literature review
 - Research synthesis skills by writing comprehensive survey papers on cutting-edge topics
-- How to identify research gaps and propose future directions in AI agents for computer systems design
-- Evaluation frameworks for AI agents in software, architecture, and chip design
+- How to identify research gaps and propose future directions in agentic AI for computer systems design
+- Evaluation frameworks for agentic AI in software, architecture, and chip design
 - Collaborative research skills through team-based survey projects
 
 ## What is Computer Systems Design?
@@ -48,7 +48,7 @@ Traditional systems design relies on human expertise, heuristics, and manual opt
 
 ## What is Architecture 2.0?
 
-**Architecture 2.0** is the paradigm shift where AI systems automatically explore, evaluate, and optimize design spaces across the entire computing stack. These AI approaches leverage reinforcement learning, neural networks, and Bayesian optimization to:
+**Architecture 2.0** is the paradigm shift where agentic AI systems automatically explore, evaluate, and optimize design spaces across the entire computing stack. These agentic approaches leverage reinforcement learning, neural networks, and Bayesian optimization to:
 
 - **Generate and optimize code** by learning from millions of programs and performance patterns
 - **Design compilers** that automatically discover better optimization strategies than human experts
@@ -57,17 +57,17 @@ Traditional systems design relies on human expertise, heuristics, and manual opt
 - **Place and route circuits** by finding optimal chip layouts faster than traditional tools
 - **Verify designs** by generating test cases and formal proofs automatically
 
-The goal is to create AI systems that can design better computing systems than human experts across software, architecture, and chip implementation - while exploring design spaces too large for manual analysis.
+The goal is to create agentic AI systems that can design better computing systems than human experts across software, architecture, and chip implementation - while exploring design spaces too large for manual analysis.
 
 ## Course Overview
 
-This course explores the shift from human-designed heuristics to **autonomous AI agents**. While conventional courses teach you how existing systems work, this seminar explores how **AI agents will design tomorrow's complete computing stack**.
+This course explores the shift from human-designed heuristics to **agentic AI systems**. While conventional courses teach you how existing systems work, this seminar explores how **agentic AI will design tomorrow's complete computing stack**.
 
-This course is focused on exploring how AI agents enable the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including CompilerGym (software), ArchGym (architecture), and DREAMPlace (chip design).
+This course is focused on exploring how agentic AI enables the specialized, efficient systems that edge computing demands. We'll work hands-on with cutting edge research tools including CompilerGym (software), ArchGym (architecture), and DREAMPlace (chip design).
 
-Students will systematically explore AI agent applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for agent-driven computer systems design.
+Students will systematically explore agentic AI applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for agentic computer systems design.
 
-**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI systems design complete computing systems rather than analyzing existing implementations.
+**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how agentic AI systems design complete computing systems rather than analyzing existing implementations.
 
 ## Prerequisites & Expectations
 
@@ -95,7 +95,7 @@ This course explores the shift from human-designed heuristics to **autonomous AI
 
 This course is focused on exploring how AI agents enable the specialized, efficient systems that edge computing demands. Students will systematically explore AI agent applications across the complete computing stack - from code generation and compiler optimization, through processor and accelerator design, to chip placement and verification - while identifying the most promising research directions for agent-driven computer systems design.
 
-**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how AI systems design complete computing systems rather than analyzing existing implementations.
+**Note**: This is a research intensive seminar with limited enrollment, focused on understanding how agentic AI systems design complete computing systems rather than analyzing existing implementations.
 
 ---
 
@@ -109,11 +109,11 @@ This course is focused on exploring how AI agents enable the specialized, effici
 - Study established design principles and optimization techniques
 
 ### **Architecture 2.0 (This Course):**
-- Build AI agents that automatically design processors and memory hierarchies
-- Create new design methodologies using machine learning
-- Develop tools and frameworks for AI-driven architecture exploration
+- Build agentic AI systems that automatically design processors and memory hierarchies
+- Create new design methodologies using agentic approaches
+- Develop tools and frameworks for agentic architecture exploration
 
-**The Goal**: By the end of this course, you won't just understand how architectures work—you'll know how to build intelligent systems that can design better architectures than humans can.
+**The Goal**: By the end of this course, you won't just understand how architectures work—you'll know how to build agentic AI systems that can design better architectures than humans can.
 
 ---
 

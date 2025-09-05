@@ -57,6 +57,7 @@ This course emphasizes **active engagement** with cutting-edge research through 
 **Scope**: Comprehensive analysis of one thematic area from the course  
 **Goal**: Produce publication-quality survey papers that advance understanding of AI agents for computer systems design
 
+{: .rationale-box}
 ### Why This Approach? The Value of Survey Research
 
 **Research Skills Over Implementation**: Rather than coding assignments, this course emphasizes **research synthesis and critical analysis**—the core skills needed to advance the field of AI agents for computer systems design. Here's why:
@@ -95,43 +96,51 @@ Each student will contribute **one major section** to their group's survey paper
 
 **The checkpoint schedule aligns with course thematic progression—students begin survey work as we complete each section, creating a natural pipeline from learning to research synthesis.**
 
+{: .pipeline-diagram}
 ```
-Course Flow → Survey Pipeline
+Course Learning Flow ──────────→ Survey Research Pipeline
 
-Weeks 2-5: AI for Software    →  📋 Checkpoint 1: Software Survey Sections
-    ↓ Learn & Discuss              ↓ Outline + Bibliography
+Weeks 2-5: AI for Software     ──→ Checkpoint 1: Software Survey Sections
+    │ Learn & Discuss                   │ Outline + Bibliography
+    ↓                                   ↓
     
-Weeks 6-10: AI for Architecture → 📊 Checkpoint 2: Architecture Survey Sections  
-    ↓ Learn & Discuss              ↓ Draft + Visuals
+Weeks 6-10: AI for Architecture ──→ Checkpoint 2: Architecture Survey Sections  
+    │ Learn & Discuss                   │ Draft + Visuals
+    ↓                                   ↓
     
-Weeks 11-14: AI for EDA        →  📖 Checkpoint 3: EDA Survey Sections
-    ↓ Learn & Discuss              ↓ Final Integration
+Weeks 11-14: AI for EDA         ──→ Checkpoint 3: EDA Survey Sections
+    │ Learn & Discuss                   │ Final Integration
+    ↓                                   ↓
     
-Week 15: Integration           →  🎯 Complete Survey Papers + Presentations
+Week 15: Integration            ──→ Complete Survey Papers + Presentations
 ```
 
-**📋 Checkpoint 1: AI for Software Survey Sections**
+{: .checkpoint-list}
+#### 📋 Checkpoint 1: AI for Software Survey Sections
 - **Timing**: After completing Weeks 2-5 (AI for Software thematic section)
 - **Who**: Students in Group 1 (AI for Software) + students from other groups working on software-related sections
 - **Deliverable**: Section outline + annotated bibliography (15-20 papers)
 - **Content**: Research questions, taxonomy framework, related work study plan
 - **Review**: TA meeting to refine scope and integration approach
 
-**📊 Checkpoint 2: AI for Architecture Survey Sections**  
+{: .checkpoint-list}
+#### 📊 Checkpoint 2: AI for Architecture Survey Sections  
 - **Timing**: After completing Weeks 6-10 (AI for Architecture thematic section)
 - **Who**: Students in Group 2 (AI for Architecture) + students from other groups working on architecture sections
 - **Deliverable**: Complete section draft (4-6 pages) + proposed visuals
 - **Content**: Full analysis, tables/figures, methodology for data collection
 - **Review**: TA feedback on content quality and visual elements
 
-**📖 Checkpoint 3: AI for EDA Survey Sections**
+{: .checkpoint-list}
+#### 📖 Checkpoint 3: AI for EDA Survey Sections
 - **Timing**: After completing Weeks 11-14 (AI for EDA thematic section)  
 - **Who**: Students in Group 3 (AI for EDA) + remaining section contributors
 - **Deliverable**: Final section integration + cross-references
 - **Content**: Polished sections with completed visuals, team integration
 - **Note**: EDA students may need extended timeline due to later course positioning
 
-**🎯 Final Integration (Week 15)**
+{: .checkpoint-list}
+#### 🎯 Final Integration (Week 15)
 - **All Groups**: Complete survey paper assembly and presentation preparation
 - **Deliverable**: 15-20 page integrated survey + group presentation + individual reflections
 
