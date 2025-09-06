@@ -90,10 +90,15 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - [Learning Performance-Improving Code Edits](https://arxiv.org/pdf/2302.07867.pdf)
 
 **📚 Context & Background:**
+- [Compiler-R1: Towards Agentic Compiler Auto-tuning with Reinforcement Learning](https://arxiv.org/pdf/2506.15701.pdf)
 - [Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation](https://arxiv.org/pdf/1808.07412.pdf)
 - [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research](https://arxiv.org/pdf/2109.08267.pdf)
 - [MLIR: Scaling Compiler Infrastructure for Domain Specific Computation](https://arxiv.org/pdf/2002.11054.pdf)
 - [Learning to Optimize Tensor Programs](https://arxiv.org/pdf/1805.08166.pdf)
+
+**🛠️ Interactive Tools & Demos:**
+- [CompilerGym GitHub Repository](https://github.com/facebookresearch/CompilerGym) - Hands-on compiler optimization environments
+- [TVM Tutorial: Auto-tuning](https://tvm.apache.org/docs/tutorial/autotvm_tutorial.html) - Interactive tensor program optimization
 
 ## Week 4 — GPU Kernels & Parallel Programming
 **September 22 & 24**
@@ -137,6 +142,7 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 **🎯 Presentation Papers:**
 - [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/pdf/2410.06603.pdf)
 - [ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://arxiv.org/pdf/2206.08515.pdf)
+- [Multi-Agent Reinforcement Learning for Microprocessor Design Space Exploration](https://arxiv.org/pdf/2211.16385.pdf)
 
 **📚 Context & Background:**
 - [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://arxiv.org/pdf/2010.11823.pdf)
@@ -144,6 +150,10 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - [HyperMapper 2.0: Interactive and Adaptive Design Space Exploration for Multi-objective Optimization](https://arxiv.org/pdf/2105.12826.pdf)
 - [AutoDSE: Enabling Automatic Design Space Exploration for High-Level Synthesis with Machine Learning](https://arxiv.org/pdf/2101.04808.pdf)
 - [Bayesian Optimization for Accelerator Design Space Exploration](https://proceedings.neurips.cc/paper_files/paper/2021/file/c59bdc99ccffe8d088b3c67cd7f6e5db-Paper.pdf)
+
+**🛠️ Interactive Tools & Demos:**
+- [ArchGym GitHub Repository](https://github.com/srivatsankrishnan/oss-arch-gym) - Open-source gymnasium for ML-assisted architecture design
+- [HyperMapper Interactive Tutorials](https://github.com/luinardi/hypermapper) - Design space exploration framework
 
 ## Week 7 — Hardware Accelerators & DNN Mappings
 **October 13 & 15**
@@ -169,9 +179,10 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 
 **🎯 Presentation Papers:**
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
-- [The Case for Learned Index Structures](https://arxiv.org/pdf/1712.01208.pdf)
+- [Learning-based Memory Allocation for C++ Server Workloads](https://research.google/pubs/pub49008/)
 
 **📚 Context & Background:**
+- [The Case for Learned Index Structures](https://arxiv.org/pdf/1712.01208.pdf)
 - [ALEX: An Updatable Adaptive Learned Index](https://arxiv.org/pdf/1905.08898.pdf)
 - [Designing a Cost-Effective Cache Replacement Policy Using Machine Learning](https://research.google/pubs/pub46599/)
 - [Long Short-Term Memory (LSTM) Based Memory Hardware Prefetcher](https://arxiv.org/pdf/1906.08699.pdf)
@@ -187,6 +198,7 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 - [Performance Prediction for Large Systems via Text-to-Text Regression](https://arxiv.org/pdf/2402.13785.pdf)
 
 **📚 Context & Background:**
+- [Neural Architecture Search with Reinforcement Learning](https://arxiv.org/pdf/1611.01578.pdf)
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/pdf/2309.06180.pdf)
 - [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](https://arxiv.org/pdf/2403.02310.pdf)
 - [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](https://arxiv.org/pdf/2311.03285.pdf)
@@ -202,15 +214,21 @@ Course overview, vision, and foundational concepts. Introduction to Architecture
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
 **🎯 Presentation Papers:**
-- [CVDP: Comprehensive Verilog Design Problems Benchmark](https://arxiv.org/pdf/2506.14074.pdf)
+- [ChipAlign: Instruction Alignment in Large Language Models for Chip Design via Geodesic Interpolation](https://arxiv.org/pdf/2412.19819.pdf)
 - [Make every move count: LLM-based high-quality RTL code generation using MCTS](https://arxiv.org/pdf/2402.03289.pdf)
 
 **📚 Context & Background:**
+- [CVDP: Comprehensive Verilog Design Problems Benchmark](https://arxiv.org/pdf/2506.14074.pdf)
 - [DRiLLS: Deep Reinforcement Learning for Logic Synthesis (ASP-DAC'20)](https://arxiv.org/pdf/1911.04021.pdf)
 - [BOiLS: Bayesian Optimisation for Logic Synthesis](https://arxiv.org/pdf/2111.06178.pdf)
 - [MasterRTL: Pre-Synthesis PPA Estimation for RTL Designs (ICCAD'22/TCAD'24)](https://arxiv.org/pdf/2211.14348.pdf)
 - [AutoChip: Automating HDL Generation Using LLM Feedback (2023–24)](https://arxiv.org/pdf/2311.04887.pdf)
 - [OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis](https://arxiv.org/pdf/2110.11292.pdf)
+
+**🛠️ Interactive Tools & Demos:**
+- [ChipNeMo Blog: Silicon Valley Designers Tap Generative AI](https://blogs.nvidia.com/blog/llm-semiconductors-chip-nemo/) - NVIDIA's AI for chip design
+- [AutoDMP: AI-Driven Macro Placement](https://developer.nvidia.com/blog/autodmp-optimizes-macro-placement-for-chip-design-with-ai-and-gpus) - GPU-accelerated chip design tools
+- [OpenABC-D Dataset Explorer](https://github.com/NYU-MLDA/OpenABC) - Interactive circuit synthesis dataset
 
 ## Week 11 — Physical Design & Layout
 **November 10 & 12**
@@ -255,6 +273,21 @@ Student project presentations and course synthesis. Integration of AI techniques
 - **Primary Sources**: Papers available through Harvard Library, ACM Digital Library, IEEE Xplore
 - **Course Reserves**: Key papers uploaded to course management system
 - **Supplemental Materials**: Additional resources linked from course website
+
+## Interactive Resources & Tools
+
+**🛠️ Hands-On Platforms:**
+- [GitHub Copilot](https://github.com/features/copilot) - AI-powered code generation (Week 2-3)
+- [Hugging Face Transformers](https://huggingface.co/transformers/) - Pre-trained models for experimentation
+- [Google Colab](https://colab.research.google.com/) - Free GPU access for AI experiments
+
+**🎥 Industry Insights:**
+- [NVIDIA AI Podcast](https://www.nvidia.com/en-us/ai-podcast/) - Real-world AI applications and innovations
+- [ChipAlign Research Page](https://research.nvidia.com/labs/electronic-design-automation/publication/deng2025align/) - Latest NVIDIA chip design AI research
+
+**📊 Datasets & Benchmarks:**
+- [SWE-bench Leaderboard](https://www.swebench.com/) - Track AI progress on real GitHub issues
+- [Papers With Code](https://paperswithcode.com/) - Implementation links for all course papers
 
 ## Discussion Format
 
