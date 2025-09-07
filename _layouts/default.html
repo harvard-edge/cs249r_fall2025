@@ -518,6 +518,23 @@
             {{ content }}
         </div>
     </main>
+    
+    <!-- Mermaid.js for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#A51C30',
+                primaryTextColor: '#333',
+                primaryBorderColor: '#8B1538',
+                lineColor: '#666',
+                secondaryColor: '#f8f9fa',
+                tertiaryColor: '#e9ecef'
+            }
+        });
+    </script>
 <!-- Force rebuild trigger -->
 </body>
 </html>

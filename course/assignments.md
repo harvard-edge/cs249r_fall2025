@@ -72,7 +72,7 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 **Survey Paper Pipeline**: The project follows a structured pipeline that aligns with course learning phases, allowing students to research topics as they learn them in class.
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     A["Week 1-2: Course Setup<br/>Group Formation"] --> B["AI for Software Groups<br/>(2-3 students each)"]
     A --> C["AI for Architecture Groups<br/>(2-3 students each)"]
@@ -106,6 +106,30 @@ flowchart TD
     style L fill:#f3e5f5
     style P fill:#e8f5e8
     style R fill:#fff3e0
+</div>
+
+{: .pipeline-diagram}
+**Alternative Text View:**
+```
+Course Learning Flow ──────────→ Survey Research Pipeline
+
+Weeks 1-2: Group Formation    ──→ All Groups: Topic Selection & Approval
+    │                               │
+    ↓                               ↓
+    
+Weeks 2-5: AI for Software    ──→ 📋 Checkpoint 1 (Oct 1): Software Groups
+    │ Learn & Discuss               │ Literature Review (3-4 pages)
+    ↓                               ↓
+    
+Weeks 6-9: AI for Architecture ──→ 📊 Checkpoint 2 (Oct 29): Architecture Groups  
+    │ Learn & Discuss               │ Draft Sections (8-10 pages)
+    ↓                               ↓
+    
+Weeks 10-12: AI for EDA       ──→ 📖 Checkpoint 3 (Nov 19): EDA Groups
+    │ Learn & Discuss               │ Final Papers (12-15 pages)
+    ↓                               ↓
+    
+Week 13: Integration          ──→ 🎯 Final Presentations (Dec 1): All Groups
 ```
 
 ### Survey Topics (2-3 students per topic)
