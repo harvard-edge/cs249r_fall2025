@@ -53,117 +53,156 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ## 3. Group Survey Paper Project (40%)
 
-**Format**: Collaborative research survey in teams of 4-5 students  
-**Scope**: Comprehensive analysis of one thematic area from the course  
+**Format**: Collaborative research survey in teams of 2-3 students  
+**Scope**: Focused analysis of specific subtopics within course themes  
 **Goal**: Produce publication-quality survey papers that advance understanding of AI agents for computer systems design
 
 {: .rationale-box}
 ### Why This Approach? The Value of Survey Research
 
-**Research Skills Over Implementation**: Rather than coding assignments, this course emphasizes **research synthesis and critical analysis**—the core skills needed to advance the field of AI agents for computer systems design. Here's why:
+**Research Skills Over Implementation**: Rather than coding assignments, this course emphasizes **research synthesis and critical analysis**—the core skills needed to advance the field of AI agents for computer systems design.
 
 **🔍 Field-Shaping Impact**: The field of AI agents for computer systems is rapidly evolving with scattered research across venues (ISCA, MICRO, DAC, MLSys, ICLR, etc.). High-quality survey papers help consolidate knowledge, identify gaps, and guide future research directions.
 
-**📊 Research Methodology**: Students develop crucial skills in:
-- **Systematic literature review** and paper discovery across multiple domains
-- **Critical analysis** of methodologies, strengths, and limitations
-- **Taxonomy development** to organize complex, interdisciplinary research
-- **Gap identification** and future research direction formulation
-- **Technical writing** for academic publication
+**📊 Research Methodology**: Students develop crucial skills in systematic literature review, critical analysis, taxonomy development, gap identification, and technical writing for academic publication.
 
-**🌐 Cross-Stack Understanding**: By surveying an entire thematic area (Software/Architecture/EDA), students gain comprehensive understanding of how AI agents work across different abstraction levels—something impossible with narrow coding projects.
+**🎯 Real Research Impact**: These surveys are designed to be **publication-quality** contributions suitable for ML4Sys workshops, computer architecture venues, or survey journals.
 
-**🎯 Real Research Impact**: These surveys are designed to be **publication-quality** contributions that could be submitted to ML4Sys workshops, computer architecture venues, or survey journals. Students produce work that advances the field, not just coursework.
+### Project Structure & Timeline
 
-**🤝 Collaborative Research Skills**: Working in teams mirrors real research collaboration, teaching students how to coordinate literature review, maintain consistency across sections, and integrate diverse perspectives into cohesive analysis.
+**Survey Paper Pipeline**: The project follows a structured pipeline that aligns with course learning phases, allowing students to research topics as they learn them in class.
 
-### Project Structure
-**Three Survey Groups:**
-- **Group 1**: AI for Software (Code generation, compiler optimization, distributed systems)
-- **Group 2**: AI for Architecture (Processor design, memory systems, accelerators)  
-- **Group 3**: AI for Chip Design (RTL synthesis, placement & routing, verification)
-
-### Individual Section Contribution Process
-
-Each student will contribute **one major section** to their group's survey paper. This collaborative approach ensures comprehensive coverage while developing individual expertise.
-
-**Section Selection & Approval:**
-- Students select specific subsection topics within their group's thematic area
-- **Required**: Meet with TAs and instructor to discuss scope and approach
-- Approval needed before proceeding to Checkpoint 1
-
-### Pipeline-Based Checkpoint Timeline
-
-**The checkpoint schedule aligns with course thematic progression—students begin survey work as we complete each section, creating a natural pipeline from learning to research synthesis.**
-
-{: .pipeline-diagram}
-```
-Course Learning Flow ──────────→ Survey Research Pipeline
-
-Weeks 2-5: AI for Software     ──→ Checkpoint 1: Software Survey Sections
-    │ Learn & Discuss                   │ Outline + Bibliography
-    ↓                                   ↓
+```mermaid
+flowchart TD
+    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["AI for Software Groups<br/>(2-3 students each)"]
+    A --> C["AI for Architecture Groups<br/>(2-3 students each)"]
+    A --> D["AI for Chip Design Groups<br/>(2-3 students each)"]
     
-Weeks 6-10: AI for Architecture ──→ Checkpoint 2: Architecture Survey Sections  
-    │ Learn & Discuss                   │ Draft + Visuals
-    ↓                                   ↓
+    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Research Literature"]
+    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research"]
+    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research"]
     
-Weeks 11-14: AI for EDA         ──→ Checkpoint 3: EDA Survey Sections
-    │ Learn & Discuss                   │ Final Integration
-    ↓                                   ↓
+    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Groups)"]
     
-Week 15: Integration            ──→ Complete Survey Papers + Presentations
+    F --> I["Weeks 6-9: Learn Architecture<br/>+ Research Literature"]
+    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research"]
+    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing"]
+    
+    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Groups)"]
+    
+    J --> M["Weeks 10-12: Learn EDA<br/>+ Research Literature"]
+    K --> N["Weeks 10-12: Finalize Software<br/>Sections"]
+    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections"]
+    
+    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Groups)"]
+    
+    N --> Q["Week 13: Final Assembly<br/>All Groups Integrate"]
+    O --> Q
+    P --> Q
+    
+    Q --> R["🎯 Dec 1: Final Presentations<br/>Complete Survey Papers"]
+    
+    style H fill:#e1f5fe
+    style L fill:#f3e5f5
+    style P fill:#e8f5e8
+    style R fill:#fff3e0
 ```
 
-{: .checkpoint-list}
-#### 📋 Checkpoint 1: AI for Software Survey Sections
-- **Timing**: After completing Weeks 2-5 (AI for Software thematic section)
-- **Who**: Students in Group 1 (AI for Software) + students from other groups working on software-related sections
-- **Deliverable**: Section outline + annotated bibliography (15-20 papers)
-- **Content**: Research questions, taxonomy framework, related work study plan
-- **Review**: TA meeting to refine scope and integration approach
+### Survey Topics (2-3 students per topic)
+
+**Phase 1: AI for Software**
+1. LLM-based Code Generation & Evaluation
+2. AI-driven Performance Optimization & Compiler Design  
+3. GPU Kernel Optimization & Parallel Programming Automation
+4. AI for Distributed Systems & Resource Management
+
+**Phase 2: AI for Architecture**
+5. ML-based Performance Prediction & Modeling
+6. AI-driven Design Space Exploration for Accelerators
+7. Learned Memory Systems & Data Management
+8. AI Workload Scheduling & System Co-design
+
+**Phase 3: AI for Chip Design**
+9. LLM-assisted RTL Design & Synthesis
+10. AI-driven Physical Design & Placement
+11. ML for Verification & Testing Automation
+12. End-to-end AI Chip Design Workflows
+
+### Three-Checkpoint System
 
 {: .checkpoint-list}
-#### 📊 Checkpoint 2: AI for Architecture Survey Sections  
-- **Timing**: After completing Weeks 6-10 (AI for Architecture thematic section)
-- **Who**: Students in Group 2 (AI for Architecture) + students from other groups working on architecture sections
-- **Deliverable**: Complete section draft (4-6 pages) + proposed visuals
-- **Content**: Full analysis, tables/figures, methodology for data collection
-- **Review**: TA feedback on content quality and visual elements
+#### 📋 Checkpoint 1: Literature Foundation (October 1)
+**Who**: Software-focused groups (Topics 1-4)  
+**Deliverable**: Annotated bibliography + survey scope (3-4 pages)  
+**Requirements**:
+- 15-20 key papers identified and categorized
+- Clear problem statement and survey boundaries  
+- Preliminary taxonomy for organizing the field
+- Gap analysis of current literature
 
 {: .checkpoint-list}
-#### 📖 Checkpoint 3: AI for EDA Survey Sections
-- **Timing**: After completing Weeks 11-14 (AI for EDA thematic section)  
-- **Who**: Students in Group 3 (AI for EDA) + remaining section contributors
-- **Deliverable**: Final section integration + cross-references
-- **Content**: Polished sections with completed visuals, team integration
-- **Note**: EDA students may need extended timeline due to later course positioning
+#### 📊 Checkpoint 2: Deep Analysis (October 29)
+**Who**: Architecture-focused groups (Topics 5-8)  
+**Deliverable**: Draft survey sections + comparative analysis (8-10 pages)  
+**Requirements**:
+- Detailed technical analysis of 3-4 major approaches
+- Comparative evaluation framework
+- Key trade-offs and design decisions identified
+- Preliminary conclusions about field trajectory
 
 {: .checkpoint-list}
-#### 🎯 Final Integration (Week 15)
-- **All Groups**: Complete survey paper assembly and presentation preparation
-- **Deliverable**: 15-20 page integrated survey + group presentation + individual reflections
+#### 📖 Checkpoint 3: Final Integration (November 19)
+**Who**: Chip design-focused groups (Topics 9-12)  
+**Deliverable**: Complete survey paper (12-15 pages)  
+**Requirements**:
+- Comprehensive literature review with novel insights
+- Critical evaluation of current state-of-the-art
+- Future research directions and open challenges
+- Publication-ready quality and formatting
 
-### Meeting & Approval Process
+{: .checkpoint-list}
+#### 🎯 Final Presentations (December 1)
+**Who**: All groups  
+**Deliverable**: 15-minute presentation + Q&A  
+**Requirements**:
+- Clear communication of survey findings
+- Novel insights and research contributions
+- Future directions and open problems
+- Professional presentation quality
 
-**Initial Topic Selection (Week 4-5):**
-- Schedule 30-minute meeting with instructor and TAs
-- Come prepared with 3-5 potential section topics
-- Discuss scope, feasibility, and alignment with group theme
+### Execution Process
+
+**Group Formation (Week 2):**
+- Students rank their top 3 topic preferences
+- Instructor assigns groups balancing interests and backgrounds
+- Groups of 2-3 students per topic for focused, high-quality work
+
+**Topic Approval Meeting (Week 3):**
+- 30-minute meeting with instructor and TAs
+- Discuss scope, methodology, and timeline
 - Receive approval and refinement suggestions
+- Establish individual responsibilities within the group
 
-**Checkpoint Reviews:**
-- **Checkpoint 1**: 20-minute TA meeting to review outline and study plan
-- **Checkpoint 2**: 30-minute review session for draft and visual elements
-- **Office Hours**: Regular availability for questions and guidance throughout
+**Ongoing Support:**
+- **Bi-weekly check-ins** with TAs during office hours
+- **Peer review sessions** between groups working on related topics
+- **Cross-group presentations** to share insights and get feedback
+- **Mandatory progress updates** at each checkpoint
 
-**Collaboration Expectations:**
-- Weekly team check-ins to ensure section integration
-- Shared bibliography and citation management
-- Consistent formatting and writing style across sections
-- Cross-referencing between related sections
+### Quality Assurance
 
-### Survey Paper Requirements
+**Assessment Criteria:**
+- **Checkpoint 1 (20%)**: Literature foundation and scope definition
+- **Checkpoint 2 (30%)**: Analysis depth and methodological rigor  
+- **Checkpoint 3 (50%)**: Final paper quality and presentation
+
+**Quality Mechanisms:**
+- **Faculty feedback sessions** after each checkpoint
+- **Peer review process** between checkpoints
+- **Cross-pollination meetings** where groups share findings
+- **Publication readiness review** before final submission
+
+### Survey Paper Standards
 - **Comprehensive Coverage**: Systematic review of recent advances (2020-2025)
 - **Critical Analysis**: Strengths, limitations, and gaps in current approaches
 - **Original Insights**: Novel taxonomy, benchmarking analysis, or methodological comparison
