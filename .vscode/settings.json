@@ -1,0 +1,25 @@
+{
+    "peacock.color": "#A51C30",
+    "peacock.remoteColor": "#007acc",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#d1233d",
+        "activityBar.activeBorder": "#ffffff",
+        "activityBar.background": "#d1233d",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#38bf20",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#d1233d",
+        "statusBar.background": "#a51c30",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#d1233d",
+        "statusBarItem.remoteBackground": "#a51c30",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#a51c30",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#a51c3099",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "window.title": "🎓 CS249r - ${rootName}${separator}${activeEditorShort}"
+}
