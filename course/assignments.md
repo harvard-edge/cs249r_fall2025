@@ -8,26 +8,30 @@ layout: default
 
 This course emphasizes **active engagement** with cutting-edge research through three main components:
 
-- **Weekly Reading Reflections**: Individual critical analysis of research papers
+- **Programming Assignments**: Three hands-on assignments exposing students to AI for systems design
 - **Paper Presentations & Discussion Leadership**: Facilitating class discussions and synthesis
 - **Group Survey Paper Project**: Collaborative research surveys advancing the field
 
 ---
 
-## 1. Weekly Reading Reflections (30%)
+## 1. Programming Assignments (45%)
 
-**Format**: 1-2 page written reflections on assigned readings  
-**Due**: Before each class session  
-**Purpose**: Demonstrate critical engagement with material and prepare for discussion
+**Format**: Three hands-on programming assignments (15% each)  
+**Purpose**: Experimentation and analysis to support your survey paper research  
+**Timeline**: Aligned with course phases (software, architecture, chip design)
 
-### Structure Guidelines
-- **Summary**: What problem does the paper address and what is the key contribution?
-- **Analysis**: What are the strengths, limitations, and questionable assumptions?
-- **Connections**: How does this relate to other papers and course themes?
+### Assignment Structure
+- **Assignment 1**: AI for Software Systems
+- **Assignment 2**: AI for Architecture Design  
+- **Assignment 3**: AI for Chip Design
+
+Each assignment focuses on **experimentation and analysis** within its respective area, providing hands-on experience that directly supports your survey paper development.
+
+*Detailed assignment specifications will be posted throughout the semester.*
 
 ---
 
-## 2. Paper Presentations & Discussion Leadership (30%)
+## 2. Paper Presentations & Discussion Leadership (25%)
 
 **Format**: Present and lead discussion for assigned papers (individually or in pairs)  
 **Structure**: 20-minute presentation + 20-minute facilitated discussion per paper  
@@ -51,7 +55,7 @@ This course emphasizes **active engagement** with cutting-edge research through 
 
 ---
 
-## 3. Collaborative Survey Paper Project (40%)
+## 3. Collaborative Survey Paper Project (30%)
 
 {: .course-goal}
 > **📋 Complete Project Details**: For comprehensive information about the survey paper project, including detailed timeline, requirements, and examples, visit the dedicated **[Survey Project Page](project)**.
@@ -318,13 +322,13 @@ Week 13: Integration          ──→ 🎯 Final Presentations (Dec 1): All Gr
 ## Course Policies
 
 ### Late Work
-- Reading reflections: Reduced credit if late
+- Programming assignments: 10% penalty per day late
 - Survey paper project: Extensions require advance notice from entire team
 - Discussion leadership: Must reschedule in advance
 
 ### Collaboration
-- **Reading reflections**: Individual work
-- **Survey paper project**: Required group work (4-5 students per team)
+- **Programming assignments**: Individual work (collaboration on concepts encouraged)
+- **Survey paper project**: Required group work (entire class collaboration)
 - **Discussion leadership**: Pairs allowed and encouraged
 
 ---
