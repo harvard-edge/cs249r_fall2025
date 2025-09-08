@@ -4,18 +4,11 @@ layout: default
 
 # Assignments & Deliverables
 
-<details>
-<summary><strong>📋 Survey Paper Project Overview</strong></summary>
-
-<br>
+## Survey Paper Project Overview
 
 **We are creating the definitive cross-stack survey on "Agentic AI for Computer Systems Design"** - the first comprehensive analysis that examines how AI agents are transforming computer systems design across the complete computing stack, from software optimization to chip design.
 
-<br>
-
 **Why This Matters**: Current research is fragmented across venues (ISCA, MICRO, DAC, MLSys, ICLR). No one has written the systematic cross-stack analysis that shows how these methodologies connect and where the field is heading holistically.
-
-<br>
 
 **Target Impact**: Publication-quality paper suitable for top-tier venues like ISCA, MICRO, or Computer Architecture Letters.
 
@@ -100,7 +93,7 @@ flowchart TD
 
 ---
 
-## 1. Survey Paper Checkpoints
+## Survey Paper Checkpoints
 
 **Format**: Three milestone checkpoints  
 **Purpose**: Progressive development and validation of your survey paper research  
@@ -151,7 +144,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 2. Final Paper Integration
+## Final Paper Integration
 
 **Format**: Collaborative review and finalization of the complete survey paper  
 **Purpose**: Ensure coherent, publication-quality final paper through group coordination  
@@ -164,7 +157,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 2. Paper Presentations
+## Paper Presentations
 
 **Format**: Present and lead discussion for assigned papers (individually or in pairs)  
 **Structure**: 20-minute presentation + 20-minute facilitated discussion per paper  
@@ -188,7 +181,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 3. In-Class Paper Discussion and Attendance
+## In-Class Paper Discussion and Attendance
 
 **Format**: Active participation in class discussions and consistent attendance  
 **Purpose**: Engage with course material through thoughtful discussion and peer interaction  
