@@ -144,33 +144,33 @@ graph LR
 
 <div class="mermaid">
 flowchart TD
-    A["Weeks 1-2: Foundations<br/>Sep 3-15: Architecture 2.0 + Group Formation"] --> B["🔧 Software Group<br/>(5-6 students)"]
+    A["Week 1: Course Introduction<br/>Sep 3 (Wed) - Sep 8 (Mon)<br/>Week 2: Architecture 2.0 Foundations<br/>Sep 10 (Wed) - Sep 15 (Sun)<br/>Group Formation"] --> B["🔧 Software Group<br/>(5-6 students)"]
     A --> C["🏗️ Architecture Group<br/>(5-6 students)"]
     A --> D["⚡ EDA Group<br/>(5-6 students)"]
     
-    B --> E["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Research Literature<br/>(Benchmarks, Tools, Best Practices)"]
-    C --> F["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Plan Architecture Research<br/>(Modeling, Accelerators, Memory)"]
-    D --> G["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
+    B --> E["Phase 1: Sep 15 (Sun) - Oct 1 (Wed)<br/>Learn Code Generation & Performance Engineering + Research Literature<br/>(Benchmarks, Tools, Best Practices)"]
+    C --> F["Phase 1: Sep 15 (Sun) - Oct 1 (Wed)<br/>Learn Code Generation & Performance Engineering + Plan Architecture Research<br/>(Modeling, Accelerators, Memory)"]
+    D --> G["Phase 1: Sep 15 (Sun) - Oct 1 (Wed)<br/>Learn Code Generation & Performance Engineering + Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
     
-    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Group)"]
+    E --> H["📋 Checkpoint 1: Oct 1 (Wed)<br/>Literature Review<br/>(Software Group)"]
     
-    F --> I["Weeks 6-9: Learn Architecture<br/>Oct 6-29: Research Literature<br/>(Modeling, Accelerators, Memory)"]
-    G --> J["Weeks 6-9: Learn Architecture<br/>Oct 6-29: Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
-    H --> K["Weeks 6-9: Continue Software<br/>Oct 6-29: Research & Writing"]
+    F --> I["Phase 2: Oct 6 (Mon) - Oct 29 (Wed)<br/>Learn Architecture + Research Literature<br/>(Modeling, Accelerators, Memory)"]
+    G --> J["Phase 2: Oct 6 (Mon) - Oct 29 (Wed)<br/>Learn Architecture + Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
+    H --> K["Phase 2: Oct 6 (Mon) - Oct 29 (Wed)<br/>Continue Software Research & Writing"]
     
-    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Group)"]
+    I --> L["📊 Checkpoint 2: Oct 29 (Wed)<br/>Draft Sections<br/>(Architecture Group)"]
     
-    J --> M["Weeks 10-12: Learn EDA<br/>Nov 3-19: Research Literature<br/>(Synthesis, Physical Design, Verification)"]
-    K --> N["Weeks 10-12: Finalize Software<br/>Nov 3-19: Complete Sections"]
-    L --> O["Weeks 10-12: Finalize Architecture<br/>Nov 3-19: Complete Sections"]
+    J --> M["Phase 3: Nov 3 (Mon) - Nov 19 (Wed)<br/>Learn EDA + Research Literature<br/>(Synthesis, Physical Design, Verification)"]
+    K --> N["Phase 3: Nov 3 (Mon) - Nov 19 (Wed)<br/>Finalize Software Sections"]
+    L --> O["Phase 3: Nov 3 (Mon) - Nov 19 (Wed)<br/>Finalize Architecture Sections"]
     
-    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Group)"]
+    M --> P["📖 Checkpoint 3: Nov 19 (Wed)<br/>Final Integration<br/>(EDA Group)"]
     
-    N --> Q["Week 13: Final Assembly<br/>Nov 24-Dec 1: All 3 Groups Integrate"]
+    N --> Q["Week 13: Nov 24 (Mon) - Dec 1 (Mon)<br/>Final Assembly: All 3 Groups Integrate"]
     O --> Q
     P --> Q
     
-    Q --> R["🎯 Dec 1: Final Submission<br/>Complete Survey Papers"]
+    Q --> R["🎯 Dec 1 (Mon): Final Submission<br/>Complete Survey Papers"]
     
     style H fill:#e1f5fe
     style L fill:#f3e5f5
@@ -179,10 +179,11 @@ flowchart TD
 </div>
 
 **The Pipeline Logic:**
-- **Weeks 1-2 (Sep 3-15)**: Foundations & Architecture 2.0 + Group formation
-- **Software group** starts intensive work in Weeks 3-5 (Sep 15 - Oct 1) while learning software topics
-- **Architecture group** begins deep work in Weeks 6-9 (Oct 6-29) while learning architecture  
-- **EDA group** starts intensive work in Weeks 10-12 (Nov 3-19) while learning EDA topics
+- **Week 1**: Sep 3 (Wed) - Sep 8 (Mon) - Course introduction and syllabus
+- **Week 2**: Sep 10 (Wed) - Sep 15 (Sun) - Architecture 2.0 foundations + Group formation
+- **Phase 1 begins Sep 15 (Sun)**: Software group starts intensive work (Sep 15 - Oct 1) while learning code generation & software engineering topics
+- **Phase 2**: Oct 6 (Mon) - Oct 29 (Wed) - Architecture group begins deep work while learning architecture topics  
+- **Phase 3**: Nov 3 (Mon) - Nov 19 (Wed) - EDA group starts intensive work while learning EDA topics
 - **Staggered deadlines** prevent bottlenecks and align with course learning phases
 
 ---
