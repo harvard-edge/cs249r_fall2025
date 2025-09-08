@@ -58,10 +58,17 @@ See the [Schedule](schedule.md) for detailed weekly topics and readings.
 Regular attendance essential for discussion-based seminar. More than two unexcused absences may result in grade reduction.
 
 ### Late Work
-Reading reflections submitted late receive reduced credit. Extensions for major assignments require advance notice.
+- Survey paper checkpoints: 10% penalty per day late
+- Survey paper project: Extensions require advance notice from entire team
+- Discussion leadership: Must reschedule in advance
+
+### Collaboration
+- **Survey paper checkpoints**: Individual work within collaborative project framework
+- **Survey paper project**: Required group work (entire class collaboration)
+- **Discussion leadership**: Pairs allowed and encouraged
 
 ### Academic Integrity
-All work must be original with proper citation. Collaboration encouraged for labs but individual work expected for reflections and final project.
+All work must be original with proper citation. Collaboration encouraged within the framework specified above.
 
 ---
 

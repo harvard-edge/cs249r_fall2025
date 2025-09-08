@@ -7,9 +7,15 @@ layout: default
 <details>
 <summary><strong>📋 Survey Paper Project Overview</strong></summary>
 
+<br>
+
 **We are creating the definitive cross-stack survey on "Agentic AI for Computer Systems Design"** - the first comprehensive analysis that examines how AI agents are transforming computer systems design across the complete computing stack, from software optimization to chip design.
 
+<br>
+
 **Why This Matters**: Current research is fragmented across venues (ISCA, MICRO, DAC, MLSys, ICLR). No one has written the systematic cross-stack analysis that shows how these methodologies connect and where the field is heading holistically.
+
+<br>
 
 **Target Impact**: Publication-quality paper suitable for top-tier venues like ISCA, MICRO, or Computer Architecture Letters.
 
@@ -194,19 +200,4 @@ Each checkpoint focuses on **systematic research development**, building toward 
 - **Peer interaction**: Constructive feedback and questions during presentations
 
 
----
-
-## Course Policies
-
-### Late Work
-- Survey paper checkpoints: 10% penalty per day late
-- Survey paper project: Extensions require advance notice from entire team
-- Discussion leadership: Must reschedule in advance
-
-### Collaboration
-- **Survey paper checkpoints**: Individual work within collaborative project framework
-- **Survey paper project**: Required group work (entire class collaboration)
-- **Discussion leadership**: Pairs allowed and encouraged
-
----
 
