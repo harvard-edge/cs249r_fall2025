@@ -111,41 +111,39 @@ graph LR
 
 ## Timeline: Three-Checkpoint Pipeline
 
-{: .pipeline-diagram}
-**Staggered Pipeline Timeline:**
-```
-Course Learning Flow ──────────→ Survey Research Pipeline
-
-Weeks 1-2: Track Assignment    ──→ All Students: Choose vertical focus
-    │                               │
-    ↓                               ↓
+<div class="mermaid">
+gantt
+    title Staggered Pipeline - Teams Start When Learning Their Domain
+    dateFormat  X
+    axisFormat %s
     
-Weeks 2-8: Learn Software      ──→ 🔧 Software Track: Deep research work
-    │ (Software teams active)       │ Literature + data analysis
-    ↓                               ↓
+    section All Students
+    Track Assignment           :milestone, assign, 2, 0
+    Planning Meetings          :planning, 3, 1
     
-Week 8: Software Checkpoint    ──→ 📋 Checkpoint 1: Software vertical analysis
-    │                               │
-    ↓                               ↓
+    section Software Track
+    Learn Software Topics      :active, sw_learn, 2, 6
+    Deep Research Work         :sw_research, 4, 4
+    Checkpoint 1 Due           :milestone, cp1, 8, 0
+    Continue Writing           :sw_write, 9, 8
     
-Weeks 6-12: Learn Architecture ──→ 🏗️ Architecture Track: Deep research work  
-    │ (Architecture teams active)   │ Literature + data analysis
-    ↓                               ↓
+    section Architecture Track
+    Plan While Learning        :arch_plan, 2, 4
+    Learn Architecture Topics  :active, arch_learn, 6, 6
+    Deep Research Work         :arch_research, 8, 4
+    Checkpoint 2 Due           :milestone, cp2, 12, 0
+    Continue Writing           :arch_write, 13, 4
     
-Week 12: Architecture Checkpoint ──→ 📊 Checkpoint 2: Architecture vertical analysis
-    │                               │
-    ↓                               ↓
+    section EDA Track
+    Plan While Learning        :eda_plan, 2, 8
+    Learn EDA Topics           :active, eda_learn, 10, 6
+    Deep Research Work         :eda_research, 12, 4
+    Checkpoint 3 Due           :milestone, cp3, 16, 0
     
-Weeks 10-16: Learn EDA         ──→ ⚡ EDA Track: Deep research work
-    │ (EDA teams active)            │ Literature + data analysis
-    ↓                               ↓
-    
-Week 16: EDA Checkpoint        ──→ 📖 Checkpoint 3: EDA vertical + cross-layer integration
-    │                               │
-    ↓                               ↓
-    
-Week 17: Final Integration     ──→ 🎯 All Teams: Final presentations
-```
+    section Final Integration
+    All Teams Integrate        :integration, 17, 1
+    Final Presentations        :milestone, present, 17, 0
+</div>
 
 **The Pipeline Logic:**
 - **Software teams** start intensive work early (Weeks 2-8) while learning software topics
