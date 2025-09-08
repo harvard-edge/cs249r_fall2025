@@ -6,6 +6,28 @@ layout: default
 
 ---
 
+## Required Materials
+
+### **Course Readings**
+- All readings provided via course website and schedule
+- Papers available through Harvard Library databases (see below)
+
+### **Technology Requirements**
+- Laptop for hands-on activities and presentations
+- Access to Harvard network for database access
+
+### **Library Access**
+- **[Harvard Library](https://library.harvard.edu/)**: Primary access point for all resources
+- **[ACM Digital Library](https://dl.acm.org/)** (via Harvard): ISCA, MICRO, ASPLOS, and other architecture conferences
+- **[IEEE Xplore](https://ieeexplore.ieee.org/)** (via Harvard): DAC, ICCAD, HPCA, and engineering conferences
+- **[Harvard Library Research Guides](https://guides.library.harvard.edu/)**: Subject-specific research assistance
+
+### **Getting Help**
+- **[Cabot Science Library](https://library.harvard.edu/libraries/cabot)**: Physical location for computer science resources
+- **[Research Consultation](https://library.harvard.edu/services/research-support)**: One-on-one help with research strategies
+
+---
+
 ## Essential Books
 
 ### **Machine Learning Systems**

@@ -39,9 +39,9 @@ See the [Schedule](schedule.md) for detailed weekly topics and readings.
 - Sign up by Week 3
 
 ### In-Class Discussion & Attendance (20%)
-- Active participation in class discussions
-- Thoughtful contributions and peer interaction
-- Consistent attendance at all sessions
+- **Class attendance**: Regular attendance at all sessions
+- **Discussion engagement**: Thoughtful contributions to paper discussions
+- **Peer interaction**: Constructive feedback and questions during presentations
 
 ### Final Paper Integration (15%)
 - Collaborative review and finalization of complete survey paper
@@ -72,12 +72,6 @@ All work must be original with proper citation. Collaboration encouraged within 
 
 ---
 
-## Required Materials
-
-- All readings provided via course website
-- Access to academic databases (ACM Digital Library, IEEE Xplore)
-- Laptop for hands-on activities
-
----
-
 *This syllabus may be adjusted based on emerging research and student interests. Changes will be announced in advance.*
+
+**See [Resources](../content/resources) for required materials and library access information.**
