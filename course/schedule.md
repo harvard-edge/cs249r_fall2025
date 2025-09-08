@@ -4,8 +4,6 @@ layout: default
 
 # Schedule & Readings
 
----
-
 ## Course Schedule
 
 *"The goal isn't to read everything, but to read the right things deeply and connect them meaningfully."*
