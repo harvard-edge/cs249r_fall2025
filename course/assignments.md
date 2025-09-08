@@ -89,8 +89,6 @@ flowchart TD
     style J fill:#fff3e0
 </div>
 
-</details>
-
 ---
 
 ## Survey Paper Checkpoints
@@ -106,8 +104,7 @@ flowchart TD
 
 Each checkpoint focuses on **systematic research development**, building toward a publication-quality survey paper through structured milestones.
 
-<details>
-<summary><strong>📋 Checkpoint 1 Details: Literature Survey</strong></summary>
+### 📋 Checkpoint 1: Literature Survey
 
 **Deliverable**: Comprehensive review of relevant papers in your section (4-5 pages)  
 **Requirements**:
@@ -116,10 +113,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 - Detailed plan for tables/figures to be generated from existing data
 - Methodology for data collection and analysis documented
 
-</details>
-
-<details>
-<summary><strong>📊 Checkpoint 2 Details: Data-Driven Exercise</strong></summary>
+### 📊 Checkpoint 2: Data-Driven Exercise
 
 **Deliverable**: Technical results with generated tables and figures (10-12 pages)  
 **Requirements**:
@@ -128,10 +122,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 - Draft survey sections with quantitative findings integrated
 - Cross-references and data connections to other sections identified
 
-</details>
-
-<details>
-<summary><strong>📖 Checkpoint 3 Details: First Draft</strong></summary>
+### 📖 Checkpoint 3: First Draft
 
 **Deliverable**: Complete draft of your survey section (12-15 pages)  
 **Requirements**:
@@ -139,8 +130,6 @@ Each checkpoint focuses on **systematic research development**, building toward 
 - Quantitative analysis seamlessly integrated into narrative
 - Cross-cutting themes supported by comparative data and visualizations
 - Future research directions based on identified gaps and trends
-
-</details>
 
 ---
 
