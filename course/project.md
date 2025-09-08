@@ -111,26 +111,47 @@ graph LR
 
 ## Timeline: Three-Checkpoint Pipeline
 
-<div class="mermaid">
-flowchart TD
-    A["Week 1-2: Section Assignment<br/>Choose your focus area"] --> B["Week 3: Planning Meeting<br/>Define your data analysis plan"]
-    B --> C["Weeks 4-8: Research Phase<br/>Literature review + data extraction"]
-    C --> D{"Which section?"}
-    D -->|Software Teams| E["📋 Week 8: Checkpoint 1<br/>Literature foundation"]
-    D -->|Architecture Teams| F["📊 Week 12: Checkpoint 2<br/>Draft analysis"]
-    D -->|Chip Design Teams| G["📖 Week 16: Checkpoint 3<br/>Final integration"]
-    E --> H["Continue research<br/>& writing"]
-    F --> I["Finalize sections<br/>& cross-references"]
-    G --> J["Paper assembly<br/>& polish"]
-    H --> J
-    I --> J
-    J --> K["🎯 Week 17: Final Presentations<br/>Complete survey paper"]
+{: .pipeline-diagram}
+**Staggered Pipeline Timeline:**
+```
+Course Learning Flow ──────────→ Survey Research Pipeline
+
+Weeks 1-2: Track Assignment    ──→ All Students: Choose vertical focus
+    │                               │
+    ↓                               ↓
     
-    style E fill:#e1f5fe
-    style F fill:#f3e5f5
-    style G fill:#e8f5e8
-    style K fill:#fff3e0
-</div>
+Weeks 2-8: Learn Software      ──→ 🔧 Software Track: Deep research work
+    │ (Software teams active)       │ Literature + data analysis
+    ↓                               ↓
+    
+Week 8: Software Checkpoint    ──→ 📋 Checkpoint 1: Software vertical analysis
+    │                               │
+    ↓                               ↓
+    
+Weeks 6-12: Learn Architecture ──→ 🏗️ Architecture Track: Deep research work  
+    │ (Architecture teams active)   │ Literature + data analysis
+    ↓                               ↓
+    
+Week 12: Architecture Checkpoint ──→ 📊 Checkpoint 2: Architecture vertical analysis
+    │                               │
+    ↓                               ↓
+    
+Weeks 10-16: Learn EDA         ──→ ⚡ EDA Track: Deep research work
+    │ (EDA teams active)            │ Literature + data analysis
+    ↓                               ↓
+    
+Week 16: EDA Checkpoint        ──→ 📖 Checkpoint 3: EDA vertical + cross-layer integration
+    │                               │
+    ↓                               ↓
+    
+Week 17: Final Integration     ──→ 🎯 All Teams: Final presentations
+```
+
+**The Pipeline Logic:**
+- **Software teams** start intensive work early (Weeks 2-8) while learning software topics
+- **Architecture teams** begin their deep work in the middle (Weeks 6-12) while learning architecture  
+- **EDA teams** start their intensive work later (Weeks 10-16) while learning EDA topics
+- **Staggered deadlines** prevent bottlenecks and align with course learning phases
 
 ---
 
