@@ -16,7 +16,7 @@ layout: default
 
 ## Project Structure
 
-### The Complete Survey Paper (18-22 pages)
+### The Complete Survey Paper (35-45 pages)
 
 **"Agentic AI for Computer Systems Design: A Holistic Cross-Stack Perspective"**
 
@@ -72,9 +72,11 @@ graph LR
 - **Software ↔ EDA**: End-to-end optimization, direct software-to-silicon workflows
 - End-to-end agentic design workflows that span all three layers
 
-**8. Conclusion & Future Directions** (1-2 pages)
+**8. Conclusion & Future Directions** (2 pages)
 - Research roadmap and concrete opportunities
 - Vision for unified agentic design ecosystem
+
+**Expected Total Length: 35-45 pages** (substantial publication-quality survey)
 
 ---
 
@@ -180,7 +182,7 @@ flowchart TD
     O --> Q
     P --> Q
     
-    Q --> R["🎯 Dec 1: Final Presentations<br/>Complete Survey Papers"]
+    Q --> R["🎯 Dec 1: Final Submission<br/>Complete Survey Papers"]
     
     style H fill:#e1f5fe
     style L fill:#f3e5f5
@@ -205,7 +207,7 @@ flowchart TD
 | **Week 8** | **Checkpoint 1** | Software Teams | Literature Foundation | 4-5 pages | 20-25 papers analyzed, data extraction plan, preliminary figures |
 | **Week 12** | **Checkpoint 2** | Architecture Teams | Draft Analysis | 10-12 pages | Complete data analysis, comparative tables/figures, draft sections |
 | **Week 16** | **Checkpoint 3** | Chip Design Teams | Section Integration | 15-18 pages | Polished sections, cross-references, integration with other sections |
-| **Week 17** | **Final Presentation** | All Teams | Complete Survey | 18-22 pages | Publication-ready paper + 15-minute presentations |
+| **Week 17** | **Final Submission** | All Teams | Complete Survey | 35-45 pages | Publication-ready paper submitted |
 
 ---
 
@@ -287,6 +289,25 @@ flowchart TD
 - **Cross-team presentations** of key findings and visualizations  
 - **Instructor review of all analytical contributions** before final integration
 - **External expert feedback** on complete draft before submission
+
+---
+
+## Student-Driven Paper Presentations
+
+**Throughout the semester, your group will present papers from the course schedule related to your specialization area:**
+
+- **Software Groups (A & B)**: Present papers during Weeks 2-5 (Software phase)
+- **Architecture Groups (C & D)**: Present papers during Weeks 6-9 (Architecture phase)  
+- **EDA Groups (E & F)**: Present papers during Weeks 10-12 (EDA phase)
+
+**Presentation Responsibilities:**
+- **Lead the discussion** of assigned papers in your domain
+- **Connect papers to your survey research** and identify relevant data/insights
+- **Guide class analysis** of methodologies and findings
+- **Facilitate Q&A** and synthesis with other course themes
+- **Extract data and insights** for your survey section during presentations
+
+This integration ensures your survey research is directly informed by the papers you're presenting and discussing in class.
 
 ---
 
