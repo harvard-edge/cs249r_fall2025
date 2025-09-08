@@ -22,42 +22,48 @@ layout: default
 
 **Tentative Paper Outline:**
 
-**1. Introduction** (2-3 pages)
-- Problem motivation and scope definition
-- Cross-stack perspective and unique contributions
+**1. Introduction** (1-2 pages)
+- Problem motivation: Why generative AI changes everything for systems design
+- Cross-stack perspective and unique contributions of this survey
 
-**2. Background & Motivation** (2-3 pages)
-- Evolution from heuristic-based to agentic design
-- Taxonomy of AI agent methodologies
+**2. Background** (2-3 pages)
+- Focus on **generative/agentic AI** (LLMs, diffusion models, RL agents)
+- Distinction from traditional ML-driven approaches (which have existing surveys)
+- Evolution from heuristic-based → ML-driven → agentic design paradigms
 
 **3. Related Work** (2-3 pages)
-- Survey of existing work across abstraction levels
-- Gap analysis and positioning
+- Existing surveys on ML for systems (what we're NOT doing)
+- Gap analysis: Why cross-stack agentic perspective is missing
+- Positioning our unique contribution
 
-**4. AI Agents for Software Systems** (4-5 pages)
+**4. Agentic AI for Software Systems** (4-5 pages)
 - Code generation, optimization, and performance engineering
-- *Cross-cutting theme: Agent-driven software-hardware co-optimization*
+- *Team Focus: Software vertical*
 
-**5. AI Agents for Architecture Design** (4-5 pages)  
+**5. Agentic AI for Architecture Design** (4-5 pages)  
 - Performance prediction, design space exploration, and accelerator design
-- *Cross-cutting theme: Multi-objective optimization and design trade-offs*
+- *Team Focus: Architecture vertical*
 
-**6. AI Agents for Physical Implementation** (4-5 pages)
+**6. Agentic AI for Physical Implementation** (4-5 pages)
 - RTL synthesis, placement & routing, and verification
-- *Cross-cutting theme: Constraint satisfaction and manufacturing considerations*
+- *Team Focus: EDA vertical*
 
-**7. Cross-Stack Analysis & Future Directions** (3-4 pages)
-- Methodological connections and unified frameworks
-- Research gaps and concrete future opportunities
-- *Evaluation insights integrated throughout thematic sections*
+**7. Cross-Stack Connections & Integration** (3-4 pages)
+- **The key insight**: How knowledge propagates between layers
+- Software ↔ Architecture ↔ EDA connection analysis
+- End-to-end agentic design workflows
+
+**8. Conclusion & Future Directions** (1-2 pages)
+- Research roadmap and concrete opportunities
+- Vision for unified agentic design ecosystem
 
 ---
 
-## Your Role: Data-Driven Analysis
+## Your Role: Focused Vertical Analysis
 
 ### What Every Student Contributes
 
-**You will be assigned to one section (2-3 students per section) and must provide:**
+**You will be assigned to one vertical track (2-3 students per track) and must provide:**
 
 1. **Comprehensive Literature Analysis** (20-25 key papers in your section)
 2. **Data-Driven Insights** through systematic extraction and analysis of existing results
