@@ -6,11 +6,12 @@ layout: default
 
 ## Assignment Overview
 
-This course emphasizes **active engagement** with cutting-edge research through three main components:
+This course emphasizes **active engagement** with cutting-edge research through four main components:
 
-- **Survey Paper Checkpoints**: Three milestone checkpoints supporting the collaborative survey paper
-- **Paper Presentations & Discussion Leadership**: Facilitating class discussions and synthesis
-- **Group Survey Paper Project**: Collaborative research surveys advancing the field
+- **Survey Paper Checkpoints**: Three milestone checkpoints (45% total)
+- **Final Paper Integration**: Collaborative review and finalization (15%)
+- **Paper Presentations**: Individual presentations of assigned papers (20%)
+- **Paper Discussion and Attendance**: Participation in class discussions (20%)
 
 ---
 
@@ -21,17 +22,64 @@ This course emphasizes **active engagement** with cutting-edge research through 
 **Timeline**: Aligned with course phases and survey paper development
 
 ### Checkpoint Structure
-- **Checkpoint 1**: Literature foundation and research planning
-- **Checkpoint 2**: Data analysis and draft sections  
-- **Checkpoint 3**: Integration and final paper preparation
+- **Checkpoint 1 (15%)**: Literature survey - Comprehensive review of relevant papers in your section
+- **Checkpoint 2 (15%)**: Data-driven exercise - Gathering results, creating plots/tables, assembling raw data  
+- **Checkpoint 3 (15%)**: First draft of your section - Complete draft of your survey section
 
-Each checkpoint focuses on **research progress and quality** within the survey paper project, ensuring systematic development of publication-quality work.
+Each checkpoint focuses on **systematic research development**, building toward a publication-quality survey paper through structured milestones.
 
-*Detailed checkpoint specifications will be posted throughout the semester.*
+<details>
+<summary><strong>📋 Checkpoint 1 Details: Literature Survey</strong></summary>
+
+**Deliverable**: Comprehensive review of relevant papers in your section (4-5 pages)  
+**Requirements**:
+- 20-25 key papers identified with data extraction plan
+- Cross-cutting themes and quantitative analysis opportunities identified
+- Detailed plan for tables/figures to be generated from existing data
+- Methodology for data collection and analysis documented
+
+</details>
+
+<details>
+<summary><strong>📊 Checkpoint 2 Details: Data-Driven Exercise</strong></summary>
+
+**Deliverable**: Technical results with generated tables and figures (10-12 pages)  
+**Requirements**:
+- Completed data analysis with generated tables and figures
+- Comparative analysis revealing new insights from existing literature
+- Draft survey sections with quantitative findings integrated
+- Cross-references and data connections to other sections identified
+
+</details>
+
+<details>
+<summary><strong>📖 Checkpoint 3 Details: First Draft</strong></summary>
+
+**Deliverable**: Complete draft of your survey section (12-15 pages)  
+**Requirements**:
+- Comprehensive cross-stack analysis with data-driven insights
+- Quantitative analysis seamlessly integrated into narrative
+- Cross-cutting themes supported by comparative data and visualizations
+- Future research directions based on identified gaps and trends
+
+</details>
 
 ---
 
-## 2. Paper Presentations & Discussion Leadership (25%)
+## 2. Final Paper Integration (15%)
+
+**Format**: Collaborative review and finalization of the complete survey paper  
+**Purpose**: Ensure coherent, publication-quality final paper through group coordination  
+**Timeline**: Final weeks of the semester
+
+### Integration Process
+- **Cross-section coordination**: Ensuring consistency and flow between sections
+- **Final review and editing**: Collaborative refinement of the complete paper
+- **Quality assurance**: Meeting publication standards for target venues
+
+---
+
+## 3. Paper Presentations (20%)
 
 **Format**: Present and lead discussion for assigned papers (individually or in pairs)  
 **Structure**: 20-minute presentation + 20-minute facilitated discussion per paper  
@@ -55,29 +103,66 @@ Each checkpoint focuses on **research progress and quality** within the survey p
 
 ---
 
-## 3. Collaborative Survey Paper Project (30%)
+## 4. In-Class Paper Discussion and Attendance (20%)
 
-{: .course-goal}
-> **📋 Complete Project Details**: For comprehensive information about the survey paper project, including detailed timeline, requirements, and examples, visit the dedicated **[Survey Project Page](project)**.
+**Format**: Active participation in class discussions and consistent attendance  
+**Purpose**: Engage with course material through thoughtful discussion and peer interaction  
+**Timeline**: Throughout the semester
 
-**Format**: Single comprehensive survey paper created collaboratively by all students  
-**Scope**: "Agentic AI for Computer Systems Design: A Holistic Cross-Stack Perspective"  
-**Goal**: Produce a publication-quality survey that synthesizes AI agent methodologies across the complete computing stack
+### Participation Components
+- **Class attendance**: Regular attendance at all sessions
+- **Discussion engagement**: Thoughtful contributions to paper discussions
+- **Peer interaction**: Constructive feedback and questions during presentations
 
-### The Vision: Cross-Cutting Analysis
+---
 
-Rather than creating separate papers on individual topics, this class will produce **one comprehensive survey** that examines how AI agents are transforming computer systems design holistically—from software optimization to chip design. The value lies in identifying cross-cutting themes, methodological connections, and system-level insights that emerge when viewing these technologies as an integrated ecosystem.
+## Survey Paper Project Overview
 
-{: .rationale-box}
-### Why This Approach? The Value of Survey Research
+**We are creating the definitive cross-stack survey on "Agentic AI for Computer Systems Design"** - the first comprehensive analysis that examines how AI agents are transforming computer systems design across the complete computing stack, from software optimization to chip design.
 
-**Research Skills Over Implementation**: Rather than coding assignments, this course emphasizes **research synthesis and critical analysis**—the core skills needed to advance the field of AI agents for computer systems design.
+**Why This Matters**: Current research is fragmented across venues (ISCA, MICRO, DAC, MLSys, ICLR). No one has written the systematic cross-stack analysis that shows how these methodologies connect and where the field is heading holistically.
 
-**🔍 Field-Shaping Impact**: The field of AI agents for computer systems is rapidly evolving with scattered research across venues (ISCA, MICRO, DAC, MLSys, ICLR, etc.). High-quality survey papers help consolidate knowledge, identify gaps, and guide future research directions.
+**Target Impact**: Publication-quality paper suitable for top-tier venues like ISCA, MICRO, or Computer Architecture Letters.
 
-**📊 Research Methodology**: Students develop crucial skills in systematic literature review, critical analysis, taxonomy development, gap identification, and technical writing for academic publication.
+<details>
+<summary><strong>📋 Tentative Paper Outline (20-25 pages)</strong></summary>
 
-**🎯 Real Research Impact**: This survey is designed to be a **publication-quality** contribution suitable for top-tier venues like ISCA, MICRO, or Computer Architecture Letters—providing the field's first comprehensive cross-stack analysis of agentic AI methodologies.
+**"Agentic AI for Computer Systems Design: A Holistic Cross-Stack Perspective"**
+
+**1. Introduction** (1-2 pages)
+- Problem motivation: Why generative AI changes everything for systems design
+- Cross-stack perspective and unique contributions of this survey
+
+**2. Background** (2-3 pages)
+- Focus on **generative/agentic AI** (LLMs, diffusion models, RL agents)
+- Distinction from traditional ML-driven approaches (which have existing surveys)
+- Evolution from heuristic-based → ML-driven → agentic design paradigms
+
+**3. Related Work** (2-3 pages)
+- Existing surveys on ML for systems (what we're NOT doing)
+- Gap analysis: Why cross-stack agentic perspective is missing
+- Positioning our unique contribution
+
+**4. Agentic AI for Software Systems** (3-4 pages)
+- Code generation, optimization, and performance engineering
+- *Team Focus: Software vertical*
+
+**5. Agentic AI for Architecture Design** (3-4 pages)  
+- Performance prediction, design space exploration, and accelerator design
+- *Team Focus: Architecture vertical*
+
+**6. Agentic AI for Physical Implementation** (3-4 pages)
+- RTL synthesis, placement & routing, and verification
+- *Team Focus: EDA vertical*
+
+**7. Cross-Stack Integration & Future Directions** (2-3 pages)
+- Methodological connections and system-level insights
+- Research gaps and opportunities
+
+**8. Conclusion** (1 page)
+- Summary of key findings and impact
+
+</details>
 
 ### Project Structure & Timeline
 
@@ -85,65 +170,42 @@ Rather than creating separate papers on individual topics, this class will produ
 
 <div class="mermaid">
 flowchart TD
-    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["AI for Software Groups<br/>(2-3 students each)"]
-    A --> C["AI for Architecture Groups<br/>(2-3 students each)"]
-    A --> D["AI for Chip Design Groups<br/>(2-3 students each)"]
+    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["AI for Software<br/>(3-5 students per group)"]
+    A --> C["AI for Architecture<br/>(3-5 students per group)"]
+    A --> D["AI for Chip Design<br/>(3-5 students per group)"]
     
-    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Research Literature"]
-    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research"]
-    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research"]
+    B --> F1["📋 Checkpoint 1: Literature Survey"]
+    C --> F2["📋 Checkpoint 1: Literature Survey"]
+    D --> F3["📋 Checkpoint 1: Literature Survey"]
     
-    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Groups)"]
+    F1 --> G1["📊 Checkpoint 2: Data-Driven Exercise"]
+    F2 --> G2["📊 Checkpoint 2: Data-Driven Exercise"]
+    F3 --> G3["📊 Checkpoint 2: Data-Driven Exercise"]
     
-    F --> I["Weeks 6-9: Learn Architecture<br/>+ Research Literature"]
-    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research"]
-    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing"]
+    G1 --> H1["📖 Checkpoint 3: First Draft"]
+    G2 --> H2["📖 Checkpoint 3: First Draft"]
+    G3 --> H3["📖 Checkpoint 3: First Draft"]
     
-    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Groups)"]
+    H1 --> I["🎯 Final Integration"]
+    H2 --> I
+    H3 --> I
     
-    J --> M["Weeks 10-12: Learn EDA<br/>+ Research Literature"]
-    K --> N["Weeks 10-12: Finalize Software<br/>Sections"]
-    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections"]
+    I --> J["🎯 Dec 1: Final Presentations<br/>Complete Survey Paper"]
     
-    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Groups)"]
-    
-    N --> Q["Week 13: Final Assembly<br/>All Groups Integrate"]
-    O --> Q
-    P --> Q
-    
-    Q --> R["🎯 Dec 1: Final Presentations<br/>Complete Survey Papers"]
-    
-    style H fill:#e1f5fe
-    style L fill:#f3e5f5
-    style P fill:#e8f5e8
-    style R fill:#fff3e0
+    style F1 fill:#e1f5fe
+    style F2 fill:#e1f5fe
+    style F3 fill:#e1f5fe
+    style G1 fill:#f3e5f5
+    style G2 fill:#f3e5f5
+    style G3 fill:#f3e5f5
+    style H1 fill:#e8f5e8
+    style H2 fill:#e8f5e8
+    style H3 fill:#e8f5e8
+    style J fill:#fff3e0
 </div>
 
-{: .pipeline-diagram}
-**Alternative Text View:**
-```
-Course Learning Flow ──────────→ Survey Research Pipeline
 
-Weeks 1-2: Group Formation    ──→ All Groups: Topic Selection & Approval
-    │                               │
-    ↓                               ↓
-    
-Weeks 2-5: AI for Software    ──→ 📋 Checkpoint 1 (Oct 1): Software Groups
-    │ Learn & Discuss               │ Literature Review (3-4 pages)
-    ↓                               ↓
-    
-Weeks 6-9: AI for Architecture ──→ 📊 Checkpoint 2 (Oct 29): Architecture Groups  
-    │ Learn & Discuss               │ Draft Sections (8-10 pages)
-    ↓                               ↓
-    
-Weeks 10-12: AI for EDA       ──→ 📖 Checkpoint 3 (Nov 19): EDA Groups
-    │ Learn & Discuss               │ Final Papers (12-15 pages)
-    ↓                               ↓
-    
-Week 13: Integration          ──→ 🎯 Final Presentations (Dec 1): All Groups
-```
-
-### Survey Structure: Cross-Stack Sections (2-3 students per section)
+### Survey Structure: Cross-Stack Sections (3-5 students per group)
 
 **The paper will examine agentic AI methodologies across three abstraction levels, with emphasis on cross-cutting themes and system-level insights:**
 
@@ -256,7 +318,7 @@ Week 13: Integration          ──→ 🎯 Final Presentations (Dec 1): All Gr
 **Section Assignment (Week 2):**
 - Students rank preferences for survey sections (1-5)
 - Instructor assigns students balancing technical backgrounds and interests
-- Teams of 2-3 students per section for comprehensive coverage
+- Teams of 3-5 students per group for comprehensive coverage
 
 **Technical Work Planning Meeting (Week 3):**
 - 45-minute meeting with instructor and TAs per team

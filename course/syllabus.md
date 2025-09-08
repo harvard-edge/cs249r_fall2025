@@ -28,22 +28,27 @@ See the [Schedule](schedule.md) for detailed weekly topics and readings.
 
 ## Assignments & Grading
 
-### Weekly Reading Reflections (30%)
-- Weekly 1-2 page reflections on assigned papers
-- Due before each class session
-- Focus on critical analysis and connections to course themes
+### Survey Paper Checkpoints (45%)
+- Three milestone checkpoints (15% each): Literature Survey, Data-Driven Exercise, First Draft
+- Progressive development of publication-quality research
+- Individual work within collaborative framework
 
-### Paper Presentations & Discussion Leadership (30%)
-- Each student leads discussion for 1-2 sessions during the semester
-- Present and lead discussion for assigned papers (individually or in pairs)
-- Prepare questions, facilitate debate, synthesize insights
+### Paper Presentations (20%)
+- Present and lead discussion for assigned papers
+- 20-minute presentation + 20-minute facilitated discussion
 - Sign up by Week 3
 
-### Group Survey Paper Project (40%)
-- Collaborative research survey in teams of 4-5 students
-- Teams focus on one area: AI for Software, AI for Architecture, or AI for Chip Design
-- Individual section contributions with structured checkpoints
-- Final: 15-20 page publication-quality survey paper + presentation
+### In-Class Discussion & Attendance (20%)
+- Active participation in class discussions
+- Thoughtful contributions and peer interaction
+- Consistent attendance at all sessions
+
+### Final Paper Integration (15%)
+- Collaborative review and finalization of complete survey paper
+- Cross-section coordination and quality assurance
+- Final presentation of integrated work
+
+**See [Assignments](assignments) for detailed specifications and requirements.**
 
 ---
 
