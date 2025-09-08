@@ -76,7 +76,7 @@ graph LR
 - Research roadmap and concrete opportunities
 - Vision for unified agentic design ecosystem
 
-**Expected Total Length: 35-45 pages** (substantial publication-quality survey)
+**Expected Total Length: 25-30 pages** (substantial publication-quality survey)
 
 ---
 
@@ -111,44 +111,32 @@ graph LR
     E --> F[Cross-Stack Insights<br/>Novel Connections]
 </div>
 
-**Structured Areas Based on Architecture 2.0 Vision:**
+**Group Structure for 16 Students:**
 
-**🔧 Software Track (6-7 students, 2 groups):**
-- **Group A: Benchmarks & Datasets** (3-4 students)
-  - Comparative analysis of evaluation frameworks (HumanEval, MBPP, SWE-bench)
-  - Dataset evolution and benchmark standardization trends
-  - Performance comparison matrices across different code generation tasks
-
-- **Group B: ML Tools & Best Practices** (3-4 students)
-  - LLM-based development tool analysis and adoption patterns
-  - Compiler optimization technique evolution (2020-2025)
+**🔧 Software Group (5-6 students):**
+- **Focus Areas**: Code generation, compiler optimization, performance engineering
+- **Architecture 2.0 Components**: 
+  - Benchmarks & evaluation frameworks (HumanEval, MBPP, SWE-bench)
+  - ML tools & development practices (LLM-based tools, optimization techniques)
   - Best practices for agentic software development workflows
 
-**🏗️ Architecture Track (6-7 students, 2 groups):**
-- **Group C: Design Space Exploration & Modeling** (3-4 students)
-  - Performance prediction model comparison and accuracy analysis
-  - Design space exploration methodology evolution
-  - Multi-objective optimization framework analysis
+**🏗️ Architecture Group (5-6 students):**
+- **Focus Areas**: Performance prediction, design space exploration, accelerator design
+- **Architecture 2.0 Components**:
+  - Design space exploration methodologies and modeling frameworks
+  - AI accelerator architecture analysis and performance comparisons
+  - Memory system optimization and energy-performance trade-offs
 
-- **Group D: Accelerator Design & Memory Systems** (3-4 students)
-  - AI accelerator architecture trend analysis and performance comparisons
-  - Memory system optimization pattern analysis
-  - Energy-performance Pareto frontier evolution
+**⚡ EDA Group (5-6 students):**
+- **Focus Areas**: RTL synthesis, physical design, verification
+- **Architecture 2.0 Components**:
+  - Synthesis & optimization tool capabilities and QoR analysis
+  - Physical design automation and placement/routing techniques
+  - AI-assisted verification and design rule checking evolution
 
-**⚡ EDA Track (6-7 students, 2 groups):**
-- **Group E: Synthesis & Optimization Tools** (3-4 students)
-  - EDA tool capability matrices and adoption analysis
-  - Synthesis QoR improvement trends and methodology comparison
-  - Logic optimization technique evolution
+**Total: 16 students across 3 groups (5-6 students each)**
 
-- **Group F: Verification & Physical Design** (3-4 students)
-  - AI-assisted verification coverage analysis and tool comparison
-  - Physical design automation trend analysis
-  - Design rule checking and constraint satisfaction evolution
-
-**Total: 18-21 students across 6 specialized groups**
-
-**The Template Structure**: Each group follows the Architecture 2.0 framework of analyzing benchmarks/datasets, tools/methodologies, and best practices within their specialized area, then contributes to the cross-stack integration analysis.
+**The Template Structure**: Each group covers the full Architecture 2.0 framework within their domain - analyzing benchmarks/datasets, tools/methodologies, and best practices, then contributes to the cross-stack integration analysis.
 
 ---
 
@@ -156,29 +144,29 @@ graph LR
 
 <div class="mermaid">
 flowchart TD
-    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["🔧 Software Track<br/>Groups A & B (6-7 students)"]
-    A --> C["🏗️ Architecture Track<br/>Groups C & D (6-7 students)"]
-    A --> D["⚡ EDA Track<br/>Groups E & F (6-7 students)"]
+    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["🔧 Software Group<br/>(5-6 students)"]
+    A --> C["🏗️ Architecture Group<br/>(5-6 students)"]
+    A --> D["⚡ EDA Group<br/>(5-6 students)"]
     
-    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Specialized Research<br/>(Benchmarks/Datasets vs Tools/Practices)"]
-    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research<br/>(Modeling vs Accelerators)"]
-    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research<br/>(Synthesis vs Verification)"]
+    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Research Literature<br/>(Benchmarks, Tools, Best Practices)"]
+    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research<br/>(Modeling, Accelerators, Memory)"]
+    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
     
-    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Groups A & B)"]
+    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Group)"]
     
-    F --> I["Weeks 6-9: Learn Architecture<br/>+ Specialized Research<br/>(Modeling vs Accelerators)"]
-    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research<br/>(Synthesis vs Verification)"]
-    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing<br/>(Groups A & B)"]
+    F --> I["Weeks 6-9: Learn Architecture<br/>+ Research Literature<br/>(Modeling, Accelerators, Memory)"]
+    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
+    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing"]
     
-    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Groups C & D)"]
+    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Group)"]
     
-    J --> M["Weeks 10-12: Learn EDA<br/>+ Specialized Research<br/>(Synthesis vs Verification)"]
-    K --> N["Weeks 10-12: Finalize Software<br/>Sections (Groups A & B)"]
-    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections (Groups C & D)"]
+    J --> M["Weeks 10-12: Learn EDA<br/>+ Research Literature<br/>(Synthesis, Physical Design, Verification)"]
+    K --> N["Weeks 10-12: Finalize Software<br/>Sections"]
+    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections"]
     
-    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Groups E & F)"]
+    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Group)"]
     
-    N --> Q["Week 13: Final Assembly<br/>All 6 Groups Integrate"]
+    N --> Q["Week 13: Final Assembly<br/>All 3 Groups Integrate"]
     O --> Q
     P --> Q
     
@@ -207,7 +195,7 @@ flowchart TD
 | **Week 8** | **Checkpoint 1** | Software Teams | Literature Foundation | 4-5 pages | 20-25 papers analyzed, data extraction plan, preliminary figures |
 | **Week 12** | **Checkpoint 2** | Architecture Teams | Draft Analysis | 10-12 pages | Complete data analysis, comparative tables/figures, draft sections |
 | **Week 16** | **Checkpoint 3** | Chip Design Teams | Section Integration | 15-18 pages | Polished sections, cross-references, integration with other sections |
-| **Week 17** | **Final Submission** | All Teams | Complete Survey | 35-45 pages | Publication-ready paper submitted |
+| **Week 17** | **Final Submission** | All Teams | Complete Survey | 25-30 pages | Publication-ready paper submitted |
 
 ---
 
@@ -296,9 +284,9 @@ flowchart TD
 
 **Throughout the semester, your group will present papers from the course schedule related to your specialization area:**
 
-- **Software Groups (A & B)**: Present papers during Weeks 2-5 (Software phase)
-- **Architecture Groups (C & D)**: Present papers during Weeks 6-9 (Architecture phase)  
-- **EDA Groups (E & F)**: Present papers during Weeks 10-12 (EDA phase)
+- **Software Group**: Present papers during Weeks 2-5 (Software phase)
+- **Architecture Group**: Present papers during Weeks 6-9 (Architecture phase)  
+- **EDA Group**: Present papers during Weeks 10-12 (EDA phase)
 
 **Presentation Responsibilities:**
 - **Lead the discussion** of assigned papers in your domain
