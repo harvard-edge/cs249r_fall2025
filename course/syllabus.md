@@ -73,5 +73,3 @@ All work must be original with proper citation. Collaboration encouraged within 
 ---
 
 *This syllabus may be adjusted based on emerging research and student interests. Changes will be announced in advance.*
-
-**See [Resources](../content/resources) for required materials and library access information.**
