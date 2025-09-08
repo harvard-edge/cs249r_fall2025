@@ -20,25 +20,36 @@ layout: default
 
 **"Agentic AI for Computer Systems Design: A Holistic Cross-Stack Perspective"**
 
-**Section 1: AI Agents for Software Systems** (4-5 pages)
+**Tentative Paper Outline:**
+
+**1. Introduction** (2-3 pages)
+- Problem motivation and scope definition
+- Cross-stack perspective and unique contributions
+
+**2. Background & Motivation** (2-3 pages)
+- Evolution from heuristic-based to agentic design
+- Taxonomy of AI agent methodologies
+
+**3. Related Work** (2-3 pages)
+- Survey of existing work across abstraction levels
+- Gap analysis and positioning
+
+**4. AI Agents for Software Systems** (4-5 pages)
 - Code generation, optimization, and performance engineering
 - *Cross-cutting theme: Agent-driven software-hardware co-optimization*
 
-**Section 2: AI Agents for Architecture Design** (4-5 pages)  
+**5. AI Agents for Architecture Design** (4-5 pages)  
 - Performance prediction, design space exploration, and accelerator design
 - *Cross-cutting theme: Multi-objective optimization and design trade-offs*
 
-**Section 3: AI Agents for Physical Implementation** (4-5 pages)
+**6. AI Agents for Physical Implementation** (4-5 pages)
 - RTL synthesis, placement & routing, and verification
 - *Cross-cutting theme: Constraint satisfaction and manufacturing considerations*
 
-**Section 4: Cross-Stack Integration & Future Directions** (3-4 pages)
-- Methodological connections, API design, and holistic system design
-- *Cross-cutting theme: End-to-end agentic design workflows*
-
-**Section 5: Evaluation Frameworks & Benchmarking** (2-3 pages)
-- Comparative analysis, metrics, and reproducibility
-- *Cross-cutting theme: Standardized evaluation across abstraction levels*
+**7. Cross-Stack Analysis & Future Directions** (3-4 pages)
+- Methodological connections and unified frameworks
+- Research gaps and concrete future opportunities
+- *Evaluation insights integrated throughout thematic sections*
 
 ---
 
@@ -95,46 +106,38 @@ graph LR
 ## Timeline: Three-Checkpoint Pipeline
 
 <div class="mermaid">
-gantt
-    title Survey Paper Project Timeline
-    dateFormat  YYYY-MM-DD
+flowchart TD
+    A["Week 1-2: Section Assignment<br/>Choose your focus area"] --> B["Week 3: Planning Meeting<br/>Define your data analysis plan"]
+    B --> C["Weeks 4-8: Research Phase<br/>Literature review + data extraction"]
+    C --> D{"Which section?"}
+    D -->|Software Teams| E["📋 Week 8: Checkpoint 1<br/>Literature foundation"]
+    D -->|Architecture Teams| F["📊 Week 12: Checkpoint 2<br/>Draft analysis"]
+    D -->|Chip Design Teams| G["📖 Week 16: Checkpoint 3<br/>Final integration"]
+    E --> H["Continue research<br/>& writing"]
+    F --> I["Finalize sections<br/>& cross-references"]
+    G --> J["Paper assembly<br/>& polish"]
+    H --> J
+    I --> J
+    J --> K["🎯 Week 17: Final Presentations<br/>Complete survey paper"]
     
-    section Setup Phase
-    Section Assignment           :milestone, assign, 2025-09-08, 0d
-    Technical Planning Meetings  :planning, 2025-09-15, 2025-09-19
-    
-    section Software Phase
-    Software Learning & Research :active, sw_research, 2025-09-08, 2025-10-01
-    Checkpoint 1 Reviews        :milestone, cp1, 2025-10-01, 2025-10-03
-    
-    section Architecture Phase
-    Architecture Learning & Research :active, arch_research, 2025-10-06, 2025-10-29
-    Software Continued Analysis     :continue1, 2025-10-06, 2025-10-29
-    Checkpoint 2 Reviews           :milestone, cp2, 2025-10-29, 2025-10-31
-    
-    section Chip Design Phase
-    EDA Learning & Research        :active, eda_research, 2025-11-03, 2025-11-19
-    Software Final Integration     :final1, 2025-11-03, 2025-11-19
-    Architecture Final Integration :final2, 2025-11-03, 2025-11-19
-    Checkpoint 3 Reviews          :milestone, cp3, 2025-11-19, 2025-11-21
-    
-    section Final Phase
-    Paper Integration & Polish     :integration, 2025-11-24, 2025-12-01
-    Final Presentations           :milestone, present, 2025-12-01, 0d
+    style E fill:#e1f5fe
+    style F fill:#f3e5f5
+    style G fill:#e8f5e8
+    style K fill:#fff3e0
 </div>
 
 ---
 
 ## Detailed Timeline & Deadlines
 
-| Date | Checkpoint | Who | Deliverable | Page Count | Key Requirements |
+| Week | Checkpoint | Who | Deliverable | Page Count | Key Requirements |
 |------|------------|-----|-------------|------------|------------------|
-| **Sep 8** | Section Assignment | All Students | - | - | Preference ranking submitted |
-| **Sep 15-19** | Planning Meetings | All Teams | Meeting with faculty | - | Technical work plan approved |
-| **Oct 1** | **Checkpoint 1** | Software Teams | Literature Foundation | 4-5 pages | 20-25 papers analyzed, data extraction plan, preliminary figures |
-| **Oct 29** | **Checkpoint 2** | Architecture Teams | Draft Analysis | 10-12 pages | Complete data analysis, comparative tables/figures, draft sections |
-| **Nov 19** | **Checkpoint 3** | Chip Design Teams | Section Integration | 15-18 pages | Polished sections, cross-references, integration with other sections |
-| **Dec 1** | **Final Presentation** | All Teams | Complete Survey | 18-22 pages | Publication-ready paper + 15-minute presentations |
+| **Week 2** | Section Assignment | All Students | Preference Form | - | Rank your top 3 section preferences |
+| **Week 3** | Planning Meetings | All Teams | Meeting with TAs & Instructor | - | Data analysis plan approved |
+| **Week 8** | **Checkpoint 1** | Software Teams | Literature Foundation | 4-5 pages | 20-25 papers analyzed, data extraction plan, preliminary figures |
+| **Week 12** | **Checkpoint 2** | Architecture Teams | Draft Analysis | 10-12 pages | Complete data analysis, comparative tables/figures, draft sections |
+| **Week 16** | **Checkpoint 3** | Chip Design Teams | Section Integration | 15-18 pages | Polished sections, cross-references, integration with other sections |
+| **Week 17** | **Final Presentation** | All Teams | Complete Survey | 18-22 pages | Publication-ready paper + 15-minute presentations |
 
 ---
 
@@ -206,16 +209,16 @@ gantt
 ## Support & Resources
 
 ### Getting Help
-- **Weekly office hours** with TAs for technical guidance
-- **Cross-team integration meetings** to ensure coherent narrative
-- **Faculty review sessions** at each checkpoint
-- **Peer feedback** through structured review process
+- **Weekly TA office hours** for technical guidance and methodology support
+- **Cross-team integration meetings** to ensure coherent narrative across sections
+- **Instructor review sessions** at each major checkpoint
+- **Peer feedback sessions** through structured cross-team reviews
 
 ### Quality Assurance
-- **Data analysis review sessions** with TAs to validate methodology
+- **TA-led methodology review sessions** to validate data analysis approaches
 - **Cross-team presentations** of key findings and visualizations  
-- **Faculty review of analytical contributions** before integration
-- **External reviewer feedback** on final paper before submission
+- **Instructor review of all analytical contributions** before final integration
+- **External expert feedback** on complete draft before submission
 
 ---
 
