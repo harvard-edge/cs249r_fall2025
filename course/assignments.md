@@ -8,23 +8,23 @@ layout: default
 
 This course emphasizes **active engagement** with cutting-edge research through four main components:
 
-- **Survey Paper Checkpoints**: Three milestone checkpoints (45% total)
-- **Final Paper Integration**: Collaborative review and finalization (15%)
-- **Paper Presentations**: Individual presentations of assigned papers (20%)
-- **Paper Discussion and Attendance**: Participation in class discussions (20%)
+- **Survey Paper Checkpoints**: Three milestone checkpoints
+- **Final Paper Integration**: Collaborative review and finalization
+- **Paper Presentations**: Individual presentations of assigned papers
+- **Paper Discussion and Attendance**: Participation in class discussions
 
 ---
 
-## 1. Survey Paper Checkpoints (45%)
+## 1. Survey Paper Checkpoints
 
-**Format**: Three milestone checkpoints (15% each)  
+**Format**: Three milestone checkpoints  
 **Purpose**: Progressive development and validation of your survey paper research  
 **Timeline**: Aligned with course phases and survey paper development
 
 ### Checkpoint Structure
-- **Checkpoint 1 (15%)**: Literature survey - Comprehensive review of relevant papers in your section
-- **Checkpoint 2 (15%)**: Data-driven exercise - Gathering results, creating plots/tables, assembling raw data  
-- **Checkpoint 3 (15%)**: First draft of your section - Complete draft of your survey section
+- **Checkpoint 1**: Literature survey - Comprehensive review of relevant papers in your section
+- **Checkpoint 2**: Data-driven exercise - Gathering results, creating plots/tables, assembling raw data  
+- **Checkpoint 3**: First draft of your section - Complete draft of your survey section
 
 Each checkpoint focuses on **systematic research development**, building toward a publication-quality survey paper through structured milestones.
 
@@ -66,7 +66,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 2. Final Paper Integration (15%)
+## 2. Final Paper Integration
 
 **Format**: Collaborative review and finalization of the complete survey paper  
 **Purpose**: Ensure coherent, publication-quality final paper through group coordination  
@@ -79,7 +79,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 3. Paper Presentations (20%)
+## 3. Paper Presentations
 
 **Format**: Present and lead discussion for assigned papers (individually or in pairs)  
 **Structure**: 20-minute presentation + 20-minute facilitated discussion per paper  
@@ -103,7 +103,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 ---
 
-## 4. In-Class Paper Discussion and Attendance (20%)
+## 4. In-Class Paper Discussion and Attendance
 
 **Format**: Active participation in class discussions and consistent attendance  
 **Purpose**: Engage with course material through thoughtful discussion and peer interaction  
