@@ -144,29 +144,29 @@ graph LR
 
 <div class="mermaid">
 flowchart TD
-    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["🔧 Software Group<br/>(5-6 students)"]
+    A["Weeks 1-2: Foundations<br/>Sep 3-15: Architecture 2.0 + Group Formation"] --> B["🔧 Software Group<br/>(5-6 students)"]
     A --> C["🏗️ Architecture Group<br/>(5-6 students)"]
     A --> D["⚡ EDA Group<br/>(5-6 students)"]
     
-    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Research Literature<br/>(Benchmarks, Tools, Best Practices)"]
-    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research<br/>(Modeling, Accelerators, Memory)"]
-    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
+    B --> E["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Research Literature<br/>(Benchmarks, Tools, Best Practices)"]
+    C --> F["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Plan Architecture Research<br/>(Modeling, Accelerators, Memory)"]
+    D --> G["Weeks 3-5: Learn Software Topics<br/>Sep 15 - Oct 1: Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
     
     E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Group)"]
     
-    F --> I["Weeks 6-9: Learn Architecture<br/>+ Research Literature<br/>(Modeling, Accelerators, Memory)"]
-    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
-    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing"]
+    F --> I["Weeks 6-9: Learn Architecture<br/>Oct 6-29: Research Literature<br/>(Modeling, Accelerators, Memory)"]
+    G --> J["Weeks 6-9: Learn Architecture<br/>Oct 6-29: Plan EDA Research<br/>(Synthesis, Physical Design, Verification)"]
+    H --> K["Weeks 6-9: Continue Software<br/>Oct 6-29: Research & Writing"]
     
     I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Group)"]
     
-    J --> M["Weeks 10-12: Learn EDA<br/>+ Research Literature<br/>(Synthesis, Physical Design, Verification)"]
-    K --> N["Weeks 10-12: Finalize Software<br/>Sections"]
-    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections"]
+    J --> M["Weeks 10-12: Learn EDA<br/>Nov 3-19: Research Literature<br/>(Synthesis, Physical Design, Verification)"]
+    K --> N["Weeks 10-12: Finalize Software<br/>Nov 3-19: Complete Sections"]
+    L --> O["Weeks 10-12: Finalize Architecture<br/>Nov 3-19: Complete Sections"]
     
     M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Group)"]
     
-    N --> Q["Week 13: Final Assembly<br/>All 3 Groups Integrate"]
+    N --> Q["Week 13: Final Assembly<br/>Nov 24-Dec 1: All 3 Groups Integrate"]
     O --> Q
     P --> Q
     
@@ -179,9 +179,10 @@ flowchart TD
 </div>
 
 **The Pipeline Logic:**
-- **Software teams** start intensive work early (Weeks 2-8) while learning software topics
-- **Architecture teams** begin their deep work in the middle (Weeks 6-12) while learning architecture  
-- **EDA teams** start their intensive work later (Weeks 10-16) while learning EDA topics
+- **Weeks 1-2 (Sep 3-15)**: Foundations & Architecture 2.0 + Group formation
+- **Software group** starts intensive work in Weeks 3-5 (Sep 15 - Oct 1) while learning software topics
+- **Architecture group** begins deep work in Weeks 6-9 (Oct 6-29) while learning architecture  
+- **EDA group** starts intensive work in Weeks 10-12 (Nov 3-19) while learning EDA topics
 - **Staggered deadlines** prevent bottlenecks and align with course learning phases
 
 ---
@@ -284,9 +285,9 @@ flowchart TD
 
 **Throughout the semester, your group will present papers from the course schedule related to your specialization area:**
 
-- **Software Group**: Present papers during Weeks 2-5 (Software phase)
-- **Architecture Group**: Present papers during Weeks 6-9 (Architecture phase)  
-- **EDA Group**: Present papers during Weeks 10-12 (EDA phase)
+- **Software Group**: Present papers during Weeks 3-5 (Sep 15 - Oct 1, Software phase)
+- **Architecture Group**: Present papers during Weeks 6-9 (Oct 6-29, Architecture phase)  
+- **EDA Group**: Present papers during Weeks 10-12 (Nov 3-19, EDA phase)
 
 **Presentation Responsibilities:**
 - **Lead the discussion** of assigned papers in your domain
