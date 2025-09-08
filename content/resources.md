@@ -6,28 +6,6 @@ layout: default
 
 ---
 
-## Required Materials
-
-### **Course Readings**
-- All readings provided via course website and schedule
-- Papers available through Harvard Library databases (see below)
-
-### **Technology Requirements**
-- Laptop for hands-on activities and presentations
-- Access to Harvard network for database access
-
-### **Library Access**
-- **[Harvard Library](https://library.harvard.edu/)**: Primary access point for all resources
-- **[ACM Digital Library](https://dl.acm.org/)** (via Harvard): ISCA, MICRO, ASPLOS, and other architecture conferences
-- **[IEEE Xplore](https://ieeexplore.ieee.org/)** (via Harvard): DAC, ICCAD, HPCA, and engineering conferences
-- **[Harvard Library Research Guides](https://guides.library.harvard.edu/)**: Subject-specific research assistance
-
-### **Getting Help**
-- **[Cabot Science Library](https://library.harvard.edu/libraries/cabot)**: Physical location for computer science resources
-- **[Research Consultation](https://library.harvard.edu/services/research-support)**: One-on-one help with research strategies
-
----
-
 ## Essential Books
 
 ### **Machine Learning Systems**
@@ -54,28 +32,36 @@ layout: default
 
 ---
 
-## Key Research Tools
+## Required Materials
 
-### **ArchGym**
-**[ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://github.com/srivatsankrishnan/oss-arch-gym)**
-- **What**: RL environment for architecture design space exploration
-- **Use**: Hands-on experience with AI-driven architecture optimization
+### **Course Readings**
+- All readings provided via course website and schedule
+- Papers available through Harvard Library databases (see below)
 
-### **DREAMPlace**
-**[DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement](https://github.com/limbo018/DREAMPlace)**
-- **What**: GPU-accelerated placement engine using deep learning
-- **Use**: Understanding AI applications in physical design
+### **Technology Requirements**
+- Laptop for hands-on activities and presentations
+- Access to Harvard network for database access
 
-### **CompilerGym**
-**[CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research](https://github.com/facebookresearch/CompilerGym)**
-- **What**: RL environments for compiler optimization
-- **Use**: Exploring AI agents for code optimization
+### **Library Access**
+- **[Harvard Library](https://library.harvard.edu/)**: Primary access point for all resources
+- **[ACM Digital Library](https://dl.acm.org/)** (via Harvard): ISCA, MICRO, ASPLOS, and other architecture conferences
+- **[IEEE Xplore](https://ieeexplore.ieee.org/)** (via Harvard): DAC, ICCAD, HPCA, and engineering conferences
+- **[Harvard Library Research Guides](https://guides.library.harvard.edu/)**: Subject-specific research assistance
+
+### **Getting Help**
+- **[Cabot Science Library](https://library.harvard.edu/libraries/cabot)**: Physical location for computer science resources
+- **[Research Consultation](https://library.harvard.edu/services/research-support)**: One-on-one help with research strategies
 
 ---
 
-## Paper Access
+## Research Tools & Paper Access
 
-### **Primary Sources**
+### **Research Platforms**
+- **[ArchGym](https://github.com/srivatsankrishnan/oss-arch-gym)**: RL environment for architecture design space exploration
+- **[DREAMPlace](https://github.com/limbo018/DREAMPlace)**: GPU-accelerated placement engine using deep learning
+- **[CompilerGym](https://github.com/facebookresearch/CompilerGym)**: RL environments for compiler optimization
+
+### **Paper Sources**
 - **[ACM Digital Library](https://dl.acm.org/)**: ISCA, MICRO, ASPLOS papers
 - **[IEEE Xplore](https://ieeexplore.ieee.org/)**: DAC, ICCAD, HPCA papers
 - **[arXiv](https://arxiv.org/)**: Latest preprints in cs.AR and cs.LG
