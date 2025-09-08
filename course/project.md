@@ -50,8 +50,27 @@ layout: default
 
 **7. Cross-Stack Connections & Integration** (3-4 pages)
 - **The key insight**: How knowledge propagates between layers
-- Software ↔ Architecture ↔ EDA connection analysis
-- End-to-end agentic design workflows
+- Connection analysis between all three domains:
+
+<div class="mermaid">
+graph LR
+    SW["🔧 Software Layer<br/>Code Generation<br/>Compiler Optimization<br/>Performance Engineering"]
+    ARCH["🏗️ Architecture Layer<br/>Design Space Exploration<br/>Accelerator Design<br/>Memory Systems"]
+    EDA["⚡ EDA Layer<br/>RTL Synthesis<br/>Physical Design<br/>Verification"]
+    
+    SW <-->|"Performance Feedback<br/>Hardware-Aware Optimization"| ARCH
+    ARCH <-->|"Design Constraints<br/>Physical Feasibility"| EDA
+    SW <-.->|"End-to-End Optimization<br/>Software-Hardware Co-design"| EDA
+    
+    style SW fill:#e1f5fe
+    style ARCH fill:#f3e5f5
+    style EDA fill:#e8f5e8
+</div>
+
+- **Software ↔ Architecture**: Performance feedback loops, hardware-aware code optimization
+- **Architecture ↔ EDA**: Design constraint propagation, physical feasibility validation  
+- **Software ↔ EDA**: End-to-end optimization, direct software-to-silicon workflows
+- End-to-end agentic design workflows that span all three layers
 
 **8. Conclusion & Future Directions** (1-2 pages)
 - Research roadmap and concrete opportunities
@@ -112,37 +131,39 @@ graph LR
 ## Timeline: Three-Checkpoint Pipeline
 
 <div class="mermaid">
-gantt
-    title Staggered Pipeline - Teams Start When Learning Their Domain
-    dateFormat  X
-    axisFormat %s
+flowchart TD
+    A["Week 1-2: Course Setup<br/>Group Formation"] --> B["AI for Software Groups<br/>(2-3 students each)"]
+    A --> C["AI for Architecture Groups<br/>(2-3 students each)"]
+    A --> D["AI for Chip Design Groups<br/>(2-3 students each)"]
     
-    section All Students
-    Track Assignment           :milestone, assign, 2, 0
-    Planning Meetings          :planning, 3, 1
+    B --> E["Weeks 2-5: Learn Software Topics<br/>+ Research Literature"]
+    C --> F["Weeks 2-5: Learn Software Topics<br/>+ Plan Architecture Research"]
+    D --> G["Weeks 2-5: Learn Software Topics<br/>+ Plan EDA Research"]
     
-    section Software Track
-    Learn Software Topics      :active, sw_learn, 2, 6
-    Deep Research Work         :sw_research, 4, 4
-    Checkpoint 1 Due           :milestone, cp1, 8, 0
-    Continue Writing           :sw_write, 9, 8
+    E --> H["📋 Checkpoint 1: Oct 1<br/>Literature Review<br/>(Software Groups)"]
     
-    section Architecture Track
-    Plan While Learning        :arch_plan, 2, 4
-    Learn Architecture Topics  :active, arch_learn, 6, 6
-    Deep Research Work         :arch_research, 8, 4
-    Checkpoint 2 Due           :milestone, cp2, 12, 0
-    Continue Writing           :arch_write, 13, 4
+    F --> I["Weeks 6-9: Learn Architecture<br/>+ Research Literature"]
+    G --> J["Weeks 6-9: Learn Architecture<br/>+ Plan EDA Research"]
+    H --> K["Weeks 6-9: Continue Software<br/>Research & Writing"]
     
-    section EDA Track
-    Plan While Learning        :eda_plan, 2, 8
-    Learn EDA Topics           :active, eda_learn, 10, 6
-    Deep Research Work         :eda_research, 12, 4
-    Checkpoint 3 Due           :milestone, cp3, 16, 0
+    I --> L["📊 Checkpoint 2: Oct 29<br/>Draft Sections<br/>(Architecture Groups)"]
     
-    section Final Integration
-    All Teams Integrate        :integration, 17, 1
-    Final Presentations        :milestone, present, 17, 0
+    J --> M["Weeks 10-12: Learn EDA<br/>+ Research Literature"]
+    K --> N["Weeks 10-12: Finalize Software<br/>Sections"]
+    L --> O["Weeks 10-12: Finalize Architecture<br/>Sections"]
+    
+    M --> P["📖 Checkpoint 3: Nov 19<br/>Final Integration<br/>(EDA Groups)"]
+    
+    N --> Q["Week 13: Final Assembly<br/>All Groups Integrate"]
+    O --> Q
+    P --> Q
+    
+    Q --> R["🎯 Dec 1: Final Presentations<br/>Complete Survey Papers"]
+    
+    style H fill:#e1f5fe
+    style L fill:#f3e5f5
+    style P fill:#e8f5e8
+    style R fill:#fff3e0
 </div>
 
 **The Pipeline Logic:**
