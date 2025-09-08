@@ -8,26 +8,26 @@ layout: default
 
 This course emphasizes **active engagement** with cutting-edge research through three main components:
 
-- **Programming Assignments**: Three hands-on assignments exposing students to AI for systems design
+- **Survey Paper Checkpoints**: Three milestone checkpoints supporting the collaborative survey paper
 - **Paper Presentations & Discussion Leadership**: Facilitating class discussions and synthesis
 - **Group Survey Paper Project**: Collaborative research surveys advancing the field
 
 ---
 
-## 1. Programming Assignments (45%)
+## 1. Survey Paper Checkpoints (45%)
 
-**Format**: Three hands-on programming assignments (15% each)  
-**Purpose**: Experimentation and analysis to support your survey paper research  
-**Timeline**: Aligned with course phases (software, architecture, chip design)
+**Format**: Three milestone checkpoints (15% each)  
+**Purpose**: Progressive development and validation of your survey paper research  
+**Timeline**: Aligned with course phases and survey paper development
 
-### Assignment Structure
-- **Assignment 1**: AI for Software Systems
-- **Assignment 2**: AI for Architecture Design  
-- **Assignment 3**: AI for Chip Design
+### Checkpoint Structure
+- **Checkpoint 1**: Literature foundation and research planning
+- **Checkpoint 2**: Data analysis and draft sections  
+- **Checkpoint 3**: Integration and final paper preparation
 
-Each assignment focuses on **experimentation and analysis** within its respective area, providing hands-on experience that directly supports your survey paper development.
+Each checkpoint focuses on **research progress and quality** within the survey paper project, ensuring systematic development of publication-quality work.
 
-*Detailed assignment specifications will be posted throughout the semester.*
+*Detailed checkpoint specifications will be posted throughout the semester.*
 
 ---
 
@@ -322,12 +322,12 @@ Week 13: Integration          ──→ 🎯 Final Presentations (Dec 1): All Gr
 ## Course Policies
 
 ### Late Work
-- Programming assignments: 10% penalty per day late
+- Survey paper checkpoints: 10% penalty per day late
 - Survey paper project: Extensions require advance notice from entire team
 - Discussion leadership: Must reschedule in advance
 
 ### Collaboration
-- **Programming assignments**: Individual work (collaboration on concepts encouraged)
+- **Survey paper checkpoints**: Individual work within collaborative project framework
 - **Survey paper project**: Required group work (entire class collaboration)
 - **Discussion leadership**: Pairs allowed and encouraged
 
