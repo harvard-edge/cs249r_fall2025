@@ -54,6 +54,10 @@ layout: default
 
 Course overview, logistics, syllabus, and introduction to the vision of AI-driven computing stack design.
 
+**📋 Foundational Reading:**
+- [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
+- [Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/)
+
 **🎤 Guest Speaker(s)**: TBD
 
 **📓 Class Notes**: [September 3 - Course Introduction](../course/notes#september-3---course-introduction--architecture-20) • **Materials**: [Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-3/CS249r_.Architecture.2.0.-.Part.1.pdf) • [All materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-3)
@@ -64,9 +68,10 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. Introduction to datasets and survey paper methodology.
 
 **📋 Foundational Reading:**
-- [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
-- [A Computer Architect's Guide to Designing Abstractions for Intelligent Systems](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/)
 - [QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture](https://arxiv.org/abs/2501.01892)
+- [A Computer Architect's Guide to Designing Abstractions for Intelligent Systems](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/)
+
+**📖 Sampling of Related Papers:**
 - [The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design](https://arxiv.org/abs/1911.05289)
 
 ---
