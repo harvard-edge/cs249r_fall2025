@@ -54,7 +54,7 @@ layout: default
 
 Course overview, logistics, syllabus, and introduction to the vision of AI-driven computing stack design.
 
-**📋 Foundational Reading:**
+**📋 Required Reading:**
 - [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
 - [Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/)
 
@@ -67,11 +67,11 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 
 Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. Introduction to datasets and survey paper methodology.
 
-**📋 Foundational Reading:**
+**📋 Required Reading:**
 - [QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture](https://arxiv.org/abs/2501.01892)
 - [A Computer Architect's Guide to Designing Abstractions for Intelligent Systems](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design](https://arxiv.org/abs/1911.05289)
 
 ---
@@ -88,7 +88,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/pdf/2310.06770.pdf)
 - [Competition-Level Code Generation with AlphaCode](https://arxiv.org/pdf/2203.07814.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [CodeBERT: A Pre-Trained Model for Programming and Natural Languages](https://arxiv.org/pdf/2002.08155.pdf)
 - [Code Llama: Open Foundation Models for Code](https://arxiv.org/pdf/2308.12950.pdf)
 - [AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation](https://arxiv.org/pdf/2312.13010.pdf)
@@ -105,7 +105,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers](https://arxiv.org/pdf/2410.15736.pdf)
 - [Learning Performance-Improving Code Edits](https://arxiv.org/pdf/2302.07867.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [Compiler-R1: Towards Agentic Compiler Auto-tuning with Reinforcement Learning](https://arxiv.org/pdf/2506.15701.pdf)
 - [Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation](https://arxiv.org/pdf/1808.07412.pdf)
 - [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research](https://arxiv.org/pdf/2109.08267.pdf)
@@ -124,7 +124,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/pdf/2411.14594.pdf)
 - [Kevin: Multi-Turn RL for Generating CUDA Kernels](https://arxiv.org/pdf/2411.16922.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms](https://research.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)
 - [Ansor: Generating High-Performance Tensor Programs for Deep Learning](https://arxiv.org/pdf/2006.06762.pdf)
 - [Reinforcement Learning for FPGA Placement](https://dl.acm.org/doi/pdf/10.1145/3400302.3415618)
@@ -140,7 +140,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [COSMIC: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems](https://arxiv.org/pdf/2401.13466.pdf)
 - [Reinforcement Learning for Datacenter Congestion Control](https://arxiv.org/pdf/2102.09337.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [Spatio-Temporal Self-Supervised Learning for Traffic Flow Prediction](https://arxiv.org/pdf/2212.04475.pdf)
 - [Remy: TCP ex Machina](https://web.mit.edu/remy/)
 - [Decima: Learning Scheduling Algorithms for Data Processing Clusters](https://arxiv.org/pdf/1810.01963.pdf)
@@ -163,7 +163,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://arxiv.org/pdf/2206.08515.pdf)
 - [Multi-Agent Reinforcement Learning for Microprocessor Design Space Exploration](https://arxiv.org/pdf/2211.16385.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://arxiv.org/pdf/2010.11823.pdf)
 - [NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference](https://www.microsoft.com/en-us/research/uploads/prod/2024/05/NeuSight.pdf)
 - [HyperMapper 2.0: Interactive and Adaptive Design Space Exploration for Multi-objective Optimization](https://arxiv.org/pdf/2105.12826.pdf)
@@ -181,7 +181,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators](https://arxiv.org/pdf/2403.13677.pdf)
 - [Learning to Optimize Tensor Programs (AutoTVM)](https://arxiv.org/pdf/1805.08166.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [Eyeriss: An Energy-Efficient Reconfigurable Accelerator for Deep Convolutional Neural Networks](https://arxiv.org/pdf/1606.07480.pdf)
 - [In-Datacenter Performance Analysis of a Tensor Processing Unit](https://arxiv.org/pdf/1704.04760.pdf)
 - [SCNN: An Accelerator for Compressed-sparse Convolutional Neural Networks](https://arxiv.org/pdf/1708.04485.pdf)
@@ -200,7 +200,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
 - [The Case for Learned Index Structures](https://arxiv.org/pdf/1712.01208.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [ALEX: An Updatable Adaptive Learned Index](https://arxiv.org/pdf/1905.08898.pdf)
 - [Learning-based Memory Allocation for C++ Server Workloads](https://research.google/pubs/pub49008/)
 - [Designing a Cost-Effective Cache Replacement Policy Using Machine Learning](https://research.google/pubs/pub46599/)
@@ -218,7 +218,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [Efficient LLM Scheduling by Learning to Rank](https://arxiv.org/pdf/2408.15792.pdf)
 - [Performance Prediction for Large Systems via Text-to-Text Regression](https://arxiv.org/pdf/2402.13785.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [Neural Architecture Search with Reinforcement Learning](https://arxiv.org/pdf/1611.01578.pdf)
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/pdf/2309.06180.pdf)
 - [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](https://arxiv.org/pdf/2403.02310.pdf)
@@ -240,7 +240,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [CVDP: Comprehensive Verilog Design Problems Benchmark](https://arxiv.org/pdf/2506.14074.pdf)
 - [Make every move count: LLM-based high-quality RTL code generation using MCTS](https://arxiv.org/pdf/2402.03289.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [ChipNeMo: Domain-Adapted LLMs for Chip Design](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design) - NVIDIA's domain-specific LLM for chip design
 - [ChipAlign: Instruction Alignment in Large Language Models for Chip Design via Geodesic Interpolation](https://arxiv.org/pdf/2412.19819.pdf)
 - [DRiLLS: Deep Reinforcement Learning for Logic Synthesis (ASP-DAC'20)](https://arxiv.org/pdf/1911.04021.pdf)
@@ -261,7 +261,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
 - [DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for VLSI Placement](https://arxiv.org/pdf/1912.10415.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [Chip Placement with Deep Reinforcement Learning (Circuit Training)](https://arxiv.org/pdf/2004.10746.pdf)
 - [MaskPlace: Fast Chip Placement via Reinforcement Learning](https://arxiv.org/pdf/2211.13382.pdf)
 - [Learning on distributed traces for data center storage systems (routing optimization perspective)](https://arxiv.org/pdf/2210.14706.pdf)
@@ -277,7 +277,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [Using LLMs to Facilitate Formal Verification of RTL](https://arxiv.org/pdf/2309.09437.pdf)
 - [SLDB: An End-To-End Heterogeneous System-on-Chip Benchmark Suite for LLM-Aided Design](https://arxiv.org/pdf/2410.15431.pdf)
 
-**📖 Sampling of Related Papers:**
+**📖 Supplemental Reading:**
 - [AssertLLM: Generating Hardware Verification Assertions from Design Specifications via Multi-LLMs (2024)](https://arxiv.org/pdf/2402.00386.pdf)
 - [SpecLLM: Exploring Generation and Review of Architecture Specifications with Large Language Models (2024)](https://arxiv.org/pdf/2402.13990.pdf)
 
