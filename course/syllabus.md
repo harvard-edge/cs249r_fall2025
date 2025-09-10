@@ -78,7 +78,7 @@ Regular attendance essential for discussion-based seminar. More than two unexcus
 - **Code examples**: Understanding implementation concepts through AI-generated snippets
 
 **What GenAI Struggles With**:
-- **Research methodology**: AI summaries miss the nuanced "how" and "why" behind authors' methodological choices—this is the gold you need to learn
+- **Research methodology**: AI summaries miss the nuanced "how" and "why" behind authors' methodological choices—this is the gold you need to learn, and I will help you learn that despite having access to ChatGPT and so forth.
 - **Critical evaluation**: AI can't assess the quality, limitations, or significance of research approaches
 - **Novel connections**: AI can't make the creative leaps between papers that lead to breakthrough insights
 - **Domain expertise**: AI lacks the deep systems knowledge to evaluate feasibility or identify subtle flaws
