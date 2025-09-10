@@ -10,7 +10,7 @@ layout: default
 
 ### **Machine Learning Systems**
 **[Introduction to Machine Learning Systems](https://profvjreddi.github.io/homepage/)** by Vijay Janapa Reddi
-- **Why**: Provides the foundational understanding of how ML systems work
+- **Why**: Provides an understanding of how ML systems work
 - **Focus**: Chapters on hardware-software co-design and system optimization
 - **Connection**: Essential background for understanding AI-driven architecture design
 

@@ -13,10 +13,11 @@ layout: default
 | Date | Topic | Key Insight |
 |------|-------|-------------|
 | [Sep 3](#september-3---course-introduction--architecture-20) | Course Introduction & Architecture 2.0 | Design complexity crisis demands AI agents |
-| Sep 8 | Code Generation & Software Engineering | *Coming soon* |
-| Sep 10 | Performance Engineering | *Coming soon* |
-| Sep 15 | GPU Kernels & Parallel Programming | *Coming soon* |
-| Sep 17 | Distributed Systems Integration | *Coming soon* |
+| Sep 8 | Architecture 2.0 & Foundations | *Coming soon* |
+| Sep 15 | Code Generation & Software Engineering | *Coming soon* |
+| Sep 22 | Performance Engineering & Code Optimization | *Coming soon* |
+| Sep 29 | GPU Kernels & Parallel Programming | *Coming soon* |
+| Oct 6 | Distributed Systems Integration | *Coming soon* |
 
 ---
 
@@ -53,6 +54,88 @@ Next week, I will continue to cover some introductory material. And soon we'll s
 The slides are posted below, and I'm curious to hear your thoughts on the research challenges we outlined: datasets, algorithms, best practices, workforce training, and infrastructure. Which of these do you think will be the biggest bottleneck?
 
 **Materials**: [Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-3/CS249r_.Architecture.2.0.-.Part.1.pdf) • [All materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-3)
+
+---
+
+## September 8 - Architecture 2.0 & Foundations
+
+*Class notes will be added after the session.*
+
+This week we'll dive deeper into Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. We'll also introduce datasets and survey paper methodology that will be essential for your research projects.
+
+**Key Topics to Cover:**
+- The foundations of AI agents in computer system design
+- Understanding design abstractions for intelligent systems
+- Introduction to QuArch dataset and question-answering for architecture
+- Deep learning's implications for computer architecture and chip design
+
+**Materials**: *Will be posted after class*
+
+---
+
+## September 15 - Code Generation & Software Engineering
+
+*Class notes will be added after the session.*
+
+This week we explore code generation as the most accessible entry point for AI in systems. We'll examine how to evaluate whether AI can actually replace human programmers and what it means for code to be "correct" vs. "optimal."
+
+**Key Topics to Cover:**
+- Moving from "impressive demos" to "production-ready tools"
+- Real-world GitHub issue resolution with SWE-bench
+- Competition-level code generation with AlphaCode
+- Multi-agent code generation and iterative optimization
+
+**Guest Speaker**: Ofir Press (Author of SWE-bench)
+
+**Materials**: *Will be posted after class*
+
+---
+
+## September 22 - Performance Engineering & Code Optimization
+
+*Class notes will be added after the session.*
+
+Moving beyond correctness to performance requires understanding both algorithmic complexity and system behavior. Can AI learn the subtle performance optimizations that expert programmers use?
+
+**Key Topics to Cover:**
+- LLM-driven code optimization for warehouse-scale computers
+- Learning performance-improving code edits
+- Compiler auto-tuning with reinforcement learning
+- Understanding cache behavior and memory access patterns
+
+**Materials**: *Will be posted after class*
+
+---
+
+## September 29 - GPU Kernels & Parallel Programming
+
+*Class notes will be added after the session.*
+
+GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding.
+
+**Key Topics to Cover:**
+- Can LLMs write efficient GPU kernels?
+- Multi-turn reinforcement learning for CUDA kernel generation
+- Benchmarking AI systems against hand-tuned libraries
+- Hardware-specific optimization strategies
+
+**Materials**: *Will be posted after class*
+
+---
+
+## October 6 - Distributed Systems Integration
+
+*Class notes will be added after the session.*
+
+Distributed systems represent the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale.
+
+**Key Topics to Cover:**
+- Full-stack co-design and optimization of distributed ML systems
+- Reinforcement learning for datacenter congestion control
+- Co-designing algorithms and system architecture
+- Handling failures, load balancing, and resource contention
+
+**Materials**: *Will be posted after class*
 
 ---
 

@@ -109,12 +109,9 @@ This course is focused on exploring how AI agents enable the specialized, effici
 - Study established design principles and optimization techniques
 
 ### **Architecture 2.0 (This Course):**
-- Build agentic AI systems that automatically design processors and memory hierarchies
-- Create new design methodologies using agentic approaches
-- Develop tools and frameworks for agentic architecture exploration
+- Use and evaluate agentic AI systems that automatically design processors and memory hierarchies
+- Analyze new design methodologies using agentic approaches through hands-on assignments
+- Critically assess tools and frameworks for agentic architecture exploration
+- Synthesize research to identify future directions in agentic systems design
 
-**The Goal**: By the end of this course, you won't just understand how architectures work—you'll know how to build agentic AI systems that can design better architectures than humans can.
-
----
-
-*Last updated: September 3, 2025*
+**The Goal**: By the end of this course, you won't just understand how architectures work—you'll have hands-on experience with agentic AI tools and deep knowledge of how they're transforming computer systems design across the entire stack.
