@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Resources
+permalink: /course/resources
 ---
 
 # Resources

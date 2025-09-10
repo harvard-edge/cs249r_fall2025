@@ -11,7 +11,7 @@ layout: default
 **Teaching Assistant:** Arya Tschand <aryatschand@g.harvard.edu>  
 **Course Staff:** Zishen Wan and Chenyu Wang  
 **Time:** Monday/Wednesday 2:15-3:30 • **Location:** SEC. Room 6.412  
-**Office Hours:** Monday 4-5pm (Instructor), TA hours TBD  
+**Office Hours:** Monday 4-5pm (Instructor), Wednesday 4-5pm (TA hours) 
 **Canvas:** [Course Site](https://canvas.harvard.edu/courses/165367)
 
 ---

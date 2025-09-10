@@ -1,7 +1,7 @@
 ---
 layout: default
 title: News
-permalink: /content/news
+permalink: /course/news
 ---
 
 # AI Transforming Computer Systems Design
