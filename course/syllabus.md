@@ -71,10 +71,25 @@ Regular attendance essential for discussion-based seminar. More than two unexcus
 
 **Philosophy**: In a course dedicated to AI agents transforming computer systems design, we embrace the thoughtful use of generative AI tools while prioritizing fundamental learning.
 
-**Permitted Use**:
-- **Research assistance**: Using AI to help understand complex papers, generate initial literature searches, or clarify technical concepts
-- **Writing support**: AI assistance for editing, structuring arguments, or improving clarity of your own ideas
-- **Coding examples**: AI-generated code snippets for understanding implementation concepts discussed in papers
+**What GenAI Is Good At**:
+- **Explaining concepts**: Breaking down complex technical terminology or mathematical notation
+- **Writing support**: Editing, structuring arguments, or improving clarity of your own ideas
+- **Initial brainstorming**: Generating starting points for literature searches or research questions
+- **Code examples**: Understanding implementation concepts through AI-generated snippets
+
+**What GenAI Struggles With**:
+- **Research methodology**: AI summaries miss the nuanced "how" and "why" behind authors' methodological choices—this is the gold you need to learn
+- **Critical evaluation**: AI can't assess the quality, limitations, or significance of research approaches
+- **Novel connections**: AI can't make the creative leaps between papers that lead to breakthrough insights
+- **Domain expertise**: AI lacks the deep systems knowledge to evaluate feasibility or identify subtle flaws
+
+**How to Use GenAI Effectively**:
+- **Start with your own reading**: Engage with papers directly first, then use AI to clarify confusing parts
+- **Ask specific questions**: Instead of "summarize this paper," ask "what does equation 3 mean?" or "why did they choose this evaluation metric?"
+- **Verify everything**: Cross-check AI explanations against the original source and your growing understanding
+- **Focus on methodology**: Pay special attention to how authors approached problems—AI can't teach you this critical skill
+
+**Remember**: Research summaries ≠ understanding research methodology. The methodology is the gold, and as your instructor, I'll help you develop this skill. Don't lean too heavily on AI for this—be aware of its limitations.
 
 **Learning-First Approach**:
 - **Develop fundamentals first**: Before using AI tools, engage deeply with the material yourself. AI should amplify your understanding, not replace it
