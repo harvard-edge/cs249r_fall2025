@@ -67,6 +67,25 @@ Regular attendance essential for discussion-based seminar. More than two unexcus
 - **Survey paper project**: Required group work (entire class collaboration)
 - **Discussion leadership**: Pairs allowed and encouraged
 
+### Generative AI Policy
+
+**Philosophy**: In a course dedicated to AI agents transforming computer systems design, we embrace the thoughtful use of generative AI tools while prioritizing fundamental learning.
+
+**Permitted Use**:
+- **Research assistance**: Using AI to help understand complex papers, generate initial literature searches, or clarify technical concepts
+- **Writing support**: AI assistance for editing, structuring arguments, or improving clarity of your own ideas
+- **Coding examples**: AI-generated code snippets for understanding implementation concepts discussed in papers
+
+**Learning-First Approach**:
+- **Develop fundamentals first**: Before using AI tools, engage deeply with the material yourself. AI should amplify your understanding, not replace it
+- **Transparent attribution**: When AI significantly contributes to your work, acknowledge it (e.g., "Used GPT-4 to help structure the argument in Section 2.3")
+- **Critical evaluation**: Always verify AI-generated content against primary sources and your own understanding
+
+**Why This Matters**:
+The goal isn't productivity—it's learning. AI tools are powerful accelerators, but they work best when you have strong foundational knowledge to guide and evaluate their output. In our seminar discussions, we want to hear *your* insights, questions, and connections, not AI-generated responses.
+
+**In-Class Discussions**: Our seminar format prioritizes human dialogue and critical thinking. Come prepared to engage with your own questions, insights, and perspectives developed through direct engagement with the material.
+
 ### Academic Integrity
 All work must be original with proper citation. Collaboration encouraged within the framework specified above.
 
