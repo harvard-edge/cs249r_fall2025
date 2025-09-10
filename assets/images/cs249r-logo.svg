@@ -1,0 +1,75 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#A51C30"/>
+  
+  <!-- Harvard crimson gradient overlay -->
+  <defs>
+    <linearGradient id="crimsonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A51C30;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B1538;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#crimsonGradient)"/>
+  
+  <!-- Subtle circuit pattern background -->
+  <g opacity="0.1" stroke="#ffffff" stroke-width="1" fill="none">
+    <circle cx="100" cy="100" r="20"/>
+    <circle cx="200" cy="150" r="15"/>
+    <circle cx="300" cy="80" r="18"/>
+    <line x1="120" y1="100" x2="185" y2="150"/>
+    <line x1="215" y1="150" x2="282" y2="80"/>
+    
+    <circle cx="1000" cy="500" r="25"/>
+    <circle cx="1100" cy="450" r="20"/>
+    <circle cx="900" cy="550" r="15"/>
+    <line x1="1025" y1="500" x2="1080" y2="450"/>
+    <line x1="1120" y1="450" x2="915" y2="550"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGradient)">
+    Architecture 2.0
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" fill="#ffffff" opacity="0.9">
+    Agentic AI for Computer Systems Design
+  </text>
+  
+  <!-- Course info -->
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#ffffff">
+    CS249r • Harvard University • Fall 2025
+  </text>
+  
+  <!-- Professor info -->
+  <text x="600" y="390" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#ffffff" opacity="0.8">
+    Professor Vijay Janapa Reddi
+  </text>
+  
+  <!-- AI/Tech icons -->
+  <g transform="translate(150, 400)" fill="#ffffff" opacity="0.7">
+    <!-- CPU icon -->
+    <rect x="0" y="0" width="60" height="60" rx="8" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <rect x="10" y="10" width="40" height="40" rx="4" fill="#ffffff"/>
+    <rect x="15" y="15" width="30" height="30" rx="2" fill="#A51C30"/>
+    <text x="30" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ffffff">AI</text>
+  </g>
+  
+  <g transform="translate(950, 400)" fill="#ffffff" opacity="0.7">
+    <!-- Chip icon -->
+    <rect x="0" y="0" width="60" height="60" rx="8" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <circle cx="30" cy="30" r="20" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="30" cy="30" r="12" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <circle cx="30" cy="30" r="6" fill="#ffffff"/>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#ffffff" opacity="0.9">
+    From Human Heuristics to Autonomous AI Agents
+  </text>
+</svg>
