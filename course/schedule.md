@@ -12,6 +12,7 @@ layout: default
 
 **📖 Reading Reflection Due**: Before each class session  
 
+**📝 [Paper Presentation Signups](https://docs.google.com/spreadsheets/d/1k3P8j3hO-tmLXfk2zjROkHvXUi97LoAwszLcLheCoyQ/edit?gid=0#gid=0)** — Sign up for your paper presentations here!
 
 ---
 
