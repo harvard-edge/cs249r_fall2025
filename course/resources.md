@@ -63,6 +63,9 @@ permalink: /course/resources
 - **[DREAMPlace](https://github.com/limbo018/DREAMPlace)**: GPU-accelerated placement engine using deep learning
 - **[CompilerGym](https://github.com/facebookresearch/CompilerGym)**: RL environments for compiler optimization
 
+### **Datasets & Knowledge Bases**
+- **[QuArch.ai](https://quarch.ai/)**: Question answering dataset for computer architecture - comprehensive Q&A resource covering architecture concepts, design principles, and system optimization topics
+
 ### **Paper Sources**
 - **[ACM Digital Library](https://dl.acm.org/)**: ISCA, MICRO, ASPLOS papers
 - **[IEEE Xplore](https://ieeexplore.ieee.org/)**: DAC, ICCAD, HPCA papers
@@ -71,7 +74,3 @@ permalink: /course/resources
 ### **Paper Discovery**
 - **[Semantic Scholar](https://www.semanticscholar.org/)**: AI-powered search with citation analysis
 - **[Connected Papers](https://www.connectedpapers.com/)**: Visual exploration of paper relationships
-
----
-
-*"The goal isn't to read everything, but to read the right things deeply and connect them meaningfully."*
