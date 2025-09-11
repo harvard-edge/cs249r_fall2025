@@ -8,8 +8,6 @@ layout: default
 
 *"The goal isn't to read everything, but to read the right things deeply and connect them meaningfully."*
 
-*Autonomous AI agents designing the complete computing stack - from code to silicon*
-
 **📖 Reading Reflection Due**: Before each class session  
 
 **📝 [Paper Presentation Signups](https://docs.google.com/spreadsheets/d/1k3P8j3hO-tmLXfk2zjROkHvXUi97LoAwszLcLheCoyQ/edit?gid=0#gid=0)** — Sign up for your paper presentations here!
@@ -113,14 +111,14 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers](https://arxiv.org/pdf/2410.15736.pdf)
+- [ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers](https://arxiv.org/pdf/2503.15669.pdf)
 - [Learning Performance-Improving Code Edits](https://arxiv.org/pdf/2302.07867.pdf)
 
 **📖 Supplemental Reading:**
 - [Compiler-R1: Towards Agentic Compiler Auto-tuning with Reinforcement Learning](https://arxiv.org/pdf/2506.15701.pdf)
 - [Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation](https://arxiv.org/pdf/1808.07412.pdf)
 - [CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research](https://arxiv.org/pdf/2109.08267.pdf)
-- [MLIR: Scaling Compiler Infrastructure for Domain Specific Computation](https://arxiv.org/pdf/2002.11054.pdf)
+- [MLIR: A Compiler Infrastructure for the End of Moore's Law](https://arxiv.org/pdf/2002.11054.pdf)
 - [Learning to Optimize Tensor Programs](https://arxiv.org/pdf/1805.08166.pdf)
 
 **📚 Background Reading:** [Ch 7. Efficient AI](https://www.mlsysbook.ai/contents/core/efficient_ai/efficient_ai) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
@@ -133,8 +131,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/pdf/2411.14594.pdf)
-- [Kevin: Multi-Turn RL for Generating CUDA Kernels](https://arxiv.org/pdf/2411.16922.pdf)
+- [KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/pdf/2502.10517.pdf)
+- [Kevin: Multi-Turn RL for Generating CUDA Kernels](https://arxiv.org/pdf/2507.11948.pdf)
 
 **📖 Supplemental Reading:**
 - [AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms](https://research.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/)
@@ -151,13 +149,13 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [COSMIC: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems](https://arxiv.org/pdf/2401.13466.pdf)
+- [COSMIC: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems](https://arxiv.org/pdf/2505.15020.pdf)
 - [Reinforcement Learning for Datacenter Congestion Control](https://arxiv.org/pdf/2102.09337.pdf)
 
 **📖 Supplemental Reading:**
 - [Spatio-Temporal Self-Supervised Learning for Traffic Flow Prediction](https://arxiv.org/pdf/2212.04475.pdf)
 - [Remy: TCP ex Machina](https://web.mit.edu/remy/)
-- [Decima: Learning Scheduling Algorithms for Data Processing Clusters](https://arxiv.org/pdf/1810.01963.pdf)
+- [Learning Scheduling Algorithms for Data Processing Clusters (Decima)](https://arxiv.org/pdf/1810.01963.pdf)
 - [Aurora: A Reinforcement Learning Perspective on Internet Congestion Control](https://dl.acm.org/doi/pdf/10.1145/3299729.3312488)
 
 **📚 Background Reading:** [Ch 10. AI Training](https://www.mlsysbook.ai/contents/core/ai_training/ai_training) • [Ch 11. ML Ops](https://www.mlsysbook.ai/contents/core/ops/ops.html)
@@ -175,17 +173,17 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/pdf/2410.06603.pdf)
-- [ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://arxiv.org/pdf/2206.08515.pdf)
+- [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/pdf/2503.23076.pdf)
+- [ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://arxiv.org/pdf/2306.08888.pdf)
 - [Multi-Agent Reinforcement Learning for Microprocessor Design Space Exploration](https://arxiv.org/pdf/2211.16385.pdf)
 
 **📚 Background Reading:** [Ch 12. Benchmarking AI](https://www.mlsysbook.ai/contents/core/benchmarking_ai/benchmarking_ai)
 
 **📖 Supplemental Reading:**
-- [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://arxiv.org/pdf/2010.11823.pdf)
+- DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks (Available from Microsoft Research, not on arXiv)
 - [NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference](https://www.microsoft.com/en-us/research/uploads/prod/2024/05/NeuSight.pdf)
-- [HyperMapper 2.0: Interactive and Adaptive Design Space Exploration for Multi-objective Optimization](https://arxiv.org/pdf/2105.12826.pdf)
-- [AutoDSE: Enabling Automatic Design Space Exploration for High-Level Synthesis with Machine Learning](https://arxiv.org/pdf/2101.04808.pdf)
+- [Practical Design Space Exploration (HyperMapper 2.0)](https://arxiv.org/pdf/1810.05236.pdf)
+- [AutoDSE: Enabling Software Programmers to Design Efficient FPGA Accelerators](https://arxiv.org/pdf/2009.14381.pdf)
 - [Bayesian Optimization for Accelerator Design Space Exploration](https://proceedings.neurips.cc/paper_files/paper/2021/file/c59bdc99ccffe8d088b3c67cd7f6e5db-Paper.pdf)
 
 ## Week 8 — Hardware Accelerators & AI Mappings
@@ -196,7 +194,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators](https://arxiv.org/pdf/2403.13677.pdf)
+- DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
 - [Learning to Optimize Tensor Programs (AutoTVM)](https://arxiv.org/pdf/1805.08166.pdf)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
@@ -206,7 +204,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [In-Datacenter Performance Analysis of a Tensor Processing Unit](https://arxiv.org/pdf/1704.04760.pdf)
 - [SCNN: An Accelerator for Compressed-sparse Convolutional Neural Networks](https://arxiv.org/pdf/1708.04485.pdf)
 - [MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects](https://dl.acm.org/doi/pdf/10.1145/3296957.3173176)
-- [MAESTRO: An Open-source Infrastructure for Modeling Dataflows within Deep Learning Accelerators](https://arxiv.org/pdf/1805.02566.pdf)
+- [Understanding Reuse, Performance, and Hardware Cost of DNN Dataflows: A Data-Centric Approach Using MAESTRO](https://arxiv.org/pdf/1805.02566.pdf)
 - [Timeloop: A Systematic Approach to DNN Accelerator Evaluation](https://ieeexplore.ieee.org/document/8686236)
 
 ## Week 9 — Memory Systems & Data Management
@@ -226,8 +224,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ALEX: An Updatable Adaptive Learned Index](https://arxiv.org/pdf/1905.08898.pdf)
 - [Learning-based Memory Allocation for C++ Server Workloads](https://research.google/pubs/pub49008/)
 - [Designing a Cost-Effective Cache Replacement Policy Using Machine Learning](https://research.google/pubs/pub46599/)
-- [Long Short-Term Memory (LSTM) Based Memory Hardware Prefetcher](https://arxiv.org/pdf/1906.08699.pdf)
-- [Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms (2023)](https://arxiv.org/pdf/2307.08635.pdf)
+- Long Short-Term Memory (LSTM) Based Hardware Prefetcher (ACM MEMSYS 2017, not on arXiv)
+- [Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms](https://arxiv.org/pdf/2307.08635.pdf)
 
 ## Week 10 — LLM Systems & AI Workload Scheduling
 **Week of November 3**
@@ -238,7 +236,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **🎯 Main Papers:**
 - [Efficient LLM Scheduling by Learning to Rank](https://arxiv.org/pdf/2408.15792.pdf)
-- [Performance Prediction for Large Systems via Text-to-Text Regression](https://arxiv.org/pdf/2402.13785.pdf)
+- [Performance Prediction for Large Systems via Text-to-Text Regression](https://arxiv.org/pdf/2506.21718.pdf)
 
 **📚 Background Reading:** [Ch 10. AI Training](https://www.mlsysbook.ai/contents/core/ai_training/ai_training) • [Ch 11. ML Ops](https://www.mlsysbook.ai/contents/core/ops/ops.html)
 
@@ -261,8 +259,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
-- [CVDP: Comprehensive Verilog Design Problems Benchmark](https://arxiv.org/pdf/2506.14074.pdf)
-- [Make every move count: LLM-based high-quality RTL code generation using MCTS](https://arxiv.org/pdf/2402.03289.pdf)
+- [Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification](https://arxiv.org/pdf/2506.14074.pdf)
+- [Make Every Move Count: LLM-based High-Quality RTL Code Generation Using MCTS](https://arxiv.org/pdf/2402.03289.pdf)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 16. Robust AI](https://www.mlsysbook.ai/contents/core/robust_ai/robust_ai)
 
@@ -271,7 +269,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ChipAlign: Instruction Alignment in Large Language Models for Chip Design via Geodesic Interpolation](https://arxiv.org/pdf/2412.19819.pdf)
 - [DRiLLS: Deep Reinforcement Learning for Logic Synthesis](https://arxiv.org/pdf/1911.04021.pdf)
 - [BOiLS: Bayesian Optimisation for Logic Synthesis](https://arxiv.org/pdf/2111.06178.pdf)
-- [MasterRTL: Pre-Synthesis PPA Estimation for RTL Designs (ICCAD'22/TCAD'24)](https://arxiv.org/pdf/2211.14348.pdf)
+- [MasterRTL: A Pre-Synthesis PPA Estimation Framework for Any RTL Design](https://arxiv.org/pdf/2311.08441.pdf)
 - [AutoChip: Automating HDL Generation Using LLM Feedback](https://arxiv.org/pdf/2311.04887.pdf)
 - [OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis](https://arxiv.org/pdf/2110.11292.pdf)
 
@@ -284,14 +282,14 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
-- [DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for VLSI Placement](https://arxiv.org/pdf/1912.10415.pdf)
+- DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement (DAC 2019/TCAD 2020, not on arXiv)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
 
 **📖 Supplemental Reading:**
 - [Chip Placement with Deep Reinforcement Learning (Circuit Training)](https://arxiv.org/pdf/2004.10746.pdf)
-- [MaskPlace: Fast Chip Placement via Reinforcement Learning](https://arxiv.org/pdf/2211.13382.pdf)
-- [Learning on distributed traces for data center storage systems (routing optimization perspective)](https://arxiv.org/pdf/2210.14706.pdf)
+- [MaskPlace: Fast Chip Placement via Reinforced Visual Representation Learning](https://arxiv.org/pdf/2211.13382.pdf)
+- Learning on distributed traces for data center storage systems (Different paper, needs verification)
 
 ## Week 13 — Verification & Advanced Chip Design
 **Week of November 24**
@@ -302,13 +300,13 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **🎯 Main Papers:**
 - [Using LLMs to Facilitate Formal Verification of RTL](https://arxiv.org/pdf/2309.09437.pdf)
-- [SLDB: An End-To-End Heterogeneous System-on-Chip Benchmark Suite for LLM-Aided Design](https://arxiv.org/pdf/2410.15431.pdf)
+- [SLDB: An End-To-End Heterogeneous System-on-Chip Benchmark Suite for LLM-Aided Design](https://arxiv.org/pdf/2507.06376.pdf)
 
 **📚 Background Reading:** [Ch 16. Robust AI](https://www.mlsysbook.ai/contents/core/robust_ai/robust_ai) • [Ch 17. Responsible AI](https://www.mlsysbook.ai/contents/core/responsible_ai/responsible_ai)
 
 **📖 Supplemental Reading:**
-- [AssertLLM: Generating Hardware Verification Assertions from Design Specifications via Multi-LLMs (2024)](https://arxiv.org/pdf/2402.00386.pdf)
-- [SpecLLM: Exploring Generation and Review of Architecture Specifications with Large Language Models (2024)](https://arxiv.org/pdf/2402.13990.pdf)
+- [AssertLLM: Generating and Evaluating Hardware Verification Assertions from Design Specifications via Multi-LLMs](https://arxiv.org/pdf/2402.00386.pdf)
+- [SpecLLM: Exploring Generation and Review of VLSI Design Specification with Large Language Model](https://arxiv.org/pdf/2401.13266.pdf)
 
 *November 26: Thanksgiving Break - No Class*
 
