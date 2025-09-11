@@ -101,8 +101,6 @@ This course is focused on exploring how AI agents enable the specialized, effici
 
 ## What Makes This Different from Traditional Architecture Courses?
 
-> *"Traditional architecture courses teach you how architectures work. Architecture 2.0 teaches you how to build AI agents that design architectures."*
-
 ### **Traditional Advanced Computer Architecture:**
 - Analyze existing processor designs and memory hierarchies
 - Understand performance trade-offs in current systems
