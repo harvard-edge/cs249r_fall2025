@@ -59,7 +59,7 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
 ## Subscribe & Share
 
 Stay updated with our weekly insights:
-- 🐦 Follow [@VJReddi](https://twitter.com/VJReddi) on Twitter for updates
+- 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) on Twitter for updates
 - 📧 Subscribe to updates via [RSS](/cs249r_fall2025/feed.xml)
 - 💬 Join discussions in the comments section of each post
 
