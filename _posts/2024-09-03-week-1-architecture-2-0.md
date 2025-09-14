@@ -69,9 +69,21 @@ Future AI agents won't respect our artificial boundaries. They'll explore design
 
 This is why every student in this class, regardless of their home discipline, needs exposure to all three phases. The compiler expert needs to understand how their optimizations affect chip area and power. The architecture specialist needs to grasp how software workloads drive their design decisions. The chip designer needs to see how physical constraints propagate up to software performance. Only by understanding the full stack can we prepare for a future where AI agents operate without our self-imposed boundaries.
 
+## The Generative AI Difference
+
+A critical question emerged near the end of class: "Machine learning has been used in computer systems for years. What makes Architecture 2.0 different?" This gets to a fundamental distinction we'll explore deeply next week.
+
+For the past decade, we've applied traditional machine learning to systems problems. These approaches were primarily predictive: branch predictors using neural networks, learned index structures, ML-driven cache replacement policies. These were valuable but fundamentally limited. They could optimize within existing paradigms but couldn't imagine new ones. They could predict patterns but couldn't generate novel solutions.
+
+We now live in the generative AI era, and this changes everything. Traditional ML could tell you which cache line to evict. Generative AI can design entirely new cache hierarchies. Traditional ML could predict branch outcomes. Generative AI can rewrite the code to eliminate branches entirely. Traditional ML optimized parameters within fixed architectures. Generative AI can propose architectural innovations no human has conceived.
+
+This isn't just a quantitative improvement; it's a qualitative transformation. When an AI system can generate RTL code, propose new instruction set extensions, or design custom accelerators from natural language specifications, we're not just optimizing existing systems. We're enabling a fundamentally new design methodology. The shift from predictive to generative AI is what makes Architecture 2.0 possible.
+
 ## Looking Ahead
 
-Next week, we will dive deeper into the Architecture 2.0 paradigm, examining the QuArch dataset and exploring how we can create meaningful abstractions for intelligent systems. As we progress through our three phases, remember that the divisions are pedagogical, not fundamental. The most exciting innovations will come from students who can think across these boundaries, just as the most powerful AI agents will be those that can optimize across the entire computing stack.
+Next week, we will dive deeper into this distinction, examining how generative AI fundamentally differs from the optimization and prediction techniques we've used in systems for years. We'll explore the QuArch dataset and see how question-answering capabilities enable AI agents to reason about architectural trade-offs in ways that traditional ML never could.
+
+As we progress through our three phases, remember that the divisions are pedagogical, not fundamental. The most exciting innovations will come from students who can think across these boundaries, just as the most powerful AI agents will be those that can generate solutions spanning the entire computing stack.
 
 The research challenges we identified—datasets, algorithms, best practices, workforce training, and infrastructure—each present significant opportunities for contribution. The question for our field is not which single challenge to address, but how to coordinate progress across all fronts.
 
