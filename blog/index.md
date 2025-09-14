@@ -14,7 +14,7 @@ permalink: /blog/
 
 Computer architecture is undergoing its most fundamental transformation in fifty years, and there's almost nothing written about it yet. This blog documents that transformation as it happens, through the eyes of a graduate seminar at Harvard that's exploring uncharted territory.
 
-CS249r isn't a traditional lecture course. It's a seminar where the most interesting insights emerge from discussions, debates, and the collision of ideas between students from vastly different backgrounds—compiler experts debating with ML theorists, chip designers challenging software optimizers. These conversations are where the future of computing gets hammered out, one heated exchange at a time.
+CS249r isn't a traditional lecture course. This semester, it is a seminar where the most interesting insights emerge from discussions, debates, and the collision of ideas between students from vastly different backgrounds—compiler experts debating with ML theorists, chip designers challenging software optimizers. These conversations are where the future of computing gets hammered out, one heated exchange at a time.
 
 Every Monday, we drop a new post capturing what we discovered the previous week. Not the sanitized version that makes it into papers months later, but the raw insights, surprising discoveries, and "wait, that changes everything" moments that happen when brilliant minds grapple with genuinely new problems. 
 
