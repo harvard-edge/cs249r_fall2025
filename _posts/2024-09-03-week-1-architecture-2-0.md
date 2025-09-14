@@ -87,7 +87,6 @@ As we progress through our three phases, remember that the divisions are pedagog
 
 The research challenges we identified—datasets, algorithms, best practices, workforce training, and infrastructure—each present significant opportunities for contribution. The question for our field is not which single challenge to address, but how to coordinate progress across all fronts.
 
-## Course Materials
+---
 
-- [Week 1 Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-3/CS249r_.Architecture.2.0.-.Part.1.pdf)
-- [Complete Materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-3)
+*For detailed readings, slides, and materials for this week, see [Week 1 in the course schedule](/cs249r_fall2025/course/schedule/#week-1--course-introduction--logistics).*
