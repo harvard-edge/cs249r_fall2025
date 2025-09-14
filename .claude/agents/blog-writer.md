@@ -67,7 +67,7 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
      * Include concrete technical details from papers discussed
      * Connect theoretical insights to practical implications
      * Acknowledge limitations and open questions
-   - **Length**: 800-1200 words typically
+   - **Length**: 1200-1500 words (standard blog post length)
    - **Technical Level**: Graduate-level CS; explain novel concepts clearly
    - **Structure**: Clear sections with descriptive headers, strategic use of emphasis
 
