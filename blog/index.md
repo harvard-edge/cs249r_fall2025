@@ -22,7 +22,7 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
 
 ## Recent Posts
 
-{% assign posts = site.posts | where_exp: "post", "post.path contains 'blog/'" %}
+{% assign posts = site.posts %}
 {% if posts.size > 0 %}
   {% for post in posts limit: 5 %}
   <article class="blog-preview">
