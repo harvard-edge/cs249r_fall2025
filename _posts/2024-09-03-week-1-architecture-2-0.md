@@ -7,13 +7,13 @@ categories: architecture
 permalink: /blog/2024/09/03/week-1-architecture-2-0/
 ---
 
-We began CS249r by addressing a critical question: Why this class, why now? 
+Moore's Law is dying. Dennard scaling ended years ago. Traditional computer architecture is hitting walls that fifty years of exponential improvement never prepared us for. So why are we launching a graduate seminar on AI-driven architecture design right now?
 
 The timing is no coincidence. We stand at an unprecedented convergence of necessity and opportunity. Traditional computer architecture approaches are hitting fundamental walls. Moore's Law is slowing, Dennard scaling has ended, and the complexity of modern systems has exploded beyond human comprehension. At the same time, AI capabilities have reached a point where they can meaningfully contribute to system design. This convergence isn't about following a trend but recognizing that the field of computer architecture must evolve or risk stagnation.
 
 The enthusiasm for this topic was immediately evident in our classroom's composition. Students arrived from remarkably diverse backgrounds: computer architecture, machine learning foundations, ML systems, compilers, and programming languages. This wasn't just interdisciplinary interest; it was recognition from across computer science that we're approaching a fundamental inflection point. Computing has been the foundation of technological progress for fifty years, and we've taken exponential improvements for granted. Now, with the end of easy scaling and the slowing of Moore's Law, every subfield recognizes that the free lunch is over.
 
-During our first class discussion, a student from the ML systems background asked pointedly: "Aren't we just automating what architects already do?" The answer revealed the heart of Architecture 2.0. We're not automating existing processes but enabling entirely new design methodologies that were previously impossible. When design spaces contain 10^14 to 10^2300 configurations, traditional human-guided exploration becomes not just inefficient but fundamentally inadequate.
+During our first class discussion, a student from our ML systems cohort—someone who'd spent the previous semester optimizing transformer inference—asked pointedly: "Aren't we just automating what architects already do?" The answer revealed the heart of Architecture 2.0. We're not automating existing processes but enabling entirely new design methodologies that were previously impossible. When design spaces contain 10^14 to 10^2300 configurations, traditional human-guided exploration becomes not just inefficient but fundamentally inadequate. To put this in perspective: if you evaluated one design configuration every nanosecond, exploring 10^14 possibilities would take over three years. For 10^2300 configurations, you'd need more time than has elapsed since the Big Bang—by a factor larger than the number of atoms in the observable universe.
 
 ## The End of an Era
 
