@@ -30,3 +30,19 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Social media and sharing
+twitter:
+  username: VJReddi
+  card: summary_large_image
+
+social:
+  name: "CS249r Harvard"
+  links:
+    - "https://github.com/harvard-edge/cs249r_fall2025"
+    - "https://harvard-edge.github.io/cs249r_fall2025"
+
+# Blog settings
+disqus:
+  shortname: "cs249r-harvard"  # You'll need to create this on Disqus
