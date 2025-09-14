@@ -59,7 +59,7 @@ Our exploration this week drew primarily from two foundational papers that estab
 
 ## Looking Ahead
 
-Next week, we will delve deeper into the Architecture 2.0 paradigm, examining the QuArch dataset and exploring how we can create meaningful abstractions for intelligent systems. The journey through our three-phase curriculum—AI for Software, AI for Architecture, and AI for Chip Design—will demonstrate how these concepts apply across the entire computing stack.
+Next week, we will dive deeper into the Architecture 2.0 paradigm, examining the QuArch dataset and exploring how we can create meaningful abstractions for intelligent systems. The journey through our three-phase curriculum—AI for Software, AI for Architecture, and AI for Chip Design—will demonstrate how these concepts apply across the entire computing stack.
 
 The research challenges we identified—datasets, algorithms, best practices, workforce training, and infrastructure—each present significant opportunities for contribution. The question for our field is not which single challenge to address, but how to coordinate progress across all fronts.
 
