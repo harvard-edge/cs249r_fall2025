@@ -105,7 +105,7 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
 
 **File Organization:**
 - **Staging/Drafts**: `/blog/drafts/week-X/YYYY-MM-DD-notes.md` (date-specific raw notes)
-- **Final Posts**: `/blog/YYYY-MM-DD-week-X-[topic-slug].md`
+- **Final Posts**: `/_posts/YYYY-MM-DD-week-X-[topic-slug].md` (Jekyll requires _posts directory)
 - Include proper Jekyll front matter in final posts
 - Use consistent folder naming: week-1, week-2, week-3, etc.
 
