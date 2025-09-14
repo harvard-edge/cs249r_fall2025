@@ -44,5 +44,6 @@ social:
     - "https://harvard-edge.github.io/cs249r_fall2025"
 
 # Blog settings
+permalink: /blog/:year/:month/:day/:title/
 disqus:
   shortname: "cs249r-harvard"  # You'll need to create this on Disqus
