@@ -1,0 +1,226 @@
+---
+layout: default
+---
+
+<article class="blog-post">
+    <header class="blog-post-header">
+        <h1>{{ page.title }}</h1>
+        <div class="blog-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% if page.categories %}
+                • <span class="categories">
+                    {% for category in page.categories %}
+                        <span class="category">{{ category | capitalize }}</span>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                </span>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="blog-content">
+        {{ content }}
+    </div>
+
+    <footer class="blog-post-footer">
+        <!-- Social sharing buttons -->
+        <div class="social-sharing">
+            <h3>Share this post</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}&via=VJReddi" 
+                   target="_blank" 
+                   class="share-button twitter"
+                   title="Share on Twitter">
+                    🐦 Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" 
+                   target="_blank" 
+                   class="share-button linkedin"
+                   title="Share on LinkedIn">
+                    💼 LinkedIn
+                </a>
+                <a href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&t={{ page.title | uri_escape }}" 
+                   target="_blank" 
+                   class="share-button hackernews"
+                   title="Share on Hacker News">
+                    🗞️ HN
+                </a>
+                <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}" 
+                   target="_blank" 
+                   class="share-button reddit"
+                   title="Share on Reddit">
+                    🔴 Reddit
+                </a>
+            </div>
+        </div>
+
+        <!-- Disqus comments -->
+        {% if site.disqus.shortname %}
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}";
+                    this.page.identifier = "{{ page.id }}";
+                };
+                
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        {% endif %}
+    </footer>
+</article>
+
+<style>
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #A51C30;
+}
+
+.blog-post-header h1 {
+    color: #A51C30;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.categories {
+    color: #A51C30;
+    font-weight: 500;
+}
+
+.category {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.blog-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #A51C30;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+}
+
+.blog-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #8B1538;
+}
+
+.blog-post-footer {
+    border-top: 1px solid #dee2e6;
+    padding-top: 2rem;
+}
+
+.social-sharing {
+    margin-bottom: 3rem;
+}
+
+.social-sharing h3 {
+    color: #A51C30;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.share-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.share-button.twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.share-button.linkedin {
+    background-color: #0077B5;
+    color: white;
+}
+
+.share-button.hackernews {
+    background-color: #FF6600;
+    color: white;
+}
+
+.share-button.reddit {
+    background-color: #FF4500;
+    color: white;
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.comments-section {
+    margin-top: 3rem;
+}
+
+.comments-section h3 {
+    color: #A51C30;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .blog-post-header h1 {
+        font-size: 2rem;
+    }
+    
+    .blog-content {
+        font-size: 1rem;
+    }
+    
+    .share-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .share-button {
+        text-align: center;
+    }
+}
+</style>
