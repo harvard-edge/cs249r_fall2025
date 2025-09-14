@@ -7,7 +7,7 @@ categories: software
 permalink: /blog/2024/09/22/week-3-beyond-toy-problems/
 ---
 
-When most people think about AI code generation, they picture toy problems: "Write a function to reverse a string" or "Implement quicksort in Python." But what happens when we move beyond textbook examples to the messy, interconnected reality of production software? This week in CS249r, we discovered why the answer to this question might determine whether AI coding tools become genuine productivity multipliers or remain clever demos.
+This week marked our transition into Phase 1 of the course: AI for Software. We examined how artificial intelligence systems are beginning to understand not just syntax but the semantics of what needs to be computed efficiently. Our exploration centered on two landmark papers—SWE-bench and AlphaCode—that represent fundamentally different approaches to evaluating AI's capability in software engineering.
 
 ## The Benchmark Problem
 
@@ -51,9 +51,15 @@ This matters for the entire field of AI-assisted computer architecture that we'r
 
 ## Papers That Shaped Our Thinking
 
-- **SWE-bench Research**: Demonstrated why real-world evaluation scenarios matter more than synthetic benchmarks
-- **CompilerGym: Robust, Performant Compiler Optimization Environments for AI Research**: Showed how to create realistic optimization environments for AI training
-- **Learning to Optimize Tensor Programs**: Illustrated the connection between high-level code generation and low-level optimization
+Our discussion this week was anchored by several key papers:
+
+- **"SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"** (Jimenez et al.) - This groundbreaking work introduces a benchmark using actual GitHub issues from popular repositories, moving beyond toy problems to measure real software engineering capability. Guest speaker Ofir Press, one of the authors, provided invaluable insights into the design decisions and challenges.
+
+- **"Competition-Level Code Generation with AlphaCode"** (Li et al., DeepMind) - AlphaCode demonstrates a different dimension of code generation: solving complex algorithmic problems at competitive programming levels, achieving performance comparable to median human competitors.
+
+- **"CodeBERT: A Pre-Trained Model for Programming and Natural Languages"** (Supplemental) - This foundational work on cross-modal pre-training between natural language and code helped establish the current generation of code understanding models.
+
+- **"Code Llama: Open Foundation Models for Code"** (Supplemental) - Meta's contribution to open-source code generation models, demonstrating the rapid democratization of these capabilities.
 
 ## Looking Ahead: From Code to Silicon
 

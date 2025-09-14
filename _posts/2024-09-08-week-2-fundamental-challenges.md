@@ -7,7 +7,7 @@ categories: architecture
 permalink: /blog/2024/09/08/week-2-fundamental-challenges/
 ---
 
-Today we tackled the fundamental question that defines our field: **Why is AI for system design so uniquely challenging?** This isn't just about needing more compute or better algorithms—it's about confronting challenges that are fundamentally different from every other AI success story you've encountered.
+This week we examined the fundamental challenges that distinguish AI for system design from other successful applications of artificial intelligence. Through our discussion of the QuArch dataset and "A Computer Architect's Guide to Designing Abstractions for Intelligent Systems," we explored why computer architecture presents unique difficulties for AI-driven approaches.
 
 ## The Dataset Problem That Nobody Talks About
 
@@ -52,16 +52,27 @@ We're not simply trying to automate existing design processes. We're building AI
 
 Our goal isn't to replace human expertise but to augment it with systems capable of exploring solution spaces too complex for manual analysis. However, achieving this vision requires us to solve these fundamental problems first.
 
+## Papers That Shaped Our Discussion
+
+This week's exploration was grounded in three key papers:
+
+- **"QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture"** - This paper introduces a crucial resource for training and evaluating AI agents in architectural decision-making. QuArch addresses the data scarcity problem by providing structured question-answer pairs that capture architectural reasoning patterns.
+
+- **"A Computer Architect's Guide to Designing Abstractions for Intelligent Systems"** - This work provides a framework for thinking about how to create meaningful abstractions that AI systems can reason about effectively, bridging the gap between low-level hardware details and high-level design decisions.
+
+- **"The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design"** (Supplemental) - Jeff Dean's analysis contextualizes our discussion within the broader transformation of computing driven by deep learning workloads.
+
 ## Looking Forward
 
-As we progress through this course, I want you to keep these challenges at the forefront of your thinking. With every paper we read, every dataset we examine, and every algorithm we study, ask yourself these critical questions:
+As we progress through this course, these fundamental challenges will inform our examination of every proposed solution. With each paper we read and system we analyze, we must critically evaluate:
 
-- Is this data truly representative of real-world systems?
-- Does this algorithm align with the specific requirements of this problem domain?
-- How would we rigorously validate this approach in production environments?
+- The representativeness and quality of training data
+- The alignment between algorithmic approaches and problem requirements
+- The validation methodologies for production deployment
 
-The students who will make meaningful contributions to this field won't simply be those who can implement the latest algorithmic advances. They'll be the researchers who can thoughtfully bridge the gap between AI capabilities and the unique, complex constraints of real system design.
+The next generation of computer architects will not merely implement existing AI techniques but will thoughtfully adapt and extend them to address the unique constraints of system design. Success requires both deep technical understanding and the ability to navigate the fundamental tensions between automated exploration and human expertise.
 
-## Resources
+## Course Materials
 
-**Materials**: [Architecture 2.0 Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-8/Architecture.2.0.slides.pdf) • [All materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-8)
+- [Architecture 2.0 Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-8/Architecture.2.0.slides.pdf)
+- [Complete Materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-8)
