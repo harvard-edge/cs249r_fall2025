@@ -2,7 +2,7 @@
 layout: post
 title: "Week 3: Beyond Toy Problems - Why Real-World Code Generation Benchmarks Matter"
 date: 2024-09-22
-author: "Vijay Janapa Reddi & Chenyu Wang"
+author: "Vijay Janapa Reddi"
 categories: software
 permalink: /blog/2024/09/22/week-3-beyond-toy-problems/
 ---
