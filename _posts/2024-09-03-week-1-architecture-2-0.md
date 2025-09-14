@@ -29,11 +29,11 @@ Consider the transformative potential: natural language specifications directly 
 
 ## Papers That Shaped Our Discussion
 
-Our exploration this week drew primarily from two foundational papers:
+Our exploration this week drew primarily from two foundational papers that establish the Architecture 2.0 vision:
 
-- **"Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design"** - This paper establishes the theoretical framework for AI-driven architecture design, introducing the concept of agentic design methodologies that can navigate exponentially complex design spaces.
+- **"Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design"** - This paper establishes the theoretical framework for AI-driven architecture design. The authors present compelling evidence that modern design spaces contain between 10^14 and 10^2300 possible configurations—a complexity that demands AI assistance. They introduce the TAO to TAOS evolution, where Specialization becomes the critical fourth pillar enabling domain-specific optimizations at unprecedented scales.
 
-- **"Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium"** - This companion piece addresses the critical infrastructure challenge: how do we create environments where AI agents can learn and evaluate architectural decisions effectively?
+- **"Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium"** - This companion piece addresses the critical infrastructure challenge. The authors propose a collaborative platform modeled after OpenAI Gym, where researchers can share simulators, datasets, and benchmarks. Key insight: the lack of large, representative public datasets remains our field's biggest bottleneck. The paper identifies specific opportunities where AI already shows promise: memory controller optimization, resource allocation, compiler optimization, cache allocation, and scheduling decisions.
 
 ## Looking Ahead
 

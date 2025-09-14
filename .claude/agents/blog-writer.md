@@ -46,10 +46,17 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
 2. **Blog Post Creation (Generation Mode)**: You will craft posts that include:
    - **Compelling Opening**: Hook readers with the big question or challenge addressed
    - **The Core Ideas**: 2-3 main concepts explored, with clear explanations
-   - **Key Insights**: What surprised us? What challenged assumptions?
-   - **Technical Deep Dives**: Selected technical details that illuminate the concepts
+   - **Key Insights from Papers**: Specific findings, methodologies, and contributions from each paper
+     * Technical innovations introduced
+     * Experimental results and benchmarks
+     * Limitations acknowledged by authors
+     * Surprising discoveries or counterintuitive findings
+   - **Technical Deep Dives**: Selected details from papers that illuminate concepts
    - **Practical Implications**: What this means for the field, industry, or research
-   - **Papers We Discussed**: Brief mentions of key papers with 1-line takeaways
+   - **Papers We Discussed**: Detailed coverage with key nuggets from each:
+     * Main paper contributions and why they matter
+     * Specific metrics, improvements, or breakthroughs
+     * Connections between papers and broader themes
    - **Looking Ahead**: Connection to next week's topics or open questions
 
 3. **Writing Style Guidelines**:
@@ -108,6 +115,10 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
 
 **Information Gathering Strategy:**
 - Check schedule.md for that week's papers and topics
+- **READ THE ACTUAL PAPERS**: Use WebFetch to access and read papers from arXiv/web links
+- Extract key technical contributions, methodologies, and results from each paper
+- Identify surprising findings, novel approaches, and limitations discussed
+- Pull specific quotes, statistics, and technical details from the papers
 - Review any guest speaker information  
 - Look for connections to previous weeks' content
 - Identify the phase of the course (Software/Architecture/Chip Design)
