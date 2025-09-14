@@ -9,9 +9,9 @@ permalink: /blog/2024/09/03/week-1-architecture-2-0/
 
 We began CS249r by addressing a critical question: Why this class, why now? 
 
-The timing is no coincidence. We stand at an unprecedented convergence of necessity and opportunity. On one side, traditional computer architecture approaches are hitting fundamental walls—Moore's Law is slowing, Dennard scaling has ended, and the complexity of modern systems has exploded beyond human comprehension. On the other, AI capabilities have reached a point where they can meaningfully contribute to system design. This isn't about following a trend; it's about recognizing that the field of computer architecture must evolve or risk stagnation.
+The timing is no coincidence. We stand at an unprecedented convergence of necessity and opportunity. Traditional computer architecture approaches are hitting fundamental walls. Moore's Law is slowing, Dennard scaling has ended, and the complexity of modern systems has exploded beyond human comprehension. At the same time, AI capabilities have reached a point where they can meaningfully contribute to system design. This convergence isn't about following a trend but recognizing that the field of computer architecture must evolve or risk stagnation.
 
-During our first class discussion, a student asked pointedly: "Aren't we just automating what architects already do?" The answer revealed the heart of Architecture 2.0: we're not automating existing processes—we're enabling entirely new design methodologies that were previously impossible. When design spaces contain 10^14 to 10^2300 configurations, traditional human-guided exploration becomes not just inefficient but fundamentally inadequate.
+During our first class discussion, a student asked pointedly: "Aren't we just automating what architects already do?" The answer revealed the heart of Architecture 2.0. We're not automating existing processes but enabling entirely new design methodologies that were previously impossible. When design spaces contain 10^14 to 10^2300 configurations, traditional human-guided exploration becomes not just inefficient but fundamentally inadequate.
 
 ## The End of an Era
 
@@ -23,11 +23,11 @@ However, we now face fundamental technological constraints that demand new appro
 
 Three converging forces make this the critical moment for Architecture 2.0:
 
-**First, the demand explosion.** Every major application domain—from large language models to autonomous vehicles—now requires specialized hardware. The era of one-size-fits-all computing is definitively over. Companies are designing custom chips for everything from cryptocurrency mining to video transcoding. This specialization demand is creating more design work than our industry has architects to handle.
+First, we face a demand explosion. Every major application domain now requires specialized hardware, from large language models to autonomous vehicles. The era of one-size-fits-all computing is definitively over. Companies are designing custom chips for everything from cryptocurrency mining to video transcoding. This specialization demand is creating more design work than our industry has architects to handle.
 
-**Second, the talent crisis.** Training a competent computer architect takes years, but the demand for specialized hardware is growing exponentially. We simply cannot train human architects fast enough to meet the need. In class, we discussed how major tech companies are competing fiercely for the same small pool of experienced architects, driving salaries sky-high while projects remain understaffed.
+Second, we're experiencing a talent crisis. Training a competent computer architect takes years, but the demand for specialized hardware is growing exponentially. We simply cannot train human architects fast enough to meet the need. In class, we discussed how major tech companies are competing fiercely for the same small pool of experienced architects, driving salaries sky-high while projects remain understaffed.
 
-**Third, the AI inflection point.** For the first time, AI systems can actually understand code, reason about performance, and even generate functional designs. This isn't theoretical—students in the class have already used GitHub Copilot, ChatGPT, and other tools in their own work. The question isn't whether AI will transform architecture; it's how quickly we can harness it effectively.
+Third, we've reached an AI inflection point. For the first time, AI systems can actually understand code, reason about performance, and even generate functional designs. This isn't theoretical. Students in the class have already used GitHub Copilot, ChatGPT, and other tools in their own work. The question isn't whether AI will transform architecture; it's how quickly we can harness it effectively.
 
 ## The TAOS Framework: Adding Specialization
 
