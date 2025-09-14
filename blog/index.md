@@ -10,13 +10,17 @@ permalink: /blog/
 
 ---
 
-## About This Blog
+## What You're Reading
 
-Every Monday, we share what we learned in the previous week of CS249r. These posts capture key insights, surprising discoveries, and the broader implications of how AI is transforming computer systems design.
+Computer architecture is undergoing its most fundamental transformation in fifty years, and there's almost nothing written about it yet. This blog documents that transformation as it happens, through the eyes of a graduate seminar at Harvard that's exploring uncharted territory.
 
-**Target Audience**: Graduate CS students and practitioners interested in the future of AI-driven system design.
+CS249r isn't a traditional lecture course. It's a seminar where the most interesting insights emerge from discussions, debates, and the collision of ideas between students from vastly different backgrounds—compiler experts debating with ML theorists, chip designers challenging software optimizers. These conversations are where the future of computing gets hammered out, one heated exchange at a time.
 
-**Publication Rhythm**: Weekly Monday releases reflecting on the previous week's classes.
+Every Monday, we drop a new post capturing what we discovered the previous week. Not the sanitized version that makes it into papers months later, but the raw insights, surprising discoveries, and "wait, that changes everything" moments that happen when brilliant minds grapple with genuinely new problems. 
+
+This is a field being born. The conventional wisdom is still forming. The right answers haven't been written yet. If you want to understand how AI will reshape computing—not just optimize existing systems but fundamentally reimagine how we design them—these weekly dispatches from the frontier might be the best window available.
+
+**Why Follow**: Because this stuff will matter enormously, but there's nowhere else to read about it as it develops. By the time it reaches textbooks, the opportunities will be gone.
 
 ---
 
@@ -56,12 +60,15 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
 
 ---
 
-## Subscribe & Share
+## Follow the Frontier
 
-Stay updated with our weekly insights:
-- 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) on Twitter for updates
+New posts drop every Monday. Don't miss the insights:
+- 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) for weekly post announcements and class highlights
 - 📧 Subscribe to updates via [RSS](/cs249r_fall2025/feed.xml)
-- 💬 Join discussions in the comments section of each post
+- 💬 Join discussions in the comments—this is where the best ideas get refined
+- 🔄 Share posts with colleagues who need to understand where computing is heading
+
+*These are the conversations that will define the next decade of computer systems. Be part of them.*
 
 <style>
 .blog-preview {
