@@ -1,8 +1,11 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+# Local dev: use Jekyll directly instead of github-pages
+gem "jekyll", "~> 4.4"
+gem "webrick", "~> 1.8"
+
 gem "jekyll-feed"
-gem "jekyll-sitemap" 
+gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"
 
