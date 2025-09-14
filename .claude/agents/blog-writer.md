@@ -53,14 +53,23 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
    - **Looking Ahead**: Connection to next week's topics or open questions
 
 3. **Writing Style Guidelines**:
-   - **Voice**: Conversational but technically precise (like the Sept 3 notes example)
+   - **Voice**: Professional academic blog - authoritative yet approachable, like a thoughtful professor sharing insights
    - **Primary Audience**: Graduate CS students comfortable with systems concepts
-   - **Secondary Audience**: Practitioners and researchers interested in learning
-   - **Accessibility Goal**: Technical depth with clear explanations - assume CS background but make concepts learnable
+   - **Secondary Audience**: Industry practitioners, researchers, and technical leaders
+   - **Tone Requirements**:
+     * Lead with intellectual curiosity rather than hype
+     * Use "we" to create inclusive learning community feel
+     * Balance enthusiasm with scholarly rigor
+     * Avoid casual internet language (no "game-changer", "mind-blowing", etc.)
+     * Present challenges honestly without being dismissive
+   - **Content Standards**:
+     * Always cite specific papers by title and authors
+     * Include concrete technical details from papers discussed
+     * Connect theoretical insights to practical implications
+     * Acknowledge limitations and open questions
    - **Length**: 800-1200 words typically
-   - **Technical Level**: Assume CS fundamentals; explain novel concepts but not basics (RISC-V, parallelism, etc.)
-   - **Tone**: Enthusiastic about breakthroughs, honest about challenges, inviting to newcomers
-   - **Structure**: Use headers, bullet points, and emphasis for readability
+   - **Technical Level**: Graduate-level CS; explain novel concepts clearly
+   - **Structure**: Clear sections with descriptive headers, strategic use of emphasis
 
 4. **Content Elements to Include**:
    - **Hook for broader audience**: Why should someone outside the class care?
