@@ -2,7 +2,9 @@
 layout: post
 title: "Week 3: Beyond Toy Problems - Why Real-World Code Generation Benchmarks Matter"
 date: 2024-09-22
+author: "Vijay Janapa Reddi & Chenyu Wang"
 categories: software
+permalink: /blog/2024/09/22/week-3-beyond-toy-problems/
 ---
 
 When most people think about AI code generation, they picture toy problems: "Write a function to reverse a string" or "Implement quicksort in Python." But what happens when we move beyond textbook examples to the messy, interconnected reality of production software? This week in CS249r, we discovered why the answer to this question might determine whether AI coding tools become genuine productivity multipliers or remain clever demos.
