@@ -6,6 +6,7 @@ _site/
 
 # Ruby
 Gemfile.lock
+.bundle/
 vendor/
 
 # macOS
@@ -23,3 +24,12 @@ vendor/
 _internal/
 
 
+
+# Archives
+arch2-seminar-main.zip
+
+# Unpacked archives
+arch2-seminar-main/
+
+# Jekyll runtime PIDs
+jekyll.pid
