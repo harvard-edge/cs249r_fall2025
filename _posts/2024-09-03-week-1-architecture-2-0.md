@@ -57,9 +57,21 @@ Our exploration this week drew primarily from two foundational papers that estab
 
 - **"Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium"** - This companion piece addresses the critical infrastructure challenge. The authors propose a collaborative platform modeled after OpenAI Gym, where researchers can share simulators, datasets, and benchmarks. Key insight: the lack of large, representative public datasets remains our field's biggest bottleneck. The paper identifies specific opportunities where AI already shows promise: memory controller optimization, resource allocation, compiler optimization, cache allocation, and scheduling decisions.
 
+## Why We Structured the Course Across the Full Stack
+
+A student asked why we organized the course into three distinct phases: AI for Software, AI for Architecture, and AI for Chip Design. The answer gets to the heart of what makes this moment unique.
+
+Traditional computer science education treats these as separate domains with clean abstractions between them. Those abstractions were created as a coping mechanism for human engineers to manage complexity. But these boundaries are artifacts of human cognitive limitations, not fundamental properties of computing systems. When we limit AI agents to operating within these traditional silos, we guarantee inefficiency.
+
+My own journey through this field has spanned compilers, microarchitecture design, mobile SoC development, embedded IoT systems, machine learning infrastructure, and most recently, embodied AI. The consistent lesson across all these domains is that the most significant opportunities for optimization lie at the interfaces. A compiler decision affects microarchitecture behavior. Architecture choices constrain software optimization. Physical design limitations ripple up through the entire stack.
+
+Future AI agents won't respect our artificial boundaries. They'll explore design spaces that span software optimization, architectural innovation, and physical implementation simultaneously. If we don't train ourselves to think across these layers, if we don't expose these interactions in our teaching, we'll miss the most transformative opportunities. The agents that will revolutionize computing won't be constrained to optimizing within a single layer; they'll discover solutions that require coordinated changes across the entire stack.
+
+This is why every student in this class, regardless of their home discipline, needs exposure to all three phases. The compiler expert needs to understand how their optimizations affect chip area and power. The architecture specialist needs to grasp how software workloads drive their design decisions. The chip designer needs to see how physical constraints propagate up to software performance. Only by understanding the full stack can we prepare for a future where AI agents operate without our self-imposed boundaries.
+
 ## Looking Ahead
 
-Next week, we will dive deeper into the Architecture 2.0 paradigm, examining the QuArch dataset and exploring how we can create meaningful abstractions for intelligent systems. The journey through our three-phase curriculum—AI for Software, AI for Architecture, and AI for Chip Design—will demonstrate how these concepts apply across the entire computing stack.
+Next week, we will dive deeper into the Architecture 2.0 paradigm, examining the QuArch dataset and exploring how we can create meaningful abstractions for intelligent systems. As we progress through our three phases, remember that the divisions are pedagogical, not fundamental. The most exciting innovations will come from students who can think across these boundaries, just as the most powerful AI agents will be those that can optimize across the entire computing stack.
 
 The research challenges we identified—datasets, algorithms, best practices, workforce training, and infrastructure—each present significant opportunities for contribution. The question for our field is not which single challenge to address, but how to coordinate progress across all fronts.
 
