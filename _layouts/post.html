@@ -10,6 +10,12 @@ layout: default
             {% if page.author %}
                 • By {{ page.author }}
             {% endif %}
+            {% assign words = content | number_of_words %}
+            {% if words < 360 %}
+                • 1 min read
+            {% else %}
+                • {{ words | divided_by: 225 | plus: 1 }} min read
+            {% endif %}
             {% if page.categories %}
                 • <span class="categories">
                     {% for category in page.categories %}
