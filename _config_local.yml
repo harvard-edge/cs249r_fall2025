@@ -1,0 +1,41 @@
+# Local development config - simpler setup
+title: "Agentic AI for Computer Systems Design"
+description: "Agentic AI for Full-Stack System Design • CS249r Harvard University Fall 2025"
+baseurl: ""
+url: "http://localhost:4001"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Simplified plugins for local development
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Course info
+instructor: "Vijay Janapa Reddi"
+ta: "Chenyu Wang"
+semester: "Fall 2025"
+course_number: "CS249r"
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Collections for blog posts
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default layout
+defaults:
+  - scope:
+      path: "blog"
+      type: "posts"
+    values:
+      layout: "post"
