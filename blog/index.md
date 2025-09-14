@@ -26,7 +26,7 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
 {% if posts.size > 0 %}
   {% for post in posts limit: 5 %}
   <article class="blog-preview">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     <div class="blog-meta">
       {{ post.date | date: "%B %d, %Y" }}
       {% if post.categories %}
@@ -36,7 +36,7 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
     {% if post.excerpt %}
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     {% endif %}
-    <a href="{{ post.url }}" class="read-more">Read More →</a>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More →</a>
   </article>
   {% endfor %}
 {% else %}
@@ -50,7 +50,7 @@ Every Monday, we share what we learned in the previous week of CS249r. These pos
 {% if posts.size > 5 %}
 ### Older Posts
 {% for post in posts offset: 5 %}
-- **[{{ post.title }}]({{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
+- **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 {% endif %}
 
