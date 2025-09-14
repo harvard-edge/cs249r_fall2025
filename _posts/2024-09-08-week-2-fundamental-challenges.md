@@ -2,7 +2,9 @@
 layout: post
 title: "Week 2: The Fundamental Challenges Nobody Talks About"
 date: 2024-09-08
+author: "Vijay Janapa Reddi"
 categories: architecture
+permalink: /blog/2024/09/08/week-2-fundamental-challenges/
 ---
 
 Today we tackled the fundamental question that defines our field: **Why is AI for system design so uniquely challenging?** This isn't just about needing more compute or better algorithms—it's about confronting challenges that are fundamentally different from every other AI success story you've encountered.

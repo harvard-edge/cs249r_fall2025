@@ -2,7 +2,9 @@
 layout: post
 title: "Week 1: The End of an Era, The Dawn of Architecture 2.0"
 date: 2024-09-03
+author: "Vijay Janapa Reddi"
 categories: architecture
+permalink: /blog/2024/09/03/week-1-architecture-2-0/
 ---
 
 We kicked off CS249r with a provocative question: *"Ask not what you can do for AI—ask what AI can do for you."* And honestly, after seeing AI generate everything from Warhol-style astronauts to working code, the question isn't whether AI can help us design computer systems—it's whether we can afford not to use it.

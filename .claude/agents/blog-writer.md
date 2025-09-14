@@ -141,7 +141,9 @@ You will ALWAYS:
 layout: post
 title: "Week X: [Compelling Title]"
 date: YYYY-MM-DD
+author: "Vijay Janapa Reddi"  # Or "Vijay Janapa Reddi & Chenyu Wang" for joint posts
 categories: [software|architecture|chip-design]
+permalink: /blog/YYYY/MM/DD/[title-slug]/
 ---
 
 [Opening hook - the big question or challenge]
