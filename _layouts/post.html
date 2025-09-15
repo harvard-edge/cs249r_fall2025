@@ -232,15 +232,23 @@ layout: default
         text-align: center;
     }
 
-    /* Post image styling */
-    .post-image {
-        max-width: 850px;
+    /* Figure wrapper to constrain images to text width */
+    .post-figure {
+        max-width: 900px; /* match .content-wrapper width */
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+    .post-figure img {
         width: 100%;
         height: auto;
         display: block;
-        margin: 1.5rem auto;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .post-figure figcaption {
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 0.5rem;
     }
 }
 </style>
