@@ -30,7 +30,7 @@ Second, we're experiencing a talent crisis. Training a competent computer archit
 
 Third, we've reached an AI inflection point. For the first time, AI systems can actually understand code, reason about performance, and even generate functional designs. This isn't theoretical. Students in the class have already used GitHub Copilot, ChatGPT, and other tools in their own work. The question isn't whether AI will transform architecture; it's how quickly we can harness it effectively.
 
-![Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design.]({{ site.baseurl }}/assets/images/blog_images/week_1/arch2.0_flower.png)
+![Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design.]({{ '/assets/images/blog_images/week_1/arch2.0_flower.png' | relative_url }})
 
 <em>Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design.</em>
 
@@ -56,9 +56,9 @@ Consider the transformative potential: natural language specifications directly 
 
 Our exploration this week drew primarily from two foundational papers that establish the Architecture 2.0 vision:
 
-- [**Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design**](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo) - This paper establishes the theoretical framework for AI-driven architecture design. The authors present compelling evidence that modern design spaces contain between 10^14 and 10^2300 possible configurations—a complexity that demands AI assistance. They introduce the TAO to TAOS evolution, where Specialization becomes the critical fourth pillar enabling domain-specific optimizations at unprecedented scales.
+- [**Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design**](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo){:target="_blank" rel="noopener noreferrer"} - This paper establishes the theoretical framework for AI-driven architecture design. The authors present compelling evidence that modern design spaces contain between 10^14 and 10^2300 possible configurations—a complexity that demands AI assistance. They introduce the TAO to TAOS evolution, where Specialization becomes the critical fourth pillar enabling domain-specific optimizations at unprecedented scales.
 
-- [**Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium**](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/) - This companion piece addresses the critical infrastructure challenge. The authors propose a collaborative platform modeled after OpenAI Gym, where researchers can share simulators, datasets, and benchmarks. Key insight: the lack of large, representative public datasets remains our field's biggest bottleneck. The paper identifies specific opportunities where AI already shows promise: memory controller optimization, resource allocation, compiler optimization, cache allocation, and scheduling decisions.
+- [**Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium**](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/){:target="_blank" rel="noopener noreferrer"} - This companion piece addresses the critical infrastructure challenge. The authors propose a collaborative platform modeled after OpenAI Gym, where researchers can share simulators, datasets, and benchmarks. Key insight: the lack of large, representative public datasets remains our field's biggest bottleneck. The paper identifies specific opportunities where AI already shows promise: memory controller optimization, resource allocation, compiler optimization, cache allocation, and scheduling decisions.
 
 ## Why We Structured the Course Across the Full Stack
 
@@ -82,7 +82,7 @@ We now live in the generative AI era, and this changes everything. Traditional M
 
 This isn't just a quantitative improvement; it's a qualitative transformation. When an AI system can generate RTL code, propose new instruction set extensions, or design custom accelerators from natural language specifications, we're not just optimizing existing systems. We're enabling a fundamentally new design methodology. The shift from predictive to generative AI is what makes Architecture 2.0 possible.
 
-![Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design.]({{ site.baseurl }}/assets/images/blog_images/week_1/ml4arch.png)
+![Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design.]({{ '/assets/images/blog_images/week_1/ml4arch.png' | relative_url }})
 
 <em>Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design.</em>
 
