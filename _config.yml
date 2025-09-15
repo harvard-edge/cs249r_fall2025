@@ -45,5 +45,5 @@ social:
 
 # Blog settings
 permalink: /blog/:year/:month/:day/:title/
-# disqus:
-#   shortname: "cs249r-harvard"  # You'll need to create this on Disqus first
+disqus:
+  shortname: "architecture2"  # Architecture 2.0: AI Agents for Computing Systems
