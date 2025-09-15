@@ -63,6 +63,8 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 
 **📓 Class Notes**: [September 3 - Course Introduction](../course/notes#september-3---course-introduction--architecture-20) • **Materials**: [Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-3/CS249r_.Architecture.2.0.-.Part.1.pdf) • [All materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-3)
 
+**✍️ Blog Post**: [Week 1: The End of an Era, The Dawn of Architecture 2.0](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/)
+
 ## Week 2 — Architecture 2.0 & Foundations
 **Week of September 8**
 
@@ -78,6 +80,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design](https://arxiv.org/abs/1911.05289)
 
 **📚 Background Reading:** [Ch 3. DL Primer](https://www.mlsysbook.ai/contents/core/dl_primer/dl_primer) • [Ch 4. DNN Arch](https://www.mlsysbook.ai/contents/core/dnn_architectures/dnn_architectures)
+
+**✍️ Blog Post**: [Week 2: The Fundamental Challenges Nobody Talks About](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/)
 
 ---
 
