@@ -1,13 +1,14 @@
 source "https://rubygems.org"
 
 # Local dev: use Jekyll directly instead of github-pages
-gem "jekyll", "~> 4.4"
+gem "jekyll", "~> 3.9.5"
 gem "webrick", "~> 1.8"
 
 gem "jekyll-feed"
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"
+gem "kramdown-parser-gfm"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
