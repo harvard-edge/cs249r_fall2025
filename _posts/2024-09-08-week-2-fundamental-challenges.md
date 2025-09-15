@@ -12,6 +12,10 @@ Here's what nobody tells you about applying AI to computer architecture: it's no
 
 Our exploration revealed five interconnected challenges that make Architecture 2.0 uniquely difficult. Unlike other AI success stories, we can't simply apply existing techniques and expect transformative results. Each challenge compounds the others, creating a complex web of technical and practical obstacles.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_2/best_practices.png" alt="Best practices figure">
+</figure>
+
 ## Challenge 1: The Dataset Crisis
 
 The ImageNet comparison reveals the depth of our data problem. ImageNet succeeded because millions of people naturally generated and uploaded labeled images. The data already existed; researchers just had to curate it. In computer architecture, no such natural data generation occurs. We must deliberately create every training example through expensive simulation or hardware measurement.
@@ -52,7 +56,10 @@ These five challenges don't exist in isolation—they cascade. Poor datasets lea
 
 Given these challenges, we focused the latter part of class on the most fundamental element: data. Data is the rocket fuel of AI, and if we get this wrong, everything else fails. This brought us to a deep dive into the QuArch dataset project, led by Shwetank and Prakash, which represents one of the first domain-specific datasets for computer architecture.
 
-Building QuArch revealed practical challenges that research papers rarely discuss. The end result looks clean and polished, but the construction process exposed fundamental problems that every architecture dataset will face.
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_2/quarch_sdg.png" alt="QuArch synthetic data generation">
+<figcaption><em>To build a scalable dataset for computer architecture recall and reasoning, we create a synthetic data generation and labeling pipeline for QuArch.</em></figcaption>
+</figure>
 
 **The Domain Expert Problem**: Computer architecture spans an enormous range of expertise, from cache coherence protocols to memory controllers to compiler optimizations. Finding experts who understand all these areas is nearly impossible. Even when we found experts, their knowledge varied dramatically. An expert in processor design might struggle with networking protocols or storage systems. This expertise variation directly affects data quality because different experts interpret the same architectural scenario differently.
 
@@ -68,17 +75,22 @@ These practical realities shaped QuArch's design and highlighted why building do
 
 Amir Yazdanbakhsh's work on designing abstractions for intelligent systems provided crucial insight into why traditional architecture abstractions fail AI agents. The abstractions we've used for decades were designed as cognitive crutches for human engineers. They help us decompose complex problems into manageable pieces by hiding details that humans struggle to track simultaneously.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_2/agi-abstraction.png" alt="Abstractions for intelligent systems">
+<figcaption><em>The traditional computing stack has multiple layers of carefully designed abstractions. How can we reimagine the stack for intelligent systems and draw parallels? (Yazdanbaksh 2025)</em></figcaption>
+</figure>
+
 But AI agents don't have the same cognitive limitations. They can potentially reason about interactions across abstraction boundaries that humans find overwhelming. When we force AI agents to work within human-designed abstractions, we may be limiting their ability to discover truly novel solutions. The challenge becomes: How do we create abstractions that enable AI reasoning while still being useful for human understanding and verification?
 
 ## Papers That Shaped Our Discussion
 
 This week's exploration drew from several foundational sources:
 
-- **"Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design"** - This paper articulates the five fundamental challenges we explored and provides the theoretical framework for understanding why Architecture 2.0 requires new approaches to data, algorithms, tools, validation, and reproducibility.
+- [**"Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design"**](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo){:target="_blank" rel="noopener noreferrer"} - This paper articulates the five fundamental challenges we explored and provides the theoretical framework for understanding why Architecture 2.0 requires new approaches to data, algorithms, tools, validation, and reproducibility.
 
-- **"QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture"** - Our deep dive into the practical challenges of dataset construction revealed that the paper's clean final result masks enormous engineering challenges in expert coordination, label consistency, and quality verification.
+- [**"QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture"**](https://ieeexplore.ieee.org/document/10904448){:target="_blank" rel="noopener noreferrer"} - Our deep dive into the practical challenges of dataset construction revealed that the paper's clean final result masks enormous engineering challenges in expert coordination, label consistency, and quality verification.
 
-- **"A Computer Architect's Guide to Designing Abstractions for Intelligent Systems"** (Amir Yazdanbakhsh) - This work challenged us to rethink the abstraction boundaries that have guided computer architecture for decades, asking whether AI agents need fundamentally different ways of decomposing design problems.
+- [**"A Computer Architect's Guide to Designing Abstractions for Intelligent Systems"**](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/){:target="_blank" rel="noopener noreferrer"} (Amir Yazdanbakhsh) - This work challenged us to rethink the abstraction boundaries that have guided computer architecture for decades, asking whether AI agents need fundamentally different ways of decomposing design problems.
 
 ## Looking Ahead: Why We Start with Software
 
