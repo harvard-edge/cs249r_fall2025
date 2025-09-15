@@ -4,7 +4,6 @@ title: "Week 1: The End of an Era, The Dawn of Architecture 2.0"
 date: 2024-09-03
 author: "Vijay Janapa Reddi"
 categories: architecture
-permalink: /blog/2024/09/03/week-1-architecture-2-0/
 ---
 
 Moore's Law is dying. Dennard scaling ended years ago. Traditional computer architecture is hitting walls that fifty years of exponential improvement never prepared us for. So why are we launching a graduate seminar on AI-driven architecture design right now?

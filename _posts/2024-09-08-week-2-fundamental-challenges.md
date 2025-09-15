@@ -4,7 +4,6 @@ title: "Week 2: The Fundamental Challenges Nobody Talks About"
 date: 2024-09-08
 author: "Vijay Janapa Reddi"
 categories: architecture
-permalink: /blog/2024/09/08/week-2-fundamental-challenges/
 ---
 
 Here's what nobody tells you about applying AI to computer architecture: it's not just harder than other domains—it's fundamentally different in ways that make most AI success stories irrelevant. This week, we confronted why the techniques that conquered vision, language, and games stumble when faced with cache hierarchies and instruction pipelines. Through examining Amir Yazdanbakhsh's work on design abstractions and our deep dive into the five critical challenges facing our field, we discovered that the obstacles are both more subtle and more fundamental than they initially appear.
