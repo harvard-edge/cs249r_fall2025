@@ -25,6 +25,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - arch2-seminar-main/
 
 # Plugins (only GitHub Pages compatible ones)
 plugins:
