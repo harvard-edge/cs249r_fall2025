@@ -42,16 +42,16 @@ title: Papers
             </div>
           </div>
           <div class="paper-date" style="display:none;">{{ paper.date | date: '%B %Y' }}</div>
-          <div>
+          <div class="paper-actions">
             {% assign target_url = paper.arxiv_url | default: paper.url %}
-            <a class="talk-title-link" href="{{ target_url }}" target="_blank" rel="noopener noreferrer">Details <i class="bi bi-box-arrow-up-right"></i></a>
+            <a class="talk-title-link" href="{{ target_url }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+            <details style="display: inline-block; margin-left: 0.5rem;">
+              <summary>Abstract</summary>
+              <div class="paper-abstract">
+                {{ paper.abstract }}
+              </div>
+            </details>
           </div>
-          <details>
-            <summary>Abstract</summary>
-            <div class="paper-abstract">
-              {{ paper.abstract }}
-            </div>
-          </details>
         </div>
       {% endfor %}
   </div>
@@ -152,15 +152,14 @@ document.addEventListener('DOMContentLoaded', function() {
 .paper-item {
   background-color: white;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
-  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .paper-item:hover {
-  box-shadow: 0 4px 12px rgba(165, 28, 48, 0.1);
-  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(165, 28, 48, 0.08);
   border-color: #A51C30;
 }
 
@@ -172,57 +171,56 @@ document.addEventListener('DOMContentLoaded', function() {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
+  gap: 1rem;
 }
 .paper-title {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #2c3e50;
-  line-height: 1.4;
+  line-height: 1.3;
   flex: 1;
-  padding-right: 1rem;
 }
 
 .paper-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
   justify-content: flex-end;
-  max-width: 30%;
+  flex-shrink: 0;
 }
 
 .paper-tag {
-  background-color: #f0f0f0;
-  color: #555;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  background-color: #f5f5f5;
+  color: #666;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
   font-weight: 500;
   white-space: nowrap;
-  border: 1px solid #e0e0e0;
 }
 
 .paper-abstract {
-  color: #555;
-  line-height: 1.6;
-  padding: 1rem;
+  color: #666;
+  line-height: 1.5;
+  padding: 0.75rem;
   background-color: #f8f9fa;
-  border-radius: 6px;
-  margin-top: 0.8rem;
-  font-size: 0.95rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .talk-title-link {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 10px;
   background-color: #A51C30;
   color: white !important;
   text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
   font-weight: 500;
   transition: background-color 0.2s ease;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .talk-title-link:hover {
@@ -233,10 +231,11 @@ details summary {
   cursor: pointer;
   color: #A51C30;
   font-weight: 500;
-  font-size: 0.9rem;
-  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
   user-select: none;
   transition: color 0.2s ease;
+  display: inline-block;
 }
 
 details summary:hover {
@@ -245,6 +244,12 @@ details summary:hover {
 
 details[open] summary {
   margin-bottom: 0;
+}
+
+.paper-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 #tag-filters {
   margin-bottom: 20px;
