@@ -17,12 +17,18 @@ title: Papers
   <p>Total papers: <span id="total-papers">{{ site.data.tagged_papers | size }}</span></p>
 
   <div id="tag-filters">
-    <button class="tag-filter-btn active" data-tag="all">All Topics</button>
+    <button class="tag-filter-btn active" data-tag="all">All Topics ({{ site.data.tagged_papers | size }})</button>
     {% assign all_tags_str = site.data.tagged_papers | map: "tags" | join: "," %}
     {% assign tags = all_tags_str | split: "," | uniq | sort %}
     {% for tag in tags %}
       {% if tag != "" %}
-        <button class="tag-filter-btn" data-tag="{{ tag | downcase }}">{{ tag }}</button>
+        {% assign tag_count = 0 %}
+        {% for paper in site.data.tagged_papers %}
+          {% if paper.tags contains tag %}
+            {% assign tag_count = tag_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        <button class="tag-filter-btn" data-tag="{{ tag | downcase }}">{{ tag }} ({{ tag_count }})</button>
       {% endif %}
     {% endfor %}
   </div>
@@ -41,7 +47,9 @@ title: Papers
               {% endfor %}
             </div>
           </div>
-          <div class="paper-date" style="display:none;">{{ paper.date | date: '%B %Y' }}</div>
+          <div class="paper-meta">
+            <span class="paper-date">{{ paper.published | date: '%B %Y' }}</span>
+          </div>
           <div class="paper-actions">
             {% assign target_url = paper.arxiv_url | default: paper.url %}
             <a class="talk-title-link" href="{{ target_url }}" target="_blank" rel="noopener noreferrer">Paper ↗</a>
@@ -250,6 +258,16 @@ details[open] summary {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.paper-meta {
+  margin-bottom: 0.3rem;
+}
+
+.paper-date {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
 }
 #tag-filters {
   margin-bottom: 20px;

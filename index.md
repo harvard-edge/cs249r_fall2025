@@ -99,6 +99,49 @@ This course is focused on exploring how AI agents enable the specialized, effici
 
 ---
 
+## 🚀 Quick Links
+
+<div class="quick-links-grid">
+  <div class="quick-link-card">
+    <h3>📖 Latest Blog Post</h3>
+    {% assign latest_post = site.posts.first %}
+    {% if latest_post %}
+      <a href="{{ latest_post.url | prepend: site.baseurl }}" class="quick-link">
+        <strong>{{ latest_post.title }}</strong>
+        <span class="quick-link-date">{{ latest_post.date | date: "%B %d, %Y" }}</span>
+      </a>
+    {% else %}
+      <p>First blog post coming soon!</p>
+    {% endif %}
+  </div>
+  
+  <div class="quick-link-card">
+    <h3>📄 Research Papers</h3>
+    <a href="/cs249r_fall2025/papers" class="quick-link">
+      <strong>{{ site.data.tagged_papers | size }} Papers Available</strong>
+      <span class="quick-link-desc">AI for Hardware research collection</span>
+    </a>
+  </div>
+  
+  <div class="quick-link-card">
+    <h3>📰 Industry News</h3>
+    <a href="/cs249r_fall2025/course/news" class="quick-link">
+      <strong>Latest AI Hardware News</strong>
+      <span class="quick-link-desc">Stay updated with industry trends</span>
+    </a>
+  </div>
+  
+  <div class="quick-link-card">
+    <h3>📅 This Week</h3>
+    <a href="/cs249r_fall2025/course/schedule" class="quick-link">
+      <strong>View Schedule</strong>
+      <span class="quick-link-desc">Weekly topics and assignments</span>
+    </a>
+  </div>
+</div>
+
+---
+
 ## What Makes This Different from Traditional Architecture Courses?
 
 ### **Traditional Advanced Computer Architecture:**
