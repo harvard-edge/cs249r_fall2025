@@ -5,6 +5,15 @@ title: Papers
 
 <div class="community-page">
   <h1>Papers</h1>
+  
+  <div class="papers-description">
+    <p><strong>About this collection:</strong> This is a curated repository of recent research papers at the intersection of AI and computer systems design. The collection focuses specifically on <em>AI for Hardware</em> — papers that demonstrate how artificial intelligence techniques are being applied to optimize, design, and verify hardware systems, from analog circuits to chip architecture to system-level optimization.</p>
+    
+    <p><strong>Why we maintain this:</strong> Finding relevant Architecture 2.0 papers scattered across conferences like DAC, ICCAD, ASPLOS, ISCA, and arXiv can be time-consuming. This centralized, searchable collection makes it easy for students and researchers to quickly discover papers relevant to AI-driven hardware design, whether you're looking for the latest in LLM-assisted verification, neural architecture search for accelerators, or ML-driven chip placement algorithms.</p>
+    
+    <p>The collection is updated periodically throughout the semester as new relevant papers emerge. Use the category filters and search function to quickly find papers in your area of interest.</p>
+  </div>
+  
   <p>Total papers: <span id="total-papers">{{ site.data.tagged_papers | size }}</span></p>
 
   <div id="tag-filters">
@@ -114,6 +123,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+.papers-description {
+  background-color: #f8f9fa;
+  border-left: 4px solid #A51C30;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.papers-description p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.papers-description p:last-child {
+  margin-bottom: 0;
+}
+
 .talk-list {
   max-height: 800px;
   overflow-y: auto;
