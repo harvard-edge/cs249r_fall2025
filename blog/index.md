@@ -30,7 +30,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
 {% if posts.size > 0 %}
   {% for post in posts limit: 5 %}
   <article class="blog-preview">
-    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <h2><a href="/cs249r_fall2025{{ post.url }}">{{ post.title }}</a></h2>
     <div class="blog-meta">
       {{ post.date | date: "%B %d, %Y" }}
       {% if post.categories %}
@@ -40,7 +40,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
     {% if post.excerpt %}
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     {% endif %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read More →</a>
+    <a href="/cs249r_fall2025{{ post.url }}" class="read-more">Read More →</a>
   </article>
   {% endfor %}
 {% else %}
@@ -54,7 +54,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
 {% if posts.size > 5 %}
 ### Older Posts
 {% for post in posts offset: 5 %}
-- **[{{ post.title }}]({{ post.url | prepend: site.baseurl }})** - {{ post.date | date: "%B %d, %Y" }}
+- **[{{ post.title }}](/cs249r_fall2025{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 {% endif %}
 
