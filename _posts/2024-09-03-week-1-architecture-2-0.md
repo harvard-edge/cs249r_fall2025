@@ -2,7 +2,7 @@
 layout: post
 title: "Week 1: The End of an Era, The Dawn of Architecture 2.0"
 date: 2024-09-03
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: architecture
 ---
 
