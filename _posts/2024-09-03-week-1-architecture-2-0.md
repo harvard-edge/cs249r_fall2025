@@ -31,7 +31,7 @@ Second, we're experiencing a talent crisis. Training a competent computer archit
 Third, we've reached an AI inflection point. For the first time, AI systems can actually understand code, reason about performance, and even generate functional designs. This isn't theoretical. Students in the class have already used GitHub Copilot, ChatGPT, and other tools in their own work. The question isn't whether AI will transform architecture; it's how quickly we can harness it effectively.
 
 <figure>
-<img src="/assets/images/blog_images/week_1/arch2.0_flower.png" alt="Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design." />
+<img src="/cs249r_fall2025/assets/images/blog_images/week_1/arch2.0_flower.png" alt="Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design." />
 <figcaption><em>Key challenges in ML-assisted architecture design. The figure illustrates the major obstacles facing ML-assisted computer architecture design.</em></figcaption>
 </figure>
 
@@ -84,7 +84,7 @@ We now live in the generative AI era, and this changes everything. Traditional M
 This isn't just a quantitative improvement; it's a qualitative transformation. When an AI system can generate RTL code, propose new instruction set extensions, or design custom accelerators from natural language specifications, we're not just optimizing existing systems. We're enabling a fundamentally new design methodology. The shift from predictive to generative AI is what makes Architecture 2.0 possible.
 
 <figure>
-<img src="/assets/images/blog_images/week_1/ml4arch.png" alt="Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design." />
+<img src="/cs249r_fall2025/assets/images/blog_images/week_1/ml4arch.png" alt="Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design." />
 <figcaption><em>Key research areas and questions in ML-driven architecture research. The figure identifies the areas that must be addressed to advance ML-assisted computer system design.</em></figcaption>
 </figure>
 
