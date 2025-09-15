@@ -54,7 +54,7 @@ These five challenges don't exist in isolation—they cascade. Poor datasets lea
 
 ## Data as the Rocket Fuel: The QuArch Experience
 
-Given these challenges, we focused the latter part of class on the most fundamental element: data. Data is the rocket fuel of AI, and if we get this wrong, everything else fails. This brought us to a deep dive into the QuArch dataset project, led by Shwetank and Prakash, which represents one of the first domain-specific datasets for computer architecture.
+Given these challenges, we focused the latter part of class on the most fundamental element: data. Data is the rocket fuel of AI, and if we get this wrong, everything else fails. This brought us to a deep dive into the QuArch dataset project, led by Shvetank Prakash, which represents one of the first domain-specific datasets for computer architecture.
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_2/quarch_sdg.png" alt="QuArch synthetic data generation">
