@@ -30,7 +30,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
 {% if posts.size > 0 %}
   {% for post in posts limit: 5 %}
   <article class="blog-preview">
-    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
     <div class="blog-meta">
       {{ post.date | date: "%B %d, %Y" }}
       {% if post.categories %}
@@ -40,7 +40,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
     {% if post.excerpt %}
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     {% endif %}
-    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More →</a>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read More →</a>
   </article>
   {% endfor %}
 {% else %}
@@ -54,7 +54,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
 {% if posts.size > 5 %}
 ### Older Posts
 {% for post in posts offset: 5 %}
-- **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
+- **[{{ post.title }}]({{ post.url | prepend: site.baseurl }})** - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 {% endif %}
 
@@ -64,7 +64,7 @@ This is a field being born. The conventional wisdom is still forming. The right 
 
 New posts drop every Monday. Don't miss the insights:
 - 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) for weekly post announcements and class highlights
-- 📧 Subscribe to updates via [RSS](/cs249r_fall2025/feed.xml)
+- 📧 Subscribe to updates via [RSS]({{ "/feed.xml" | prepend: site.baseurl }})
 - 💬 Join discussions in the comments—this is where the best ideas get refined
 - 🔄 Share posts with colleagues who need to understand where computing is heading
 
