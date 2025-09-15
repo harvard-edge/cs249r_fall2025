@@ -6,7 +6,7 @@
 
 ## About This Course
 
-This advanced graduate seminar explores how AI agents are transforming computer architecture design across the complete system stack. From compiler optimization to physical chip design, we examine the cutting edge research in AI driven architecture methodologies.
+This advanced graduate seminar explores how AI agents are transforming computer architecture design across the complete system stack. From compiler optimization to physical chip design, we examine the cutting-edge research in AI-driven architecture methodologies.
 
 ## Course Website
 
