@@ -2,7 +2,7 @@
 layout: post
 title: "Week 2: The Fundamental Challenges Nobody Talks About"
 date: 2024-09-08
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: architecture
 ---
 
