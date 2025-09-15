@@ -214,6 +214,31 @@ layout: default
     font-size: 1.2rem;
 }
 
+/* Ensure images never exceed the text width */
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Consistent figure styling across breakpoints */
+.post-figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+.post-figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+}
+.post-figure figcaption {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .blog-post-header h1 {
         font-size: 2rem;
@@ -232,23 +257,6 @@ layout: default
         text-align: center;
     }
 
-    /* Figure wrapper to constrain images to text width */
-    .post-figure {
-        max-width: 900px; /* match .content-wrapper width */
-        margin: 1.5rem auto;
-        text-align: center;
-    }
-    .post-figure img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-    .post-figure figcaption {
-        font-size: 0.95rem;
-        color: #555;
-        margin-top: 0.5rem;
-    }
+    /* Mobile retains same figure behavior; definitions above already constrain width */
 }
 </style>
