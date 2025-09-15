@@ -146,12 +146,43 @@ document.addEventListener('DOMContentLoaded', function() {
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 4px;
+  background-color: #f9f9f9;
 }
+
+.paper-item {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.paper-item:hover {
+  box-shadow: 0 4px 12px rgba(165, 28, 48, 0.1);
+  transform: translateY(-2px);
+  border-color: #A51C30;
+}
+
+.paper-item:last-child {
+  margin-bottom: 0;
+}
+
 .paper-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 0.8rem;
 }
+.paper-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.4;
+  flex: 1;
+  padding-right: 1rem;
+}
+
 .paper-tags {
   display: flex;
   flex-wrap: wrap;
@@ -159,13 +190,61 @@ document.addEventListener('DOMContentLoaded', function() {
   justify-content: flex-end;
   max-width: 30%;
 }
+
 .paper-tag {
-  background-color: #eee;
-  color: #333;
-  padding: 4px 8px;
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 4px 10px;
   border-radius: 12px;
-  font-size: 0.8em;
+  font-size: 0.75rem;
+  font-weight: 500;
   white-space: nowrap;
+  border: 1px solid #e0e0e0;
+}
+
+.paper-abstract {
+  color: #555;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.talk-title-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #A51C30;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.talk-title-link:hover {
+  background-color: #8B1538;
+}
+
+details summary {
+  cursor: pointer;
+  color: #A51C30;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+details summary:hover {
+  color: #8B1538;
+}
+
+details[open] summary {
+  margin-bottom: 0;
 }
 #tag-filters {
   margin-bottom: 20px;
