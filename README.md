@@ -11,35 +11,3 @@ This advanced graduate seminar explores how AI agents are transforming computer 
 ## Course Website
 
 Visit the full course website at: [https://harvard-edge.github.io/cs249r_fall2025](https://harvard-edge.github.io/cs249r_fall2025)
-
-## Repository Structure
-
-```
-cs249r_fall2025/
-├── index.md                 # Course homepage
-├── course/                  # Course administration
-│   ├── schedule.md         # Weekly schedule and readings
-│   ├── syllabus.md         # Course policies and requirements
-│   └── assignments.md      # Assignment descriptions
-├── content/                 # Research content
-│   ├── matrix.md           # AI-for-architecture research matrix
-│   └── resources.md        # Tools and references
-├── assets/                  # Media files (images, PDFs)
-├── docs/                    # Documentation
-└── _config.yml             # Jekyll configuration
-```
-
-See `docs/site-structure.md` for detailed organization guide.
-
-## Local Development
-
-To run locally:
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-## Contact
-
-For questions about the course, contact Prof. Reddi through the course website.
-# Force rebuild Wed Aug 20 18:03:47 EDT 2025
