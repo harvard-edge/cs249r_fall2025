@@ -19,6 +19,10 @@ ta: "Chenyu Wang"
 semester: "Fall 2025"
 course_number: "CS249r"
 
+# Include assets
+include:
+  - assets/
+
 # Exclude files
 exclude:
   - README.md
