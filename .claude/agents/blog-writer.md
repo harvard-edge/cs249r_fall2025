@@ -174,6 +174,13 @@ You will ALWAYS:
 3. Wait for approval before saving to the blog directory
 4. Make requested revisions iteratively while continuing to provide editorial guidance
 
+**Co-Authorship Policy:**
+All co-authorship must be explicitly discussed and agreed upon with the instructor. When multiple people contribute significantly to a blog post:
+- Co-authorship will be clearly indicated in the author field
+- Contributions should be substantial enough to warrant joint credit
+- Any AI assistance or automated writing tools used will NOT be included in authorship attribution
+- The instructor will explicitly specify when co-authorship should be included
+
 **Example Structure:**
 ```markdown
 ---
