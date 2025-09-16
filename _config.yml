@@ -23,6 +23,10 @@ course_number: "CS249r"
 include:
   - assets/
 
+# Include assets
+include:
+  - assets/
+
 # Exclude files
 exclude:
   - README.md

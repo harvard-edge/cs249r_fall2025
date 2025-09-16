@@ -26,29 +26,29 @@ layout: default
 **📚 Quick Navigation:**
 
 ### Introduction & Foundations
-- [Week 1 — Course Introduction & Logistics](#week-1--course-introduction--logistics)
-- [Week 2 — Architecture 2.0 & Foundations](#week-2--architecture-20--foundations)
+- [Week 1 - Course Introduction & Logistics](#week-1---course-introduction--logistics)
+- [Week 2 - Architecture 2.0 & Foundations](#week-2---architecture-20--foundations)
 
 ### Phase 1: AI for Software
-- [Week 3 — Code Generation & Software Engineering](#week-3--code-generation--software-engineering)
-- [Week 4 — Performance Engineering & Code Optimization](#week-4--performance-engineering--code-optimization)
-- [Week 5 — GPU Kernels & Parallel Programming](#week-5--gpu-kernels--parallel-programming)
-- [Week 6 — Distributed Systems Integration](#week-6--distributed-systems-integration)
+- [Week 3 - Code Generation & Software Engineering](#week-3---code-generation--software-engineering)
+- [Week 4 - Performance Engineering & Code Optimization](#week-4---performance-engineering--code-optimization)
+- [Week 5 - GPU Kernels & Parallel Programming](#week-5---gpu-kernels--parallel-programming)
+- [Week 6 - Distributed Systems Integration](#week-6---distributed-systems-integration)
 
 ### Phase 2: AI for Architecture
-- [Week 7 — Performance Prediction and Design Space Exploration](#week-7--performance-prediction-and-design-space-exploration)
-- [Week 8 — Hardware Accelerators & AI Mappings](#week-8--hardware-accelerators--ai-mappings)
-- [Week 9 — Memory Systems & Data Management](#week-9--memory-systems--data-management)
-- [Week 10 — LLM Systems & AI Workload Scheduling](#week-10--llm-systems--ai-workload-scheduling)
+- [Week 7 - Performance Prediction & Design Space Exploration](#week-7---performance-prediction--design-space-exploration)
+- [Week 8 - Hardware Accelerators & AI Mappings](#week-8---hardware-accelerators--ai-mappings)
+- [Week 9 - Memory Systems & Data Management](#week-9---memory-systems--data-management)
+- [Week 10 - LLM Systems & AI Workload Scheduling](#week-10---llm-systems--ai-workload-scheduling)
 
 ### Phase 3: AI for Chip Design
-- [Week 11 — RTL Design & Logic Synthesis](#week-11--rtl-design--logic-synthesis)
-- [Week 12 — Physical Design & Layout](#week-12--physical-design--layout)
-- [Week 13 — Verification & Advanced Chip Design](#week-13--verification--advanced-chip-design)
+- [Week 11 - RTL Design & Logic Synthesis](#week-11---rtl-design--logic-synthesis)
+- [Week 12 - Physical Design & Layout](#week-12---physical-design--layout)
+- [Week 13 - Verification & Advanced Chip Design](#week-13---verification--advanced-chip-design)
 
 ---
 
-## Week 1 — Course Introduction & Logistics
+## Week 1 - Course Introduction & Logistics
 **Week of September 1 (first class: September 3)**
 
 Course overview, logistics, syllabus, and introduction to the vision of AI-driven computing stack design.
@@ -63,7 +63,9 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 
 **📓 Class Notes**: [September 3 - Course Introduction](../course/notes#september-3---course-introduction--architecture-20) • **Materials**: [Slides](https://github.com/harvard-edge/cs249r_fall2025/releases/download/sep-3/CS249r_.Architecture.2.0.-.Part.1.pdf) • [All materials](https://github.com/harvard-edge/cs249r_fall2025/releases/tag/sep-3)
 
-## Week 2 — Architecture 2.0 & Foundations
+**✍️ Blog Post**: [Week 1: The End of an Era, The Dawn of Architecture 2.0](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/)
+
+## Week 2 - Architecture 2.0 & Foundations
 **Week of September 8**
 
 Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. Introduction to datasets and survey paper methodology.
@@ -79,12 +81,14 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **📚 Background Reading:** [Ch 3. DL Primer](https://www.mlsysbook.ai/contents/core/dl_primer/dl_primer) • [Ch 4. DNN Arch](https://www.mlsysbook.ai/contents/core/dnn_architectures/dnn_architectures)
 
+**✍️ Blog Post**: [Week 2: The Fundamental Challenges Nobody Talks About](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/)
+
 ---
 
 # Phase 1: AI for Software
 *AI systems understand what needs to be computed efficiently*
 
-## Week 3 — Code Generation & Software Engineering
+## Week 3 - Code Generation & Software Engineering
 **Week of September 15**
 
 *Why are we studying this? Code generation is the most accessible entry point for AI in systems - it's where LLMs have shown dramatic success, but also where we can clearly see the gap between "impressive demos" and "production-ready tools." This week examines: How do we evaluate whether AI can actually replace human programmers? What does it mean for code to be "correct" vs. "optimal"? How do we move from toy problems to real software engineering workflows?*
@@ -103,7 +107,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **📚 Background Reading:** [Ch 6. AI Frameworks](https://www.mlsysbook.ai/contents/core/frameworks/frameworks) • [Ch 5. Data Engr](https://www.mlsysbook.ai/contents/core/data_engineering/data_engineering.html)
 
-## Week 4 — Performance Engineering & Code Optimization
+## Week 4 - Performance Engineering & Code Optimization
 **Week of September 22**
 
 *Why are we studying this? Moving beyond correctness to performance requires understanding both algorithmic complexity and system behavior. This week explores: Can AI learn the subtle performance optimizations that expert programmers use? How do we teach machines to reason about cache behavior, instruction-level parallelism, and memory access patterns? What's the difference between micro-optimizations and architectural improvements?*
@@ -123,7 +127,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **📚 Background Reading:** [Ch 7. Efficient AI](https://www.mlsysbook.ai/contents/core/efficient_ai/efficient_ai) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
 
-## Week 5 — GPU Kernels & Parallel Programming
+## Week 5 - GPU Kernels & Parallel Programming
 **Week of September 29**
 
 *Why are we studying this? GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding. This week explores: Can AI learn hardware-specific optimization strategies that human experts use? How do we benchmark AI systems against decades of hand-tuned libraries? What happens when the optimization space is so large that even experts disagree on "optimal" solutions?*
@@ -141,7 +145,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 7. Efficient AI](https://www.mlsysbook.ai/contents/core/efficient_ai/efficient_ai)
 
-## Week 6 — Distributed Systems Integration
+## Week 6 - Distributed Systems Integration
 **Week of October 6**
 
 *Why are we studying this? Distributed systems are the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale. This week examines: How do we optimize systems where the bottleneck might be network latency, not computation? Can AI learn to co-design algorithms and system architecture? What does "optimal" mean when dealing with failures, load balancing, and resource contention?*
@@ -165,7 +169,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 # Phase 2: AI for Architecture
 *AI agents design how to compute efficiently in hardware*
 
-## Week 7 — Performance Prediction & Design Space Exploration
+## Week 7 - Performance Prediction & Design Space Exploration
 **Week of October 13**
 
 *Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
@@ -186,7 +190,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [AutoDSE: Enabling Software Programmers to Design Efficient FPGA Accelerators](https://arxiv.org/pdf/2009.14381.pdf)
 - [Bayesian Optimization for Accelerator Design Space Exploration](https://proceedings.neurips.cc/paper_files/paper/2021/file/c59bdc99ccffe8d088b3c67cd7f6e5db-Paper.pdf)
 
-## Week 8 — Hardware Accelerators & AI Mappings
+## Week 8 - Hardware Accelerators & AI Mappings
 **Week of October 20**
 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
@@ -207,7 +211,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [Understanding Reuse, Performance, and Hardware Cost of DNN Dataflows: A Data-Centric Approach Using MAESTRO](https://arxiv.org/pdf/1805.02566.pdf)
 - [Timeloop: A Systematic Approach to DNN Accelerator Evaluation](https://ieeexplore.ieee.org/document/8686236)
 
-## Week 9 — Memory Systems & Data Management
+## Week 9 - Memory Systems & Data Management
 **Week of October 27**
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
@@ -227,7 +231,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - Long Short-Term Memory (LSTM) Based Hardware Prefetcher (ACM MEMSYS 2017, not on arXiv)
 - [Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms](https://arxiv.org/pdf/2307.08635.pdf)
 
-## Week 10 — LLM Systems & AI Workload Scheduling
+## Week 10 - LLM Systems & AI Workload Scheduling
 **Week of November 3**
 
 *Why are we studying this? AI workloads are a new class of computational patterns that challenge traditional system design assumptions. This week explores: How do we optimize systems for workloads that are themselves AI-driven? What new scheduling challenges emerge with transformer architectures and attention mechanisms? Can we co-design the AI algorithms and the systems that run them?*
@@ -251,7 +255,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 # Phase 3: AI for Chip Design
 *AI tools implement the architecture physically in silicon*
 
-## Week 11 — RTL Design & Logic Synthesis
+## Week 11 - RTL Design & Logic Synthesis
 **Week of November 10**
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
@@ -273,7 +277,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [AutoChip: Automating HDL Generation Using LLM Feedback](https://arxiv.org/pdf/2311.04887.pdf)
 - [OpenABC-D: A Large-Scale Dataset for Machine Learning Guided Integrated Circuit Synthesis](https://arxiv.org/pdf/2110.11292.pdf)
 
-## Week 12 — Physical Design & Layout
+## Week 12 - Physical Design & Layout
 **Week of November 17**
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
@@ -291,7 +295,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [MaskPlace: Fast Chip Placement via Reinforced Visual Representation Learning](https://arxiv.org/pdf/2211.13382.pdf)
 - Learning on distributed traces for data center storage systems (Different paper, needs verification)
 
-## Week 13 — Verification & Advanced Chip Design
+## Week 13 - Verification & Advanced Chip Design
 **Week of November 24**
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
@@ -310,7 +314,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *November 26: Thanksgiving Break - No Class*
 
-## Week 13 — Final Projects & Integration
+## Week 13 - Final Projects & Integration
 
 Student project synthesis.
 
