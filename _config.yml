@@ -31,6 +31,12 @@ exclude:
   - vendor/
   - arch2-seminar-main/
 
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
 # Plugins (only GitHub Pages compatible ones)
 plugins:
   - jekyll-feed
