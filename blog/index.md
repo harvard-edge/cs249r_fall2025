@@ -36,6 +36,9 @@ This is a field being born. The conventional wisdom is still forming. The right 
       {% if post.categories %}
         • {{ post.categories | join: ", " | capitalize }}
       {% endif %}
+      {% assign words = post.content | strip_html | number_of_words %}
+      {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+      • {{ reading_time }} min read
     </div>
     {% if post.excerpt %}
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
@@ -45,17 +48,6 @@ This is a field being born. The conventional wisdom is still forming. The right 
   {% endfor %}
 {% else %}
   <p><em>Blog posts coming soon! The first post will be published after our first week of classes.</em></p>
-{% endif %}
-
----
-
-## Archive
-
-{% if posts.size > 5 %}
-### Older Posts
-{% for post in posts offset: 5 %}
-- **[{{ post.title }}](/cs249r_fall2025{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
 {% endif %}
 
 ---
@@ -109,5 +101,59 @@ New posts drop every Monday. Don't miss the insights:
 .read-more:hover {
   color: #8B1538;
   text-decoration: underline;
+}
+
+.key-takeaways {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid #A51C30;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.key-takeaways h3 {
+  margin-top: 0;
+  color: #A51C30;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.key-takeaways ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.key-takeaways li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .blog-preview {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-preview h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  
+  .key-takeaways {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .key-takeaways h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Reading time styling */
+.reading-time {
+  color: #666;
+  font-weight: 500;
 }
 </style>

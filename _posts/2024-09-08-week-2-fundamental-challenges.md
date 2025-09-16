@@ -8,6 +8,16 @@ categories: architecture
 
 Here's what nobody tells you about applying AI to computer architecture: it's not just harder than other domains—it's fundamentally different in ways that make most AI success stories irrelevant. This week, we confronted why the techniques that conquered vision, language, and games stumble when faced with cache hierarchies and instruction pipelines. Through examining Amir Yazdanbakhsh's work on design abstractions and our deep dive into the five critical challenges facing our field, we discovered that the obstacles are both more subtle and more fundamental than they initially appear.
 
+<div class="key-takeaways">
+<h3>🔑 Key Takeaways</h3>
+<ul>
+<li><strong>Five Core Challenges:</strong> Dataset crisis, algorithm evolution treadmill, tools infrastructure gap, reproducibility crisis, and real-world robustness requirements</li>
+<li><strong>Data is Different:</strong> Unlike other AI domains, we must deliberately create every training example through expensive simulation or hardware measurement</li>
+<li><strong>Cascade Effect:</strong> These challenges compound each other, creating feedback loops that have kept Architecture 2.0 perpetually "five years away"</li>
+<li><strong>Abstraction Rethinking:</strong> Traditional human-designed abstractions may limit AI agents' ability to discover truly novel cross-layer optimizations</li>
+</ul>
+</div>
+
 ## The Five Fundamental Challenges
 
 Our exploration revealed five interconnected challenges that make Architecture 2.0 uniquely difficult. Unlike other AI success stories, we can't simply apply existing techniques and expect transformative results. Each challenge compounds the others, creating a complex web of technical and practical obstacles.

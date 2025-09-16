@@ -8,6 +8,16 @@ categories: architecture
 
 Moore's Law is dying. Dennard scaling ended years ago. Traditional computer architecture is hitting walls that fifty years of exponential improvement never prepared us for. So why are we launching a graduate seminar on AI-driven architecture design right now?
 
+<div class="key-takeaways">
+<h3>🔑 Key Takeaways</h3>
+<ul>
+<li><strong>Perfect Storm for Innovation:</strong> The convergence of stalled traditional scaling, explosive demand for specialized hardware, and breakthrough AI capabilities creates unprecedented opportunity</li>
+<li><strong>Scale Changes Everything:</strong> Modern design spaces contain 10^14 to 10^2300 configurations—requiring AI assistance to explore effectively</li>
+<li><strong>TAOS Framework:</strong> Architecture 2.0 extends TAO (Technology, Architecture, Optimization) with Specialization as the crucial fourth pillar</li>
+<li><strong>Full-Stack Thinking:</strong> The biggest opportunities lie at interfaces between traditional abstraction layers, demanding cross-stack AI agents</li>
+</ul>
+</div>
+
 The timing is no coincidence. We stand at an unprecedented convergence of necessity and opportunity. Traditional computer architecture approaches are hitting fundamental walls. Moore's Law is slowing, Dennard scaling has ended, and the complexity of modern systems has exploded beyond human comprehension. At the same time, AI capabilities have reached a point where they can meaningfully contribute to system design. This convergence isn't about following a trend but recognizing that the field of computer architecture must evolve or risk stagnation.
 
 The enthusiasm for this topic was immediately evident in our classroom's composition. Students arrived from remarkably diverse backgrounds: computer architecture, machine learning foundations, ML systems, compilers, and programming languages. This wasn't just interdisciplinary interest; it was recognition from across computer science that we're approaching a fundamental inflection point. Computing has been the foundation of technological progress for fifty years, and we've taken exponential improvements for granted. Now, with the end of easy scaling and the slowing of Moore's Law, every subfield recognizes that the free lunch is over.
@@ -24,9 +34,15 @@ However, we now face fundamental technological constraints that demand new appro
 
 Three converging forces make this the critical moment for Architecture 2.0:
 
+### The Demand Explosion
+
 First, we face a demand explosion. Every major application domain now requires specialized hardware, from large language models to autonomous vehicles. The era of one-size-fits-all computing is definitively over. Companies are designing custom chips for everything from cryptocurrency mining to video transcoding. This specialization demand is creating more design work than our industry has architects to handle.
 
+### The Talent Crisis
+
 Second, we're experiencing a talent crisis. Training a competent computer architect takes years, but the demand for specialized hardware is growing exponentially. We simply cannot train human architects fast enough to meet the need. In class, we discussed how major tech companies are competing fiercely for the same small pool of experienced architects, driving salaries sky-high while projects remain understaffed.
+
+### The AI Inflection Point
 
 Third, we've reached an AI inflection point. For the first time, AI systems can actually understand code, reason about performance, and even generate functional designs. This isn't theoretical. Students in the class have already used GitHub Copilot, ChatGPT, and other tools in their own work. The question isn't whether AI will transform architecture; it's how quickly we can harness it effectively.
 
