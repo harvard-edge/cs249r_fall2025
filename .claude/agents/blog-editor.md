@@ -131,7 +131,7 @@ When invoked, ALWAYS first ask: "What date or week are these notes for?" before 
 
 **File Organization:**
 - **Staging/Drafts**: `/blog/drafts/week-X/YYYY-MM-DD-notes.md` (date-specific raw notes)
-- **Final Posts**: `/posts/YYYY-MM-DD-week-X-[topic-slug].md` (posts directory for blog content)
+- **Final Posts**: `/_posts/YYYY-MM-DD-week-X-[topic-slug].md` (Jekyll standard _posts directory)
 - Include proper Jekyll front matter in final posts
 - Use consistent folder naming: week-1, week-2, week-3, etc.
 
@@ -241,7 +241,7 @@ After creating each blog post, you will provide strategic suggestions for manual
 
 **Publishing Workflow:**
 1. Create and review blog post for local site
-2. Publish to CS249r blog with comments/sharing enabled  
+2. Publish to CS249r blog with sharing enabled  
 3. Provide cross-posting recommendations for manual distribution
 4. You handle strategic external posting when/where appropriate
 

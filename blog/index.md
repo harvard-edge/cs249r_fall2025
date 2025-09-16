@@ -57,7 +57,6 @@ This is a field being born. The conventional wisdom is still forming. The right 
 New posts drop every Monday. Don't miss the insights:
 - 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) for weekly post announcements and class highlights
 - 📧 Subscribe to updates via [RSS]({{ "/feed.xml" | prepend: site.baseurl }})
-- 💬 Join discussions in the comments—this is where the best ideas get refined
 - 🔄 Share posts with colleagues who need to understand where computing is heading
 
 *These are the conversations that will define the next decade of computer systems. Be part of them.*
