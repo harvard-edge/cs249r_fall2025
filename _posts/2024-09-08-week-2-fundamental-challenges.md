@@ -46,6 +46,8 @@ We have incredible tools like gem5, but they were designed for human architects,
 
 The infrastructure gap extends beyond simulation. We need environments where AI agents can learn and experiment safely, where they can try radical designs without requiring months of silicon fabrication to validate ideas. The tools that enabled the deep learning revolution don't exist for architecture yet.
 
+As one student insightfully noted, we need "a 'gymnasium' for testing algorithms on a standardized benchmark of curated datasets" that would enable "academia and industry to collaboratively accelerate progress." This vision of shared infrastructure—complete with challenges, competitions, and leaderboards—echoes successful models from other ML domains but remains conspicuously absent in computer architecture.
+
 ## Challenge 4: The Reproducibility Crisis
 
 Here's an uncomfortable truth that emerged from our discussion: approximately 70-80% of papers in our field struggle with reproducibility—a figure that aligns with broader studies of computational research, but feels particularly acute in architecture where industrial adoption demands rock-solid reliability. We're excited about publishing interesting nuggets, but we punt on the engineering rigor that industry demands. When engineers receive exotic technology from academia, they often reject it because they can't consistently reproduce the claimed results across diverse real-world scenarios.
@@ -61,6 +63,8 @@ The safety and verification challenges multiply when AI agents make architectura
 ## The Cascade Effect: How Challenges Compound
 
 These five challenges don't exist in isolation—they cascade. Poor datasets lead researchers to chase algorithmic novelty instead of addressing fundamental data quality. Inadequate tools force researchers into reproducibility shortcuts. Each challenge makes the others harder to solve, creating a feedback loop that has kept Architecture 2.0 perpetually 'five years away.'
+
+This compound effect resonates with students' observations about domain-specific systems. One student particularly highlighted the connection to Hennessy's vision: "Future AI systems that become commercial will most likely have a sort of bespoke subsystem for individual tasks." This modularity might be key to breaking the cascade—allowing progress in isolated domains without waiting for universal solutions.
 
 ## Data as the Rocket Fuel: The QuArch Experience
 
@@ -92,6 +96,8 @@ Amir Yazdanbakhsh's work on designing abstractions for intelligent systems provi
 
 But AI agents don't have the same cognitive limitations. They can potentially reason about interactions across abstraction boundaries that humans find overwhelming. When we force AI agents to work within human-designed abstractions, we may be limiting their ability to discover truly novel solutions. The challenge becomes: How do we create abstractions that enable AI reasoning while still being useful for human understanding and verification?
 
+This tension prompted deep reflection from students. One asked a fundamental question: "To what extent do human abstractions help or harm progress of machine learning guided approaches to complex tasks?" Another student connected this to their own research experience with reinforcement learning, noting how "carefully designed environments often act as controlled testbeds that reveal deeper behaviors," drawing parallels to how standardized environments drive advances even when starting as "more contrived or controlled" settings.
+
 ## Papers That Shaped Our Discussion
 
 This week's exploration drew from several foundational sources:
@@ -102,6 +108,14 @@ This week's exploration drew from several foundational sources:
 
 - [**"A Computer Architect's Guide to Designing Abstractions for Intelligent Systems"**](https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/){:target="_blank" rel="noopener noreferrer"} (Amir Yazdanbakhsh) - This work challenged us to rethink the abstraction boundaries that have guided computer architecture for decades, asking whether AI agents need fundamentally different ways of decomposing design problems.
 
+## Student Perspectives: Where Will Automation Strike First?
+
+Our class survey revealed fascinating divergence in how students view the automation timeline. While some believe "code generation is already pretty advanced" and will be refined further, others argue that debugging represents the more tractable near-term target. As one student articulated: "Debugging has clear problems with clear answers. It is not a matter of 'Depend' to debug software designs."
+
+A particularly nuanced perspective emerged around the evolution pathway: "Code generation → debugging → optimization." The reasoning is compelling—since "most problems presently with AI generated code involve some form of debugging, if a software design task can master this before giving a final answer, then it paves the way towards ML automated performance optimizations."
+
+Interestingly, several students with industry experience suggested compiler optimization as the most likely candidate for near-term automation. "ML can analyze large numbers of code paths and quickly discover optimization strategies that humans might miss," one noted, adding that "compilers sit at the intersection of hardware and software, so even small gains in efficiency can scale across many applications."
+
 ## Looking Ahead: Why We Start with Software
 
 Having established this foundation of challenges, we're ready to begin our three-phase journey through the computing stack. Next week, we start with AI for Software, and this choice is deliberate. Code is the most accessible entry point for understanding how AI can transform system design. Students already interact with code generation tools like GitHub Copilot and ChatGPT, providing familiar ground for exploring deeper questions.
@@ -110,7 +124,9 @@ Software also offers the cleanest separation between correctness and optimality.
 
 As we progress from software to architecture to chip design, we'll see how these five fundamental challenges manifest differently at each layer. The dataset problems become more complex, the tools more specialized, and the verification requirements more stringent. But the core insight remains: we're not just applying AI to existing design processes. We're reimagining how design happens when the cognitive limitations that shaped our current methodologies no longer apply.
 
-The next generation of computer architects will need to navigate all five challenges simultaneously. Success requires both deep technical understanding and the wisdom to know when human intuition remains irreplaceable.
+Students are already connecting these concepts to their research domains. One observed how "efficiency bottlenecks often dictate what research is even possible," particularly in ML workflows where "the cost of efficient inference scheduling—both for rollout generation and reward computation—often dominates the training pipeline." Another highlighted the self-referential opportunity: "Can models help decide which rollouts to prioritize, or how to allocate compute across competing objectives?"
+
+The next generation of computer architects will need to navigate all five challenges simultaneously. Success requires both deep technical understanding and the wisdom to know when human intuition remains irreplaceable. As one student succinctly put it: "Progress in ML-assisted computer architecture depends less on new algorithms and more on building high quality shared datasets and benchmarks."
 
 ---
 
