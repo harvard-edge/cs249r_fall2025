@@ -91,7 +91,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 *Why are we studying this? Code generation is the most accessible entry point for AI in systems - it's where LLMs have shown dramatic success, but also where we can clearly see the gap between "impressive demos" and "production-ready tools." This week examines: How do we evaluate whether AI can actually replace human programmers? What does it mean for code to be "correct" vs. "optimal"? How do we move from toy problems to real software engineering workflows?*
 
 **🎤 Guest Speaker(s)**: Ofir Press (Princeton Postdoc)
-Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language models for code and evaluation, and is a creator of SWE-bench and SWE-agent.
+
+*Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language models for code and evaluation, and is a creator of SWE-bench and SWE-agent.*
 
 **🎯 Main Papers:**
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/pdf/2310.06770.pdf)
@@ -111,7 +112,8 @@ Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language
 *Why are we studying this? Moving beyond correctness to performance requires understanding both algorithmic complexity and system behavior. This week explores: Can AI learn the subtle performance optimizations that expert programmers use? How do we teach machines to reason about cache behavior, instruction-level parallelism, and memory access patterns? What's the difference between micro-optimizations and architectural improvements?*
 
 **🎤 Guest Speaker(s)**: Amir Yazdanbaksh (Google DeepMind Research Scientist)
-Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the intersection of intelligent systems and computer architecture, with a focus on designing abstractions that enable AI-driven systems.
+
+*Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the intersection of intelligent systems and computer architecture, with a focus on designing abstractions that enable AI-driven systems.*
 
 **🎯 Main Papers:**
 - [ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers](https://arxiv.org/pdf/2503.15669.pdf)
@@ -195,7 +197,8 @@ Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
 **🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
-Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.
+
+*Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.*
 
 **🎯 Main Papers:**
 - DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
@@ -217,7 +220,8 @@ Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture w
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
 **🎤 Guest Speaker(s)**: Milad Hashemi (Google Research Scientist)
-Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems, and Cloud AI team.
+
+*Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems, and Cloud AI team.*
 
 **🎯 Main Papers:**
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
@@ -262,7 +266,8 @@ Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems,
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
 **🎤 Guest Speaker(s)**: Mark Ren (Nvidia Director of Design Automation Research)
-Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.
+
+*Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.*
 
 **🎯 Main Papers:**
 - [Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification](https://arxiv.org/pdf/2506.14074.pdf)
@@ -285,7 +290,8 @@ Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
 **🎤 Guest Speaker(s)**: Richard Ho (OpenAI Head of Hardware)
-Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.
+
+*Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.*
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
@@ -304,7 +310,8 @@ Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models a
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
 **🎤 Guest Speaker(s)**: Kartik Hegde (ChipStack Co-Founder)
-Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.
+
+*Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.*
 
 **🎯 Main Papers:**
 - [Using LLMs to Facilitate Formal Verification of RTL](https://arxiv.org/pdf/2309.09437.pdf)
