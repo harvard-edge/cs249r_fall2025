@@ -198,7 +198,7 @@ Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
 **🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
-Bio: Jenny Huang is a research scientist at Nvidia working on hardware accelerators and AI mappings, focusing on performance, energy, and co-design across models, compilers, and architectures.
+Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.
 
 **🎯 Main Papers:**
 - DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
@@ -219,8 +219,8 @@ Bio: Jenny Huang is a research scientist at Nvidia working on hardware accelerat
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
-**🎤 Guest Speaker(s)**: Milas Hashemi (Google Research Scientist)
-Bio: Milas Hashemi is a research scientist at Google working on memory systems and data-driven systems design for modern AI and cloud workloads.
+**🎤 Guest Speaker(s)**: Milad Hashemi (Google Research Scientist)
+Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems, and Cloud AI team.
 
 **🎯 Main Papers:**
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
@@ -265,7 +265,7 @@ Bio: Milas Hashemi is a research scientist at Google working on memory systems a
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
 **🎤 Guest Speaker(s)**: Mark Ren (Director of Design Automation Research at Nvidia)
-Bio: Mark Ren leads Design Automation Research at Nvidia, driving advances in EDA and automation from RTL through physical implementation for cutting-edge silicon.
+Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.
 
 **🎯 Main Papers:**
 - [Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification](https://arxiv.org/pdf/2506.14074.pdf)
@@ -288,7 +288,7 @@ Bio: Mark Ren leads Design Automation Research at Nvidia, driving advances in ED
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
 **🎤 Guest Speaker(s)**: Richard Ho (Head of Hardware at OpenAI)
-Bio: Richard Ho leads the hardware organization at OpenAI, working on AI compute systems and accelerator development to power next-generation AI.
+Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
