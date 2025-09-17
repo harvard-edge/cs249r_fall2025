@@ -185,7 +185,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **📚 Background Reading:** [Ch 12. Benchmarking AI](https://www.mlsysbook.ai/contents/core/benchmarking_ai/benchmarking_ai)
 
 **📖 Supplemental Reading:**
-- DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks (Available from Microsoft Research, not on arXiv)
+- [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://ieeexplore.ieee.org/abstract/document/10172674?casa_token=G4jLZfZNu70AAAAA:ApmDhwWk_UAxbhY1TIwWYlrw6gddXvI06q49dHSIKsQ5jj7LJSnbv9DP4UHSk5PuLyAJwYk)
 - [NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference](https://www.microsoft.com/en-us/research/uploads/prod/2024/05/NeuSight.pdf)
 - [Practical Design Space Exploration (HyperMapper 2.0)](https://arxiv.org/pdf/1810.05236.pdf)
 - [AutoDSE: Enabling Software Programmers to Design Efficient FPGA Accelerators](https://arxiv.org/pdf/2009.14381.pdf)
@@ -201,7 +201,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 *Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.*
 
 **🎯 Main Papers:**
-- DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
+- [DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators](https://dl.acm.org/doi/abs/10.1145/3613424.3623797)
 - [Learning to Optimize Tensor Programs (AutoTVM)](https://arxiv.org/pdf/1805.08166.pdf)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
@@ -233,7 +233,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ALEX: An Updatable Adaptive Learned Index](https://arxiv.org/pdf/1905.08898.pdf)
 - [Learning-based Memory Allocation for C++ Server Workloads](https://research.google/pubs/pub49008/)
 - [Designing a Cost-Effective Cache Replacement Policy Using Machine Learning](https://research.google/pubs/pub46599/)
-- Long Short-Term Memory (LSTM) Based Hardware Prefetcher (ACM MEMSYS 2017, not on arXiv)
+- [Long Short-Term Memory (LSTM) Based Hardware Prefetcher](https://dl.acm.org/doi/abs/10.1145/3132402.3132405?casa_token=7OUJuN1RTbEAAAAA:HcAyXtX_RrbKn_L-SxPuriHksoJkiahI9BOtPg4KvLxM4h5JzzWcb64NZMK_a1LOWoBJqJMNRwU)
 - [Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms](https://arxiv.org/pdf/2307.08635.pdf)
 
 ## Week 10 - LLM Systems & AI Workload Scheduling
@@ -295,14 +295,14 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
-- DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement (DAC 2019/TCAD 2020, not on arXiv)
+- [DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement](https://dl.acm.org/doi/abs/10.1145/3316781.3317803?casa_token=mTj9T_lMwI8AAAAA:VBv0lb8QUwPcwcKZMoNWuEpDCC9pjxM9JSrGW9HsAjG3dlCqx9qK9lmEnVt0D_0uxXRHGEqoKTs)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
 
 **📖 Supplemental Reading:**
 - [Chip Placement with Deep Reinforcement Learning (Circuit Training)](https://arxiv.org/pdf/2004.10746.pdf)
 - [MaskPlace: Fast Chip Placement via Reinforced Visual Representation Learning](https://arxiv.org/pdf/2211.13382.pdf)
-- Learning on distributed traces for data center storage systems (Different paper, needs verification)
+- [Learning on distributed traces for data center storage systems](https://proceedings.mlsys.org/paper_files/paper/2021/file/efe0df3ea4a53a04614ad79e7a8a57de-Paper.pdf)
 
 ## Week 13 - Verification & Advanced Chip Design
 **Week of November 24**
