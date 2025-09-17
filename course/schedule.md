@@ -134,8 +134,7 @@ Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the 
 
 *Why are we studying this? GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding. This week explores: Can AI learn hardware-specific optimization strategies that human experts use? How do we benchmark AI systems against decades of hand-tuned libraries? What happens when the optimization space is so large that even experts disagree on "optimal" solutions?*
 
-**🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
-Bio: Jenny Huang is a research scientist at Nvidia working on hardware accelerators and AI mappings, focusing on performance, energy, and co-design across models, compilers, and architectures.
+**🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
 - [KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/pdf/2502.10517.pdf)
@@ -153,8 +152,7 @@ Bio: Jenny Huang is a research scientist at Nvidia working on hardware accelerat
 
 *Why are we studying this? Distributed systems are the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale. This week examines: How do we optimize systems where the bottleneck might be network latency, not computation? Can AI learn to co-design algorithms and system architecture? What does "optimal" mean when dealing with failures, load balancing, and resource contention?*
 
-**🎤 Guest Speaker(s)**: Milas Hashemi (Google Research Scientist)
-Bio: Milas Hashemi is a research scientist at Google working on memory systems and data-driven systems design for modern AI and cloud workloads.
+**🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
 - [COSMIC: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems](https://arxiv.org/pdf/2505.15020.pdf)
@@ -178,8 +176,7 @@ Bio: Milas Hashemi is a research scientist at Google working on memory systems a
 
 *Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
 
-**🎤 Guest Speaker(s)**: Mark Ren (Director of Design Automation Research at Nvidia)
-Bio: Mark Ren leads Design Automation Research at Nvidia, driving advances in EDA and automation from RTL through physical implementation for cutting-edge silicon.
+**🎤 Guest Speaker(s)**: TBD
 
 **🎯 Main Papers:**
 - [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/pdf/2503.23076.pdf)
@@ -200,8 +197,8 @@ Bio: Mark Ren leads Design Automation Research at Nvidia, driving advances in ED
 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
-**🎤 Guest Speaker(s)**: Richard Ho (Head of Hardware at OpenAI)
-Bio: Richard Ho leads the hardware organization at OpenAI, working on AI compute systems and accelerator development to power next-generation AI.
+**🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
+Bio: Jenny Huang is a research scientist at Nvidia working on hardware accelerators and AI mappings, focusing on performance, energy, and co-design across models, compilers, and architectures.
 
 **🎯 Main Papers:**
 - DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
@@ -222,8 +219,8 @@ Bio: Richard Ho leads the hardware organization at OpenAI, working on AI compute
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
-**🎤 Guest Speaker(s)**: Kartik Hegde (Co-Founder of ChipStack)
-Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.
+**🎤 Guest Speaker(s)**: Milas Hashemi (Google Research Scientist)
+Bio: Milas Hashemi is a research scientist at Google working on memory systems and data-driven systems design for modern AI and cloud workloads.
 
 **🎯 Main Papers:**
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
@@ -267,7 +264,8 @@ Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip d
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Mark Ren (Director of Design Automation Research at Nvidia)
+Bio: Mark Ren leads Design Automation Research at Nvidia, driving advances in EDA and automation from RTL through physical implementation for cutting-edge silicon.
 
 **🎯 Main Papers:**
 - [Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification](https://arxiv.org/pdf/2506.14074.pdf)
@@ -289,7 +287,8 @@ Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip d
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Richard Ho (Head of Hardware at OpenAI)
+Bio: Richard Ho leads the hardware organization at OpenAI, working on AI compute systems and accelerator development to power next-generation AI.
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
@@ -307,7 +306,8 @@ Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip d
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Kartik Hegde (Co-Founder of ChipStack)
+Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.
 
 **🎯 Main Papers:**
 - [Using LLMs to Facilitate Formal Verification of RTL](https://arxiv.org/pdf/2309.09437.pdf)
