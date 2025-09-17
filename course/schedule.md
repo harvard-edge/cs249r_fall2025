@@ -53,8 +53,6 @@ layout: default
 
 Course overview, logistics, syllabus, and introduction to the vision of AI-driven computing stack design.
 
-**🎤 Guest Speaker(s)**: N/A
-
 **📋 Required Reading:**
 - [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
 - [Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/)
@@ -70,7 +68,6 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 
 Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. Introduction to datasets and survey paper methodology.
 
-**🎤 Guest Speaker(s)**: N/A
 
 **📋 Main Papers:**
 - [QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture](https://arxiv.org/abs/2501.01892)
@@ -93,7 +90,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Code generation is the most accessible entry point for AI in systems - it's where LLMs have shown dramatic success, but also where we can clearly see the gap between "impressive demos" and "production-ready tools." This week examines: How do we evaluate whether AI can actually replace human programmers? What does it mean for code to be "correct" vs. "optimal"? How do we move from toy problems to real software engineering workflows?*
 
-**🎤 Guest Speaker(s)**: [Ofir Press](https://ofir.io/about/)
+**🎤 Guest Speaker(s)**: Ofir Press (Princeton Postdoc)
 Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language models for code and evaluation, and is a creator of SWE-bench and SWE-agent.
 
 **🎯 Main Papers:**
@@ -264,7 +261,7 @@ Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems,
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
-**🎤 Guest Speaker(s)**: Mark Ren (Director of Design Automation Research at Nvidia)
+**🎤 Guest Speaker(s)**: Mark Ren (Nvidia Director of Design Automation Research)
 Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.
 
 **🎯 Main Papers:**
@@ -287,7 +284,7 @@ Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest 
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
-**🎤 Guest Speaker(s)**: Richard Ho (Head of Hardware at OpenAI)
+**🎤 Guest Speaker(s)**: Richard Ho (OpenAI Head of Hardware)
 Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.
 
 **🎯 Main Papers:**
@@ -306,7 +303,7 @@ Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models a
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
-**🎤 Guest Speaker(s)**: Kartik Hegde (Co-Founder of ChipStack)
+**🎤 Guest Speaker(s)**: Kartik Hegde (ChipStack Co-Founder)
 Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.
 
 **🎯 Main Papers:**
