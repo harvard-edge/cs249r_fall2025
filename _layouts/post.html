@@ -9,6 +9,11 @@ layout: default
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
             {% if page.author %}
                 • By {{ page.author }}
+                {% if page.author contains "Vijay Janapa Reddi and Arya Tschand" %}
+                    • <a href="https://twitter.com/profvjreddi" target="_blank" style="color: #1DA1F2; text-decoration: none;">@profvjreddi</a> & <a href="https://twitter.com/aryatschand" target="_blank" style="color: #1DA1F2; text-decoration: none;">@aryatschand</a>
+                {% elsif page.author contains "Vijay Janapa Reddi" %}
+                    • <a href="https://twitter.com/profvjreddi" target="_blank" style="color: #1DA1F2; text-decoration: none;">@profvjreddi</a>
+                {% endif %}
             {% endif %}
             {% assign words = content | number_of_words %}
             {% if words < 360 %}
@@ -62,10 +67,52 @@ layout: default
             </div>
         </div>
 
+        <!-- Connect with authors -->
+        <div class="author-connect">
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Connect with the authors:</p>
+            
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <!-- Vijay Janapa Reddi -->
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="margin: 0 0 0.5rem 0; color: #A51C30; font-size: 1rem;">Prof. Vijay Janapa Reddi</h4>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://www.linkedin.com/in/vijay-janapa-reddi-63a6a173/" 
+                           target="_blank" 
+                           class="connect-button-small linkedin-small"
+                           title="Connect on LinkedIn">
+                            💼 LinkedIn
+                        </a>
+                        <a href="https://twitter.com/profvjreddi" 
+                           target="_blank" 
+                           class="connect-button-small twitter-small"
+                           title="Follow on Twitter">
+                            🐦 Twitter
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Arya Tschand -->
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="margin: 0 0 0.5rem 0; color: #A51C30; font-size: 1rem;">Arya Tschand</h4>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://twitter.com/aryatschand" 
+                           target="_blank" 
+                           class="connect-button-small twitter-small"
+                           title="Follow on Twitter">
+                            🐦 Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Disqus comments -->
-        {% if site.disqus.shortname %}
         <div class="comments-section">
-            <h3>Comments</h3>
+            <h3>💬 Join the Discussion</h3>
+            <div class="comment-guidelines" style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 5px; margin-bottom: 1.5rem; border-left: 3px solid #A51C30;">
+                <p style="margin: 0 0 1rem 0; color: #555; font-size: 0.9rem;"><strong>CS249r students:</strong> Use the comments section to engage with the material. Discuss points that surprised you, link concepts to other readings or courses, share how this connects to your research, or propose new questions and directions. Your thoughtful participation here contributes to your class engagement.</p>
+                <p style="margin: 0; color: #555; font-size: 0.9rem;"><strong>Others:</strong> Help our students learn from real-world experience! Whether you work in industry, research, or have practical insights on these topics, share your perspective to bridge the gap between theory and practice. Tell us how these concepts play out in production systems, what challenges you've faced, or how industry approaches these problems differently. Great coaching comments are <strong>specific</strong>, <strong>constructive</strong>, and <strong>evidence-based</strong>.</p>
+            </div>
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
@@ -75,14 +122,13 @@ layout: default
                 
                 (function() {
                     var d = document, s = d.createElement('script');
-                    s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                    s.src = 'https://architecture2.disqus.com/embed.js';
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
-        {% endif %}
     </footer>
 </article>
 
@@ -258,5 +304,127 @@ layout: default
     }
 
     /* Mobile retains same figure behavior; definitions above already constrain width */
+}
+
+/* Margin notes styling */
+.margin-note {
+    display: none;
+    position: absolute;
+    right: -280px;
+    width: 250px;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-left: 3px solid #A51C30;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #555;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.blog-content {
+    position: relative;
+}
+
+/* Show margin notes on larger screens */
+@media (min-width: 1200px) {
+    .margin-note {
+        display: block;
+    }
+}
+
+/* Clickable margin notes for smaller screens */
+@media (max-width: 1199px) {
+    .margin-note {
+        display: inline;
+        position: relative;
+        right: auto;
+        width: auto;
+        padding: 0.25rem 0.5rem;
+        margin-left: 0.5rem;
+        background-color: #e3f2fd;
+        border: 1px solid #A51C30;
+        border-radius: 3px;
+        font-size: 0.75rem;
+        color: #A51C30;
+        cursor: pointer;
+        box-shadow: none;
+    }
+    
+    .margin-note:before {
+        content: "💡 ";
+    }
+    
+    .margin-note:hover {
+        background-color: #bbdefb;
+    }
+}
+
+/* Author connect section styling */
+.author-connect {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #A51C30;
+}
+
+.author-connect h3 {
+    color: #A51C30;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.author-connect p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.connect-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.connect-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.connect-button.linkedin-connect {
+    background-color: #0077B5;
+    color: white;
+}
+
+.connect-button.twitter-connect {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.connect-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .connect-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .connect-button {
+        text-align: center;
+    }
+    
+    .author-connect {
+        padding: 1.5rem;
+    }
 }
 </style>

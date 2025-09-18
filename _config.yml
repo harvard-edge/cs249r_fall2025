@@ -54,5 +54,7 @@ social:
 
 # Blog settings
 permalink: /blog/:year/:month/:day/:title/
+
+# Comments powered by Disqus
 disqus:
   shortname: "architecture2"  # Architecture 2.0: AI Agents for Computing Systems
