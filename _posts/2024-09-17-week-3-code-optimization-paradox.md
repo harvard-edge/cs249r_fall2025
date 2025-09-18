@@ -123,7 +123,20 @@ This interface design addresses a fundamental problem that emerged from SWE-Benc
 
 The results speak volumes. SWE-Agent, which started as a 100-line implementation, achieved significant improvements on SWE-Bench simply by providing better ways for AI models to interact with code. This isn't just an engineering trick—it reveals that the bottleneck in AI software engineering might not be the models themselves, but how we design their interaction with complex software systems.
 
+## Dataset Saturation
+
+A significant challenge in data benchmarking emerges from dataset saturation. When models achieve near-perfect accuracy on benchmarks like ImageNet, it becomes crucial to distinguish whether performance gains represent genuine advances in AI capability or merely optimization to existing test sets. Figure 12 illustrates this trend, showing AI systems surpassing human performance across various applications over the past decade.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_3/dataset_saturation.png" alt="Dataset saturation: AI systems surpassing human performance on long-standing benchmarks" />
+<figcaption><em>As benchmarks saturate, marginal gains can reflect test-set optimization rather than meaningful capability improvements.</em></figcaption>
+</figure>
+
+This saturation phenomenon raises fundamental methodological questions. The MNIST dataset provides an illustrative example: certain test images, though nearly illegible to humans, were assigned specific labels during the dataset’s creation in 1994. When models correctly predict these labels, their apparent superhuman performance may actually reflect memorization of dataset artifacts rather than true digit recognition capabilities.
+
 ## The Overfitting Problem
+
+This is precisely the dynamic we see with benchmark overfitting—once datasets saturate, improvements often reflect test-set optimization rather than broader system understanding.
 
 But Ofir's most important insight concerns the broader evaluation landscape. As he put it, we're seeing massive "benchmark overfitting"—where developers focus on scoring well on specific metrics rather than building systems that solve real problems. This creates what he calls a "saturation" problem: as AI systems get better at existing benchmarks, the benchmarks themselves become less useful for driving real progress.
 
