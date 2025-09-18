@@ -79,6 +79,12 @@ This brings us to one of the most important developments in software engineering
 
 SWE-Bench is a benchmark that uses actual GitHub issues and pull requests from real repositories as question-answer pairs, testing whether AI models can fix bugs and develop features in real-world codebases. Unlike synthetic coding problems with clean specifications, SWE-Bench presents models with the messy reality of production software: incomplete bug reports, legacy code dependencies, and the need to understand complex system interactions.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_3/swebench.png" alt="SWE-bench data curation pipeline">
+<figcaption><em>SWE-bench scrapes real Github repositories for PRs that introduce new funcionality and create tests to evaluate correctness.</em></figcaption>
+
+</figure>
+
 The results provide important insights. Even state-of-the-art models face significant challenges with these real-world software engineering tasks. But Ofir's insights go deeper than just performance numbers. He highlighted a critical issue that affects our entire field: **benchmark overfitting**. As he put it, "developers focus on scoring well rather than overall programming." This creates a risk of optimizing for metrics that may not translate directly to real-world engineering success.
 
 The SWE-Bench approach addresses three fundamental requirements that Ofir emphasized: benchmarks must be **challenging**, **verifiable**, and **useful**. Traditional competitive programming benchmarks like [Codeforces](https://codeforces.com/){:target="_blank" rel="noopener noreferrer"} and [LeetCode](https://leetcode.com/){:target="_blank" rel="noopener noreferrer"} fail the "useful" test because they measure capabilities that don't transfer to real software engineering. SWE-Bench tests AI models' ability to understand codebases, navigate technical debt, and implement changes that don't break existing functionality.
