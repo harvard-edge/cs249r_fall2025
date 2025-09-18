@@ -23,6 +23,10 @@ course_number: "CS249r"
 include:
   - assets/
 
+# Include assets
+include:
+  - assets/
+
 # Exclude files
 exclude:
   - README.md
@@ -30,9 +34,6 @@ exclude:
   - Gemfile.lock
   - vendor/
   - arch2-seminar-main/
-
-# Posts configuration
-permalink: /blog/:year/:month/:day/:title/
 
 # Plugins (only GitHub Pages compatible ones)
 plugins:
@@ -52,4 +53,6 @@ social:
     - "https://harvard-edge.github.io/cs249r_fall2025"
 
 # Blog settings
-# Comments disabled - no external dependencies
+permalink: /blog/:year/:month/:day/:title/
+disqus:
+  shortname: "architecture2"  # Architecture 2.0: AI Agents for Computing Systems

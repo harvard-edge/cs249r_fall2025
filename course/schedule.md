@@ -53,8 +53,6 @@ layout: default
 
 Course overview, logistics, syllabus, and introduction to the vision of AI-driven computing stack design.
 
-**🎤 Guest Speaker(s)**: N/A
-
 **📋 Required Reading:**
 - [Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design](https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo)
 - [Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium](https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/)
@@ -70,7 +68,6 @@ Course overview, logistics, syllabus, and introduction to the vision of AI-drive
 
 Introduction to Architecture 2.0 and the paradigm shift from human-designed heuristics to agentic design methodologies. Introduction to datasets and survey paper methodology.
 
-**🎤 Guest Speaker(s)**: N/A
 
 **📋 Main Papers:**
 - [QuArch: A Question-Answering Dataset for AI Agents in Computer Architecture](https://arxiv.org/abs/2501.01892)
@@ -93,7 +90,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Code generation is the most accessible entry point for AI in systems - it's where LLMs have shown dramatic success, but also where we can clearly see the gap between "impressive demos" and "production-ready tools." This week examines: How do we evaluate whether AI can actually replace human programmers? What does it mean for code to be "correct" vs. "optimal"? How do we move from toy problems to real software engineering workflows?*
 
-**🎤 Guest Speaker(s)**: [Ofir Pres](https://ofir.io/about/) (Author of SWE-bench, SWE-smith, SWE-agent, ...)
+**🎤 Guest Speaker(s)**: Ofir Press (Princeton Postdoc)
+
+*Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language models for code and evaluation, and is a creator of SWE-bench and SWE-agent.*
 
 **🎯 Main Papers:**
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/pdf/2310.06770.pdf)
@@ -112,7 +111,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Moving beyond correctness to performance requires understanding both algorithmic complexity and system behavior. This week explores: Can AI learn the subtle performance optimizations that expert programmers use? How do we teach machines to reason about cache behavior, instruction-level parallelism, and memory access patterns? What's the difference between micro-optimizations and architectural improvements?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Amir Yazdanbaksh (Google DeepMind Research Scientist)
+
+*Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the intersection of intelligent systems and computer architecture, with a focus on designing abstractions that enable AI-driven systems.*
 
 **🎯 Main Papers:**
 - [ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers](https://arxiv.org/pdf/2503.15669.pdf)
@@ -184,7 +185,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 **📚 Background Reading:** [Ch 12. Benchmarking AI](https://www.mlsysbook.ai/contents/core/benchmarking_ai/benchmarking_ai)
 
 **📖 Supplemental Reading:**
-- DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks (Available from Microsoft Research, not on arXiv)
+- [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://ieeexplore.ieee.org/abstract/document/10172674?casa_token=G4jLZfZNu70AAAAA:ApmDhwWk_UAxbhY1TIwWYlrw6gddXvI06q49dHSIKsQ5jj7LJSnbv9DP4UHSk5PuLyAJwYk)
 - [NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference](https://www.microsoft.com/en-us/research/uploads/prod/2024/05/NeuSight.pdf)
 - [Practical Design Space Exploration (HyperMapper 2.0)](https://arxiv.org/pdf/1810.05236.pdf)
 - [AutoDSE: Enabling Software Programmers to Design Efficient FPGA Accelerators](https://arxiv.org/pdf/2009.14381.pdf)
@@ -195,10 +196,12 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
+
+*Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.*
 
 **🎯 Main Papers:**
-- DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators (MICRO 2023, not on arXiv)
+- [DOSA: Differentiable Model-Based One-Loop Search for DNN Accelerators](https://dl.acm.org/doi/abs/10.1145/3613424.3623797)
 - [Learning to Optimize Tensor Programs (AutoTVM)](https://arxiv.org/pdf/1805.08166.pdf)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
@@ -216,7 +219,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Milad Hashemi (Google Research Scientist)
+
+*Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems, and Cloud AI team.*
 
 **🎯 Main Papers:**
 - [Learning Memory Access Patterns](https://arxiv.org/pdf/1803.02329.pdf)
@@ -228,7 +233,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 - [ALEX: An Updatable Adaptive Learned Index](https://arxiv.org/pdf/1905.08898.pdf)
 - [Learning-based Memory Allocation for C++ Server Workloads](https://research.google/pubs/pub49008/)
 - [Designing a Cost-Effective Cache Replacement Policy Using Machine Learning](https://research.google/pubs/pub46599/)
-- Long Short-Term Memory (LSTM) Based Hardware Prefetcher (ACM MEMSYS 2017, not on arXiv)
+- [Long Short-Term Memory (LSTM) Based Hardware Prefetcher](https://dl.acm.org/doi/abs/10.1145/3132402.3132405?casa_token=7OUJuN1RTbEAAAAA:HcAyXtX_RrbKn_L-SxPuriHksoJkiahI9BOtPg4KvLxM4h5JzzWcb64NZMK_a1LOWoBJqJMNRwU)
 - [Lightweight ML-based Runtime Prefetcher Selection on Many-core Platforms](https://arxiv.org/pdf/2307.08635.pdf)
 
 ## Week 10 - LLM Systems & AI Workload Scheduling
@@ -260,7 +265,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Mark Ren (Nvidia Director of Design Automation Research)
+
+*Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.*
 
 **🎯 Main Papers:**
 - [Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification](https://arxiv.org/pdf/2506.14074.pdf)
@@ -282,25 +289,29 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Richard Ho (OpenAI Head of Hardware)
+
+*Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.*
 
 **🎯 Main Papers:**
 - [Chip Placement with Deep Reinforcement Learning](https://arxiv.org/pdf/2004.10746.pdf)
-- DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement (DAC 2019/TCAD 2020, not on arXiv)
+- [DREAMPlace: Deep Learning Toolkit-Enabled GPU Acceleration for Modern VLSI Placement](https://dl.acm.org/doi/abs/10.1145/3316781.3317803?casa_token=mTj9T_lMwI8AAAAA:VBv0lb8QUwPcwcKZMoNWuEpDCC9pjxM9JSrGW9HsAjG3dlCqx9qK9lmEnVt0D_0uxXRHGEqoKTs)
 
 **📚 Background Reading:** [Ch 9. AI Acceleration](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration) • [Ch 8. Model Opt](https://www.mlsysbook.ai/contents/core/model_optimizations/model_optimizations)
 
 **📖 Supplemental Reading:**
 - [Chip Placement with Deep Reinforcement Learning (Circuit Training)](https://arxiv.org/pdf/2004.10746.pdf)
 - [MaskPlace: Fast Chip Placement via Reinforced Visual Representation Learning](https://arxiv.org/pdf/2211.13382.pdf)
-- Learning on distributed traces for data center storage systems (Different paper, needs verification)
+- [Learning on distributed traces for data center storage systems](https://proceedings.mlsys.org/paper_files/paper/2021/file/efe0df3ea4a53a04614ad79e7a8a57de-Paper.pdf)
 
 ## Week 13 - Verification & Advanced Chip Design
 **Week of November 24**
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Kartik Hegde (ChipStack Co-Founder)
+
+*Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.*
 
 **🎯 Main Papers:**
 - [Using LLMs to Facilitate Formal Verification of RTL](https://arxiv.org/pdf/2309.09437.pdf)

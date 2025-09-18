@@ -52,12 +52,23 @@ This is a field being born. The conventional wisdom is still forming. The right 
 
 ---
 
+## Archive
+
+{% if posts.size > 5 %}
+### Older Posts
+{% for post in posts offset: 5 %}
+- **[{{ post.title }}](/cs249r_fall2025{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
+{% endif %}
+
+---
+
 ## Follow the Frontier
 
 New posts drop every Monday. Don't miss the insights:
-- 🐦 Follow [@profvjreddi](https://twitter.com/profvjreddi) for weekly post announcements and class highlights
+- 🐦 Follow [@aryatschand](https://twitter.com/aryatschand) and [@profvjreddi](https://twitter.com/profvjreddi) for weekly post announcements and class highlights
 - 📧 Subscribe to updates via [RSS]({{ "/feed.xml" | prepend: site.baseurl }})
-- 🔄 Share posts with colleagues who need to understand where computing is heading
+- 💬 Join discussions in the comments—this is where the best ideas get refined
 
 *These are the conversations that will define the next decade of computer systems. Be part of them.*
 
