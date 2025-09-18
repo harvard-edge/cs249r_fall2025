@@ -4,6 +4,7 @@ title: "Week 1: The End of an Era, The Dawn of Architecture 2.0"
 date: 2024-09-03
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: architecture
+permalink: /blog/2024/09/03/week-1-architecture-2-0/
 ---
 
 Moore's Law is dying. Dennard scaling ended years ago.<span class="margin-note">Dennard scaling, formulated by Robert Dennard at IBM in 1974, observed that as transistors became smaller, their switching voltage and current could be reduced proportionally, keeping power density roughly constant. This meant each new generation delivered faster processors without exponentially increasing power consumption. When this scaling broke down around 2006 due to quantum effects and leakage currents, we could no longer simply make processors faster—leading to the multicore era and today's push toward specialized accelerators. See the <a href="https://ieeexplore.ieee.org/document/1050511" target="_blank">original 1974 paper</a> and <a href="https://users.cs.duke.edu/~lkw34/papers/cmos-trends-ieee2017.pdf" target="_blank">Bohr's 2017 analysis</a> of scaling trends and innovations beyond traditional MOSFET scaling.</span> Traditional computer architecture is hitting walls that fifty years of exponential improvement never prepared us for. So why are we launching a graduate seminar on AI-driven architecture design right now?

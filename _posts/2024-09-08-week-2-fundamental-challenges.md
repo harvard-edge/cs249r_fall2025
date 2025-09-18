@@ -4,6 +4,7 @@ title: "Week 2: The Fundamental Challenges Nobody Talks About"
 date: 2024-09-08
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: architecture
+permalink: /blog/2024/09/08/week-2-fundamental-challenges/
 ---
 
 Here's what nobody tells you about applying AI to computer architecture: it's not just harder than other domains—it's fundamentally different in ways that make most AI success stories irrelevant. This week, we confronted why the techniques that conquered vision, language, and games stumble when faced with cache hierarchies and instruction pipelines. Through examining Amir Yazdanbakhsh's work on design abstractions and our deep dive into the five critical challenges facing our field, we discovered that the obstacles are both more subtle and more fundamental than they initially appear.
@@ -87,7 +88,7 @@ These practical realities shaped QuArch's design and highlighted why building do
 
 ## The Need for New Design Abstractions
 
-Amir Yazdanbakhsh's work on designing abstractions for intelligent systems provided crucial insight into why traditional architecture abstractions fail AI agents. The abstractions we've used for decades were designed as cognitive crutches for human engineers. They help us decompose complex problems into manageable pieces by hiding details that humans struggle to track simultaneously.
+Amir Yazdanbakhsh's work on designing abstractions for intelligent systems provided crucial insight into why traditional architecture abstractions fail AI agents.<span class="margin-note">Yazdanbakhsh's compelling visual comparison shows how the traditional computing stack (ISA, OS, compilers) maps to an intelligent system stack (computational primitives, AI frameworks, model orchestration). This isn't just renaming layers—it's recognizing that AI systems need fundamentally different abstraction boundaries that enable cross-layer reasoning rather than enforcing human cognitive limitations.</span> The abstractions we've used for decades were designed as cognitive crutches for human engineers. They help us decompose complex problems into manageable pieces by hiding details that humans struggle to track simultaneously.
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_2/agi-abstraction.png" alt="Abstractions for intelligent systems">
