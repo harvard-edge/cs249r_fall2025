@@ -28,7 +28,7 @@ Our exploration revealed five interconnected challenges that make Architecture 2
 
 ## Challenge 1: The Dataset Crisis
 
-The ImageNet comparison reveals the depth of our data problem. ImageNet succeeded because millions of people naturally generated and uploaded labeled images. The data already existed; researchers just had to curate it. In computer architecture, no such natural data generation occurs. We must deliberately create every training example through expensive simulation or hardware measurement.
+The ImageNet comparison reveals the depth of our data problem. ImageNet succeeded because millions of people naturally generated and uploaded labeled images.<span class="margin-note">ImageNet's success built on the natural photo-sharing ecosystem of Flickr and other platforms. The <a href="http://www.image-net.org/" target="_blank">ImageNet project</a> cleverly leveraged human-generated content at scale—a luxury we don't have in computer architecture where every data point requires expensive simulation.</span> The data already existed; researchers just had to curate it. In computer architecture, no such natural data generation occurs. We must deliberately create every training example through expensive simulation or hardware measurement.
 
 But the challenge goes deeper than availability. In computer vision, mislabeling a few cat photos as dogs barely affects overall classifier performance. In architecture, a single incorrect power measurement or wrong performance counter can derail an entire optimization trajectory. Data quality isn't just important; it's existential.
 
@@ -42,7 +42,7 @@ The fundamental question becomes: How do we build lasting research contributions
 
 ## Challenge 3: The Tools Infrastructure Gap
 
-We have incredible tools like gem5, but they were designed for human architects, not AI agents. Gem5 excels at detailed simulation but wasn't built for the rapid iteration and massive data generation that modern ML requires. Where's our equivalent of TensorFlow or PyTorch for architecture research? Where are the standardized APIs that let AI agents interact with simulators, synthesizers, and place-and-route tools seamlessly?
+We have incredible tools like gem5, but they were designed for human architects, not AI agents.<span class="margin-note">gem5 is a remarkable achievement—a full-system simulator supporting multiple ISAs and detailed modeling. See the <a href="http://gem5.org/" target="_blank">gem5 project</a> and its <a href="https://doi.org/10.1145/2024716.2024718" target="_blank">foundational paper</a>. However, its APIs weren't designed for the rapid experimentation and massive data generation that modern ML demands.</span> Gem5 excels at detailed simulation but wasn't built for the rapid iteration and massive data generation that modern ML requires. Where's our equivalent of TensorFlow or PyTorch for architecture research? Where are the standardized APIs that let AI agents interact with simulators, synthesizers, and place-and-route tools seamlessly?
 
 The infrastructure gap extends beyond simulation. We need environments where AI agents can learn and experiment safely, where they can try radical designs without requiring months of silicon fabrication to validate ideas. The tools that enabled the deep learning revolution don't exist for architecture yet.
 
