@@ -1,34 +1,19 @@
 ---
 layout: default
-title: "CS249r Blog: What We Learned"
+title: "CS249r Notes: What We Learned"
 permalink: /blog/
 ---
 
-# CS249r Blog: What We Learned
+# CS249r Notes: What We Learned
 
-*Weekly insights and reflections from Harvard's CS249r: Architecture 2.0*
-
----
-
-## What You're Reading
-
-Computer architecture is undergoing its most fundamental transformation in fifty years, and there's almost nothing written about it yet. This blog documents that transformation as it happens, through the eyes of a graduate seminar at Harvard that's exploring uncharted territory.
-
-CS249r isn't a traditional lecture course. This semester, it is a seminar where the most interesting insights emerge from discussions, debates, and the collision of ideas between students from vastly different backgrounds—compiler experts debating with ML theorists, chip designers challenging software optimizers. These conversations are where the future of computing gets hammered out, one heated exchange at a time.
-
-Every Monday, we drop a new post capturing what we discovered the previous week. Not the sanitized version that makes it into papers months later, but the raw insights, surprising discoveries, and "wait, that changes everything" moments that happen when brilliant minds grapple with genuinely new problems. 
-
-This is a field being born. The conventional wisdom is still forming. The right answers haven't been written yet. If you want to understand how AI will reshape computing—not just optimize existing systems but fundamentally reimagine how we design them—these weekly dispatches from the frontier might be the best window available.
-
-**Why Follow**: Because this stuff will matter enormously, but there's nowhere else to read about it as it develops. By the time it reaches textbooks, the opportunities will be gone.
+*Weekly recaps and reflections from Harvard's CS249r: Architecture 2.0*
 
 ---
 
-## Recent Posts
 
 {% assign posts = site.posts %}
 {% if posts.size > 0 %}
-  {% for post in posts limit: 5 %}
+  {% for post in posts %}
   <article class="blog-preview">
     <h2><a href="/cs249r_fall2025{{ post.url }}">{{ post.title }}</a></h2>
     <div class="blog-meta">
@@ -48,17 +33,6 @@ This is a field being born. The conventional wisdom is still forming. The right 
   {% endfor %}
 {% else %}
   <p><em>Blog posts coming soon! The first post will be published after our first week of classes.</em></p>
-{% endif %}
-
----
-
-## Archive
-
-{% if posts.size > 5 %}
-### Older Posts
-{% for post in posts offset: 5 %}
-- **[{{ post.title }}](/cs249r_fall2025{{ post.url }})** - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
 {% endif %}
 
 ---
@@ -165,5 +139,43 @@ New posts drop every Monday. Don't miss the insights:
 .reading-time {
   color: #666;
   font-weight: 500;
+}
+
+/* Details/summary styling */
+details {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: #f8f9fa;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #A51C30;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "▶ ";
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
 }
 </style>
