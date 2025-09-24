@@ -133,7 +133,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding. This week explores: Can AI learn hardware-specific optimization strategies that human experts use? How do we benchmark AI systems against decades of hand-tuned libraries? What happens when the optimization space is so large that even experts disagree on "optimal" solutions?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Sasha Rush (Cursor Researcher)
+*Bio: Sasha Rush is a researcher at Cursor and Associate Professor at Cornell Tech working on building and improving language models, especially for code optimization*
+
 
 **🎯 Main Papers:**
 - [KernelBench: Can LLMs Write Efficient GPU Kernels?](https://arxiv.org/pdf/2502.10517.pdf)
