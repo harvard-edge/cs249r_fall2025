@@ -128,20 +128,6 @@ This reflects a fundamental truth about software engineering: the "best" solutio
 
 **The Responsibility Factor**: Ultimately, when something goes wrong in production, it's not the AI that gets called at 3 AM to fix it; it's the human developer. This accountability creates a natural incentive for careful review that no automated system can replicate.
 
-## The Non Determinism Challenge
-
-A fascinating technical discussion emerged around the non deterministic nature of AI code optimization. When a student asked about "chasing down phantom optimizations" where code optimized differently on different machines, Amir clarified two distinct sources of non determinism in their approach.
-
-**Hardware Specific Optimization**: "The non determinism in Pie4Perf comes from... when you want to optimize the code, we, as performance engineers, are going to optimize the code for a particular hardware. Let's say, if I want to optimize a code for even like Intel hardware or like an AMD hardware, it might require different optimization strategies."
-
-To address this, they deliberately constrained their optimization target: "We didn't want to send noise to the model, we wanted to ensure that we are going to optimize for a particular hardware, and therefore we're going to use one instance of the hardware so we can send meaningful signal to the LLM."
-
-**Sampling Strategy**: The second source of non determinism was intentional, using temperature 0.7 instead of 0 for sampling. "We're not actually using temp zero when we want to sample the LLM. And there is a reason behind that... You have to create a balance between deterministic behavior and also creativity."
-
-This design choice reflects a sophisticated understanding of the exploration exploitation tradeoff in optimization: "The task of code performance optimization requires a little bit of exploration as well. Why? Because we want the model to also be a little bit creative and think out of the box to suggest crazy optimization as well."
-
-The approach generates multiple candidates (8 or 16 samples) and relies on unit tests to filter correct solutions, embracing controlled non determinism to discover optimizations that purely deterministic approaches might miss.
-
 ## Student Questions: The Future of AI Code Optimization
 
 The class discussion revealed several thought provoking questions that highlight the fundamental challenges and opportunities in AI assisted performance engineering:
@@ -155,6 +141,11 @@ The class discussion revealed several thought provoking questions that highlight
 **The Complexity Trade off**: Perhaps the most philosophical question raised was whether code readability and simplicity still matter if AI can explain and maintain arbitrarily complex code. This touches on a fundamental tension in software engineering: should we optimize for human understanding or machine efficiency? The reality is more nuanced—even AI systems struggle with overly complex code in future iterations, suggesting that clarity benefits both humans and machines. Moreover, in critical systems where human oversight remains essential, maintaining comprehensible code isn't just a nice to have—it's a safety requirement.
 
 ## ECO's Production Reality: The Numbers and Challenges
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_4/eco_edit.png" alt="ECO change deployment figure.">
+<figcaption><em>An end-to-end example of ECO deploying a change.</em></figcaption>
+</figure>
 
 The ECO team's results illuminate both the successes and limitations of production AI code optimization at unprecedented scale. Over one year, the system made 6,400 commits that ended up in production, consisting of over 25,000 lines of code changes across Google's billions of lines of code. Remarkably, less than 0.5% of these commits were rolled back, demonstrating the effectiveness of the multi stage verification pipeline the team developed. Most impressively, these optimizations resulted in performance savings equivalent to over 500,000 normalized CPU cores per quarter, a massive efficiency gain that translates to significant cost and energy savings across Google's global fleet.
 
@@ -232,18 +223,6 @@ This directly addresses Leiserson's central thesis: there remains enormous "room
 
 This perspective highlights academia's unique opportunity: while industry focuses on optimizing high value, well maintained codebases, vast amounts of critical software (from scientific computing to infrastructure systems) remain unoptimized simply because they lack the economic incentives that drive commercial optimization efforts.
 
-## The Viability Question: Long term Strategy
-
-But even as we consider academia's role in advancing this field, a pragmatic question emerged from our discussion about ECO's approach:
-
-A fundamental question emerges about ECO's long term viability: "Is this a viable long term strategy?" given that it's "meant to retrospectively improve human code" in a finite codebase.
-
-The class discussion revealed nuanced perspectives on this challenge. Some students argued that as AI becomes better at writing efficient code initially, the need for retrospective optimization might diminish. Others suggested that new inefficiencies will always emerge as technology evolves, creating ongoing optimization opportunities.
-
-Amir's response was particularly insightful: "For Google, like high value Google code base, they are significantly optimized. So I don't see a world that for the current code base... they're going to be significant algorithmic changes that LLM is going to suggest." However, he noted that for specific, well defined problems with sufficient compute and data, "LLM is going to be amazing."
-
-This suggests that the future of AI optimization might not be about continually optimizing the same codebase, but rather about expanding to new domains and types of optimization challenges—exactly the kind of exploration that academic research can lead.
-
 ## Papers That Shaped Our Discussion
 
 To provide proper context for our exploration, it's worth examining the foundational research that informed both our discussion and the development of systems like ECO:
@@ -271,16 +250,6 @@ The key infrastructure requirements that emerged from our discussion:
 **Context Management**: Infrastructure that helps AI systems understand system wide dependencies and helps humans verify the implications of AI generated changes.
 
 **Organizational Adaptation**: Processes that integrate AI assistance into existing development workflows without disrupting the human expertise that remains essential.
-
-## The Agent Future: Downstream Implications We Must Consider
-
-While we must be careful not to speak for any company or make predictions on their behalf, we can (and should) think academically about the implications of a future where AI agents routinely optimize code at scale. What happens when these systems become more autonomous? What are the downstream effects we need to prepare for?
-
-**The Reliability Paradox**: As AI agents become more capable, the reliability requirements become more stringent, not less. When a human makes an optimization error, we can trace the reasoning and learn from it. When an AI agent makes an error, the debugging process becomes fundamentally different. How do we build systems that remain debuggable and maintainable as they become more AI assisted?
-
-**The Knowledge Transfer Problem**: If AI agents become highly effective at optimization, how do we ensure that human developers continue to understand the systems they're responsible for? There's a risk of creating a generation of developers who can use AI tools effectively but lack the deep understanding needed when those tools fail or encounter novel situations.
-
-**The Democratization Challenge**: The infrastructure requirements we've seen with ECO suggest that effective AI code optimization might remain concentrated among a few large companies. How do we ensure that the benefits of AI assisted optimization reach smaller organizations, open source projects, and critical infrastructure systems that lack commercial incentives for optimization?
 
 ## Looking Ahead: From Research to Practice
 
