@@ -1,0 +1,7 @@
+feedparser>=6.0
+requests>=2.0
+arxiv>=2.2.0
+python-dateutil
+openai
+tqdm
+Pillow

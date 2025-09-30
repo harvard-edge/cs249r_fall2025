@@ -33,3 +33,27 @@ arch2-seminar-main/
 
 # Jekyll runtime PIDs
 jekyll.pid
+
+# API Keys and Secrets
+secrets/api_key.json
+secrets/*.json
+!secrets/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Intermediate data files
+_data/llm_hw_design_papers.json
+_data/llm_hw_design_papers_labeled.json
+_data/filter_papers.json
+_data/*_unlabeled.json
