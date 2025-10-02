@@ -65,7 +65,7 @@ The Cell processor's commercial failure taught the industry a crucial lesson: ra
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_5/cuda_stack.png" alt="CUDA software stack diagram">
-<figcaption><em>CUDA software stack from runtime/driver to PTX/SASS and optimized libraries; illustrates the layered complexity discussed here. (AMAX Engineering)</em></figcaption>
+<figcaption><em>CUDA software stack from runtime/driver to optimized libraries to PTX/SASS. (AMAX Engineering)</em></figcaption>
 </figure>
 
 But CUDA's remarkable success story has an unexpected twist. By building such a comprehensive and optimized ecosystem, NVIDIA inadvertently created what many call the "CUDA moat", a competitive barrier that makes it extremely difficult for developers to switch to alternative hardware platforms, even when those platforms might offer better price-performance ratios for specific workloads.
@@ -118,7 +118,7 @@ The fundamental difference between CPU and GPU optimization reflects a broader s
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_5/gpu_architecture.png" alt="CPU vs GPU architecture diagram">
-<figcaption><em>CPU vs GPU architecture: CPUs favor latency-optimized control and caches; GPUs allocate more silicon to parallel ALUs and memory bandwidth—well suited for ML's dense, parallel linear algebra. (NVIDIA Docs)</em></figcaption>
+<figcaption><em>CPU vs GPU architecture: CPUs favor latency-optimized control and caches while GPUs allocate more silicon to parallel ALUs and memory bandwidth—well suited for ML's dense, parallel linear algebra. (NVIDIA Docs)</em></figcaption>
 </figure>
 
 **CPU Optimization: Forgiving and Predictable**: CPU optimization, while certainly intricate, operates within a relatively predictable framework. When we discussed [ECO's success at Google in Week 4](/blog/2024/09/24/performance-engineering/), we saw how AI systems could identify performance anti-patterns like unnecessary allocations and redundant operations.
