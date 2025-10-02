@@ -118,7 +118,7 @@ The fundamental difference between CPU and GPU optimization reflects a broader s
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_5/gpu_architecture.png" alt="CPU vs GPU architecture diagram">
-<figcaption><em>CPU vs GPU architecture: CPUs favor latency-optimized control and caches while GPUs allocate more silicon to parallel ALUs and memory bandwidth—well suited for ML's dense, parallel linear algebra. (NVIDIA Docs)</em></figcaption>
+<figcaption><em>CPU vs GPU architecture: CPUs favor latency-optimized control and caches while GPUs allocate more silicon to parallel ALUs and memory bandwidth to align with ML's dense, parallel linear algebra. (NVIDIA Docs)</em></figcaption>
 </figure>
 
 **CPU Optimization: Forgiving and Predictable**: CPU optimization, while certainly intricate, operates within a relatively predictable framework. When we discussed [ECO's success at Google in Week 4](/blog/2024/09/24/performance-engineering/), we saw how AI systems could identify performance anti-patterns like unnecessary allocations and redundant operations.
