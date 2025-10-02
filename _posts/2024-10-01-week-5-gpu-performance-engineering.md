@@ -93,6 +93,11 @@ To understand what LLMs must master to succeed at GPU optimization, we need to e
 
 The reality is that modern GPU computation involves a sophisticated stack of abstractions, each adding both power and complexity:
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_5/cuda_stack.png" alt="CUDA software stack diagram">
+<figcaption><em>CUDA software stack from runtime/driver to PTX/SASS and optimized libraries; illustrates the layered complexity discussed here. (AMAX Engineering)</em></figcaption>
+</figure>
+
 **The Foundation Layer**: CUDA Runtime manages device memory, kernel launches, and synchronization. CUDA Driver provides low-level hardware interface and resource management. [PTX (Parallel Thread Execution)](https://docs.nvidia.com/cuda/parallel-thread-execution/) offers a virtual instruction set that provides portability across GPU generations. [SASS (Streaming ASSembler)](https://docs.nvidia.com/cuda/cuda-binary-utilities/) represents the actual machine code that runs on GPU hardware.
 
 **The Optimization Layer**: Above CUDA sits a layer of highly optimized libraries that implement common computational patterns:
@@ -110,6 +115,11 @@ This foundation alone represents enormous complexity. Unlike CPU programming whe
 ### The Great Divide: CPU Transparency vs GPU Complexity
 
 The fundamental difference between CPU and GPU optimization reflects a broader shift in computing philosophy. CPU architectures prioritize ease of programming and predictable performance, while GPU architectures prioritize raw computational throughput, but only for programs that can exploit their parallel nature effectively.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_5/gpu_architecture.png" alt="CPU vs GPU architecture diagram">
+<figcaption><em>CPU vs GPU architecture: CPUs favor latency-optimized control and caches; GPUs allocate more silicon to parallel ALUs and memory bandwidth—well suited for ML's dense, parallel linear algebra. (NVIDIA Docs)</em></figcaption>
+</figure>
 
 **CPU Optimization: Forgiving and Predictable**: CPU optimization, while certainly intricate, operates within a relatively predictable framework. When we discussed [ECO's success at Google in Week 4](/blog/2024/09/24/performance-engineering/), we saw how AI systems could identify performance anti-patterns like unnecessary allocations and redundant operations.
 
@@ -145,6 +155,11 @@ The benchmark introduces a novel evaluation metric called **fast_p**, which meas
 
 The results reveal the scope of the challenge facing AI-assisted optimization. Even frontier reasoning models struggle to match PyTorch baselines in most cases, a sobering reminder that despite impressive capabilities in other domains, current AI systems struggle with the complex, multi-layered optimization challenges that GPU programming presents.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_5/kernelbench.png" alt="KernelBench diagram">
+<figcaption><em>KernelBench tasks LMs with generating optimized CUDA kernels for a given target PyTorch model architecture and conducts automated evaluation. (Ouyang et al.)</em></figcaption>
+</figure>
+
 KernelBench's focus on real PyTorch workloads is particularly significant because it bridges the gap between research and practice. As the authors note, "making progress on the introduced benchmark directly translates to faster practical kernels." This connection to real-world impact addresses one of the key challenges we identified in [Week 2's discussion of fundamental challenges](/blog/2024/09/08/week-2-fundamental-challenges/): ensuring that research advances translate to practical benefits.
 
 ### Kevin: Multi-Turn RL and Measurable Breakthroughs
@@ -159,6 +174,11 @@ The results are compelling and measurable. Kevin demonstrates significant improv
 - **Competitive performance**: Surpassing other frontier models
 
 But perhaps most importantly, Kevin's multi-turn RL framework addresses "unique challenges encountered in real-world settings, such as learning from long trajectories and effective reward attribution across turns." This tackles a fundamental problem in AI-assisted optimization: how to learn from the complex, multi-step feedback loops that characterize expert performance engineering.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_5/kevinrl.png" alt="Kevin multi-turn RL diagram">
+<figcaption><em>Within each training step, the Kevin model iteratively generates, executes, and refines kernels over multiple turns. (Baronio et al.)</em></figcaption>
+</figure>
 
 Kevin's approach explicitly incorporates the iterative nature of expert optimization:
 
