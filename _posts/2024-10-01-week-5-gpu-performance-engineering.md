@@ -63,6 +63,11 @@ The Cell processor's commercial failure taught the industry a crucial lesson: ra
 
 ### The CUDA Moat: When Success Creates Lock-In
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_5/cuda_stack.png" alt="CUDA software stack diagram">
+<figcaption><em>CUDA software stack from runtime/driver to PTX/SASS and optimized libraries; illustrates the layered complexity discussed here. (AMAX Engineering)</em></figcaption>
+</figure>
+
 But CUDA's remarkable success story has an unexpected twist. By building such a comprehensive and optimized ecosystem, NVIDIA inadvertently created what many call the "CUDA moat", a competitive barrier that makes it extremely difficult for developers to switch to alternative hardware platforms, even when those platforms might offer better price-performance ratios for specific workloads.
 
 The depth of this moat becomes apparent when you consider what porting a CUDA application really entails. It's not just translating kernel code from CUDA C++ to alternatives like [OpenCL](https://www.khronos.org/opencl/) (the cross-platform standard) or AMD's [ROCm](https://rocm.docs.amd.com/) (Radeon Open Compute platform). It's recreating years of optimization work embedded in [cuDNN](https://developer.nvidia.com/cudnn), [cuBLAS](https://developer.nvidia.com/cublas), and countless other specialized libraries. 
@@ -92,11 +97,6 @@ To understand what LLMs must master to succeed at GPU optimization, we need to e
 ### The GPU Software Stack: Layers Upon Layers
 
 The reality is that modern GPU computation involves a sophisticated stack of abstractions, each adding both power and complexity:
-
-<figure class="post-figure">
-<img src="/cs249r_fall2025/assets/images/blog_images/week_5/cuda_stack.png" alt="CUDA software stack diagram">
-<figcaption><em>CUDA software stack from runtime/driver to PTX/SASS and optimized libraries; illustrates the layered complexity discussed here. (AMAX Engineering)</em></figcaption>
-</figure>
 
 **The Foundation Layer**: CUDA Runtime manages device memory, kernel launches, and synchronization. CUDA Driver provides low-level hardware interface and resource management. [PTX (Parallel Thread Execution)](https://docs.nvidia.com/cuda/parallel-thread-execution/) offers a virtual instruction set that provides portability across GPU generations. [SASS (Streaming ASSembler)](https://docs.nvidia.com/cuda/cuda-binary-utilities/) represents the actual machine code that runs on GPU hardware.
 
