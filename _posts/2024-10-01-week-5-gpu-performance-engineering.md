@@ -4,7 +4,7 @@ title: "Week 5: From CPU Transparency to GPU Complexity - The Performance Engine
 date: 2024-10-01
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [software, performance]
-permalink: /cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/
+permalink: /blog/2024/10/01/gpu-performance-engineering/
 --- 
 
 Over the past four weeks, we've been exploring a central question: can AI systems help us optimize performance at scale? We started with [the foundational challenges of Architecture 2.0](/blog/2024/09/03/week-1-architecture-2-0/), examined [the software engineering reality gap](/blog/2024/09/17/software-engineering-reality-gap/) between AI capabilities and real development tasks, and investigated [how Google's ECO system tackles CPU performance optimization](/blog/2024/09/24/performance-engineering/) in production.
