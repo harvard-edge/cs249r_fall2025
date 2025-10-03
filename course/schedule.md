@@ -153,7 +153,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Distributed systems are the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale. This week examines: How do we optimize systems where the bottleneck might be network latency, not computation? Can AI learn to co-design algorithms and system architecture? What does "optimal" mean when dealing with failures, load balancing, and resource contention?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Martin Maas (Google DeepMind Staff Research Scientist)
+*Bio: Martin Maas is a Staff Research Scientist at Google DeepMind working on leveraging machine learning to improve runtime systems, operating systems and computer architecture*
+
 
 **🎯 Main Papers:**
 - [COSMIC: Enabling Full-Stack Co-Design and Optimization of Distributed Machine Learning Systems](https://arxiv.org/pdf/2505.15020.pdf)
@@ -177,7 +179,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Suvinay Subramanian (Google DeepMind Staff Software Engineer)
+*Bio: Suvinay Subramanian is a Staff Software at Google working on designing and optimizing the performance of specialized hardware-accelerator systems (TPUs) for AI (LLMs, Recommendation Models)*
+
 
 **🎯 Main Papers:**
 - [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/pdf/2503.23076.pdf)
