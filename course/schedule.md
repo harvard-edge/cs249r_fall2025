@@ -134,6 +134,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 *Why are we studying this? GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding. This week explores: Can AI learn hardware-specific optimization strategies that human experts use? How do we benchmark AI systems against decades of hand-tuned libraries? What happens when the optimization space is so large that even experts disagree on "optimal" solutions?*
 
 **🎤 Guest Speaker(s)**: Sasha Rush (Cursor Researcher)
+
 *Bio: Sasha Rush is a researcher at Cursor and Associate Professor at Cornell Tech working on building and improving language models, especially for code optimization*
 
 
@@ -154,6 +155,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 *Why are we studying this? Distributed systems are the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale. This week examines: How do we optimize systems where the bottleneck might be network latency, not computation? Can AI learn to co-design algorithms and system architecture? What does "optimal" mean when dealing with failures, load balancing, and resource contention?*
 
 **🎤 Guest Speaker(s)**: Martin Maas (Google DeepMind Staff Research Scientist)
+
 *Bio: Martin Maas is a Staff Research Scientist at Google DeepMind working on leveraging machine learning to improve runtime systems, operating systems and computer architecture*
 
 
@@ -180,6 +182,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 *Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
 
 **🎤 Guest Speaker(s)**: Suvinay Subramanian (Google DeepMind Staff Software Engineer)
+
 *Bio: Suvinay Subramanian is a Staff Software at Google working on designing and optimizing the performance of specialized hardware-accelerator systems (TPUs) for AI (LLMs, Recommendation Models)*
 
 
