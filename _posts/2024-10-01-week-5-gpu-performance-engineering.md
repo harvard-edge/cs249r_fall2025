@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 5: From CPU Transparency to GPU Complexity - The Performance Engineering Frontier"
+title: "Week 5: Can LLMs Optimize GPU Performance? From CPU Transparency to GPU Complexity"
 date: 2024-10-01
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [software, performance]
