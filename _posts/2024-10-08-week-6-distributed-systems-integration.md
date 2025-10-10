@@ -4,10 +4,10 @@ title: "Week 6: Can AI Co-Design Distributed Systems? Scaling from 1 GPU to 1,00
 date: 2024-10-08
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [software, systems]
-permalink: /blog/2024/10/08/distributed-systems-integration/
+permalink: /blog/2024/10/08/ai-co-design-distributed-systems/
 --- 
 
-You've learned how AI can optimize CPU code. You've seen AI generate blazingly fast GPU kernels. Your single machine performance is perfect. Now you need to scale to 1,000 GPUs to train your frontier model.
+You've learned how AI can optimize CPU code. You've seen AI generate blazingly fast GPU kernels. Your single machine performance is perfect. Now you need to scale to 1,000 GPUs to train your frontier model. Or maybe 200,000 GPUs, like [xAI's Colossus supercomputer](https://x.ai/colossus), currently the world's largest AI training cluster.
 
 **The network becomes your bottleneck.**
 
@@ -50,6 +50,8 @@ Why does the network become so unpredictable? And why does scaling to thousands 
 #### The Communication Explosion
 
 Consider training a large language model. On a single GPU, your bottleneck might be memory bandwidth or compute throughput. But when you distribute training across 1,000 GPUs, something dramatic happens. **The communication overhead begins to dominate everything else.**
+
+At the scale of modern AI infrastructure, the network bandwidth required is staggering. These systems can generate petabytes of gradient data per day that must be synchronized across the cluster. A single slow network link, a suboptimal collective communication algorithm, or poor workload placement can bottleneck the entire training run.
 
 To understand why, we need to examine how distributed training actually works. When training is distributed, the model's computations are divided across many devices, but these devices must constantly exchange information to stay synchronized. This creates communication patterns fundamentally different from the point-to-point messages we're familiar with in traditional networked applications.
 
@@ -131,7 +133,9 @@ But here's the pragmatic question we must ask. Does co-design actually make sens
 
 Co-design is expensive. It requires reasoning about workload characteristics, network topology, and hardware constraints simultaneously. You're not just optimizing one layer. You're redesigning multiple layers together. That level of effort demands justification.
 
-The answer depends on scale. If you're running ChatGPT or training frontier language models at mega-scale, where you're distributing work across thousands of GPUs continuously, then yes, co-design absolutely makes sense. The efficiency gains COSMIC demonstrates (reduced training time, lower network costs, better resource utilization) directly translate to millions of dollars saved and competitive advantages in model deployment.
+The answer depends on scale. If you're running ChatGPT or training frontier language models at mega-scale, where you're distributing work across thousands of GPUs continuously, then yes, co-design absolutely makes sense. 
+
+Consider the real-world scale. OpenAI's infrastructure for GPT-4 training [reportedly involved around 25,000 GPUs](https://www.semianalysis.com/p/gpt-4-architecture-infrastructure). Microsoft and OpenAI built [supercomputers with tens of thousands of GPUs](https://news.microsoft.com/source/features/ai/openai-azure-supercomputer/) interconnected with InfiniBand networks. At this scale, even a 10% improvement in communication efficiency translates to massive cost savings. The efficiency improvements COSMIC demonstrates (reduced training time, lower network costs, better resource utilization) directly translate to millions of dollars saved and competitive advantages in model deployment.
 
 But if you're training smaller models occasionally, or running distributed workloads at more modest scales? The engineering effort to co-design your system might not be worth it. Standard network topologies and conventional parallelism strategies might be good enough.
 
@@ -213,7 +217,7 @@ This infrastructure gap makes the practical deployment of learned systems orders
 
 Which leads us to a surprising observation. An unexpected theme emerged in our class discussion. As model scaling shows diminishing returns (with models like GPT 4.5 plateauing), distributed systems optimization paradoxically becomes **more critical, not less.** The economics of AI are shifting.
 
-When scaling was the answer to everything, suboptimal distributed training was wasteful but acceptable. Throw more hardware at the problem. Now, **how you use your GPUs determines whether you can afford to train competitive models at all**. The efficiency of communication patterns, the intelligence of workload distribution, the optimization of network topology. These become competitive advantages.
+When scaling was the answer to everything, suboptimal distributed training was wasteful but acceptable. Throw more hardware at the problem. But building and operating these massive clusters is expensive. Meta's [Research SuperCluster](https://ai.meta.com/blog/ai-rsc/) cost hundreds of millions to build. Power consumption for large GPU clusters can exceed 20 MW.<span class="margin-note">**The Energy Elephant in the Room**: We're not deeply addressing it in this post, but the energy implications are staggering. OpenAI's [partnership with AMD](https://openai.com/index/openai-amd-strategic-partnership/) will deploy 6 gigawatts of GPU infrastructure, with 1 gigawatt arriving in 2026 alone. To put this in perspective, a typical nuclear power plant produces around 1 gigawatt. This makes efficiency optimization not just an economic imperative but an environmental one. Every percentage point of improvement in communication efficiency translates directly to reduced power consumption at planetary scale.</span> Now, **how you use your GPUs determines whether you can afford to train competitive models at all**. The efficiency of communication patterns, the intelligence of workload distribution, the optimization of network topology. These become competitive advantages, not just nice-to-haves.
 
 The class discussion highlighted this shift. The focus moves toward quality improvements. Better data curation, algorithmic innovations, and system optimization. Each of these directions demands distributed systems that can adapt and efficiently utilize resources. Exactly what papers like COSMIC enable.
 
