@@ -7,7 +7,7 @@ categories: [software, systems]
 permalink: /blog/2024/10/08/ai-co-design-distributed-systems/
 --- 
 
-You've learned how AI can optimize CPU code. You've seen AI generate blazingly fast GPU kernels. Your single machine performance is perfect. Now you need to scale to 1,000 GPUs to train your frontier model. Or maybe 200,000 GPUs, like [xAI's Colossus supercomputer](https://x.ai/colossus), currently the world's largest AI training cluster.
+Let's imagine the following (quite realistic) scenario: You've learned how AI can optimize CPU code. You've seen AI generate blazingly fast GPU kernels. Your single machine performance is perfect. Now you need to scale to 1,000 GPUs to train your frontier model. Or maybe 200,000 GPUs, like [xAI's Colossus supercomputer](https://x.ai/colossus), currently the world's largest AI training cluster. What new problems arise, and how can we leverage AI to solve them?
 
 **The network becomes your bottleneck.**
 
