@@ -90,7 +90,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Code generation is the most accessible entry point for AI in systems - it's where LLMs have shown dramatic success, but also where we can clearly see the gap between "impressive demos" and "production-ready tools." This week examines: How do we evaluate whether AI can actually replace human programmers? What does it mean for code to be "correct" vs. "optimal"? How do we move from toy problems to real software engineering workflows?*
 
-**🎤 Guest Speaker(s)**: Ofir Press (Princeton Postdoc)
+**🎤 Guest Speaker(s)**: Ofir Press (Princeton, Postdoc)
 
 *Bio: Ofir Press is a Princeton postdoctoral researcher focused on large language models for code and evaluation, and is a creator of SWE-bench and SWE-agent.*
 
@@ -111,7 +111,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Moving beyond correctness to performance requires understanding both algorithmic complexity and system behavior. This week explores: Can AI learn the subtle performance optimizations that expert programmers use? How do we teach machines to reason about cache behavior, instruction-level parallelism, and memory access patterns? What's the difference between micro-optimizations and architectural improvements?*
 
-**🎤 Guest Speaker(s)**: Amir Yazdanbaksh (Google DeepMind Research Scientist)
+**🎤 Guest Speaker(s)**: Amir Yazdanbaksh (Google DeepMind, Research Scientist)
 
 *Bio: Amir Yazdanbaksh is a research scientist at Google DeepMind working at the intersection of intelligent systems and computer architecture, with a focus on designing abstractions that enable AI-driven systems.*
 
@@ -133,7 +133,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? GPU kernel optimization sits at the intersection of domain expertise and automated optimization - a space too complex for pure heuristics but requiring deep hardware understanding. This week explores: Can AI learn hardware-specific optimization strategies that human experts use? How do we benchmark AI systems against decades of hand-tuned libraries? What happens when the optimization space is so large that even experts disagree on "optimal" solutions?*
 
-**🎤 Guest Speaker(s)**: Sasha Rush (Cursor Researcher)
+**🎤 Guest Speaker(s)**: Sasha Rush (Cursor, Researcher)
 
 *Bio: Sasha Rush is a researcher at Cursor and Associate Professor at Cornell Tech working on building and improving language models, especially for code optimization*
 
@@ -154,7 +154,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Distributed systems are the culmination of software engineering challenges - where code generation, performance optimization, and parallel programming must work together at scale. This week examines: How do we optimize systems where the bottleneck might be network latency, not computation? Can AI learn to co-design algorithms and system architecture? What does "optimal" mean when dealing with failures, load balancing, and resource contention?*
 
-**🎤 Guest Speaker(s)**: Martin Maas (Google DeepMind Staff Research Scientist)
+**🎤 Guest Speaker(s)**: Martin Maas (Google DeepMind, Staff Research Scientist)
 
 *Bio: Martin Maas is a Staff Research Scientist at Google DeepMind working on leveraging machine learning to improve runtime systems, operating systems and computer architecture*
 
@@ -181,7 +181,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Performance prediction and design space exploration are fundamental to AI-driven architecture design. This week bridges performance modeling with systematic design space navigation. Key questions: How do we model complex interactions between architectural components? Can AI systematically explore spaces too large for human analysis? How do we predict performance across different workloads and design points? What architectural insights can emerge from data that human designers might miss?*
 
-**🎤 Guest Speaker(s)**: Suvinay Subramanian (Google DeepMind Staff Software Engineer)
+**🎤 Guest Speaker(s)**: Suvinay Subramanian (Google DeepMind, Staff Software Engineer)
 
 *Bio: Suvinay Subramanian is a Staff Software at Google working on designing and optimizing the performance of specialized hardware-accelerator systems (TPUs) for AI (LLMs, Recommendation Models)*
 
@@ -205,7 +205,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Accelerator design is the ultimate co-design challenge - optimizing both the hardware architecture and the mapping of computations onto that hardware. This week explores: How do we jointly optimize dataflow, memory hierarchy, and compute units? Can AI learn the complex trade-offs between energy, performance, and area? What happens when the target workload is itself changing rapidly (like evolving DNN architectures)?*
 
-**🎤 Guest Speaker(s)**: Jenny Huang (Nvidia Research Scientist)
+**🎤 Guest Speaker(s)**: Jenny Huang (Nvidia, Research Scientist)
 
 *Bio: Jenny Huang is a research scientist at Nvidia working on GPU architecture with the computer architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithm, hardware, and mappings.*
 
@@ -228,7 +228,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Memory hierarchy design is where the theoretical meets the practical - where algorithmic access patterns meet physical constraints of latency, bandwidth, and energy. This week examines: Can AI learn to predict and optimize for complex memory access patterns? How do we design memory systems for workloads we can't fully characterize? What's the relationship between data structure design and memory hierarchy optimization?*
 
-**🎤 Guest Speaker(s)**: Milad Hashemi (Google Research Scientist)
+**🎤 Guest Speaker(s)**: Milad Hashemi (Google, Research Scientist)
 
 *Bio: Milad Hashemi is a research scientist at Google working on the ML, Systems, and Cloud AI team.*
 
@@ -250,7 +250,9 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? AI workloads are a new class of computational patterns that challenge traditional system design assumptions. This week explores: How do we optimize systems for workloads that are themselves AI-driven? What new scheduling challenges emerge with transformer architectures and attention mechanisms? Can we co-design the AI algorithms and the systems that run them?*
 
-**🎤 Guest Speaker(s)**: TBD
+**🎤 Guest Speaker(s)**: Esha Choukse (Microsoft Azure Research, Principal Researcher)
+
+*Bio: Esha Choukse is a Principal Researcher in the Azure Research Systems team. She leads the efficient AI project that optimizes the GenAI workloads and systems for efficiency and sustainability.*
 
 **🎯 Main Papers:**
 - [Efficient LLM Scheduling by Learning to Rank](https://arxiv.org/pdf/2408.15792.pdf)
@@ -274,7 +276,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? RTL design and logic synthesis represent the transition from architectural intent to physical implementation. This week examines: Can AI learn the complex relationships between high-level hardware descriptions and optimized gate-level implementations? How do we teach machines to reason about timing, power, and area trade-offs? What does it mean for AI to "understand" hardware design languages?*
 
-**🎤 Guest Speaker(s)**: Mark Ren (Nvidia Director of Design Automation Research)
+**🎤 Guest Speaker(s)**: Mark Ren (Nvidia, Director of Design Automation Research)
 
 *Bio: Mark Ren leads Design Automation Research at Nvidia. His research interest is in AI for chip design and GPU-acceleration EDA.*
 
@@ -298,7 +300,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Physical design is the final translation from logical design to manufacturable silicon. This week explores: Can AI learn the complex geometric and electrical constraints of chip layout? How do we optimize for objectives that span multiple scales - from transistor placement to global routing? What happens when AI systems must reason about manufacturing variability and yield?*
 
-**🎤 Guest Speaker(s)**: Richard Ho (OpenAI Head of Hardware)
+**🎤 Guest Speaker(s)**: Richard Ho (OpenAI, Head of Hardware)
 
 *Bio: Richard Ho is Head of Hardware at OpenAI working to co-optimize ML models and the massive compute hardware they run on.*
 
@@ -318,7 +320,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 *Why are we studying this? Verification is the ultimate test of whether AI-designed systems actually work. This week examines: How do we verify systems that are too complex for traditional formal methods? Can AI help generate better test cases and assertions? What does it mean to "trust" an AI-designed chip? How do we close the loop from verification results back to design optimization?*
 
-**🎤 Guest Speaker(s)**: Kartik Hegde (ChipStack Co-Founder)
+**🎤 Guest Speaker(s)**: Kartik Hegde (ChipStack, Co-Founder)
 
 *Bio: Kartik Hegde is the co-founder of ChipStack, focusing on AI-assisted chip design and verification workflows that accelerate silicon development.*
 
