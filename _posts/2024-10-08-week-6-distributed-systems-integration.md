@@ -65,6 +65,11 @@ To understand why, we need to examine how distributed training actually works. W
 
 The efficiency of these operations depends critically on the network topology and the algorithms used to implement them.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_6/distributed_parallelism.png" alt="Visualization of data, tensor, and pipeline parallelism">
+<figcaption><em>Visualization of distributed training strategies—data, tensor, and pipeline parallelism—that shape communication patterns at scale. (UvA DL Notebooks)</em></figcaption>
+</figure>
+
 **Multiple Parallelism Strategies**: Our class discussion revealed that modern distributed training employs several forms of parallelism simultaneously.
 
 **Data Parallelism**: Each node processes different data batches with identical model replicas. Requires all-reduce to synchronize gradients.
@@ -98,6 +103,11 @@ This interdependence creates the core challenge. How do you design a network whe
 ---
 
 ## PHASE 2: Co-Design as the Answer
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_6/cosmic.png" alt="COSMIC overview diagram">
+<figcaption><em>COSMIC's summary of a parameter set architecture to capture the full-stack distributed ML design space and an ML-based optimization framework to design new distributed ML infrastructures. (Raju et al.)</em></figcaption>
+</figure>
 
 ### The COSMIC Approach
 
@@ -245,19 +255,6 @@ This connects back to our [Week 3 discussion of SWE-Bench](/blog/2024/09/17/soft
 
 The challenge for the research community is clear. **How do we create benchmarks that capture dynamism without making them so complex that results become irreproducible?**
 
-### The Analytical + ML Pattern
-
-Beyond creating better benchmarks, our discussion surfaced a crucial pattern that's emerging in AI for systems work. Combining analytical models with machine learning. The Concorde project we read about showcases this approach, achieving 5 orders of magnitude speedup over cycle accurate simulation with only ~2% error.
-
-The insight is counterintuitive. **Simple analytical models that are "wrong" can be more useful than complex simulations that are "right."**
-
-Here's the pattern:
-1. Use analytical models (like roofline analysis) for first order effects. They're fast and interpretable.
-2. Apply ML to learn the messy interactions and second order effects that analytical models miss.
-3. Combine them to get speed AND accuracy.
-
-This compositional thinking (leveraging decades of modeling expertise as a foundation, then using ML for what we can't model analytically) is an important design pattern for AI driven systems optimization. It's not "ML replaces everything." It's "ML complements what we already know."
-
 ### The Self-Improvement Vision
 
 Toward the end of our discussion, students asked about self improving ML systems. Can we create "automatic positive feedback loops" where systems learn to optimize themselves?
@@ -302,19 +299,6 @@ These are questions that academic research is uniquely positioned to explore, un
 
 Week 6 marks the culmination of Phase 1, but it also reveals why the Architecture 2.0 vision from [Week 1](/blog/2024/09/03/week-1-architecture-2-0/) is necessary. Let's connect the threads.
 
-### The Design Space Explosion
-
-Remember that modern design spaces contain 10^14 to 10^2300 possible configurations. Spaces too vast for human exploration. Distributed systems embody this challenge perfectly.
-
-Consider the optimization space COSMIC navigates:
-- Parallelism strategies (data, tensor, expert, pipeline and their combinations)
-- Network topologies (ring, tree, fat tree, custom configurations)
-- Hardware configurations (GPU types, interconnects, memory hierarchies)
-- Workload characteristics (model architecture, batch sizes, sequence lengths)
-- Dynamic conditions (failure modes, traffic patterns, resource contention)
-
-The number of possible configurations explodes combinatorially. **No human expert can navigate this space comprehensively.** This is exactly why we need agentic design. AI systems that can autonomously explore, optimize, and adapt across vast configuration spaces.
-
 ### Breaking Down Artificial Boundaries
 
 COSMIC demonstrates a principle central to Architecture 2.0. **Optimal design requires reasoning across traditional abstraction layers.** We created these layers (application, system software, network, hardware) to manage complexity for human designers. But they're artificial constraints that limit optimization potential.
@@ -329,6 +313,11 @@ Each week, we've pushed against these artificial boundaries. COSMIC's co-design 
 This connects to Leiserson's "room at the top" vision. Enormous performance gaps exist between current systems and what's theoretically possible. Distributed systems exemplify this gap. Most clusters operate far below their theoretical efficiency because we optimize each layer independently.
 
 ### The Data Challenge Redux
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_6/deathstarbench.png" alt="DeathStarBench swarm service diagram">
+<figcaption><em>DeathStarBench captures the complex relationships within a swarm service across edge and cloud deployment. Curating benchmarks that represent the complexity of real-world workloads enable the open source and academic community to make impactful contributions. (Gan et al.)</em></figcaption>
+</figure>
 
 This also connects to the data and benchmark challenge from [Week 2](/blog/2024/09/08/week-2-fundamental-challenges/). How do we create datasets and benchmarks for distributed system optimization?
 
