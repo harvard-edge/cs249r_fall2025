@@ -13,7 +13,7 @@ layout: default
 
 ### Checkpoint Structure
 - **Checkpoint 1** (Due: October 3, Friday): Literature survey - Comprehensive review of relevant papers in your section
-- **Checkpoint 2** (Due: October 24, Thursday): Data-driven exercise - Gathering results, creating plots/tables, assembling raw data  
+- **Checkpoint 2** (Due: October 31, Thursday): Data-driven exercise - Gathering results, creating plots/tables, assembling raw data  
 - **Checkpoint 3** (Due: November 21, Thursday): First draft of your section - Complete draft of your survey section
 - **Final Paper** (Due: December 12, Thursday): Complete integrated survey paper
 
@@ -32,7 +32,7 @@ Each checkpoint focuses on **systematic research development**, building toward 
 
 **📅 Timeline Guidance**: Contact the TA and instructor by **September 19th** (two weeks before the deadline) to discuss your literature review approach and ensure you're on the right track.
 
-### 📊 Checkpoint 2: Data-Driven Exercise (Due: October 24, Thursday)
+### 📊 Checkpoint 2: Data-Driven Exercise (Due: October 31, Thursday)
 
 **Deliverable**: Technical results with generated tables and figures (10-12 pages)  
 **Requirements**:
