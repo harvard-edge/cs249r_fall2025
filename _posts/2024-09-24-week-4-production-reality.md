@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 4: From Benchmarks to Production - The Performance Engineering Reality of AI Code Optimization"
+title: "Week 4: Can AI Optimize Production Code? From Contest Winners to Google's ECO"
 date: 2024-09-24
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [software]

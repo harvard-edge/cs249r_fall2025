@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 3: The Software Engineering Reality Gap"
+title: "Week 3: Can AI Really Replace Software Engineers? The Reality Behind Contest-Winning Code"
 date: 2024-09-17
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [software]
