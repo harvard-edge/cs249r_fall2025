@@ -11,7 +11,7 @@ Let's imagine the following (quite realistic) scenario: You've learned how AI ca
 
 **The network becomes your bottleneck.**
 
-That thing you took for granted when optimizing individual machines with AI? It's now the critical constraint. And here's what makes distributed systems fundamentally different from everything we've explored so far. Unlike code that either works or doesn't, unlike benchmarks that give you deterministic speedup numbers, distributed systems exist in a world of continuous adaptation, unpredictable failures, and dynamic conditions that change moment by moment.
+That thing you took for granted when optimizing individual machines with AI? It's now the critical constraint. Here's what makes distributed systems fundamentally different from everything we've explored so far. Unlike code that either works or doesn't, unlike benchmarks that give you deterministic speedup numbers, distributed systems exist in a world of continuous adaptation, unpredictable failures, and dynamic conditions that change moment by moment.
 
 Suddenly, everything you learned about AI for system design in the past five weeks isn't enough. This week, we confront the messy reality where "does it work?" has no single answer.
 

@@ -193,6 +193,8 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 **📚 Background Reading:** [Ch 12. Benchmarking AI](https://www.mlsysbook.ai/contents/core/benchmarking_ai/benchmarking_ai)
 
+**✍️ Blog Post**: [Week 7: The Tacit Knowledge Problem - How AI Agents Learn What Architects Never Wrote Down](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/)
+
 **📖 Supplemental Reading:**
 - [DNNPerf: Runtime Performance Prediction for Deep Learning Models with Graph Neural Networks](https://ieeexplore.ieee.org/abstract/document/10172674?casa_token=G4jLZfZNu70AAAAA:ApmDhwWk_UAxbhY1TIwWYlrw6gddXvI06q49dHSIKsQ5jj7LJSnbv9DP4UHSk5PuLyAJwYk)
 - [NeuSight: Forecasting GPU Performance for Deep Learning Training and Inference](https://www.microsoft.com/en-us/research/uploads/prod/2024/05/NeuSight.pdf)
