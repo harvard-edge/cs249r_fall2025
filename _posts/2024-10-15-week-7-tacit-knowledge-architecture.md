@@ -39,14 +39,14 @@ Let's trace the journey we've taken over the past seven weeks. Each week, we've 
 
 ### The Architecture Knowledge Gap
 
-<figure class="post-figure">
-<img src="/cs249r_fall2025/assets/images/blog_images/week_7/arch2.png" alt="Architecture knowledge gap illustration">
-<figcaption><em>Figure 1: Innovation in systems is driven by technology innovation, architectural innovation, optimization, and specialization. With a plethora of emerging applications with demanding requirements, we are increasingly starting to build more complex and specializad systems that requires informed decisions on tradeoffs across the stack.</em></figcaption>
-</figure>
-
 When you design a new processor architecture, you face a fundamentally different challenge. You can't just "read the code" because there is no code yet. You can't profile it because it doesn't exist. You can't measure its performance because it hasn't been built.
 
 Instead, you must predict performance of designs that exist only as specifications. As shown in Figure 1, you navigate a wide range of trade-offs based on incomplete information about future workloads. You make philosophical choices about where to locate complexity in the system. You apply intuitions developed through years of seeing what works and what fails.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/arch2.png" alt="Architecture knowledge gap illustration">
+<figcaption><em>Figure 1: Innovation in systems is driven by technology innovation, architectural innovation, optimization, and specialization. With a plethora of emerging applications with demanding requirements, we are starting to build more complex and specializad systems that require informed decisions on tradeoffs across the stack.</em></figcaption>
+</figure>
 
 Here's the crucial point: **most of this knowledge is tacit**. It exists in the heads of experienced computer architects, accumulated through decades of building systems, seeing designs succeed and fail, understanding the consequences of architectural decisions that ripple through entire systems.
 
@@ -163,14 +163,14 @@ None of these is straightforward.
 
 ### The Numerics Example: Details That Matter
 
+Suvinay provided a concrete example that illustrates how tacit knowledge operates in practice: **the evolution of floating-point formats for ML**.
+
+Traditional deep learning used FP32 (32 bit floating point). Then researchers discovered FP16 (16 bit) worked well for many models, offering 2x speedup. Then Google introduced bfloat16 (BF16), which trades precision for range compared to FP16. While the distinction between FP16 and BF16 is subtle, as shown in Figure 4, there are consequential tradeoffs in hardware support, convergence, and end-to-end performance. More recently, INT8, FP8, even FP4 quantization have gained hardware support.
+
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_7/numerics.png" alt="Numerical precision formats for ML">
 <figcaption><em>Figure 4: Evolution of numerical formats from FP32 to FP16 and BF16(Snehal)</em></figcaption>
 </figure>
-
-Suvinay provided a concrete example that illustrates how tacit knowledge operates in practice: **the evolution of floating-point formats for ML**.
-
-Traditional deep learning used FP32 (32 bit floating point). Then researchers discovered FP16 (16 bit) worked well for many models, offering 2x speedup. Then Google introduced bfloat16 (BF16), which trades precision for range compared to FP16. While the distinction between FP16 and BF16 is subtle, as shown in Figure 4, there are consequential tradeoffs in hardware support, convergence, and end-to-end performance. More recently, INT8, FP8, even FP4 quantization have gained hardware support.
 
 Each of these choices has implications that ripple through the entire system. Hardware complexity: different formats require different arithmetic units. Software stack: frameworks need to support mixed precision training. Numerical stability: some operations are sensitive to precision, others aren't. Model architectures: some models tolerate lower precision better than others. Future proofing: which formats will dominate in 3 years when your chip ships?
 
