@@ -39,9 +39,14 @@ Let's trace the journey we've taken over the past seven weeks. Each week, we've 
 
 ### The Architecture Knowledge Gap
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/arch2.png" alt="Architecture knowledge gap illustration">
+<figcaption><em>Figure 1: Innovation in systems is driven by technology innovation, architectural innovation, optimization, and specialization. With a plethora of emerging applications with demanding requirements, we are increasingly starting to build more complex and specializad systems that requires informed decisions on tradeoffs across the stack.</em></figcaption>
+</figure>
+
 When you design a new processor architecture, you face a fundamentally different challenge. You can't just "read the code" because there is no code yet. You can't profile it because it doesn't exist. You can't measure its performance because it hasn't been built.
 
-Instead, you must predict performance of designs that exist only as specifications. You navigate trade-offs based on incomplete information about future workloads. You make philosophical choices about where to locate complexity in the system. You apply intuitions developed through years of seeing what works and what fails.
+Instead, you must predict performance of designs that exist only as specifications. As shown in Figure 1, you navigate a wide range of trade-offs based on incomplete information about future workloads. You make philosophical choices about where to locate complexity in the system. You apply intuitions developed through years of seeing what works and what fails.
 
 Here's the crucial point: **most of this knowledge is tacit**. It exists in the heads of experienced computer architects, accumulated through decades of building systems, seeing designs succeed and fail, understanding the consequences of architectural decisions that ripple through entire systems.
 
@@ -65,6 +70,11 @@ This week's two main papers (Concorde and ArchGym) represent fundamentally diffe
 
 ### Concorde: Codifying What We Can, Learning What We Can't
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/concorde.png" alt="Concorde compositional analytical-ML fusion diagram">
+<figcaption><em>Figure 2: Concorde composes analytical models with ML to achieve fast, accurate performance prediction—capturing first-order effects analytically and learning second-order interactions. (Nasr-Esfahany et al.)</em></figcaption>
+</figure>
+
 [Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion](https://arxiv.org/abs/2503.23076) takes a pragmatic stance. Decades of computer architecture research have produced powerful analytical models. These models encode explicit theoretical knowledge: queueing theory, roofline models, Amdahl's law, Little's law. This knowledge is precious. It's been validated, refined, and proven across countless designs.
 
 **Why throw it away?**
@@ -84,6 +94,11 @@ This is tacit knowledge made explicit through modeling. But it only works for th
 ### ArchGym: Learning Through Exploration
 
 [ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design](https://arxiv.org/abs/2306.08888) takes a radically different approach. Instead of trying to codify architectural knowledge, it creates an environment where agents can **develop that knowledge through experience**.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/archgym.png" alt="ArchGym framework overview">
+<figcaption><em>Figure 3: ArchGym provides a gymnasium for agents to explore architectural design spaces via simulation and learn search strategies from outcomes. (Krishnan et al.)</em></figcaption>
+</figure>
 
 Think about how human architects actually learn their craft. Yes, they read papers and textbooks. But much of their intuition comes from experience. Trying designs. Seeing what works. Understanding why configurations fail. Building mental models through repeated exposure to the consequences of design choices.
 
@@ -148,9 +163,14 @@ None of these is straightforward.
 
 ### The Numerics Example: Details That Matter
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/numerics.png" alt="Numerical precision formats for ML">
+<figcaption><em>Figure 4: Evolution of numerical formats from FP32 to FP16 and BF16(Snehal)</em></figcaption>
+</figure>
+
 Suvinay provided a concrete example that illustrates how tacit knowledge operates in practice: **the evolution of floating-point formats for ML**.
 
-Traditional deep learning used FP32 (32 bit floating point). Then researchers discovered FP16 (16 bit) worked well for many models, offering 2x speedup. Then Google introduced bfloat16 (BF16), which trades precision for range compared to FP16. Then INT8 quantization, then FP8 in different formats.
+Traditional deep learning used FP32 (32 bit floating point). Then researchers discovered FP16 (16 bit) worked well for many models, offering 2x speedup. Then Google introduced bfloat16 (BF16), which trades precision for range compared to FP16. While the distinction between FP16 and BF16 is subtle, as shown in Figure 4, there are consequential tradeoffs in hardware support, convergence, and end-to-end performance. More recently, INT8, FP8, even FP4 quantization have gained hardware support.
 
 Each of these choices has implications that ripple through the entire system. Hardware complexity: different formats require different arithmetic units. Software stack: frameworks need to support mixed precision training. Numerical stability: some operations are sensitive to precision, others aren't. Model architectures: some models tolerate lower precision better than others. Future proofing: which formats will dominate in 3 years when your chip ships?
 
@@ -235,6 +255,11 @@ The tacit knowledge problem suggests a more nuanced vision of Architecture 2.0.
 
 **Not:** AI agents replace human architects by exhaustively searching design spaces  
 **But:** AI agents and human architects collaborate, with agents handling systematic exploration and architects providing philosophical guidance, intuitive constraints, and interpretive wisdom
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_7/gpt_image.png" alt="Architecture 2.0 and AI agents concept image">
+<figcaption><em>Figure 5: Architecture 2.0 envisions collaboration between human architects and AI agents. Our next generation of system research will be driven by the implicit decisions made by humans and explored by specialized agents. (ChatGPT image generation)</em></figcaption>
+</figure>
 
 This isn't a disappointing compromise. It's actually more powerful. It combines AI's ability to explore thoroughly, consistently, without cognitive bias with human's ability to provide context, philosophy, and intuitive leaps.
 
