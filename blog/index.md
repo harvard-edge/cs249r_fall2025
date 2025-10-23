@@ -15,7 +15,7 @@ permalink: /blog/
 {% if posts.size > 0 %}
   {% for post in posts %}
   <article class="blog-preview">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     <div class="blog-meta">
       {{ post.date | date: "%B %d, %Y" }}
       {% if post.categories %}
@@ -28,7 +28,7 @@ permalink: /blog/
     {% if post.excerpt %}
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     {% endif %}
-    <a href="{{ post.url }}" class="read-more">Read More →</a>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More →</a>
   </article>
   {% endfor %}
 {% else %}
