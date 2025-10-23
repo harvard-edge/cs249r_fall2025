@@ -249,7 +249,7 @@ Mapping reveals something broader: not just "how to find good mappings" but "how
 
 ## Beyond the Research Papers: Production Constraints
 
-<span class="margin-note">**Jenny Huang** is a Research Scientist at Nvidia working in the GPU architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithms, hardware, and mappings. She brings a unique perspective from working at the intersection of architecture design and practical ML workload deployment, understanding both theoretical optimization and production constraints.</span>
+<span class="margin-note"><img src="{{ site.baseurl }}/assets/images/blog_images/week_8/jenny_huang.jpg" alt="Jenny Huang" style="width: 80px; height: 80px; border-radius: 8px; float: left; margin-right: 10px; margin-bottom: 10px; margin-top: 5px;"> **Jenny Huang** is a Research Scientist at Nvidia working in the GPU architecture research group. Her research focuses on accelerated computing and the co-optimization of algorithms, hardware, and mappings. She brings a unique perspective from working at the intersection of architecture design and practical ML workload deployment, understanding both theoretical optimization and production constraints.</span>
 
 While DOSA and AutoTVM reveal important aspects of co-design reasoning, production deployment introduces additional complexities. Our guest speaker, industry practitioner Jenny Huang (co-author of DOSA), highlighted challenges that research papers often elide, showing that reasoning about mappings in practice extends far beyond pure performance optimization.
 
