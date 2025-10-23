@@ -37,7 +37,7 @@ exclude:
 
 # Plugins (only GitHub Pages compatible ones)
 plugins:
-  - jekyll-feed
+  # - jekyll-feed  # Temporarily commented out due to eventmachine dependency issues
   - jekyll-sitemap
   - jekyll-seo-tag
 
