@@ -267,11 +267,45 @@ blockquote {
     margin: 1.5rem 0;
 }
 
+/* Inline code */
 code {
     background-color: #f8f9fa;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
-    font-family: Monaco, Consolas, monospace;
+    font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #e83e8c;
+}
+
+/* Code blocks */
+pre {
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    line-height: 1.45;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #24292e;
+    font-size: 0.85em;
+    border-radius: 0;
+}
+
+/* Syntax highlighting improvements */
+.highlight {
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.highlight pre {
+    margin: 0;
+    border: none;
 }
 
 ul, ol {

@@ -8,9 +8,18 @@ url: "http://localhost:4001"
 markdown: kramdown
 highlighter: rouge
 
+# Kramdown settings for better code blocks
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: false
+      start_line: 1
+
 # Simplified plugins for local development
 plugins:
-  - jekyll-feed
+  # - jekyll-feed  # Commented out temporarily
   - jekyll-sitemap
   - jekyll-seo-tag
 

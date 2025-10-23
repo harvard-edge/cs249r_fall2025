@@ -3,8 +3,12 @@ source "https://rubygems.org"
 # Local dev: use Jekyll directly instead of github-pages
 gem "jekyll", "~> 3.9.5"
 gem "webrick", "~> 1.8"
+gem "csv"
+gem "logger"
+gem "base64"
+gem "bigdecimal"
 
-gem "jekyll-feed"
+# gem "jekyll-feed"  # Commented out temporarily due to eventmachine build issues
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"

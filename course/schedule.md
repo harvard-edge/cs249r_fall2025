@@ -82,7 +82,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 ---
 
-# Phase 1: AI for Software
+# Phase 1: AI for Software {#phase-1-ai-for-software}
 *AI systems understand what needs to be computed efficiently*
 
 ## Week 3 - Code Generation & Software Engineering
@@ -173,7 +173,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 ---
 
-# Phase 2: AI for Architecture
+# Phase 2: AI for Architecture {#phase-2-ai-for-architecture}
 *AI agents design how to compute efficiently in hardware*
 
 ## Week 7 - Performance Prediction & Design Space Exploration
@@ -270,7 +270,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 ---
 
-# Phase 3: AI for Chip Design
+# Phase 3: AI for Chip Design {#phase-3-ai-for-chip-design}
 *AI tools implement the architecture physically in silicon*
 
 ## Week 11 - RTL Design & Logic Synthesis
