@@ -341,5 +341,5 @@ The journey deeper into hardware continues. The knowledge becomes increasingly i
 
 ---
 
-*For detailed readings, slides, and materials for this week, see [Week 7 in the course schedule](/course/schedule/#week-7---performance-prediction--design-space-exploration).*
+*For detailed readings, slides, and materials for this week, see [Week 7 in the course schedule]({{ site.baseurl }}/course/schedule/#week-7---performance-prediction--design-space-exploration).*
 

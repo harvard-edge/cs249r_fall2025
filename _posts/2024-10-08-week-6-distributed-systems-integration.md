@@ -381,4 +381,4 @@ The network became the bottleneck when we scaled from one GPU to thousands. Next
 
 ---
 
-*For detailed readings, slides, and materials for this week, see [Week 6 in the course schedule](/course/schedule/#week-6---distributed-systems-integration).*
+*For detailed readings, slides, and materials for this week, see [Week 6 in the course schedule]({{ site.baseurl }}/course/schedule/#week-6---distributed-systems-integration).*

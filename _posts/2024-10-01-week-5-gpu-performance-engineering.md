@@ -272,4 +272,4 @@ Next week, we'll continue exploring these themes as we delve deeper into the pra
 
 ---
 
-*For detailed readings, slides, and materials for this week, see [Week 5 in the course schedule](/course/schedule/#week-5-gpu-performance-engineering).*
+*For detailed readings, slides, and materials for this week, see [Week 5 in the course schedule]({{ site.baseurl }}/course/schedule/#week-5-gpu-performance-engineering).*

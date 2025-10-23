@@ -44,7 +44,7 @@ Why did we choose mapping as the problem to illustrate co-design reasoning? **Be
 
 The stakes are high. Remember [Week 5's discussion of GPU performance engineering](/blog/2024/10/01/gpu-performance-engineering/): getting peak performance from hardware requires understanding how your computation maps onto the architecture. The difference between a naive mapping and an optimized one can be 10-100x in performance. At scale, this difference translates to millions of dollars in infrastructure costs and determines what applications are even feasible to run. Mapping isn't just an academic exercise. It's the difference between a successful product and an unusable one.
 
-Consider typical software optimization scenarios (this was [Phase 1](/course/schedule/#phase-1-ai-for-software)):
+Consider typical software optimization scenarios (this was [Phase 1]({{ site.baseurl }}/course/schedule/#phase-1-ai-for-software)):
 - **CPU optimization**: Software changes, hardware is fixed
 - **GPU kernels**: Write code to match fixed hardware  
 - **Distributed systems**: Map workloads to existing infrastructure
@@ -437,5 +437,5 @@ Co-design reasoning is ONE type of tacit architectural knowledge. But architectu
 Each week exposes a different facet of what "architectural thinking" actually means. Together, they chart the territory that AI agents must learn to navigate to truly become co-designers of computer systems.
 
 
-*For detailed readings, slides, and materials for this week, see [Week 8 in the course schedule](/course/schedule/#week-8hardware-accelerators--ai-mappings).*
+*For detailed readings, slides, and materials for this week, see [Week 8 in the course schedule]({{ site.baseurl }}/course/schedule/#week-8hardware-accelerators--ai-mappings).*
 
