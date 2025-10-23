@@ -7,7 +7,7 @@ categories: [architecture, design]
 permalink: /blog/2024/10/15/tacit-knowledge-architecture/
 --- 
 
-For five weeks, we've been optimizing software. The code was right there, waiting to be read. APIs were documented. Performance metrics were measurable. When [ECO optimized CPU code at Google](/blog/2024/09/24/performance-engineering/), it could analyze the source, identify patterns, and suggest improvements. When [Kevin generated GPU kernels](/blog/2024/10/01/gpu-performance-engineering/), it could iterate on CUDA code, profile the results, and refine its approach.
+For six weeks, we've been optimizing software. The code was right there, waiting to be read. APIs were documented. Performance metrics were measurable. When [ECO optimized CPU code at Google](/blog/2024/09/24/performance-engineering/), it could analyze the source, identify patterns, and suggest improvements. When [Kevin generated GPU kernels](/blog/2024/10/01/gpu-performance-engineering/), it could iterate on CUDA code, profile the results, and refine its approach.
 
 This week, we crossed a boundary.
 

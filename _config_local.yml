@@ -12,6 +12,7 @@ highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Course info
 instructor: "Vijay Janapa Reddi"
