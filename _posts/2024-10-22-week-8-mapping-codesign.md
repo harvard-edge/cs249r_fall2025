@@ -154,7 +154,7 @@ The optimal choice for any single decision depends on what you choose for all th
 
 **This is Challenge 1: reasoning about circular dependencies.** Problems where you cannot decompose into independent subproblems.
 
-Most machine learning frameworks assume you can define a clear objective function and search for solutions that maximize it. But here, you can't even evaluate whether a solution is "good" without simultaneously considering hardware design, software structure, and mapping choices. The evaluation function itself depends on design decisions you haven't made yet.
+Most machine learning frameworks assume you can define a clear objective function and search for solutions that maximize it. But here, evaluation itself is circular. You can't judge whether a solution is "good" without simultaneously considering hardware design, software structure, and mapping choices. The evaluation function depends on design decisions you haven't made yet.
 
 Let's trace through these circular dependencies in concrete terms:
 
@@ -179,7 +179,9 @@ We're back where we started. This is a circular dependency. Every decision const
 
 This is what makes co-design reasoning fundamentally different from the optimization we did in Phase 1. In Phase 1, we had clear constraints we could optimize within. Here, the constraints themselves are interdependent design choices that must be reasoned about simultaneously.
 
-**This is tacit knowledge.** Remember [Week 7's central question](/blog/2024/10/15/tacit-knowledge-architecture/): how do AI agents learn what was never written down? Here's a concrete example. An experienced architect might look at a workload and immediately say: "Use output-stationary dataflow with 32×32 tiles." The knowledge isn't categorical rules like "32×32 tiles are good." It's relational understanding of how tile sizes interact with cache capacity under specific bandwidth constraints, how dataflow choices affect memory traffic by 10-100x, why certain patterns work for certain workload characteristics. This knowledge spans hardware (cache hierarchy), software (loop structure), and physics (memory latency). It's developed through building many systems and seeing what works.
+**This is tacit knowledge.** Remember [Week 7's central question](/blog/2024/10/15/tacit-knowledge-architecture/): how do AI agents learn what was never written down? Here's a concrete example. An experienced architect might look at a workload and immediately say: "Use output-stationary dataflow with 32×32 tiles." 
+
+The knowledge isn't categorical rules like "32×32 tiles are good." It's relational understanding. How do tile sizes interact with cache capacity under specific bandwidth constraints? How do dataflow choices affect memory traffic by 10-100x? Why do certain patterns work for certain workload characteristics? This knowledge spans hardware (cache hierarchy), software (loop structure), and physics (memory latency). It's developed through building many systems and seeing what works.
 
 You can't easily codify it as rules or learn it by showing examples, because the "best" solution is deeply context-dependent. **This is Challenge 2: context-dependent knowledge transfer.** Understanding not just "what works" but "when and why it works."
 
@@ -236,7 +238,7 @@ Both approaches attempt to capture how to reason about interdependent design cho
 3. **Sample efficiency** because we can't try everything: With 10^15 configurations, exhaustive search is impossible.
 4. **Generalization** to transfer insights across problems: Knowledge learned from optimizing ResNet-50 should transfer to EfficientNet.
 
-This mirrors how human architects approach design decisions. They combine first-principles understanding (DOSA's approach) with pattern recognition developed through years of experience (AutoTVM's approach). Neither alone is sufficient. 
+Human architects work this way too. They combine first-principles understanding with pattern recognition developed through years of experience. Neither alone is sufficient. 
 
 **The fundamental challenge for AI agents:** Current machine learning excels at pattern recognition (AutoTVM-style) but struggles to encode first-principles understanding (DOSA-style). Current formal methods excel at encoding structure but struggle with generalization and learning from experience. What we need are hybrid approaches that combine both, but we don't yet know how to build systems that can learn when to apply which form of reasoning to which aspect of the problem.
 
@@ -391,7 +393,7 @@ Throughout our examination of mapping, we've encountered six distinct challenges
 </div>
 </details>
 
-**The deeper lesson:** Co-design reasoning isn't just about finding good solutions to constrained optimization problems. It's about developing new forms of reasoning that combine learning and structure, handle circular dependencies, generalize across contexts, and account for uncertainty about both present constraints and future requirements. These challenges appear whenever designing complex systems where multiple components must be jointly optimized.
+Co-design reasoning isn't just about finding good solutions to constrained optimization problems. It's about developing new forms of reasoning that combine learning and structure, handle circular dependencies, generalize across contexts, and account for uncertainty about both present constraints and future requirements. These challenges appear whenever designing complex systems where multiple components must be jointly optimized.
 
 
 ## Questions for Reflection
@@ -424,15 +426,15 @@ Why does this type of reasoning matter? Because it's how architects achieve the 
 
 We've identified six challenges this reasoning poses for AI agents, all stemming from one core difficulty: **you cannot decompose co-design problems into independent subproblems.** Current AI approaches assume decomposability. Human architects have learned through experience that some problems require simultaneous reasoning across multiple tightly coupled dimensions. We're still fumbling toward how to help AI agents develop this capability.
 
-**A note on what we've done:** We didn't simply review existing solutions. We used mapping to expose gaps in current AI capabilities. The papers we examined (DOSA, AutoTVM) reveal as much about what's missing as what's been achieved. We're charting territory that future research must address, trying to write the research agenda itself.
+A note on what we've done: We didn't simply review existing solutions. We used mapping to expose gaps in current AI capabilities. The papers we examined (DOSA, AutoTVM) reveal as much about what's missing as what's been achieved. This is research agenda territory, not solved problems.
 
 Co-design reasoning is ONE type of tacit architectural knowledge. But architectural thinking encompasses other types of reasoning, each with its own characteristics and challenges:
 
-**Week 9** will examine **predictive reasoning** - how architects design systems for workloads they can't fully characterize, making predictions about future behavior with incomplete information.
+**Week 9** will examine **predictive reasoning**: how architects design systems for workloads they can't fully characterize, making predictions about future behavior with incomplete information.
 
-**Week 10** will examine **adaptive reasoning** - how architects design systems that must make real-time decisions about resource allocation under changing conditions.
+**Week 10** will examine **adaptive reasoning**: how architects design systems that must make real-time decisions about resource allocation under changing conditions.
 
-Each week exposes a different facet of what "architectural thinking" actually means. Together, they chart the territory that AI agents must learn to navigate to truly become co-designers of computer systems. We're not just reviewing what's been done. We're mapping what needs to be built.
+Each week exposes a different facet of what "architectural thinking" actually means. Together, they chart the territory that AI agents must learn to navigate to truly become co-designers of computer systems.
 
 
 *For detailed readings, slides, and materials for this week, see [Week 8 in the course schedule](/course/schedule/#week-8hardware-accelerators--ai-mappings).*
