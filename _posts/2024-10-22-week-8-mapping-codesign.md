@@ -244,7 +244,7 @@ Human architects work this way too. They combine first-principles understanding 
 
 **This is Challenge 4: combining structure and learning.** Problems that require both first-principles understanding and experiential pattern recognition.
 
-This is the deeper lesson from mapping: not just "how to find good mappings" but "how to reason about problems where structure and learning must be combined in problem-specific ways."
+Mapping reveals something broader: not just "how to find good mappings" but "how to reason about problems where structure and learning must be combined in problem-specific ways."
 
 
 ## Beyond the Research Papers: Production Constraints
