@@ -7,7 +7,7 @@ categories: [architecture, design]
 permalink: /blog/2024/10/22/mapping-codesign-reasoning/
 ---
 
-[Last week](/blog/2024/10/15/tacit-knowledge-architecture/), we confronted an important challenge: architectural knowledge is tacit. It exists in the minds of experienced computer architects, accumulated through decades of building systems. We saw how this creates an epistemological problem for AI agents trying to become co-designers.
+[Last week](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/), we confronted an important challenge: architectural knowledge is tacit. It exists in the minds of experienced computer architects, accumulated through decades of building systems. We saw how this creates an epistemological problem for AI agents trying to become co-designers.
 
 But what exactly IS this tacit knowledge? When we say architectural expertise is "tacit," what specifically are we talking about?
 
@@ -36,6 +36,13 @@ Each of these decisions is a mapping choice. The same matrix multiplication, on 
 This matters because modern AI accelerators are incredibly fast at computation but relatively slow at moving data. The mapping determines how much data movement you need. Get it wrong, and your expensive hardware sits idle, waiting for data. Get it right, and you achieve orders of magnitude better performance.
 
 We'll make this concrete shortly with a detailed example. But first, why is mapping particularly interesting for studying co-design reasoning?
+
+As a useful mental model, see Figure 1, which frames mapping within a broader systems optimization playbook—sitting between workload characteristics and hardware execution.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_8/playbook.png" alt="Systems optimization playbook for mapping">
+<figcaption><em>Figure 1: A systematic playbook for breaking down systems optimization problems, situating mapping between workload characteristics and hardware execution. (Mohri and Diaz)</em></figcaption>
+</figure>
 
 
 ## Why Mapping? The Architecture Design Challenge
@@ -193,11 +200,16 @@ How do we help AI agents develop this type of reasoning? We examine two papers t
 
 ### DOSA: Encoding Relationships as Differentiable Models
 
-[DOSA (Differentiable Model-Based One-Loop Search for DNN Accelerators)](https://dl.acm.org/doi/abs/10.1145/3613424.3623797) takes an analytical approach: encode the relationships between hardware and mapping as differentiable mathematical equations.
+[DOSA (Differentiable Model-Based One-Loop Search for DNN Accelerators)](https://dl.acm.org/doi/abs/10.1145/3613424.3623797) takes an analytical approach: encode the relationships between hardware and mapping as differentiable mathematical equations. Figure 2 illustrates the DOSA architecture and its joint exploration of hardware and mapping spaces via a differentiable performance model.
 
 The core insight: if you can model how changing hardware parameters affects mapping quality, and how changing mapping affects hardware utilization, you can use gradient descent to explore the coupled space.
 
 DOSA builds on TimeLoop<span class="margin-note">**TimeLoop** is an infrastructure for evaluating and exploring the architecture design space of deep neural network accelerators. Developed at NVIDIA and MIT, it models the data movement and compute patterns of DNN workloads mapped onto hardware architectures, predicting energy consumption and performance. TimeLoop has become a standard tool in academic and industrial accelerator research, encoding decades of knowledge about how to model accelerator behavior accurately.</span>, an analytical performance model that predicts latency and energy for DNN accelerators. TimeLoop encodes years of expert understanding about how accelerators work: memory access costs, compute throughput, interconnect constraints.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_8/dosa.png" alt="DOSA architecture diagram">
+<figcaption><em>Figure 2: Architecture diagram of DOSA: builds a differentiable performance model and jointly explores the hardware design space and mapping space. (Hong et al.)</em></figcaption>
+</figure>
 
 **What DOSA reveals about what AI agents need:**
 
@@ -211,11 +223,16 @@ DOSA builds on TimeLoop<span class="margin-note">**TimeLoop** is an infrastructu
 
 ### AutoTVM: Learning from Experience
 
-[AutoTVM (Learning to Optimize Tensor Programs)](https://arxiv.org/pdf/1805.08166.pdf), part of [Apache TVM](https://tvm.apache.org/), takes a learning approach: explore many mappings, learn patterns about what works, and generalize to new workloads.
+[AutoTVM (Learning to Optimize Tensor Programs)](https://arxiv.org/pdf/1805.08166.pdf), part of [Apache TVM](https://tvm.apache.org/), takes a learning approach: explore many mappings, learn patterns about what works, and generalize to new workloads. Figure 3 shows how AutoTVM explores program variants guided by a statistical cost model.
 
 The core insight: even though we can't analytically model all the relationships, we can learn from experience what types of mappings work well for what types of workloads.
 
 AutoTVM generates a space of possible mappings (through templates that structure the search space), tries many of them, builds a performance predictor, and uses that predictor to guide further search.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_8/autotvm.png" alt="AutoTVM learning flow">
+<figcaption><em>Figure 3: AutoTVM learns to optimize tensor program implementations by exploring program variants with a statistical cost model. (Chen et al.)</em></figcaption>
+</figure>
 
 **What AutoTVM reveals about what AI agents need:**
 
