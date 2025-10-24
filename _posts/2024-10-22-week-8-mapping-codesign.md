@@ -49,7 +49,7 @@ As a useful mental model, see Figure 1, which frames mapping within a broader sy
 
 Why did we choose mapping as the problem to illustrate co-design reasoning? **Because when AI agents design architectures, they must reason about mapping simultaneously.**
 
-The stakes are high. Remember [Week 5's discussion of GPU performance engineering](/blog/2024/10/01/gpu-performance-engineering/): getting peak performance from hardware requires understanding how your computation maps onto the architecture. The difference between a naive mapping and an optimized one can be 10-100x in performance. At scale, this difference translates to millions of dollars in infrastructure costs and determines what applications are even feasible to run. Mapping isn't just an academic exercise. It's the difference between a successful product and an unusable one.
+The stakes are high. Remember [Week 5's discussion of GPU performance engineering](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/): getting peak performance from hardware requires understanding how your computation maps onto the architecture. The difference between a naive mapping and an optimized one can be 10-100x in performance. At scale, this difference translates to millions of dollars in infrastructure costs and determines what applications are even feasible to run. Mapping isn't just an academic exercise. It's the difference between a successful product and an unusable one.
 
 Consider typical software optimization scenarios (this was [Phase 1]({{ site.baseurl }}/course/schedule/#phase-1-ai-for-software)):
 - **CPU optimization**: Software changes, hardware is fixed
@@ -186,7 +186,7 @@ We're back where we started. This is a circular dependency. Every decision const
 
 This is what makes co-design reasoning fundamentally different from the optimization we did in Phase 1. In Phase 1, we had clear constraints we could optimize within. Here, the constraints themselves are interdependent design choices that must be reasoned about simultaneously.
 
-**This is tacit knowledge.** Remember [Week 7's central question](/blog/2024/10/15/tacit-knowledge-architecture/): how do AI agents learn what was never written down? Here's a concrete example. An experienced architect might look at a workload and immediately say: "Use output-stationary dataflow with 32×32 tiles." 
+**This is tacit knowledge.** Remember [Week 7's central question](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/): how do AI agents learn what was never written down? Here's a concrete example. An experienced architect might look at a workload and immediately say: "Use output-stationary dataflow with 32×32 tiles." 
 
 The knowledge isn't categorical rules like "32×32 tiles are good." It's relational understanding. How do tile sizes interact with cache capacity under specific bandwidth constraints? How do dataflow choices affect memory traffic by 10-100x? Why do certain patterns work for certain workload characteristics? This knowledge spans hardware (cache hierarchy), software (loop structure), and physics (memory latency). It's developed through building many systems and seeing what works.
 
@@ -288,7 +288,7 @@ Now you're adding temporal uncertainty to the mix. You're not just reasoning abo
 
 Jenny stressed that the best mapping means nothing if developers can't express it. 
 
-Remember [Week 5's discussion of the CUDA moat](/blog/2024/10/01/gpu-performance-engineering/)? NVIDIA's dominance isn't just about hardware performance. It's about the software ecosystem that makes that performance accessible.
+Remember [Week 5's discussion of the CUDA moat](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/)? NVIDIA's dominance isn't just about hardware performance. It's about the software ecosystem that makes that performance accessible.
 
 Co-design reasoning must include the human-in-the-loop. The "optimal" mapping that requires rewriting your entire [ML framework](https://pytorch.org/) won't get adopted. The "good-enough" mapping that fits into existing workflows will.
 
@@ -435,11 +435,11 @@ Current AI tools handle decomposable problems effectively because that's how mos
 
 ## Closing the Loop: One Type of Reasoning
 
-Recall our starting point: [architectural knowledge is tacit](/blog/2024/10/15/tacit-knowledge-architecture/), and this tacit knowledge isn't monolithic. It's a collection of different types of reasoning that experienced architects have developed through decades of building systems.
+Recall our starting point: [architectural knowledge is tacit](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/), and this tacit knowledge isn't monolithic. It's a collection of different types of reasoning that experienced architects have developed through decades of building systems.
 
 **This week, we examined the first type: co-design reasoning.** This is the ability to reason about interdependent constraints simultaneously, where you cannot optimize one aspect without considering how it affects everything else. Through mapping, we've seen what makes this reasoning fundamentally different from traditional optimization: the problem structure itself is part of what needs to be designed.
 
-Why does this type of reasoning matter? Because it's how architects achieve the efficiency gains that make systems viable. The 10-100x performance improvements we discussed in [Week 5](/blog/2024/10/01/gpu-performance-engineering/) come from this kind of reasoning: understanding how hardware, software, and mapping interact, and optimizing all three simultaneously. Sequential optimization leaves performance on the table. Co-design reasoning is what unlocks it.
+Why does this type of reasoning matter? Because it's how architects achieve the efficiency gains that make systems viable. The 10-100x performance improvements we discussed in [Week 5](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/) come from this kind of reasoning: understanding how hardware, software, and mapping interact, and optimizing all three simultaneously. Sequential optimization leaves performance on the table. Co-design reasoning is what unlocks it.
 
 We've identified six challenges this reasoning poses for AI agents, all stemming from one core difficulty: **you cannot decompose co-design problems into independent subproblems.** Current AI approaches assume decomposability. Human architects have learned through experience that some problems require simultaneous reasoning across multiple tightly coupled dimensions. We're still fumbling toward how to help AI agents develop this capability.
 

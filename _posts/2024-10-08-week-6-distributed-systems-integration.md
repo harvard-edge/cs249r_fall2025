@@ -21,7 +21,7 @@ Suddenly, everything you learned about AI for system design in the past five wee
 
 ### The Journey to Week 6: From Determinism to Dynamism
 
-Over the past five weeks, we've been building toward this moment. In [Week 3](/blog/2024/09/17/software-engineering-reality-gap/), we explored code generation, where success means "does it compile and pass tests?" In [Week 4](/blog/2024/09/24/performance-engineering/), we tackled CPU performance optimization with ECO, where you could measure speedups deterministically. In [Week 5](/blog/2024/10/01/gpu-performance-engineering/), we dove into GPU kernel optimization, where KernelBench and Kevin showed us that iterative refinement could produce measurable performance gains.
+Over the past five weeks, we've been building toward this moment. In [Week 3](/cs249r_fall2025/blog/2024/09/17/software-engineering-reality-gap/), we explored code generation, where success means "does it compile and pass tests?" In [Week 4](/cs249r_fall2025/blog/2024/09/24/performance-engineering/), we tackled CPU performance optimization with ECO, where you could measure speedups deterministically. In [Week 5](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/), we dove into GPU kernel optimization, where KernelBench and Kevin showed us that iterative refinement could produce measurable performance gains.
 
 All of these challenges shared a crucial characteristic. **They had clear verification criteria.** Write code, run tests, measure performance. The environment was controlled, the hardware was predictable, and optimization was largely deterministic.
 
@@ -251,7 +251,7 @@ The class explored the need for **dynamic benchmarks** that:
 
 We discussed the [DeathStarBench](https://github.com/delimitrou/DeathStarBench) suite as an example of benchmarks designed to elicit complex system behaviors. These benchmarks model real-world microservices with realistic request patterns, dependencies, and failure modes.
 
-This connects back to our [Week 3 discussion of SWE-Bench](/blog/2024/09/17/software-engineering-reality-gap/) and the challenge of benchmark overfitting. Just as AI systems can excel at competitive programming while struggling with real software engineering, they can optimize for static distributed system benchmarks while failing in dynamic production environments.
+This connects back to our [Week 3 discussion of SWE-Bench](/cs249r_fall2025/blog/2024/09/17/software-engineering-reality-gap/) and the challenge of benchmark overfitting. Just as AI systems can excel at competitive programming while struggling with real software engineering, they can optimize for static distributed system benchmarks while failing in dynamic production environments.
 
 The challenge for the research community is clear. **How do we create benchmarks that capture dynamism without making them so complex that results become irreproducible?**
 
@@ -297,7 +297,7 @@ These are questions that academic research is uniquely positioned to explore, un
 
 ## Synthesis: The Architecture 2.0 Connection
 
-Week 6 marks the culmination of Phase 1, but it also reveals why the Architecture 2.0 vision from [Week 1](/blog/2024/09/03/week-1-architecture-2-0/) is necessary. Let's connect the threads.
+Week 6 marks the culmination of Phase 1, but it also reveals why the Architecture 2.0 vision from [Week 1](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/) is necessary. Let's connect the threads.
 
 ### Breaking Down Artificial Boundaries
 
@@ -319,7 +319,7 @@ This connects to Leiserson's "room at the top" vision. Enormous performance gaps
 <figcaption><em>DeathStarBench captures the complex relationships within a swarm service across edge and cloud deployment. Curating benchmarks that represent the complexity of real-world workloads enable the open source and academic community to make impactful contributions. (Gan et al.)</em></figcaption>
 </figure>
 
-This also connects to the data and benchmark challenge from [Week 2](/blog/2024/09/08/week-2-fundamental-challenges/). How do we create datasets and benchmarks for distributed system optimization?
+This also connects to the data and benchmark challenge from [Week 2](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/). How do we create datasets and benchmarks for distributed system optimization?
 
 Unlike code generation (where we have GitHub) or architecture exploration (where we have simulators), distributed systems present unique challenges:
 - **Dynamic behavior**: Static benchmarks don't capture the continuous adaptation required

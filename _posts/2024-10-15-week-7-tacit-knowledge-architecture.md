@@ -7,7 +7,7 @@ categories: [architecture, design]
 permalink: /blog/2024/10/15/tacit-knowledge-architecture/
 --- 
 
-For six weeks, we've been optimizing software. The code was right there, waiting to be read. APIs were documented. Performance metrics were measurable. When [ECO optimized CPU code at Google](/blog/2024/09/24/performance-engineering/), it could analyze the source, identify patterns, and suggest improvements. When [Kevin generated GPU kernels](/blog/2024/10/01/gpu-performance-engineering/), it could iterate on CUDA code, profile the results, and refine its approach.
+For six weeks, we've been optimizing software. The code was right there, waiting to be read. APIs were documented. Performance metrics were measurable. When [ECO optimized CPU code at Google](/cs249r_fall2025/blog/2024/09/24/performance-engineering/), it could analyze the source, identify patterns, and suggest improvements. When [Kevin generated GPU kernels](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/), it could iterate on CUDA code, profile the results, and refine its approach.
 
 This week, we crossed a boundary.
 
@@ -27,13 +27,13 @@ This isn't just a practical challenge. It's an epistemological one. And it sits 
 
 Let's trace the journey we've taken over the past seven weeks. Each week, we've moved one level deeper into the computing stack. And with each step, the knowledge we need to optimize has become progressively less explicit.
 
-**Week 3 ([Code Generation](/blog/2024/09/17/software-engineering-reality-gap/))**: AI systems generate source code. The knowledge is maximally explicit, literally written as text in programming languages with defined syntax and semantics. When SWE-bench evaluates whether code is correct, it can run tests, check outputs, verify behavior.
+**Week 3 ([Code Generation](/cs249r_fall2025/blog/2024/09/17/software-engineering-reality-gap/))**: AI systems generate source code. The knowledge is maximally explicit, literally written as text in programming languages with defined syntax and semantics. When SWE-bench evaluates whether code is correct, it can run tests, check outputs, verify behavior.
 
-**Week 4 ([CPU Performance Engineering](/blog/2024/09/24/performance-engineering/))**: ECO optimizes C++ code at Google. Still working with source code, but now the knowledge extends beyond correctness to performance patterns. These patterns remain largely explicit. You can profile the code, measure cache misses, count allocations, observe the outcomes of changes.
+**Week 4 ([CPU Performance Engineering](/cs249r_fall2025/blog/2024/09/24/performance-engineering/))**: ECO optimizes C++ code at Google. Still working with source code, but now the knowledge extends beyond correctness to performance patterns. These patterns remain largely explicit. You can profile the code, measure cache misses, count allocations, observe the outcomes of changes.
 
-**Week 5 ([GPU Kernel Optimization](/blog/2024/10/01/gpu-performance-engineering/))**: Kevin generates CUDA kernels. The complexity increases significantly. Now you're reasoning about memory hierarchies, warp scheduling, tensor cores. But you can still iterate: write code, profile it, measure performance, refine. The feedback loop remains tight and concrete.
+**Week 5 ([GPU Kernel Optimization](/cs249r_fall2025/blog/2024/10/01/gpu-performance-engineering/))**: Kevin generates CUDA kernels. The complexity increases significantly. Now you're reasoning about memory hierarchies, warp scheduling, tensor cores. But you can still iterate: write code, profile it, measure performance, refine. The feedback loop remains tight and concrete.
 
-**Week 6 ([Distributed Systems](/blog/2024/10/08/ai-co-design-distributed-systems/))**: COSMIC co-designs workload mappings and network topologies. We entered the realm of systems that exist in time, systems that must adapt to dynamic conditions. Even here, you have telemetry. You have measurements. You have explicit workload traces and network topologies to reason about.
+**Week 6 ([Distributed Systems](/cs249r_fall2025/blog/2024/10/08/ai-co-design-distributed-systems/))**: COSMIC co-designs workload mappings and network topologies. We entered the realm of systems that exist in time, systems that must adapt to dynamic conditions. Even here, you have telemetry. You have measurements. You have explicit workload traces and network topologies to reason about.
 
 **Week 7**: We've hit a different kind of wall.
 
@@ -56,7 +56,7 @@ This creates a profound challenge for AI agents. In software optimization, agent
 
 ### Why This Matters for Architecture 2.0
 
-This brings us back to the fundamental promise of Architecture 2.0 that we introduced in [Week 1](/blog/2024/09/03/week-1-architecture-2-0/). We talked about design spaces containing 10^14 to 10^2300 possible configurations. Spaces too vast for human exploration. We discussed how AI agents could navigate these spaces and discover optimizations that humans might miss.
+This brings us back to the fundamental promise of Architecture 2.0 that we introduced in [Week 1](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/). We talked about design spaces containing 10^14 to 10^2300 possible configurations. Spaces too vast for human exploration. We discussed how AI agents could navigate these spaces and discover optimizations that humans might miss.
 
 But we didn't fully confront something: **even if an agent can explore vast design spaces, how does it know what's worth exploring?** How does it develop the intuition that certain classes of designs are dead ends? How does it learn the philosophical frameworks that guide human architects' search strategies?
 
@@ -249,7 +249,7 @@ Each of these domains will force us to grapple with the same question we confron
 
 ### The Broader Architecture 2.0 Vision
 
-This connects back to the vision we articulated in [Week 1](/blog/2024/09/03/week-1-architecture-2-0/). We talked about AI agents as co-designers, navigating vast design spaces that humans can't comprehend. But we didn't fully confront that these spaces aren't just *large*. They're also shaped by decades of accumulated wisdom about what's worth exploring.
+This connects back to the vision we articulated in [Week 1](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/). We talked about AI agents as co-designers, navigating vast design spaces that humans can't comprehend. But we didn't fully confront that these spaces aren't just *large*. They're also shaped by decades of accumulated wisdom about what's worth exploring.
 
 The tacit knowledge problem suggests a more nuanced vision of Architecture 2.0.
 

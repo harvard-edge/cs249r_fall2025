@@ -7,7 +7,7 @@ categories: [software, performance]
 permalink: /blog/2024/10/01/gpu-performance-engineering/
 --- 
 
-Over the past four weeks, we've been exploring a central question: can AI systems help us optimize performance at scale? We started with [the foundational challenges of Architecture 2.0](/blog/2024/09/03/week-1-architecture-2-0/), examined [the software engineering reality gap](/blog/2024/09/17/software-engineering-reality-gap/) between AI capabilities and real development tasks, and investigated [how Google's ECO system tackles CPU performance optimization](/blog/2024/09/24/performance-engineering/) in production.
+Over the past four weeks, we've been exploring a central question: can AI systems help us optimize performance at scale? We started with [the foundational challenges of Architecture 2.0](/cs249r_fall2025/blog/2024/09/03/week-1-architecture-2-0/), examined [the software engineering reality gap](/cs249r_fall2025/blog/2024/09/17/software-engineering-reality-gap/) between AI capabilities and real development tasks, and investigated [how Google's ECO system tackles CPU performance optimization](/cs249r_fall2025/blog/2024/09/24/performance-engineering/) in production.
 
 This week, we confront the next frontier: **can LLMs optimize GPU performance?** 
 
@@ -33,7 +33,7 @@ This is more than just scaling up existing approaches. It's a fundamental shift 
 
 NVIDIA's data center revenue has grown dramatically, driven almost entirely by AI demand. This transformation wasn't inevitable. It began with a fortunate accident. In 2012, when Alex Krizhevsky used NVIDIA GPUs to win [ImageNet](https://www.image-net.org/) with [AlexNet](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html), NVIDIA's gaming GPUs accidentally became the foundation of the deep learning revolution. The company quickly recognized this opportunity, pivoting from optimizing for graphics workloads to AI workloads. The introduction of Tensor Cores in the Volta architecture (2017) marked NVIDIA's full commitment to AI, providing specialized units for the mixed-precision matrix operations that dominate neural network training.
 
-Every major language model, from GPT-4 to Claude to Gemini, relies on massive GPU clusters for both training and inference. As we discussed in [Week 2's exploration of fundamental challenges](/blog/2024/09/08/week-2-fundamental-challenges/), the demand explosion for specialized hardware has created more design work than our industry has architects to handle, and GPUs sit at the epicenter of this demand.
+Every major language model, from GPT-4 to Claude to Gemini, relies on massive GPU clusters for both training and inference. As we discussed in [Week 2's exploration of fundamental challenges](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/), the demand explosion for specialized hardware has created more design work than our industry has architects to handle, and GPUs sit at the epicenter of this demand.
 
 But this AI-driven GPU adoption has revealed profound challenges that go far beyond traditional graphics workloads. Modern AI applications don't just need raw computational power; they need it delivered with precise control over memory access patterns, numerical precision, and execution scheduling. This creates a multi-layered software stack that makes CPU optimization look straightforward by comparison.
 
@@ -121,7 +121,7 @@ The fundamental difference between CPU and GPU optimization reflects a broader s
 <figcaption><em>GPU architecture diagram optimized for the parallel linear algebra computation in machine learning workloads. (Arafa)</em></figcaption>
 </figure>
 
-**CPU Optimization: Forgiving and Predictable**: CPU optimization, while certainly intricate, operates within a relatively predictable framework. When we discussed [ECO's success at Google in Week 4](/blog/2024/09/24/performance-engineering/), we saw how AI systems could identify performance anti-patterns like unnecessary allocations and redundant operations.
+**CPU Optimization: Forgiving and Predictable**: CPU optimization, while certainly intricate, operates within a relatively predictable framework. When we discussed [ECO's success at Google in Week 4](/cs249r_fall2025/blog/2024/09/24/performance-engineering/), we saw how AI systems could identify performance anti-patterns like unnecessary allocations and redundant operations.
 
 These optimizations work because CPU architectures are designed to be somewhat forgiving. Branch predictors, out-of-order execution, and sophisticated caching mechanisms help smooth over suboptimal code patterns. As Charles Leiserson noted in his influential ["There's Plenty of Room at the Top"](https://cacm.acm.org/magazines/2020/12/248800-theres-plenty-of-room-at-the-top/fulltext) paper, CPU performance engineering benefits from decades of mature tooling and well-understood optimization principles.
 
@@ -139,7 +139,7 @@ Consider the challenges that emerged from our class discussions:
 
 To appreciate the intricacy of this process, consider that a [state-of-the-art matrix multiplication kernel](https://www.aleksagordic.com/blog/matmul) involves understanding GPU memory hierarchies, warp-tiling techniques, tensor cores, asynchronous pipelines, and even space-filling curves like Hilbert curves for optimal memory access patterns.
 
-This layered complexity explains why GPU performance engineering is fundamentally different from CPU optimization. As we learned from [Week 3's discussion of the software engineering reality gap](/blog/2024/09/17/software-engineering-reality-gap/), AI systems excel at isolated problems but struggle with complex, interconnected systems. The GPU software stack represents exactly this kind of complex system where optimization decisions at one layer can have unexpected effects at others.
+This layered complexity explains why GPU performance engineering is fundamentally different from CPU optimization. As we learned from [Week 3's discussion of the software engineering reality gap](/cs249r_fall2025/blog/2024/09/17/software-engineering-reality-gap/), AI systems excel at isolated problems but struggle with complex, interconnected systems. The GPU software stack represents exactly this kind of complex system where optimization decisions at one layer can have unexpected effects at others.
 
 But here's the paradox: while this complexity makes GPU optimization harder for humans, it might actually make it more suitable for AI assistance. The very characteristics that challenge human developers (managing thousands of parallel threads, optimizing across multiple memory hierarchies, navigating complex trade-offs between precision and performance) are exactly the kinds of multi-dimensional optimization problems where AI systems can potentially excel.
 
@@ -160,7 +160,7 @@ The results reveal the scope of the challenge facing AI-assisted optimization. E
 <figcaption><em>KernelBench tasks LMs with generating optimized CUDA kernels for a given target PyTorch model architecture and conducts automated evaluation. (Ouyang et al.)</em></figcaption>
 </figure>
 
-KernelBench's focus on real PyTorch workloads is particularly significant because it bridges the gap between research and practice. As the authors note, "making progress on the introduced benchmark directly translates to faster practical kernels." This connection to real-world impact addresses one of the key challenges we identified in [Week 2's discussion of fundamental challenges](/blog/2024/09/08/week-2-fundamental-challenges/): ensuring that research advances translate to practical benefits.
+KernelBench's focus on real PyTorch workloads is particularly significant because it bridges the gap between research and practice. As the authors note, "making progress on the introduced benchmark directly translates to faster practical kernels." This connection to real-world impact addresses one of the key challenges we identified in [Week 2's discussion of fundamental challenges](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/): ensuring that research advances translate to practical benefits.
 
 ### Kevin: Multi-Turn RL and Measurable Breakthroughs
 
@@ -222,7 +222,7 @@ Perhaps most importantly, Rush emphasized the infrastructure requirements for pr
 
 Rush offered a particularly thoughtful reflection on the broader implications: can models help decide which rollouts to prioritize, or how to allocate compute across competing objectives? This question gets to the heart of a meta-optimization challenge: using AI not just to optimize individual kernels, but to optimize the optimization process itself. It's a recursive problem that highlights how AI-assisted performance engineering might evolve beyond current approaches.
 
-This echoes the lessons we learned from [ECO's deployment at Google](/blog/2024/09/24/performance-engineering/): the infrastructure for safely deploying AI-generated optimizations is often more complex than the optimization algorithms themselves.
+This echoes the lessons we learned from [ECO's deployment at Google](/cs249r_fall2025/blog/2024/09/24/performance-engineering/): the infrastructure for safely deploying AI-generated optimizations is often more complex than the optimization algorithms themselves.
 
 ## Reflecting on Our Journey: From Architecture 2.0 to GPU Reality
 
