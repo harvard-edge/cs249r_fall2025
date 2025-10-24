@@ -131,7 +131,7 @@ This depends on:
 
 ### Fourth Decision: What Dataflow Pattern?
 
-<span class="margin-note">**Dataflow patterns** describe which data stays put (stationary) and which data moves through the accelerator. **Output stationary** keeps partial results (outputs) in place while streaming inputs (good when outputs are reused many times). **Weight stationary** keeps model parameters (weights) in place while streaming activations (good when the same weights are applied to many inputs). **Input stationary** keeps input activations in place (useful for certain convolution patterns). The choice fundamentally affects memory traffic, energy, and achievable performance.</span>
+<span class="margin-note">**Dataflow patterns** describe which data stays put (stationary) and which data moves through the accelerator. **Output stationary** keeps partial results (outputs) in place while streaming inputs (good when outputs are reused many times). **Weight stationary** keeps model parameters (weights) in place while streaming activations (good when the same weights are applied to many inputs). **Input stationary** keeps input activations in place (useful for certain convolution patterns). The choice fundamentally affects memory traffic, energy, and achievable performance. For a comprehensive treatment of data movement patterns and dataflow optimization strategies, see the [Machine Learning Systems textbook](https://www.mlsysbook.ai/contents/core/hw_acceleration/hw_acceleration.html#sec-ai-acceleration-data-movement-patterns-3b06).</span>
 
 Do you:
 - Stream rows of A and columns of B past stationary tiles of C? (output stationary)
