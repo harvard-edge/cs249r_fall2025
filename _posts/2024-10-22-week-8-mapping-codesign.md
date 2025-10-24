@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 8: Can AI Navigate Circular Dependencies? The Mapping Challenge"
+title: "Week 8: Can AI Optimize When Everything Depends on Everything? The Mapping Challenge"
 date: 2024-10-22
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [architecture, design]
@@ -253,9 +253,11 @@ Mapping reveals something broader: not just "how to find good mappings" but "how
 
 While DOSA and AutoTVM reveal important aspects of co-design reasoning, production deployment introduces additional complexities. Our guest speaker, industry practitioner Jenny Huang (co-author of DOSA), highlighted challenges that research papers often elide, showing that reasoning about mappings in practice extends far beyond pure performance optimization.
 
+Jenny's insights from working at the intersection of architecture design and practical ML workload deployment reveal several critical dimensions that co-design reasoning must address:
+
 ### The Workload Prediction Problem
 
-You're designing hardware that will tape out in 2-3 years. What workloads will it run? 
+As Jenny emphasized, you're designing hardware that will tape out in 2-3 years. What workloads will it run? 
 
 In 2017, transformer architectures didn't dominate. By 2024, they're everywhere. Each generation of GPU architecture must bet on future trends. Get it wrong, and your hardware is optimized for workloads that no longer matter.
 
@@ -267,7 +269,7 @@ Now you're adding temporal uncertainty to the mix. You're not just reasoning abo
 
 ### The Programmability Constraint
 
-The best mapping means nothing if developers can't express it. 
+Jenny stressed that the best mapping means nothing if developers can't express it. 
 
 Remember [Week 5's discussion of the CUDA moat](/blog/2024/10/01/gpu-performance-engineering/)? NVIDIA's dominance isn't just about hardware performance. It's about the software ecosystem that makes that performance accessible.
 
@@ -275,7 +277,7 @@ Co-design reasoning must include the human-in-the-loop. The "optimal" mapping th
 
 ### The Validation Challenge
 
-From our class discussion: "How do you validate a new architecture without building it?"
+Jenny highlighted a critical question from our class discussion: "How do you validate a new architecture without building it?"
 
 Simulators like TimeLoop are approximations. They make assumptions. Real hardware has quirks the simulator doesn't capture. This is the simulation-reality gap we've seen throughout the course, but in hardware it's especially costly.
 
@@ -285,9 +287,7 @@ As I mentioned in class, experienced chip architects historically relied more on
 
 ### The Integration Reality
 
-From our discussion: "Existing systems weren't designed for ML integration."
-
-Even if you have perfect mappings, deploying them requires infrastructure: validation pipelines, rollback mechanisms, monitoring systems. This is why, as we've seen throughout Phase 1 and 2, only organizations with massive infrastructure can deploy these techniques.
+From Jenny's perspective working at Nvidia, even if you have perfect mappings, deploying them requires infrastructure: validation pipelines, rollback mechanisms, monitoring systems. This is why, as we've seen throughout Phase 1 and 2, only organizations with massive infrastructure can deploy these techniques.
 
 
 ## What Mapping Reveals About AI Agent Challenges
@@ -396,6 +396,15 @@ Throughout our examination of mapping, we've encountered six distinct challenges
 Co-design reasoning isn't just about finding good solutions to constrained optimization problems. It's about developing new forms of reasoning that combine learning and structure, handle circular dependencies, generalize across contexts, and account for uncertainty about both present constraints and future requirements. These challenges appear whenever designing complex systems where multiple components must be jointly optimized.
 
 
+## Where Today's AI Tools Stand
+
+Today's AI coding assistants like Claude, ChatGPT, and Cursor demonstrate remarkable capabilities with decomposable tasks: write this function, optimize this loop, explain this error, debug this stack trace. These tools excel when problems naturally break into sequential steps (understand requirement → generate code → check syntax → test behavior).
+
+Co-design introduces a different structure. When you need to "design a database schema and query optimizer together" or "co-optimize this algorithm and its hardware mapping," you're working with interdependent objectives where evaluating one choice depends on decisions you haven't made yet. When tile size depends on cache size, which depends on bandwidth utilization, which depends on dataflow, which depends back on tile size, sequential decomposition encounters the circularity we've examined throughout this post.
+
+Current AI tools handle decomposable problems effectively because that's how most software engineering tasks are structured. Co-design problems have additional characteristics: interdependence that resists sequential breakdown. This isn't a limitation of the tools. It's recognition that designing systems with circular dependencies requires reasoning strategies beyond decomposition. Understanding where decomposition works and where it encounters fundamental constraints helps us recognize what new capabilities AI agents need to develop.
+
+
 ## Questions for Reflection
 
 **For researchers:** How do we help agents develop intuition about interdependencies without requiring them to explore exhaustively? Can we combine analytical modeling with learning more effectively?
@@ -405,15 +414,6 @@ Co-design reasoning isn't just about finding good solutions to constrained optim
 **For educators:** How do we teach students to recognize circular dependencies and develop co-design reasoning skills? What abstractions help versus hinder this type of thinking?
 
 **For the field:** What other types of architectural reasoning are similarly tacit? How do we systematically identify and characterize the different forms of expert knowledge that constitute "architectural thinking"?
-
-
-## Co-Design Reasoning and Task Decomposition
-
-Systems design involves multiple forms of complexity. Today's AI coding assistants like Claude, ChatGPT, and Cursor demonstrate remarkable capabilities with decomposable tasks: write this function, optimize this loop, explain this error. These tasks naturally break into sequential steps (understand requirement → generate code → check syntax), and decomposition works beautifully here.
-
-Co-design adds a different dimension. When you ask "design a database schema and query optimizer together" or "co-optimize this algorithm and its hardware mapping," you're introducing interdependent objectives where evaluation depends on choices you haven't made yet. When tile size depends on cache size, which depends on bandwidth utilization, which depends on dataflow, which depends on tile size, the natural decomposition approach encounters the circularity we've been examining.
-
-Decomposition is powerful and broadly applicable. It's how we tackle most engineering problems, and current AI tools excel at it. Co-design problems simply have additional structure: interdependence that resists sequential decomposition. Understanding this distinction helps us recognize when we need different approaches. It's not about tools being limited. It's about recognizing that designing systems with circular dependencies requires reasoning strategies beyond breaking problems into independent pieces.
 
 
 ## Closing the Loop: One Type of Reasoning
