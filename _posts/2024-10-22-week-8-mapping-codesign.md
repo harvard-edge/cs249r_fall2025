@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 8: Can AI Optimize When Everything Depends on Everything? The Mapping Challenge"
+title: "Week 8: Can AI Master Co-Design Reasoning? When Everything Depends on Everything"
 date: 2024-10-22
 author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [architecture, design]
