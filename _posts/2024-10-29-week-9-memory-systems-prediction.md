@@ -11,7 +11,7 @@ permalink: /blog/2024/10/29/memory-systems-prediction/
 
 This week, we encounter a different type of architectural reasoning challenge. Not interdependence, but **uncertainty**.
 
-Architects designing memory systems face a fundamental problem: they must predict and optimize for access patterns they cannot fully observe or characterize. The patterns are sparse—only a tiny fraction of addresses matter. They're heterogeneous—different applications behave completely differently. They're irregular—not following simple strides or loops. And they're time-sensitive—predict too early and your data gets evicted; predict too late and you've missed the opportunity.
+Architects designing memory systems face a fundamental problem: they must predict and optimize for access patterns they cannot fully observe or characterize. The patterns are sparse (only a tiny fraction of addresses matter). They're heterogeneous (different applications behave completely differently). They're irregular (not following simple strides or loops). And they're time-sensitive (predict too early and your data gets evicted; predict too late and you've missed the opportunity).
 
 **How do you design systems to predict the unpredictable?**
 
@@ -27,13 +27,13 @@ Before diving into how to predict memory access patterns, we need to understand 
 
 Modern processors can execute thousands of operations per cycle. But memory? Memory is slow. Accessing data from DRAM takes hundreds of cycles. If the processor has to wait for every memory access, it spends most of its time idle, waiting for data.
 
-The solution has been a sophisticated memory hierarchy: small, fast caches close to the processor; larger, slower caches further away; eventually DRAM and storage. This hierarchy works beautifully when you can predict which data you'll need next. Load it into cache before the processor asks for it, and the processor never has to wait—this is how architects fight the memory wall (Figure 1).
+The solution has been a sophisticated memory hierarchy: small, fast caches close to the processor; larger, slower caches further away; eventually DRAM and storage. This hierarchy works beautifully when you can predict which data you'll need next. Load it into cache before the processor asks for it, and the processor never has to wait. This is how architects fight the memory wall (Figure 1).
 
 But how do you know what data to load?
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_9/memorywall.jpg" alt="The memory wall: CPU speed vs memory latency/bandwidth (Astera Labs)">
-<figcaption><em>Figure 1: The memory wall—compute performance has outpaced memory bandwidth and latency, creating a widening gap that architects must hide with prediction and staging. (Astera Labs)</em></figcaption>
+<figcaption><em>Figure 1: The memory wall: compute performance has outpaced memory bandwidth and latency, creating a widening gap that architects must hide with prediction and staging. (Astera Labs)</em></figcaption>
 </figure>
 
 
@@ -42,11 +42,11 @@ But how do you know what data to load?
 
 For decades, computer architects have used heuristic-based predictors. These are simple rules that capture common patterns:
 
-**Stride prefetchers** detect when you're accessing memory in regular patterns. If you access addresses 100, 104, 108, 112, the prefetcher notices the stride of 4 and starts loading 116, 120, 124 before you ask for them. This works beautifully for array traversals and simple loops—the bread and butter of traditional scientific computing.
+**Stride prefetchers** detect when you're accessing memory in regular patterns. If you access addresses 100, 104, 108, 112, the prefetcher notices the stride of 4 and starts loading 116, 120, 124 before you ask for them. This works beautifully for array traversals and simple loops, the bread and butter of traditional scientific computing.
 
 **Correlation prefetchers** maintain a history of which addresses tend to follow which other addresses. If address A is often followed by address B, start loading B whenever you see A. This captures slightly more complex patterns than simple strides.
 
-These heuristics work for regular, predictable access patterns. But modern workloads—especially AI workloads—are increasingly irregular. Sparse matrix operations, pointer-chasing through graph structures, hash table lookups, attention mechanisms in transformers. These patterns are much harder to capture with simple rules.
+These heuristics work for regular, predictable access patterns. But modern workloads, especially AI workloads, are increasingly irregular. Sparse matrix operations, pointer-chasing through graph structures, hash table lookups, attention mechanisms in transformers. These patterns are much harder to capture with simple rules.
 
 **The fundamental limitation**: Heuristics encode human intuition about common patterns. They work for patterns we've seen before and can articulate as simple rules. But what about patterns that are too complex for simple rules? What about workloads that don't follow patterns we've seen before?
 
@@ -66,14 +66,14 @@ The paper proposes using LSTMs to replace traditional prefetchers entirely. Trai
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_9/learningpatterns.png" alt="Learning memory access patterns with LSTMs (Hashemi et al.)">
-<figcaption><em>Figure 2: Hashemi et al.'s learned prefetcher treats memory access as sequence modeling—separating signal from noise via delta encoding and letting an LSTM learn recurring patterns end-to-end. (Hashemi et al.)</em></figcaption>
+<figcaption><em>Figure 2: Hashemi et al.'s learned prefetcher treats memory access as sequence modeling, separating signal from noise via delta encoding and letting an LSTM learn recurring patterns end-to-end. (Hashemi et al.)</em></figcaption>
 </figure>
 
 
 
 ### Why This Should Work
 
-The case for learning seems obvious. Modern workloads have complex patterns—sparse matrices, graph traversals, pointer chasing through databases. These are too irregular for simple stride prefetchers. And ML has shown remarkable success with sequence prediction. Language models predict text with startling accuracy. Why not memory addresses?
+The case for learning seems obvious. Modern workloads have complex patterns: sparse matrices, graph traversals, pointer chasing through databases. These are too irregular for simple stride prefetchers. And ML has shown remarkable success with sequence prediction. Language models predict text with startling accuracy. Why not memory addresses?
 
 Plus, workloads change over time. A learned prefetcher could adapt to new patterns that fixed heuristics miss. Retrain as applications evolve.
 
@@ -83,13 +83,13 @@ The intuition is powerful. But when you actually try to build this, you hit fund
 
 Try to build a learned prefetcher and you'll hit three challenges that make memory prediction fundamentally different from other sequence prediction problems. These aren't just engineering difficulties. They reveal why predictive reasoning in systems is harder than it looks.
 
-### Challenge 1: Sparsity—Learning from Signals Buried in Noise
+### Challenge 1: Sparsity (Learning from Signals Buried in Noise)
 
 Here's the first problem: **only about 1% of memory addresses are accessed frequently enough to be worth predicting**.
 
 Think about what this means for learning. In language modeling, every word in your training data is potentially useful. Your vocabulary might be 50,000 words, and you'll see most of them many times during training. The signal-to-noise ratio is high.
 
-In memory access prediction, your "vocabulary" is the entire address space—potentially billions of addresses. But 99% of them are accessed so rarely that there's nothing to learn. A few "hot" addresses dominate all the traffic. The rest is noise.
+In memory access prediction, your "vocabulary" is the entire address space (potentially billions of addresses). But 99% of them are accessed so rarely that there's nothing to learn. A few "hot" addresses dominate all the traffic. The rest is noise.
 
 <span class="margin-note">**The Curse of Dimensionality in Address Spaces**: When your vocabulary is the entire 64-bit address space (2^64 possible addresses), traditional one-hot encoding becomes impossible. You need 2^64 output neurons, which is absurd. The solution is typically to cluster addresses into regions or use hash-based representations. But this introduces its own problems: how do you cluster addresses when you don't know which ones matter? The sparsity challenge appears at every level of the problem.</span>
 
@@ -101,7 +101,7 @@ The architecture must somehow focus on the small fraction of addresses that matt
 
 Traditional ML metrics like accuracy become misleading. Predict "no prefetch" for everything and you'll achieve 99% accuracy. Completely useless. The value comes from correctly predicting those rare, important accesses.
 
-### Challenge 2: Timing—When Prediction is as Important as What
+### Challenge 2: Timing (When Prediction is as Important as What)
 
 Here's the second fundamental problem: **prefetching is useless if your timing is wrong**.
 
@@ -118,9 +118,9 @@ Standard LSTM architecture has no notion of "when" to predict. It predicts the n
 
 The paper doesn't fully solve this. The LSTM predicts what addresses will be accessed, but relies on heuristics to decide when to issue prefetches. This is a hybrid approach: learned model for "what," heuristics for "when."
 
-Timing is a first-class constraint in systems. Most ML approaches treat it as secondary—just another input feature. But time is fundamental to whether your prediction has any value at all.
+Timing is a first-class constraint in systems. Most ML approaches treat it as secondary, just another input feature. But time is fundamental to whether your prediction has any value at all.
 
-### Challenge 3: Heterogeneity—One Model for Diverse Workloads
+### Challenge 3: Heterogeneity (One Model for Diverse Workloads)
 
 The third challenge: **different applications have completely different memory access patterns**.
 
@@ -130,7 +130,7 @@ If you train a model on one type of workload, will it generalize to others?
 
 The paper evaluates across diverse benchmarks (SPEC CPU, graph workloads, etc.) and finds highly variable results. The LSTM works well on some workloads and poorly on others. There's no single model that dominates across all application types.
 
-You're stuck choosing between bad options. Train specialized models per workload type? Now you need to classify workloads at runtime and switch models—complex and error-prone. Train one general model on diverse workloads? Mediocre performance everywhere. Use online learning to adapt dynamically? Training overhead during execution.
+You're stuck choosing between bad options. Train specialized models per workload type? Now you need to classify workloads at runtime and switch models (complex and error-prone). Train one general model on diverse workloads? Mediocre performance everywhere. Use online learning to adapt dynamically? Training overhead during execution.
 
 None of these is clearly superior. Each involves trade-offs that depend on your deployment constraints.
 
@@ -146,7 +146,7 @@ The paper ["The Case for Learned Index Structures"](https://arxiv.org/pdf/1712.0
 
 Traditional data structures make no assumptions about your data. A B-tree works whether your data is uniformly distributed, skewed, sorted, or random. O(log n) lookup time regardless of data distribution.
 
-But this generality has a cost. If your data has structure—timestamps that increase monotonically, user IDs that cluster by region—a B-tree doesn't exploit that structure. It treats your data as if it could be arbitrary.
+But this generality has a cost. If your data has structure (timestamps that increase monotonically, user IDs that cluster by region), a B-tree doesn't exploit that structure. It treats your data as if it could be arbitrary.
 
 Here's the insight: an index is really just a model of your data distribution. Given a key, where is it located? That's a prediction problem. For a sorted array of n elements, it's learning the cumulative distribution function (CDF): what fraction of keys are less than this key?
 
@@ -170,11 +170,11 @@ This can be much faster than traversing a B-tree, especially when your learned m
 
 ### Why Google Cared About This
 
-Before diving into results, consider why Google invested in this research. At Google's scale, even small improvements compound dramatically. When you're serving billions of queries per day across systems like BigTable, Spanner, and search infrastructure, a 2-3x speedup translates to massive cost savings in compute and power. More importantly, a 10-100x reduction in memory footprint means you can fit indices that previously required hundreds of servers onto dozens—directly impacting datacenter costs.
+Before diving into results, consider why Google invested in this research. At Google's scale, even small improvements compound dramatically. When you're serving billions of queries per day across systems like BigTable, Spanner, and search infrastructure, a 2-3x speedup translates to massive cost savings in compute and power. More importantly, a 10-100x reduction in memory footprint means you can fit indices that previously required hundreds of servers onto dozens, directly impacting datacenter costs.
 
 Many of Google's core workloads fit the learned index sweet spot: read-heavy with stable data distributions. Search indices don't change drastically hour-to-hour. Ad targeting data has clear patterns (users from certain regions, certain age groups, certain interests). These workloads are exactly where you can train once and serve billions of queries, amortizing the training cost over massive inference volume.
 
-The paper came from Google researchers (Kraska worked closely with Jeff Dean's team) precisely because they had both the motivation (scale) and the right workloads (stable patterns, read-heavy) to make learned indexes worthwhile.<span class="margin-note">**Jeff Dean** is one of Google's most influential engineers, leading Google AI and co-designing foundational systems like MapReduce, BigTable, Spanner, and TensorFlow. He's also known for ["Latency Numbers Every Programmer Should Know"](https://gist.github.com/jboner/2841832)—a list that makes explicit the performance costs we discussed (DRAM access: 100ns, SSD read: 150μs). His team's investment in learned index structures reflects a broader vision: using ML not just for applications, but to optimize the infrastructure itself. When Dean's group explores an idea, it's usually because they've identified a real pain point at Google's scale that could save millions in operational costs.</span> This wasn't academic curiosity—it was solving a real infrastructure cost problem.
+The paper came from Google researchers (Kraska worked closely with Jeff Dean's team) precisely because they had both the motivation (scale) and the right workloads (stable patterns, read-heavy) to make learned indexes worthwhile.<span class="margin-note">**Jeff Dean** is one of Google's most influential engineers, leading Google AI and co-designing foundational systems like MapReduce, BigTable, Spanner, and TensorFlow. He's also known for ["Latency Numbers Every Programmer Should Know"](https://gist.github.com/jboner/2841832), a list that makes explicit the performance costs we discussed (DRAM access: 100ns, SSD read: 150μs). His team's investment in learned index structures reflects a broader vision: using ML not just for applications, but to optimize the infrastructure itself. When Dean's group explores an idea, it's usually because they've identified a real pain point at Google's scale that could save millions in operational costs.</span> This wasn't academic curiosity. It was solving a real infrastructure cost problem.
 
 ### When This Works: The Power of Patterns
 
@@ -194,7 +194,7 @@ A learned index faces the retraining problem. Your model learned the CDF of your
 
 For workloads where data is largely static (read-heavy databases, data warehouses, log archives), this isn't a problem. Train once, serve forever. The learned index dominates.
 
-For workloads where data changes frequently (write-heavy databases, real-time systems), retraining overhead becomes significant. You could periodically retrain (accumulate changes, retrain offline, deploy new model—but predictions go stale). Or use online learning (update continuously—but that adds overhead to every write). Or build hybrid structures (learned models for stable data, traditional structures for recent changes—the approach [ALEX](https://arxiv.org/pdf/1905.08898.pdf) explores).
+For workloads where data changes frequently (write-heavy databases, real-time systems), retraining overhead becomes significant. You could periodically retrain (accumulate changes, retrain offline, deploy new model, but predictions go stale). Or use online learning (update continuously, but that adds overhead to every write). Or build hybrid structures (learned models for stable data, traditional structures for recent changes, the approach [ALEX](https://arxiv.org/pdf/1905.08898.pdf) explores).
 
 Here's the core tension: ML excels at exploiting patterns in static data. But systems are dynamic. Data changes. Workloads evolve. How do you maintain learned models in the face of continuous change?
 
@@ -218,7 +218,7 @@ In co-design, if you had perfect information about the workload, hardware, and c
 
 In prediction, even with complete information about past workloads, you don't know future workloads. Even with perfect models of current data distributions, you don't know how distributions will change. The challenge is irreducible uncertainty.
 
-This requires different strategies. Design for robustness over optimality—work reasonably well across diverse scenarios rather than optimally for one. Build adaptation mechanisms that adjust to changing patterns rather than assuming static environments. Have fallback strategies for when predictions fail. Understand the cost of being wrong and design accordingly.
+This requires different strategies. Design for robustness over optimality (work reasonably well across diverse scenarios rather than optimally for one). Build adaptation mechanisms that adjust to changing patterns rather than assuming static environments. Have fallback strategies for when predictions fail. Understand the cost of being wrong and design accordingly.
 
 These aren't skills you learn from reading papers. They're developed through experience: seeing which predictions hold up in production and which don't, understanding how workloads evolve, learning when adaptation overhead pays off.
 
@@ -246,7 +246,7 @@ A key aspect of predictive reasoning: it's not just about making accurate predic
 
 But Milad also highlighted where learned approaches genuinely shine: **read-heavy workloads over largely static data**.
 
-Data warehouses with append-only logs analyzed for insights—data distribution changes slowly. CDNs and caches where content popularity follows power-law distributions that stay relatively stable. ML serving where model weights don't change during inference and access patterns are consistent.
+Data warehouses with append-only logs analyzed for insights (data distribution changes slowly). CDNs and caches where content popularity follows power-law distributions that stay relatively stable. ML serving where model weights don't change during inference and access patterns are consistent.
 
 In these domains, you can amortize training costs over millions or billions of queries. The patterns are stable enough that models stay accurate. The workloads are homogeneous enough that a single model works well.
 
@@ -266,13 +266,13 @@ Building this infrastructure is engineering-heavy work that research papers rare
 
 ## The Generative AI Question: Can Modern LLMs Help?
 
-During class, students raised a provocative question: **"We're talking about LSTMs from 2018. Could modern generative AI—transformers, LLMs—do better at prefetching?"**
+During class, students raised a provocative question: **"We're talking about LSTMs from 2018. Could modern generative AI (transformers, LLMs) do better at prefetching?"**
 
 This question is sharper than it might initially seem. It forces us to think carefully about what generative models actually offer and whether those capabilities address the fundamental challenges we've identified.
 
 ### What Transformers Might Offer
 
-There are genuine reasons to be intrigued. Transformers handle long sequences better—LSTMs struggle beyond a few hundred elements, while transformers with attention can model dependencies across much longer contexts. They're more parallelizable, which could reduce prediction latency. Pre-trained models might transfer better across workloads, learning general patterns about memory access the way LLMs learned general patterns about language. And GPT-style models work across diverse text domains without retraining—maybe they could similarly handle diverse memory access patterns.
+There are genuine reasons to be intrigued. Transformers handle long sequences better. LSTMs struggle beyond a few hundred elements, while transformers with attention can model dependencies across much longer contexts. They're more parallelizable, which could reduce prediction latency. Pre-trained models might transfer better across workloads, learning general patterns about memory access the way LLMs learned general patterns about language. And GPT-style models work across diverse text domains without retraining. Maybe they could similarly handle diverse memory access patterns.
 
 These are legitimate possibilities. But we need to confront the fundamental barriers:
 
@@ -282,7 +282,7 @@ These are legitimate possibilities. But we need to confront the fundamental barr
 
 As noted during discussion: "Generative AI might slow down the system despite its benefits." For prefetching, latency is not negotiable. You can't prefetch 1000 cycles late because your model is still computing attention weights.
 
-**The sparsity challenge remains.** Transformers are data-hungry. They typically need millions of training examples. Memory access traces are sparse by nature—99% noise, 1% signal. Standard transformer training assumes dense, meaningful data. The architectural mismatch persists.
+**The sparsity challenge remains.** Transformers are data-hungry. They typically need millions of training examples. Memory access traces are sparse by nature (99% noise, 1% signal). Standard transformer training assumes dense, meaningful data. The architectural mismatch persists.
 
 **The semantics gap is crucial.** One student observation from the transcript was particularly insightful: "The importance of semantics in data for effective prefetching." Memory addresses are just numbers. They don't have the rich semantic structure that language has. In language, "king" and "queen" have semantic relationships that embeddings can capture. Memory addresses? Much less so.
 
@@ -290,7 +290,7 @@ LLMs succeed partly because language has rich compositional semantics. Memory ad
 
 ### A More Promising Direction: Software-Coupled Prediction
 
-However, one direction from the discussion seems genuinely promising: **"Coupling prefetching with software attributes—the actual algorithm or code executing."**
+However, one direction from the discussion seems genuinely promising: **"Coupling prefetching with software attributes, the actual algorithm or code executing."**
 
 Instead of predicting from raw memory addresses, what if you incorporated:
 - **Code context**: What function is executing? What loop are we in?
@@ -300,13 +300,13 @@ Instead of predicting from raw memory addresses, what if you incorporated:
 
 This is actually closer to what compilers and profilers do. They have semantic understanding of the program, not just observed memory traces.
 
-**This is where LLMs might genuinely help.** Recent work on ["Performance Prediction for Large Systems via Text-to-Text Regression"](https://arxiv.org/abs/2506.21718) shows that encoder-decoder models can predict system performance from configuration files and system logs—exactly the kind of rich semantic context that raw memory traces lack. For Google's Borg cluster scheduler, a 60M parameter model achieves near-perfect 0.99 rank correlation in predicting resource efficiency. The key insight as shown in Figure 4: treat system prediction as a text understanding problem rather than pure numerical regression.
+**This is where LLMs might genuinely help.** Recent work on ["Performance Prediction for Large Systems via Text-to-Text Regression"](https://arxiv.org/abs/2506.21718) shows that encoder-decoder models can predict system performance from configuration files and system logs, exactly the kind of rich semantic context that raw memory traces lack. For Google's Borg cluster scheduler, a 60M parameter model achieves near-perfect 0.99 rank correlation in predicting resource efficiency. The key insight as shown in Figure 4: treat system prediction as a text understanding problem rather than pure numerical regression.
 
 Not by replacing hardware prefetchers, but by understanding code and suggesting where software prefetch hints should be inserted. The LLM operates at compile time or development time, with access to full program context, no timing constraints, and rich semantic information.
 
 <figure class="post-figure">
 <img src="/cs249r_fall2025/assets/images/blog_images/week_9/predictionregression.png" alt="Transformer regression on telemetry for system-level prediction (Akhauri et al.)">
-<figcaption><em>Figure 4: Akhauri et al. demonstrate transformer‑based regression on logs and telemetry to predict system behavior—an approach that could learn macro memory‑access phases and guide software‑inserted prefetch hints. (Akhauri et al.)</em></figcaption>
+<figcaption><em>Figure 4: Akhauri et al. demonstrate transformer‑based regression on logs and telemetry to predict system behavior, an approach that could learn macro memory‑access phases and guide software‑inserted prefetch hints. (Akhauri et al.)</em></figcaption>
 </figure>
 
 
@@ -363,7 +363,7 @@ Being wrong has immediate costs (cache pollution, wasted bandwidth, processor st
 
 Predictive reasoning under uncertainty isn't unique to memory systems. It appears throughout computer systems design.
 
-Network traffic prediction demands forecasting bandwidth needs and congestion patterns for routing algorithms—but you're designing for traffic you haven't seen, with tight timing constraints. Power management requires predicting future CPU utilization to decide whether to sleep cores—wrong predictions waste power or hurt performance. Cloud resource allocation needs predicting VM resource needs for optimal placement, but workloads are heterogeneous and patterns change. Storage caching faces similar challenges to memory prefetching, just at different timescales.
+Network traffic prediction demands forecasting bandwidth needs and congestion patterns for routing algorithms, but you're designing for traffic you haven't seen, with tight timing constraints. Power management requires predicting future CPU utilization to decide whether to sleep cores (wrong predictions waste power or hurt performance). Cloud resource allocation needs predicting VM resource needs for optimal placement, but workloads are heterogeneous and patterns change. Storage caching faces similar challenges to memory prefetching, just at different timescales.
 
 The pattern repeats: sparse signals, heterogeneous workloads, timing constraints, dynamic environments. Architects must design systems for patterns they can't fully characterize.
 
@@ -373,11 +373,11 @@ What separates experienced architects from novices? Recognizing when patterns ar
 
 We've now explored two types of tacit architectural knowledge:
 
-**Week 8: Co-design reasoning** — handling circular dependencies where everything depends on everything else.
+**Week 8: Co-design reasoning** (handling circular dependencies where everything depends on everything else).
 
-**Week 9: Predictive reasoning** — designing for patterns you can't fully observe or characterize.
+**Week 9: Predictive reasoning** (designing for patterns you can't fully observe or characterize).
 
-Next week: **adaptive reasoning**. LLM serving systems must dynamically schedule requests, manage memory, and balance throughput versus latency—all while conditions continuously change. You can't just predict. You must continuously adapt.
+Next week: **adaptive reasoning**. LLM serving systems must dynamically schedule requests, manage memory, and balance throughput versus latency, all while conditions continuously change. You can't just predict. You must continuously adapt.
 
 This builds directly on this week's themes. The same memory management challenges we discussed (KV-cache, attention patterns) appear in LLM systems. But now we add real-time decision making under load.
 
