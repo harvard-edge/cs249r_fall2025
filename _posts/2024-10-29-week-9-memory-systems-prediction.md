@@ -27,9 +27,16 @@ Before diving into how to predict memory access patterns, we need to understand 
 
 Modern processors can execute thousands of operations per cycle. But memory? Memory is slow. Accessing data from DRAM takes hundreds of cycles. If the processor has to wait for every memory access, it spends most of its time idle, waiting for data.
 
-The solution has been a sophisticated memory hierarchy: small, fast caches close to the processor; larger, slower caches further away; eventually DRAM and storage. This hierarchy works beautifully when you can predict which data you'll need next. Load it into cache before the processor asks for it, and the processor never has to wait.
+The solution has been a sophisticated memory hierarchy: small, fast caches close to the processor; larger, slower caches further away; eventually DRAM and storage. This hierarchy works beautifully when you can predict which data you'll need next. Load it into cache before the processor asks for it, and the processor never has to wait—this is how architects fight the memory wall (Figure 1).
 
 But how do you know what data to load?
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_9/memorywall.jpg" alt="The memory wall: CPU speed vs memory latency/bandwidth (Astera Labs)">
+<figcaption><em>Figure 1: The memory wall—compute performance has outpaced memory bandwidth and latency, creating a widening gap that architects must hide with prediction and staging. (Astera Labs)</em></figcaption>
+</figure>
+
+
 
 ### Traditional Heuristics: Simple Patterns, Limited Reach
 
@@ -56,6 +63,13 @@ The insight is elegant: treat memory access prediction as a sequence prediction 
 This maps naturally onto LSTM (Long Short-Term Memory) networks, which excel at sequence prediction. LSTMs have been remarkably successful at tasks like language modeling (predict the next word given previous words) and time series forecasting. The architecture seems like a perfect fit: feed in the sequence of past memory accesses, predict future accesses.
 
 The paper proposes using LSTMs to replace traditional prefetchers entirely. Train the LSTM on memory access traces from real applications. Let it learn the patterns that humans would struggle to articulate as simple rules. Deploy it in hardware to predict which addresses to prefetch.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_9/learningpatterns.png" alt="Learning memory access patterns with LSTMs (Hashemi et al.)">
+<figcaption><em>Figure 2: Hashemi et al.'s learned prefetcher treats memory access as sequence modeling—separating signal from noise via delta encoding and letting an LSTM learn recurring patterns end-to-end. (Hashemi et al.)</em></figcaption>
+</figure>
+
+
 
 ### Why This Should Work
 
@@ -145,7 +159,14 @@ If you can learn the CDF, you can predict where a key is located. Then you only 
 
 For example, if you're indexing 1 billion user records by timestamp spanning January 1 to December 31, a learned model could predict: "timestamp for March 15 is approximately at position 250 million" (roughly 1/4 through the year). Then you do a local search within a small range around position 250 million.
 
-This can be much faster than traversing a B-tree, especially when your model is simple (a neural network with a few layers can be faster than pointer chasing through cache-cold tree nodes).
+This can be much faster than traversing a B-tree, especially when your learned model is simple and exploits data distribution structure as shown in Figure 3.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_9/datastructure.png" alt="Learned index structures vs traditional data structures (Kraska et al.)">
+<figcaption><em>Figure 3: Kraska et al. show that learned models can replace generic data structures (B‑trees, hash tables, Bloom filters), yielding higher lookup efficiency and strong accuracy by exploiting data distributions. (Kraska et al.)</em></figcaption>
+</figure>
+
+
 
 ### Why Google Cared About This
 
@@ -279,33 +300,18 @@ Instead of predicting from raw memory addresses, what if you incorporated:
 
 This is actually closer to what compilers and profilers do. They have semantic understanding of the program, not just observed memory traces.
 
-**This is where LLMs might genuinely help.** Recent work on ["Performance Prediction for Large Systems via Text-to-Text Regression"](https://arxiv.org/abs/2506.21718) shows that encoder-decoder models can predict system performance from configuration files and system logs—exactly the kind of rich semantic context that raw memory traces lack. For Google's Borg cluster scheduler, a 60M parameter model achieves near-perfect 0.99 rank correlation in predicting resource efficiency. The key insight: treat system prediction as a text understanding problem rather than pure numerical regression.
+**This is where LLMs might genuinely help.** Recent work on ["Performance Prediction for Large Systems via Text-to-Text Regression"](https://arxiv.org/abs/2506.21718) shows that encoder-decoder models can predict system performance from configuration files and system logs—exactly the kind of rich semantic context that raw memory traces lack. For Google's Borg cluster scheduler, a 60M parameter model achieves near-perfect 0.99 rank correlation in predicting resource efficiency. The key insight as shown in Figure 4: treat system prediction as a text understanding problem rather than pure numerical regression.
 
 Not by replacing hardware prefetchers, but by understanding code and suggesting where software prefetch hints should be inserted. The LLM operates at compile time or development time, with access to full program context, no timing constraints, and rich semantic information.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_9/predictionregression.png" alt="Transformer regression on telemetry for system-level prediction (Akhauri et al.)">
+<figcaption><em>Figure 4: Akhauri et al. demonstrate transformer‑based regression on logs and telemetry to predict system behavior—an approach that could learn macro memory‑access phases and guide software‑inserted prefetch hints. (Akhauri et al.)</em></figcaption>
+</figure>
+
+
+
 This is less sexy than "LLMs do prefetching" but potentially more practical: **LLMs augment human understanding of memory behavior, helping developers optimize memory access patterns at the software level.**
-
-## Modern Challenges: LLM Workloads and Attention Patterns
-
-There's a fascinating irony in this week's topic: we're discussing whether AI can predict memory access patterns—while simultaneously deploying AI systems whose memory access patterns are especially hard to predict.
-
-Transformer models and attention mechanisms create memory access patterns that challenge traditional prefetchers:
-
-**Attention is data-dependent.** Which keys and values you access depends on the input sequence. Traditional prefetchers assume access patterns are relatively stable. Attention breaks this assumption.
-
-**Batch sizes vary dynamically.** In LLM serving, you're constantly adjusting batch sizes based on load. Your memory access patterns change with batch size. A prefetcher trained on one regime doesn't transfer to another.
-
-**KV-cache management is complex.** Systems like [vLLM with PagedAttention](https://arxiv.org/pdf/2309.06180.pdf) dynamically manage memory for cached key-value pairs. The access patterns are determined by which sequences are active, which is dynamic and unpredictable.
-
-**Sparsity patterns are irregular.** Sparse attention mechanisms (used to handle longer sequences efficiently) create irregular memory access patterns that defeat both stride prefetchers and learned prefetchers.
-
-The result is that LLM inference systems often show poor cache utilization and memory bandwidth efficiency. Traditional prefetchers don't help much. Learned prefetchers haven't been deployed at scale for these workloads yet.
-
-This creates an interesting research opportunity. LLM workloads are economically important (massive inference costs), have novel memory patterns (different from traditional workloads), and are relatively new. Nobody has decades of tacit knowledge about optimizing them yet.
-
-AI agents and human architects start on more equal footing here. The tacit knowledge hasn't been developed because the workloads are too new. This might be where predictive reasoning for memory systems sees its next breakthrough.
-
-Next week, we'll explore LLM systems optimization directly, seeing how these memory challenges play out in the context of scheduling and serving large language models.
 
 ## What This Means for AI Agents
 
