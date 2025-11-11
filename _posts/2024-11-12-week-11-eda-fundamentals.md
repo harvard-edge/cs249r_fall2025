@@ -2,7 +2,7 @@
 layout: post
 title: "Week 11 Part 1: Phase 3 Begins - From Code to Silicon: Understanding Electronic Design Automation"
 date: 2024-11-12
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [hardware, eda, chip-design]
 permalink: /blog/2024/11/12/eda-fundamentals-code-to-silicon/
 ---
