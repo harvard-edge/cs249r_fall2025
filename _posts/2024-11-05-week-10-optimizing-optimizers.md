@@ -65,10 +65,7 @@ Multimodal generation combines these patterns and amplifies the challenge. Text,
 
 The common thread: **you can't predict resource consumption from request characteristics alone. It emerges during generation.**
 
-**This is the fundamental difference** that makes generative AI serving uniquely challenging:<span class="margin-note">**Observable vs Emergent Characteristics**: In traditional ML, all relevant information for scheduling decisions is observable at request arrival. You know the input dimensions, the model architecture, the compute requirements. Your heuristics can immediately classify the request and make informed decisions. In generative AI, the most important characteristics (sequence length, generation quality, memory pressure) only become known *as the model generates*. By the time you know what resources a request needs, you've already made scheduling decisions. This inversion, from observable upfront to emergent during execution, is what breaks traditional adaptive systems.</span>
-
-- **Traditional ML**: Request arrives → Observe characteristics → Calculate resources → Schedule → Execute (fixed resources)
-- **Generative AI**: Request arrives → Start with minimal info → Execute and generate → Resources grow dynamically → Must adapt continuously
+<span class="margin-note">**Observable vs Emergent Characteristics**: In traditional ML, all relevant information for scheduling decisions is observable at request arrival. You know the input dimensions, the model architecture, the compute requirements. Your heuristics can immediately classify the request and make informed decisions. In generative AI, the most important characteristics (sequence length, generation quality, memory pressure) only become known *as the model generates*. By the time you know what resources a request needs, you've already made scheduling decisions. This inversion, from observable upfront to emergent during execution, is what breaks traditional adaptive systems.</span>
 
 Traditional heuristics assume you can observe what you need to make decisions. Generative AI violates this assumption. The scheduler must make initial decisions with incomplete information, then continuously adapt as the true requirements emerge.
 
@@ -96,8 +93,6 @@ The optimal batching strategy for prefill *hurts* decode performance, and vice v
 
 You must dynamically decide: which phase to prioritize? Which requests to batch together? When to accept new requests versus finishing current ones? These decisions ripple through the system, affecting throughput, latency, and fairness.
 
-**This is fundamentally different from predictive reasoning** (Week 9). Memory prefetchers predict access patterns but don't change the underlying computation. LLM schedulers must adapt *how computation is performed* based on evolving system state.
-
 ### Quadratic Attention: Computational Complexity Emerges During Generation
 
 The attention mechanism compounds these challenges. Attention scales O(n²) with sequence length. Double the sequence, quadruple the computation.
@@ -116,11 +111,9 @@ How do we build schedulers that handle these challenges? This brings us to our f
 
 ### Why Traditional Scheduling Fails
 
-Traditional schedulers rely on simple policies. [First-Come-First-Served (FCFS)](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) is fair but ignores request characteristics. [Shortest-Job-First (SJF)](https://en.wikipedia.org/wiki/Shortest_job_next) prioritizes quick requests but requires knowing job lengths upfront (which we don't for LLMs). Priority based schemes need manual tuning and don't adapt to workload shifts.
+Traditional schedulers rely on simple policies. [First-Come-First-Served (FCFS)](https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)) is fair but ignores request characteristics. [Shortest-Job-First (SJF)](https://en.wikipedia.org/wiki/Shortest_job_next) prioritizes quick requests but requires knowing job lengths upfront. Priority based schemes need manual tuning and don't adapt to workload shifts.
 
-These policies assume you can characterize requests at arrival. LLM serving breaks this assumption. You don't know how long a request will take (depends on generated length). You don't know memory consumption (KV-cache grows during generation). You don't know optimal batching (depends on other concurrent requests).
-
-Moreover, scheduling decisions interact in complex ways. Batching request A with request B affects memory pressure, which influences whether you can accept request C, which determines head-of-line blocking for request D. These interactions resist simple heuristics.
+The deeper challenge: scheduling decisions interact in complex ways. Batching request A with request B affects memory pressure, which influences whether you can accept request C, which determines head-of-line blocking for request D. These interactions resist simple heuristics.
 
 ### The Learning-to-Rank Approach
 
@@ -166,17 +159,9 @@ The results on [Google's Borg cluster scheduler](https://research.google/pubs/la
 
 ### Why Semantic Understanding Works
 
-What does the text-to-text model learn that numerical models don't?
+What does the text-to-text model learn that numerical models don't? It captures relationships between parameters that manual feature engineering misses. High CPU count with low memory suggests compute bound workloads. Error patterns in logs predict performance degradation through semantic connections, not just disconnected error codes. Labels like "CPU optimized instance" carry meaning beyond raw numbers. The hierarchical structure, comments, and context in configuration files remain intact rather than being discarded during numerical encoding.
 
-It learns relationships between parameters. High CPU count with low memory suggests a compute bound workload. The model picks up these patterns from context, not from manual feature engineering.
-
-It recognizes patterns in log messages. Certain error patterns or warning sequences predict performance degradation. Numerical models see disconnected error codes. Text models understand semantic connections.
-
-It preserves configuration semantics. A label like "CPU optimized instance" carries meaning beyond the raw number of cores. The text encoding keeps this information intact.
-
-It maintains context and structure. Configuration files have hierarchical structure, comments, and relationships between sections. Text encoding maintains this context that numerical encoding throws away.
-
-This connects to Week 9's discussion of learned index structures. Those systems learned CDFs of data distributions. Text-to-text regression learns semantic patterns in system configurations. Both show that machine learning can extract patterns humans struggle to codify explicitly.
+This connects to Week 9's learned index structures. Those systems learned CDFs of data distributions. Text-to-text regression learns semantic patterns in system configurations. Both show that machine learning can extract patterns humans struggle to codify explicitly.
 
 ### Fine-Tuning with Minimal Data
 
@@ -186,13 +171,13 @@ This is important for adaptive reasoning. Production systems can't afford extens
 
 ### The Meta Nature: LLMs Optimizing LLM Infrastructure
 
-Here's where it gets interesting. The paper shows that language models can predict system performance through semantic understanding. But many of the systems being optimized are themselves running language models. LLMs optimizing LLM infrastructure.
+Here's where it gets interesting. Text-to-text regression uses language models to predict system performance through semantic understanding. But many of the systems being optimized are themselves running language models. LLMs optimizing LLM infrastructure.
 
-This creates opportunities traditional systems lack. The workload can reason about its own behavior. Ask the LLM serving system why latency increased, and it can analyze logs, understand configuration changes, and explain the cause semantically. The optimizer and the workload speak the same language, literally.
+This creates opportunities traditional systems lack. The system can explain its own behavior in natural language. Ask why latency increased, and it can analyze logs with semantic understanding, not just pattern matching. When the scheduler makes a decision, it can articulate its reasoning in terms humans understand, building trust and enabling oversight. The optimizer and the workload speak the same language, literally.
 
-This blurs the boundary between "system" and "agent." Is the text-to-text model a performance predictor, or is it an agent participating in system optimization? When it suggests configuration changes based on semantic understanding of logs, it's doing both.
+Pre-trained language models already understand system semantics, so fine tuning to new configurations requires minimal data. As the system optimizes itself, humans learn from observing its decisions. The system learns from human corrections. Knowledge transfer flows both ways.
 
-This is adaptive reasoning in its most meta form. Systems that understand themselves, predict their own behavior, and guide their own optimization.
+This blurs the boundary between "system" and "agent." The text-to-text model is simultaneously a performance predictor and an agent participating in system optimization. This meta nature distinguishes modern adaptive systems from traditional control systems. The optimizer doesn't just react to signals—it understands them semantically.
 
 ## Industry Perspective: Agentic Workflows at Azure Scale
 
@@ -242,84 +227,33 @@ The deployment gap isn't a criticism of research. It's recognition that producti
 
 During our class discussion, Esha highlighted an emerging theme: energy efficiency and sustainability are becoming first class optimization objectives, not afterthoughts.<span class="margin-note">**Embodied Carbon in Data Centers**: Esha's work on modeling embodied carbon (the emissions from manufacturing hardware) alongside operational carbon (power consumption) reflects a broader industry trend. When a single GPU cluster can consume megawatts of power, and data centers represent growing percentages of global electricity consumption, efficiency isn't just about cost. It's about environmental impact. Microsoft's public commitments to carbon reduction drive research into heat reuse, renewable energy integration, and carbon aware workload scheduling. These constraints shape what "optimal" means for adaptive systems.</span>
 
-Traditional optimization: maximize throughput, minimize latency, balance fairness. Modern optimization at Azure scale: also minimize energy consumption, reduce embodied carbon, enable heat reuse, integrate with renewable energy availability.
-
-This adds complexity to adaptive reasoning. The system must balance multiple objectives in real-time: serve requests quickly (latency), process many requests (throughput), treat users fairly (fairness), consume less power (energy efficiency), schedule workloads when renewable energy is available (carbon optimization).
-
-These objectives often conflict. The highest-throughput strategy might waste energy. The most carbon-efficient schedule might increase latency. Adaptive reasoning must navigate these tradeoffs dynamically as conditions change.
+This adds complexity to adaptive reasoning. Modern systems must balance multiple objectives in real-time: latency, throughput, fairness, energy efficiency, and carbon optimization. These objectives often conflict. The highest-throughput strategy might waste energy. The most carbon-efficient schedule might increase latency. Adaptive reasoning must navigate these tradeoffs dynamically as conditions change.
 
 ## Adaptive Reasoning: The Third Type of Tacit Knowledge
 
-We've now explored three distinct types of architectural reasoning through the lens of concrete problems. Let's synthesize what makes adaptive reasoning distinct and why it matters for AI agents.
+Having explored LLM scheduling through learning to rank, system optimization through text-to-text regression, and production deployment challenges at Azure scale, we can now characterize what makes adaptive reasoning distinct and why it matters for AI agents.
 
-### Three Types, One Architecture
+Adaptive reasoning operates continuously at runtime, responding to evolving conditions. Unlike co-design reasoning that optimizes static interdependencies, or predictive reasoning that accounts for uncertainty at design-time, adaptive reasoning must learn from live traffic without disrupting service. The exploration versus exploitation tradeoff becomes fundamental: trying new strategies risks hurting current performance, but using only known strategies might miss better solutions.
 
-**Week 8: Co-Design Reasoning**  
-The challenge of circular dependencies where everything depends on everything else. Tile size depends on memory hierarchy, which depends on access patterns, which depend on dataflow, which depends back on tile size. You cannot decompose the problem into independent subproblems. Requires simultaneous reasoning across interdependent constraints.
-
-**Week 9: Predictive Reasoning**  
-The challenge of designing for patterns you can't fully observe or characterize. Memory prefetchers must predict from sparse signals across heterogeneous workloads with tight timing constraints. Learned indexes exploit data distributions but must handle retraining costs. Requires making informed bets about uncertain futures.
-
-**Week 10: Adaptive Reasoning**  
-The challenge of continuous real-time adjustment as conditions change. LLM schedulers must make decisions under live traffic, learning from experience while maintaining service guarantees. Systems use AI to optimize themselves, participating in their own optimization. Requires online learning under production constraints with multi-objective balancing.
-
-### What Makes Adaptive Reasoning Distinct
-
-Adaptive reasoning builds on the previous two types but adds new dimensions.
-
-Temporal dynamics are fundamental. Co-design reasoning optimizes static interdependencies. Predictive reasoning accounts for uncertainty at design-time. Adaptive reasoning operates continuously at runtime, responding to evolving conditions.
-
-Online learning under constraints becomes necessary. You can't stop the system to retrain. You must learn from live traffic without disrupting service. Exploration, trying new strategies, risks hurting current performance. Exploitation, using known strategies, might miss better solutions. This exploration versus exploitation tradeoff is unique to adaptive systems.
-
-Meta reasoning about decisions emerges. The system must reason about its own reasoning. When should we adapt versus when are changes just noise? Which past decisions led to current state, the temporal credit assignment problem? How do our adaptations affect future states we'll observe, creating feedback loops?
-
-Multi objective optimization in real time. Not just "minimize latency" or "maximize throughput." You must balance latency, throughput, fairness, energy, and cost simultaneously, in real time, as objectives shift in relative importance.
+Meta reasoning emerges: the system must reason about its own reasoning. When should we adapt versus when are changes just noise? Which past decisions led to current state? How do our adaptations affect future states we'll observe? Multi objective optimization happens in real time, balancing latency, throughput, fairness, energy, and cost simultaneously as objectives shift in relative importance.
 
 ### What This Requires from AI Agents
 
-For AI agents to master adaptive reasoning, they need capabilities beyond pattern recognition or optimization.
+For AI agents to master adaptive reasoning, several capabilities become essential. Learning with delayed rewards: a scheduling decision might affect performance minutes or hours later, requiring temporal credit assignment that's difficult when feedback isn't immediate. Robustness to distribution shift: workload patterns change continuously (morning vs evening, weekday vs weekend, model updates, hardware failures), so adaptive strategies must generalize rather than overfit to recent observations.
 
-Consider learning with delayed rewards. A scheduling decision you make now might affect performance minutes or hours later. Which past decisions caused the current good or bad state? This temporal credit assignment problem is fundamental to adaptive systems but difficult for learning algorithms that assume immediate feedback.
+As Esha's Sherlock project demonstrated, counterfactual reasoning, safe exploration, and interpretability aren't just nice features but fundamental requirements. These challenges extend beyond algorithms to system design: architecting systems to support safe adaptation, creating interfaces for human oversight of self-optimizing systems. These remain open questions at the frontier of adaptive reasoning.
 
-Then there's robustness to distribution shift. Workload patterns change continuously. Morning versus evening traffic looks different. Weekday versus weekend patterns vary. Model updates change generation characteristics. Hardware failures shift available capacity. The adaptive strategy must remain valid across these shifts, not just overfit to recent observations.
-
-Safe exploration in production is non negotiable. You can't freely experiment when production traffic has SLA requirements. You must explore promising strategies without risking catastrophic failures. This requires confidence bounds on decisions, safe rollout mechanisms, and automatic rollback when experiments go wrong.
-
-Counterfactual reasoning becomes essential. The agent's decisions affect the future states it observes. To learn whether a decision was good, you must reason about what would have happened if you chose differently. This counterfactual reasoning is notoriously difficult but essential for learning in closed-loop systems.
-
-Finally, interpretability and trust. When systems adapt themselves, humans need oversight. The system must explain why adaptations happened, provide confidence in predictions, and enable operators to override decisions. Black box adaptation doesn't build the trust required for production deployment.
-
-These challenges extend beyond individual algorithms to system design. How do we architect systems to support safe adaptation? What interfaces enable human oversight of self-optimizing systems? These are open questions at the frontier of adaptive reasoning.
-
-## The Unique Opportunity
+## The Unique Moment: Learning Adaptive Reasoning Together
 
 Throughout Phase 2, we've examined domains where humans have accumulated decades of experience. Memory system architects have refined prefetching heuristics over 40+ years. Database designers have developed intuitions about index structures through countless deployments. In these domains, AI agents are catching up to human expertise.
 
 **LLM serving is different. Nobody has decades of experience.**
 
-Transformers emerged in 2017. Large-scale LLM serving (models with 100B+ parameters) is only 2 to 3 years old. Production diffusion model serving is even newer. The architectural principles for these workloads are being developed *right now*, and humans don't have a significant head start.
+Transformers emerged in 2017. Large-scale LLM serving (models with 100B+ parameters) is only 2 to 3 years old. Production diffusion model serving is even newer. The architectural principles for these workloads are being developed *right now*, and humans don't have a significant head start. There's no established playbook to learn from. The tacit knowledge doesn't exist yet—it's being created through current experience.
 
-This creates a unique moment: humans and AI agents learning adaptive reasoning together. There's no established playbook to learn from. The tacit knowledge doesn't exist yet. It's being created through current experience.
+This creates both challenge and opportunity. Generative AI is rapidly becoming the dominant workload in production systems, yet no established best practices exist. The workloads themselves evolve rapidly: new model architectures emerge, new modalities appear, scale requirements shift. What works today might not work tomorrow.
 
-### The Meta Nature Changes Everything
-
-In previous weeks, there was clear separation: the optimizer (AI) and the workload (application code, memory traces, database queries). This week, that boundary blurs.
-
-Text-to-text regression models predict system performance using the same architecture (transformers) as the workloads they're optimizing. LLM serving systems use LLMs to schedule LLM inference. The workload speaks the same language as the optimizer.
-
-This enables new forms of optimization.
-
-The system can explain its own behavior in natural language. Ask why latency increased, and it can analyze logs with semantic understanding, not just pattern matching.
-
-When the scheduler makes a decision, it can articulate its reasoning in terms humans understand, building trust and enabling oversight.
-
-As the system optimizes itself, humans learn from observing its decisions. The system learns from human corrections. Knowledge transfer flows both ways.
-
-Pre-trained language models already understand system semantics. Fine tuning to new configurations requires minimal data because the model already grasps the underlying concepts.
-
-This meta nature distinguishes modern adaptive systems from traditional control systems. The optimizer doesn't just react to signals. It understands them semantically.
-
-The future of adaptive reasoning in LLM systems isn't just more sophisticated algorithms. It's building systems where the workload can explain its own behavior, where optimization happens through semantic understanding rather than black box tuning, and where humans and AI learn together rather than AI trying to catch up to established human expertise.
+But the meta nature of LLMs optimizing LLM infrastructure enables something unprecedented: systems that explain their own behavior, optimization through semantic understanding rather than black box tuning, humans and AI learning together rather than AI catching up to established expertise. The next generation of architects will design systems that adapt themselves, shifting from memorizing optimal configurations to designing meta-policies for self-optimization.
 
 ## Questions for Reflection
 
@@ -356,18 +290,6 @@ Not just search algorithms for optimization. Not just pattern recognition from t
 Current AI systems possess pieces of these capabilities but don't fully integrate them. Analytical models (like DOSA from Week 8) encode structural understanding but lack adaptation. Learning-based approaches (like AutoTVM, Learning to Rank) recognize patterns but need structural guidance. Text-to-text regression brings semantic understanding but requires integration with temporal reasoning.
 
 The path forward: hybrid systems that know when to apply which type of reasoning. Human-AI collaboration interfaces for all three. Architectures designed from first principles to support adaptive optimization.
-
-### The Generative AI Inflection Point
-
-We're at a unique moment. Generative AI is rapidly becoming the dominant workload in production systems. The architectural principles for serving these workloads are being discovered now, not refined from decades of experience.
-
-This creates both challenge and opportunity.
-
-The challenge is that no established best practices exist yet. The workloads themselves evolve rapidly. New model architectures emerge. New modalities appear. Scale requirements shift. What works today might not work tomorrow.
-
-The opportunity is that humans and AI agents are learning together. The meta nature of LLMs optimizing LLM infrastructure enables new collaboration modes. Systems that explain their own behavior accelerate human learning.
-
-The next generation of architects will design systems that adapt themselves. The skills that matter shift: less about memorizing optimal configurations, more about designing meta-policies for self-optimization. Less about having all the answers, more about asking the right questions and building systems that learn their own answers.
 
 ### Looking Ahead
 
