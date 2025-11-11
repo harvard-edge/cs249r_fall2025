@@ -108,6 +108,88 @@
                 table.parentNode.insertBefore(tableContainer, table);
                 tableContainer.appendChild(table);
             });
+
+            // Generate Table of Contents
+            const tocList = document.querySelector('.toc-list');
+            const blogContent = document.querySelector('.blog-content');
+            
+            if (tocList && blogContent) {
+                const headings = blogContent.querySelectorAll('h2, h3');
+                
+                if (headings.length > 0) {
+                    headings.forEach((heading, index) => {
+                        // Add ID to heading if it doesn't have one
+                        if (!heading.id) {
+                            heading.id = 'heading-' + index;
+                        }
+                        
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = '#' + heading.id;
+                        a.textContent = heading.textContent;
+                        
+                        // Add class for H3 to indent them
+                        if (heading.tagName === 'H3') {
+                            a.classList.add('toc-h3');
+                        }
+                        
+                        a.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            // Update URL without jumping
+                            history.pushState(null, null, '#' + heading.id);
+                        });
+                        
+                        li.appendChild(a);
+                        tocList.appendChild(li);
+                    });
+                    
+                    // Scroll spy - highlight current section
+                    let ticking = false;
+                    function updateActiveLink() {
+                        if (!ticking) {
+                            window.requestAnimationFrame(() => {
+                                const scrollPos = window.scrollY + 150;
+                                const tocLinks = tocList.querySelectorAll('a');
+                                
+                                let currentHeading = null;
+                                headings.forEach(heading => {
+                                    if (heading.offsetTop <= scrollPos) {
+                                        currentHeading = heading;
+                                    }
+                                });
+                                
+                                tocLinks.forEach(link => {
+                                    link.classList.remove('active');
+                                    if (currentHeading && link.getAttribute('href') === '#' + currentHeading.id) {
+                                        link.classList.add('active');
+                                    }
+                                });
+                                
+                                ticking = false;
+                            });
+                            ticking = true;
+                        }
+                    }
+                    
+                    window.addEventListener('scroll', updateActiveLink);
+                    updateActiveLink(); // Initial call
+                } else {
+                    // Hide TOC if no headings
+                    const tocSidebar = document.getElementById('table-of-contents');
+                    if (tocSidebar) tocSidebar.style.display = 'none';
+                }
+            }
+            
+            // TOC Toggle for mobile
+            const tocToggle = document.querySelector('.toc-toggle');
+            const tocSidebar = document.getElementById('table-of-contents');
+            
+            if (tocToggle && tocSidebar) {
+                tocToggle.addEventListener('click', () => {
+                    tocSidebar.classList.toggle('collapsed');
+                });
+            }
         });
     </script>
 <!-- Force rebuild trigger 2 -->
