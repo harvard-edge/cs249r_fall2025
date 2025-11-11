@@ -184,6 +184,21 @@ Larger tiles mean fewer memory transactions but risk cache thrashing. Smaller ti
 
 We're back where we started. This is a circular dependency. Every decision constrains and is constrained by every other decision.
 
+<div class="mermaid">
+graph LR
+    A[Tile Size] --> B[Memory<br/>Hierarchy]
+    B --> C[Access<br/>Patterns]
+    C --> D[Dataflow]
+    D --> E[Bandwidth]
+    E --> A
+    
+    style A fill:#2563eb,color:#fff
+    style B fill:#dc2626,color:#fff
+    style C fill:#9333ea,color:#fff
+    style D fill:#16a34a,color:#fff
+    style E fill:#ea580c,color:#fff
+</div>
+
 This is what makes co-design reasoning fundamentally different from the optimization we did in Phase 1. In Phase 1, we had clear constraints we could optimize within. Here, the constraints themselves are interdependent design choices that must be reasoned about simultaneously.
 
 **This is tacit knowledge.** Remember [Week 7's central question](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/): how do AI agents learn what was never written down? Here's a concrete example. An experienced architect might look at a workload and immediately say: "Use output-stationary dataflow with 32×32 tiles." 

@@ -37,6 +37,20 @@ Let's trace the journey we've taken over the past seven weeks. Each week, we've 
 
 **Week 7**: We've hit a different kind of wall.
 
+<div class="mermaid">
+graph TD
+    A[Week 3: Code Generation<br/>📝 Fully Explicit<br/>Source code, tests, syntax] --> B[Week 4: CPU Optimization<br/>📊 Mostly Explicit<br/>Profiles, measurements]
+    B --> C[Week 5: GPU Kernels<br/>🔧 Complex but Measurable<br/>Iterate and profile]
+    C --> D[Week 6: Distributed Systems<br/>🌐 Dynamic & Temporal<br/>Telemetry and traces]
+    D --> E[Week 7: Architecture Design<br/>🧠 Largely Tacit<br/>Experience and intuition]
+    
+    style A fill:#e8f5e9
+    style B fill:#fff3e0
+    style C fill:#ffe8e0
+    style D fill:#ffe0f0
+    style E fill:#ffebee
+</div>
+
 ### The Architecture Knowledge Gap
 
 When you design a new processor architecture, you face a fundamentally different challenge. You can't just "read the code" because there is no code yet. You can't profile it because it doesn't exist. You can't measure its performance because it hasn't been built.
