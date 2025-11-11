@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 11 Part 1: From Code to Silicon - Understanding Electronic Design Automation"
+title: "Week 11 Part 1: Phase 3 Begins - From Code to Silicon: Understanding Electronic Design Automation"
 date: 2024-11-12
 author: "Vijay Janapa Reddi"
 categories: [hardware, eda, chip-design]
@@ -19,7 +19,7 @@ This isn't a rhetorical question. In chip design, you make thousands of interdep
 
 This changes everything about how reasoning must work.
 
-In Phase 1 (AI for Software), we optimized code with rapid iteration. Compile, test, adjust. In Phase 2 (AI for Architecture), we designed systems with some validation before deployment, but still with opportunities to adapt. In Phase 3 (AI for Chip Design), we enter a domain where **decisions are irrevocable** and **validation is incomplete**.
+We're now entering **Phase 3** of the course. In [Phase 1](/course/schedule/#phase-1-ai-for-software-weeks-3-5) (AI for Software), we optimized code with rapid iteration. Compile, test, adjust. In [Phase 2](/course/schedule/#phase-2-ai-for-architecture-weeks-6-10) (AI for Architecture), we designed systems with some validation before deployment, but still with opportunities to adapt. In **Phase 3** (AI for Chip Design), we enter a domain where **decisions are irrevocable** and **validation is incomplete**.
 
 To understand what AI agents would need to master chip design, we first need to understand what chip design actually is. Many students in this course come from software engineering or systems backgrounds. You've optimized CUDA kernels, architected distributed systems, tuned database queries. But you may have never seen the flow from RTL to silicon.
 
@@ -69,9 +69,9 @@ The fundamental differences:
 
 This gap is where **Electronic Design Automation (EDA)** tools live. They bridge human intent and physical reality.
 
-## The Chip Design Flow: A Roadmap
+## The Chip Design Flow: A Roadmap {#chip-design-flow}
 
-Chip design follows a flow with distinct stages, each with its own tools, challenges, and expertise requirements.
+Chip design follows a flow with distinct stages, each with its own tools, challenges, and expertise requirements. We'll walk through each stage in detail, then discuss what makes this fundamentally different from everything in Phases 1 and 2.
 
 <div class="mermaid">
 graph LR
@@ -95,47 +95,9 @@ graph LR
     style I fill:#8B1538,color:#fff
 </div>
 
-This might look sequential, but it's not. At every stage, you discover problems that send you back to earlier stages (shown by dotted lines). Verification finds RTL bugs. Synthesis reveals that your design won't meet timing. Physical design shows you can't route all the connections. Each iteration is expensive, both in time and human effort.
+This might look sequential, but it's not. At every stage, you discover problems that send you back to earlier stages (shown by dotted lines). Verification finds RTL bugs. Synthesis reveals that your design won't meet timing. Physical design shows you can't route all the connections. Each iteration is expensive, both in time and human effort. Let's walk through each stage.
 
-## Why Phase 3 Is Fundamentally Different
-
-Before diving into the technical details of each stage, let's understand what makes chip design uniquely challenging compared to everything we've tackled in Phases 1 and 2.
-
-### Iteration Timescales
-
-**Phase 1 (Software):** Edit → compile → test takes seconds to minutes. Deploy → observe → patch takes minutes to hours. Feedback is rapid and cheap.
-
-**Phase 2 (Architecture/Systems):** Design → simulate → validate takes hours to days. Deploy → monitor → adjust takes days to weeks. Feedback is delayed but manageable.
-
-**Phase 3 (Chip Design):** Design → verify → synthesize → place → tape out takes months. Fabricate → test takes additional months. If there's a problem, restart from design (months to years). **Feedback comes after irrevocable commitment.**
-
-### Cost of Errors
-
-**Phase 1:** Low - bugs are embarrassing but fixable
-
-**Phase 2:** Medium - downtime and reconfiguration costs
-
-**Phase 3:** Extreme - $10M-$100M+ per respin, plus time to market delays
-
-### Observability and Debugging
-
-**Phase 1:** High. Print statements, debuggers, profilers. Inspect any variable at any time. Reproduce bugs easily.
-
-**Phase 2:** Medium. Logging, metrics, distributed tracing. Limited observability in production. Reproducing issues requires complex setups.
-
-**Phase 3:** Low. Limited test pins on packaged chips. Can't observe internal signals directly. Debugging requires scan chains, JTAG, or failure analysis (destructive).
-
-### Validation Completeness
-
-**Phase 1:** Can test extensively before deployment. Can canary and gradually roll out. Production is additional validation.
-
-**Phase 2:** Can test at scale in staging environments. Can deploy incrementally. Some issues only emerge in production.
-
-**Phase 3:** Must validate entirely pre-silicon. All validation is model-based. No "try it and see" in production. First real validation is when silicon comes back.
-
-**This is the context for everything that follows.** As you read about each design stage, remember: every decision must be more careful, every validation more thorough, because there's no second chance after tape out.
-
-## Stage 1: RTL Design - Writing Hardware
+## Stage 1: RTL Design - Writing Hardware {#rtl-design}
 
 **RTL (Register Transfer Level)** is how humans describe hardware behavior. It's code, but it's fundamentally different from software code. You're not writing instructions that execute sequentially. You're describing **concurrent hardware that all operates simultaneously**.
 
@@ -178,7 +140,7 @@ These decisions require deep expertise. An experienced chip designer looks at a 
 
 **This is tacit knowledge** (Week 7's theme). It's accumulated through building many chips and developing intuition about what works.
 
-## Stage 2: Verification - Does It Actually Work?
+## Stage 2: Verification - Does It Actually Work? {#verification}
 
 Before spending months on synthesis and physical design, you need to verify that your RTL actually does what you intended. This is harder than software testing because:
 
@@ -229,7 +191,7 @@ Modern chip companies run billions of test cycles. They use constrained random t
 
 Despite all this, bugs still escape to silicon. **The verification problem is fundamentally incomplete: you're trying to prove absence of bugs, which is much harder than finding bugs that exist.**
 
-## Stage 3: Logic Synthesis - From Behavior to Gates
+## Stage 3: Logic Synthesis - From Behavior to Gates {#synthesis}
 
 Once you believe your RTL is correct, you synthesize it: convert behavioral descriptions into actual gates.
 
@@ -395,7 +357,7 @@ You can't simulate everything. You can't test every corner case. At some point, 
 
 **This is predictive reasoning (Week 9) under extreme uncertainty.** You're making a bet about physical behavior based on incomplete models. Get it wrong, and you discover problems only after spending millions on fabrication.
 
-## Stage 6: Tape Out and Fabrication
+## Stage 6: Tape Out and Fabrication {#tape-out}
 
 When signoff is complete, you **tape out**: send your final design to the fabrication facility.
 
@@ -419,7 +381,45 @@ If there's a critical bug, you don't have options. You can't patch hardware. **M
 
 **This is the irrevocable decision point.** Everything from Phases 1 and 2 had escape hatches. Software has patches. Systems have configuration changes. Hardware has tape out.
 
-## The EDA Landscape: Tools and Expertise
+## Why Phase 3 Is Fundamentally Different {#phase-3-differences}
+
+Now that you've seen the entire chip design flow, let's step back and understand what makes this uniquely challenging compared to everything we've tackled in [Phase 1](/course/schedule/#phase-1-ai-for-software-weeks-3-5) and [Phase 2](/course/schedule/#phase-2-ai-for-architecture-weeks-6-10).
+
+### Iteration Timescales
+
+**Phase 1 (Software):** Edit → compile → test takes seconds to minutes. Deploy → observe → patch takes minutes to hours. Feedback is rapid and cheap.
+
+**Phase 2 (Architecture/Systems):** Design → simulate → validate takes hours to days. Deploy → monitor → adjust takes days to weeks. Feedback is delayed but manageable.
+
+**Phase 3 (Chip Design):** Design → verify → synthesize → place → tape out takes months. Fabricate → test takes additional months. If there's a problem, restart from design (months to years). **Feedback comes after irrevocable commitment.**
+
+### Cost of Errors
+
+**Phase 1:** Low - bugs are embarrassing but fixable
+
+**Phase 2:** Medium - downtime and reconfiguration costs
+
+**Phase 3:** Extreme - $10M-$100M+ per respin, plus time to market delays
+
+### Observability and Debugging
+
+**Phase 1:** High. Print statements, debuggers, profilers. Inspect any variable at any time. Reproduce bugs easily.
+
+**Phase 2:** Medium. Logging, metrics, distributed tracing. Limited observability in production. Reproducing issues requires complex setups.
+
+**Phase 3:** Low. Limited test pins on packaged chips. Can't observe internal signals directly. Debugging requires scan chains, JTAG, or failure analysis (destructive).
+
+### Validation Completeness
+
+**Phase 1:** Can test extensively before deployment. Can canary and gradually roll out. Production is additional validation.
+
+**Phase 2:** Can test at scale in staging environments. Can deploy incrementally. Some issues only emerge in production.
+
+**Phase 3:** Must validate entirely pre-silicon. All validation is model-based. No "try it and see" in production. First real validation is when silicon comes back.
+
+These differences fundamentally change what AI agents must master. In Phase 1, agents could iterate rapidly. In Phase 2, they could adapt in real-time. In Phase 3, they must reason under irrevocability.
+
+## The EDA Landscape: Tools and Expertise {#eda-landscape}
 
 The EDA industry has evolved over 40+ years to address these challenges. Major players:
 
@@ -431,7 +431,7 @@ These tools encode decades of expertise: heuristics, algorithms, and optimizatio
 
 More tacit knowledge. Experienced chip designers develop intuition about tool behavior. They know which warnings to worry about ("This one is always benign for this design pattern"). They know how to work around tool limitations. They know which metrics indicate real problems vs. artifacts.
 
-## Where AI Comes In: Industry Perspective and Research Directions
+## Where AI Comes In: Industry Perspective and Research Directions {#ai-for-eda}
 
 Traditional EDA tools use "AI" in the broad sense: heuristic search, optimization algorithms (simulated annealing, genetic algorithms), and machine learning for specific sub-problems (timing prediction, congestion estimation). But they rely heavily on human expertise at every stage. The tools automate the mechanics, but humans specify what to build (architecture), guide the tools (constraints, floorplans), debug when things go wrong, make judgment calls about tradeoffs, and decide when design is "good enough".
 
