@@ -263,7 +263,7 @@ These heuristics encode enormous domain expertise. What constitutes a "good" int
 
 **This is another form of tacit knowledge.** The tools have built-in heuristics, but using them effectively requires understanding when to apply which techniques.
 
-## Stage 4: Physical Design - From Gates to Geometry
+## Stage 4: Physical Design - From Gates to Geometry {#physical-design}
 
 You now have a netlist: a list of gates and wires connecting them. But gates and wires aren't abstract. They're physical objects that must be arranged in two-dimensional space on a silicon die.
 
@@ -323,7 +323,7 @@ Designing the power delivery network requires predicting current consumption acr
 
 This is another circular dependency: power delivery depends on placement (where current is consumed), which depends on timing (which gates are used), which depends on synthesis (which gates are selected), which might depend on power constraints.
 
-## Stage 5: Signoff - The Final Validation
+## Stage 5: Signoff - The Final Validation {#signoff}
 
 Before you can fabricate, you must verify that your physical design will actually work. **Signoff** is the comprehensive validation phase:
 
