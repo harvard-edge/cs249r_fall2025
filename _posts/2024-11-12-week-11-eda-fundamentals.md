@@ -231,9 +231,9 @@ graph TD
     B --> D[Optimize for<br/>AREA]
     B --> E[Optimize for<br/>POWER]
     
-    C --> F["⚡ FAST<br/>✗ Large gates<br/>✗ More area<br/>✗ High power"]
-    D --> G["📦 SMALL<br/>✓ Minimal gates<br/>✗ Slower<br/>✓ Less power"]
-    E --> H["🔋 EFFICIENT<br/>✓ Low power<br/>✗ Slower<br/>≈ Medium area"]
+    C --> F["FAST<br/>Large gates<br/>More area<br/>High power"]
+    D --> G["SMALL<br/>Minimal gates<br/>Slower<br/>Less power"]
+    E --> H["EFFICIENT<br/>Low power<br/>Slower<br/>Medium area"]
     
     F --> I[Different<br/>Netlists]
     G --> I
@@ -439,7 +439,7 @@ But they rely heavily on human expertise at every stage. The tools automate the 
 
 ## Industry Perspective: Why AI for Chip Design Now?
 
-<span class="margin-note"><img src="/cs249r_fall2025/assets/images/blog_images/week_11/mark_ren.jpg" alt="Mark Ren" style="width: 80px; height: 80px; border-radius: 8px; float: left; margin-right: 10px; margin-bottom: 10px; margin-top: 5px;"> **Mark Ren** is a researcher at NVIDIA working on AI for EDA. Previously at IBM Research, he worked on physical design, placement, and optimization tools. His research focuses on making EDA tools more scalable and enabling better designer-tool interaction through AI agents.</span>
+<span class="margin-note"><img src="/cs249r_fall2025/assets/images/blog_images/week_11/mark_ren.png" alt="Mark Ren" style="width: 80px; height: 80px; border-radius: 8px; float: left; margin-right: 10px; margin-bottom: 10px; margin-top: 5px;"> **Mark Ren** is a researcher at NVIDIA working on AI for EDA. Previously at IBM Research, he worked on physical design, placement, and optimization tools. His research focuses on making EDA tools more scalable and enabling better designer-tool interaction through AI agents.</span>
 
 Our guest speaker, Mark Ren, provided crucial context about why AI for chip design is both urgent and challenging. His perspective from working on EDA at IBM and now NVIDIA reveals why the industry is at an inflection point.
 

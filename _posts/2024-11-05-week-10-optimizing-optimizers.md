@@ -91,8 +91,8 @@ The KV cache problem connects to another unique characteristic: LLM inference ha
 
 <div class="mermaid">
 graph LR
-    A[Request<br/>Arrives] --> B[Prefill Phase<br/>🔥 Compute-Bound<br/>✓ Large Batches<br/>✓ High Parallelism]
-    B --> C[Decode Phase<br/>💾 Memory-Bound<br/>✓ Small Batches<br/>✓ Low Latency]
+    A[Request<br/>Arrives] --> B[Prefill Phase<br/>Compute-Bound<br/>Large Batches<br/>High Parallelism]
+    B --> C[Decode Phase<br/>Memory-Bound<br/>Small Batches<br/>Low Latency]
     C --> D{More<br/>Tokens?}
     D -->|Yes| C
     D -->|No| E[Complete]
