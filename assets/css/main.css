@@ -613,24 +613,28 @@ h1 + hr, h2 + hr {
 
 /* Table of Contents Sidebar */
 .blog-post-container {
-    display: flex;
-    gap: 2rem;
     position: relative;
-    align-items: flex-start;
 }
 
 .toc-sidebar {
-    position: sticky;
-    top: 100px;
+    position: fixed;
+    top: 120px;
+    left: calc((100vw - 900px) / 2 - 280px);
     width: 250px;
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 140px);
     overflow-y: auto;
     padding: 1.5rem;
     background-color: #f8f9fa;
     border-radius: 8px;
     border: 1px solid #dee2e6;
-    flex-shrink: 0;
-    order: -1;
+    display: block;
+}
+
+/* Hide TOC on screens that don't have enough space */
+@media (max-width: 1400px) {
+    .toc-sidebar {
+        display: none;
+    }
 }
 
 .toc-header {
@@ -705,19 +709,16 @@ h1 + hr, h2 + hr {
     min-width: 0;
 }
 
-/* Responsive TOC */
-@media (max-width: 1200px) {
+/* Show TOC inline on smaller screens */
+@media (max-width: 1400px) {
     .toc-sidebar {
+        display: block;
         position: relative;
         top: 0;
+        left: 0;
         width: 100%;
         max-height: none;
         margin-bottom: 2rem;
-        order: 0;
-    }
-
-    .blog-post-container {
-        flex-direction: column;
     }
 
     .toc-toggle {
