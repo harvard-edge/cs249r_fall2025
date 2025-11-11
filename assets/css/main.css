@@ -601,6 +601,15 @@ h1 + hr, h2 + hr {
     padding: 0 1rem;
 }
 
+/* Mermaid Diagrams */
+.mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: center;
+}
 
 /* Post Navigation */
 .post-navigation {
