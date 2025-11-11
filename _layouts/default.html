@@ -207,6 +207,61 @@
                     tocSidebar.classList.toggle('collapsed');
                 });
             }
+
+            // Image zoom functionality
+            const blogContent = document.querySelector('.blog-content');
+            if (blogContent) {
+                // Create modal elements
+                const modal = document.createElement('div');
+                modal.className = 'image-modal';
+                modal.innerHTML = `
+                    <span class="image-modal-close">&times;</span>
+                    <img class="image-modal-content" alt="Zoomed image">
+                    <div class="image-modal-caption"></div>
+                `;
+                document.body.appendChild(modal);
+
+                const modalImg = modal.querySelector('.image-modal-content');
+                const modalCaption = modal.querySelector('.image-modal-caption');
+                const closeBtn = modal.querySelector('.image-modal-close');
+
+                // Add click handlers to all images in blog content
+                const images = blogContent.querySelectorAll('img');
+                images.forEach(img => {
+                    // Skip margin note images and very small images
+                    if (img.closest('.margin-note') || img.width < 100) {
+                        return;
+                    }
+
+                    img.addEventListener('click', function() {
+                        modal.classList.add('active');
+                        modalImg.src = this.src;
+                        modalCaption.textContent = this.alt || '';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+
+                // Close modal on click
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal || e.target === modalImg) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
         });
     </script>
 <!-- Force rebuild trigger 2 -->
