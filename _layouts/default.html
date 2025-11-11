@@ -163,6 +163,23 @@
                                     link.classList.remove('active');
                                     if (currentHeading && link.getAttribute('href') === '#' + currentHeading.id) {
                                         link.classList.add('active');
+                                        // Auto-scroll TOC to keep active item visible
+                                        const tocSidebar = document.querySelector('.toc-sidebar');
+                                        if (tocSidebar && link) {
+                                            const linkTop = link.offsetTop;
+                                            const linkBottom = linkTop + link.offsetHeight;
+                                            const scrollTop = tocSidebar.scrollTop;
+                                            const scrollBottom = scrollTop + tocSidebar.clientHeight;
+                                            
+                                            // Check if link is outside visible area
+                                            if (linkTop < scrollTop) {
+                                                // Scroll up to show link at top
+                                                tocSidebar.scrollTop = linkTop - 20;
+                                            } else if (linkBottom > scrollBottom) {
+                                                // Scroll down to show link at bottom
+                                                tocSidebar.scrollTop = linkBottom - tocSidebar.clientHeight + 20;
+                                            }
+                                        }
                                     }
                                 });
                                 
