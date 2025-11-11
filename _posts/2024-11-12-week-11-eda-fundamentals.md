@@ -73,7 +73,7 @@ This gap is where **Electronic Design Automation (EDA)** tools live. They bridge
 
 Chip design follows a flow with distinct stages, each with its own tools, challenges, and expertise requirements.
 
-```mermaid
+<div class="mermaid">
 graph LR
     A[Specification] --> B[RTL Design]
     B --> C[Verification]
@@ -93,7 +93,7 @@ graph LR
     style G fill:#A51C30,color:#fff
     style H fill:#A51C30,color:#fff
     style I fill:#8B1538,color:#fff
-```
+</div>
 
 This might look sequential, but it's not. At every stage, you discover problems that send you back to earlier stages (shown by dotted lines). Verification finds RTL bugs. Synthesis reveals that your design won't meet timing. Physical design shows you can't route all the connections. Each iteration is expensive, both in time and human effort.
 
@@ -223,7 +223,7 @@ These objectives conflict:
 
 **The same RTL can synthesize to billions of different gate-level implementations.** The synthesizer makes choices at every step: which gate from the library (2-input NAND or 3-input NOR?), which drive strength (1x, 2x, 4x?), how to structure the logic (tree of gates vs. chain of gates?), where to insert pipeline registers?
 
-```mermaid
+<div class="mermaid">
 graph TD
     A[Same RTL Input] --> B{Synthesis<br/>Strategy}
     
@@ -245,7 +245,7 @@ graph TD
     style F fill:#ffebee
     style G fill:#e8f5e9
     style H fill:#fff3e0
-```
+</div>
 
 This is an **optimization problem** with interdependent constraints - co-design reasoning (Week 8) again. You can't optimize timing without considering area and power. You can't choose gate sizes without knowing the downstream load. Decisions ripple through the entire design.
 
