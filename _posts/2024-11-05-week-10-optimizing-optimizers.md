@@ -89,6 +89,20 @@ The KV cache problem connects to another unique characteristic: LLM inference ha
 
 **Decode phase:** Generate output tokens one at a time. Each token generation is memory-bound (loading the KV-cache), sequential (can't parallelize token generation for a single request), and benefits from small batches (less memory contention).
 
+<div class="mermaid">
+graph LR
+    A[Request<br/>Arrives] --> B[Prefill Phase<br/>🔥 Compute-Bound<br/>✓ Large Batches<br/>✓ High Parallelism]
+    B --> C[Decode Phase<br/>💾 Memory-Bound<br/>✓ Small Batches<br/>✓ Low Latency]
+    C --> D{More<br/>Tokens?}
+    D -->|Yes| C
+    D -->|No| E[Complete]
+    
+    style B fill:#ffebee
+    style C fill:#e3f2fd
+    style A fill:#e9ecef
+    style E fill:#e8f5e9
+</div>
+
 The optimal batching strategy for prefill *hurts* decode performance, and vice versa. Pack a large batch for efficient prefill, and you'll thrash memory during decode. Use small batches for decode efficiency, and you waste compute during prefill.
 
 You must dynamically decide: which phase to prioritize? Which requests to batch together? When to accept new requests versus finishing current ones? These decisions ripple through the system, affecting throughput, latency, and fairness.
