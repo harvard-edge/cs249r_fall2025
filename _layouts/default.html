@@ -209,8 +209,8 @@
             }
 
             // Image zoom functionality
-            const blogContent = document.querySelector('.blog-content');
-            if (blogContent) {
+            const blogContentForImages = document.querySelector('.blog-content');
+            if (blogContentForImages) {
                 // Create modal elements
                 const modal = document.createElement('div');
                 modal.className = 'image-modal';
@@ -226,7 +226,7 @@
                 const closeBtn = modal.querySelector('.image-modal-close');
 
                 // Add click handlers to all images in blog content
-                const images = blogContent.querySelectorAll('img');
+                const images = blogContentForImages.querySelectorAll('img');
                 images.forEach(img => {
                     // Skip margin note images and very small images
                     if (img.closest('.margin-note') || img.width < 100) {
