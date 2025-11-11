@@ -630,13 +630,6 @@ h1 + hr, h2 + hr {
     display: block;
 }
 
-/* Hide TOC on screens that don't have enough space */
-@media (max-width: 1400px) {
-    .toc-sidebar {
-        display: none;
-    }
-}
-
 .toc-header {
     display: flex;
     justify-content: space-between;
@@ -709,7 +702,7 @@ h1 + hr, h2 + hr {
     min-width: 0;
 }
 
-/* Show TOC inline on smaller screens */
+/* Mobile/Tablet: Show TOC inline at top of post */
 @media (max-width: 1400px) {
     .toc-sidebar {
         display: block;
@@ -736,6 +729,28 @@ h1 + hr, h2 + hr {
     .toc-icon {
         display: inline-block;
         transition: transform 0.3s ease;
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 768px) {
+    .toc-sidebar {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .toc-header h3 {
+        font-size: 0.95rem;
+    }
+
+    .toc-list a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .toc-list .toc-h3 {
+        padding-left: 1rem;
+        font-size: 0.8rem;
     }
 }
 
