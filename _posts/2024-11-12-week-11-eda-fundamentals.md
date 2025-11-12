@@ -381,6 +381,11 @@ If there's a critical bug, you don't have options. You can't patch hardware. **M
 
 **This is the irrevocable decision point.** Everything from Phases 1 and 2 had escape hatches. Software has patches. Systems have configuration changes. Hardware has tape out.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_11/chipdesign.jpg" alt="Chip design flow steps (VVDN Technologies)">
+<figcaption><em>Chip design spans many sequential and iterative steps from specification to silicon and typically takes months to years to complete. The complexity leaves substantial room for automation, with improvements carrying significant implications for cost, time-to-market, and reliability. (VVDN Technologies)</em></figcaption>
+</figure>
+
 ## Why Phase 3 Is Fundamentally Different {#phase-3-differences}
 
 Now that you've seen the entire chip design flow, let's step back and understand what makes this uniquely challenging compared to everything we've tackled in [Phase 1](/course/schedule/#phase-1-ai-for-software-weeks-3-5) and [Phase 2](/course/schedule/#phase-2-ai-for-architecture-weeks-6-10).

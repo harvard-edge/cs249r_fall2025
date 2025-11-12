@@ -81,6 +81,11 @@ This creates cascading scheduling challenges. You can't allocate fixed memory pe
 
 Traditional memory management assumes you know resource needs upfront. Generative AI makes this assumption untenable. Systems like [vLLM with PagedAttention](https://arxiv.org/abs/2309.06180) tackle this by treating KV cache like virtual memory, allowing more flexible allocation. But even with better memory management, the fundamental challenge remains: you must adapt continuously as resource needs emerge.
 
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_10/paged_attention.png" alt="PagedAttention: KV-cache paging for flexible allocation (vLLM)">
+<figcaption><em>PagedAttention treats the KV cache like virtual memory, paging key/value blocks to enable flexible allocation and reduce memory movement during decoding. (vLLM)</em></figcaption>
+</figure>
+
 ### Multi-Phase Workloads with Conflicting Optimization Goals
 
 The KV cache problem connects to another unique characteristic: LLM inference has two distinct phases with opposing optimization strategies.
@@ -170,6 +175,11 @@ The paper's insight is elegant. System configurations are already text. Logs are
 Take configuration files, system logs, and telemetry as text input. Output performance metrics also rendered as text. Use a 60 million parameter encoder decoder transformer, trained to map input text to output text.
 
 The results on [Google's Borg cluster scheduler](https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/) are striking. The model achieves 0.99 rank correlation on resource efficiency prediction. It captures patterns that traditional feature engineering misses.
+
+<figure class="post-figure">
+<img src="/cs249r_fall2025/assets/images/blog_images/week_10/regression.png" alt="Text-to-text regression for system performance prediction (Akhauri et al.)">
+<figcaption><em>A language model is trained to predict system-wide performance metrics directly from configurations, logs, and telemetry. (Akhauri et al.)</em></figcaption>
+</figure>
 
 ### Why Semantic Understanding Works
 
