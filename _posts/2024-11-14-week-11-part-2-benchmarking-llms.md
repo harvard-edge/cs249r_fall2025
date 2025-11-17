@@ -25,9 +25,16 @@ In [Part 1](/blog/2024/11/12/eda-fundamentals-code-to-silicon/), we saw that RTL
 
 Consider this simple request: "Design a FIFO buffer."
 
-A software engineer might ask about the interface, overflow behavior, and expected throughput. Standard questions for any queue implementation.
+The questions each discipline asks reveal how different the problem spaces are:
 
-But a hardware engineer immediately thinks deeper: Which clock domain? What reset behavior? Are we optimizing for area or speed? What's the power budget? Which standard cell library are we targeting? What frequency do we need to hit?
+| **Software Engineer Asks** | **Hardware Engineer Asks** |
+|---------------------------|---------------------------|
+| What's the interface? | Which clock domain? |
+| What should happen on overflow? | What's the reset behavior (sync vs async)? |
+| What's the expected throughput? | Are we optimizing for area or speed? |
+| | What's the power budget? |
+| | Which standard cell library? |
+| | What's the target frequency? |
 
 The same natural language description can map to dozens of valid but fundamentally different hardware implementations. This is the **specification ambiguity problem**.
 
@@ -47,18 +54,38 @@ You need to evaluate not just functional correctness, but also **implementabilit
 
 Remember from last week: chip design has an irrevocability constraint. You can't patch hardware after fabrication. This means the verification process is fundamentally different from software.
 
-In software debugging:
-```
-Write code → Run → See error → Fix → Repeat
-(cycle time: seconds to minutes)
-```
+<div class="mermaid">
+graph TD
+    subgraph "Software Debugging Loop"
+    A1[Write Code] --> A2[Run]
+    A2 --> A3{Error?}
+    A3 -->|Yes| A4[Fix]
+    A4 --> A1
+    A3 -->|No| A5[Done]
+    end
+    
+    subgraph "Hardware Verification Loop"
+    B1[Write RTL] --> B2[Synthesize]
+    B2 --> B3[Check Timing]
+    B3 --> B4[Simulate]
+    B4 --> B5[Check Coverage]
+    B5 --> B6[Place & Route]
+    B6 --> B7[Physical Verify]
+    B7 --> B8{Issue?}
+    B8 -->|Yes| B9[Debug]
+    B9 --> B1
+    B8 -->|No| B10[Tape Out]
+    end
+    
+    style A1 fill:#e8f5e9
+    style A5 fill:#e8f5e9
+    style B1 fill:#fff3e0
+    style B10 fill:#A51C30,color:#fff
+    style B8 fill:#ffebee
+</div>
 
-In hardware verification:
-```
-Write RTL → Synthesize → Check timing → Simulate → Check coverage → 
-Place & Route → Verify → Find issue → Back to RTL
-(cycle time: hours to days per iteration)
-```
+**Software cycle time: seconds to minutes**  
+**Hardware cycle time: hours to days per iteration**
 
 Any benchmark needs to capture this multi-stage feedback loop, not just "does it compile?"
 
@@ -160,7 +187,15 @@ For software, this is already a problem. For hardware, it's worse. There's less 
 
 In [Week 2](/blog/2024/09/08/week-2-fundamental-challenges/), we talked about the challenge of unclear specifications. Real-world design specs are often incomplete, missing critical corner cases. They're ambiguous, with multiple valid interpretations. They evolve as requirements change during the design process. And they're deeply context-dependent, relying on unwritten assumptions about the broader system.
 
-But benchmark problems need clear, unambiguous specifications to enable automatic evaluation. This creates a fundamental gap. Benchmark specs are precise, complete, and static. Real-world specs are vague, incomplete, and constantly evolving.
+But benchmark problems need clear, unambiguous specifications to enable automatic evaluation. This creates a fundamental gap:
+
+| **Aspect** | **Benchmark Specs** | **Real-World Specs** |
+|-----------|-------------------|-------------------|
+| **Completeness** | Fully specified | Incomplete, missing corner cases |
+| **Clarity** | Unambiguous | Multiple valid interpretations |
+| **Stability** | Fixed and static | Evolving during design |
+| **Context** | Self-contained | Deeply system-dependent |
+| **Testability** | Verifiable automatically | Requires human judgment |
 
 An AI that performs well on benchmarks might struggle with the messy reality of actual chip design.
 
