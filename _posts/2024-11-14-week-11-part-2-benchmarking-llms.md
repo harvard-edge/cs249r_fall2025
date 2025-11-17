@@ -266,41 +266,41 @@ These questions come from experience and understanding of the broader system con
 
 ## Looking Forward: What Would Better Benchmarks Look Like?
 
-Based on this week's papers and the challenges we've discussed, here's what next-generation RTL benchmarks might need:
+At the start of this post, we noted that software benchmarks like HumanEval work by giving a model a problem description, running tests, and getting pass/fail results. Simple, binary, focused on functional correctness.
 
-### 1. Multi-Stage Evaluation
-Don't just test RTL generation. Test the full flow:
-- Specification clarification (asking the right questions)
-- Initial design (generating RTL)
-- Verification (creating testbenches)
-- Debugging (fixing issues)
-- Optimization (improving PPA)
+But everything we've discussed shows why that approach breaks down for hardware. The feedback loop diagram showed that hardware verification is multi-stage, not single-shot. The specification tables revealed that hardware problems are context-dependent and have multiple valid solutions. The papers demonstrated that quality (PPA metrics) matters as much as correctness.
 
-### 2. Quality-Aware Metrics
-Move beyond pass@k to include:
-- Synthesis QoR (area, timing, power)
-- Verification coverage
-- Code quality and readability
-- Modularity and reusability
+So what would hardware benchmarks need to look like?
 
-### 3. Contextual Problems
-Include problems that require:
-- Understanding system-level constraints
-- Making trade-offs between competing objectives
-- Reasoning about manufacturing and yield
+### 1. Multi-Stage Evaluation, Not Single-Shot Testing
 
-### 4. Ambiguity and Iteration
-Real-world problems have:
-- Incomplete specifications (requiring clarification)
-- Evolving requirements (requiring adaptation)
-- Conflicting constraints (requiring negotiation)
+**Software benchmarks**: Generate code → Run tests → Pass/fail
 
-### 5. Verification-First Design
-Test the ability to:
-- Generate comprehensive testbenches
-- Identify corner cases
-- Create meaningful assertions
-- Debug failures systematically
+**Hardware needs**: Following our feedback loop, benchmarks should test specification clarification (can the AI ask the right questions like "which clock domain?"), initial RTL generation, testbench creation, debugging when synthesis reveals timing issues, and optimization for PPA. Each stage feeds information to the next, just like real chip design.
+
+### 2. Quality Metrics, Not Just Correctness
+
+**Software benchmarks**: Measure pass@k - how many attempts to get one working solution
+
+**Hardware needs**: Remember the correctness problem from earlier? Synthesis might fail, timing might not close, area might explode. We need metrics for synthesis QoR (area, timing, power), verification coverage (did tests exercise corner cases?), and implementation quality (is it maintainable? reusable?).
+
+### 3. Contextual Problems, Not Self-Contained Puzzles
+
+**Software benchmarks**: Problems are typically self-contained with complete specifications
+
+**Hardware needs**: Our benchmark vs real-world table showed that real specs are context-dependent. Problems should require understanding system-level constraints (this FIFO connects to a slow peripheral), making trade-offs (speed vs power), and reasoning about manufacturing (will this close timing at worst-case process corners?).
+
+### 4. Handling Ambiguity, Not Assuming Clarity
+
+**Software benchmarks**: Precise specifications with single correct answers
+
+**Hardware needs**: As we saw with "design a FIFO," real hardware specs are incomplete and evolving. Benchmarks should test whether AI can identify missing information, ask clarifying questions, and adapt when requirements change mid-design.
+
+### 5. Verification-Centric Evaluation
+
+**Software benchmarks**: Tests are provided; just make code pass them
+
+**Hardware needs**: The irrevocability constraint means verification is paramount. Benchmarks should test the ability to generate comprehensive testbenches, identify corner cases the spec didn't mention, create meaningful assertions, and debug systematically when issues arise.
 
 ## The Uncomfortable Reality
 
