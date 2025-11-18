@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 11 Part 2: Why You Can't Benchmark Hardware Like Software"
+title: "Week 11 Part 2: Why You Can't Benchmark AI for Hardware Like You Do for Software"
 date: 2024-11-14
 author: "Vijay Janapa Reddi"
 categories: [hardware, eda, benchmarks, datasets]
