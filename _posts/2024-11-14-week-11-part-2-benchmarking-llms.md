@@ -308,6 +308,8 @@ So what would hardware benchmarks need to look like?
 
 ## The Uncomfortable Reality
 
+These five proposals sketch what better hardware benchmarks could look like. But proposing ideal benchmarks is easier than acknowledging the fundamental challenge we face.
+
 Here's what the papers don't say but we should acknowledge: **We might be quite far from AI systems that can meaningfully assist with RTL design.**
 
 Not because the technical approaches are wrong. The MCTS paper shows genuine improvements. The comprehensive benchmark paper identifies real limitations.
@@ -315,6 +317,8 @@ Not because the technical approaches are wrong. The MCTS paper shows genuine imp
 But because the gap between "generate a module that passes tests" and "design a chip that works reliably in production" is enormous.
 
 Remember from [Week 4](/blog/2024/09/24/week-4-production-reality/) the difference between proof-of-concept systems and production-ready systems? RTL generation faces an even higher bar. Hardware can't be patched post-deployment. Verification must be exhaustive, not probabilistic. Manufacturing costs make mistakes extremely expensive. And system integration requires deep contextual understanding that goes far beyond the module specification.
+
+This reality raises important questions for us to consider:
 
 ## Discussion Questions
 
@@ -325,6 +329,8 @@ Remember from [Week 4](/blog/2024/09/24/week-4-production-reality/) the differen
 **For those with ML backgrounds:** How do we address the training data contamination problem when the domain is small and most professional code is proprietary?
 
 **The deeper question:** Are we trying to automate the wrong thing? Should we focus on AI assistants that help human designers, rather than autonomous AI designers?
+
+Let's step back and synthesize what we've learned.
 
 ## Synthesis: What Benchmarking Reveals About Phase 3
 
