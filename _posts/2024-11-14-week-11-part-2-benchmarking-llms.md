@@ -207,32 +207,6 @@ Real hardware design is iterative and collaborative. Designers consult with veri
 
 None of this appears in current benchmarks. We're testing **individual capability** when the real task requires **collaborative problem-solving**.
 
-## Connecting to Our Course Themes
-
-Let's revisit the three reasoning challenges we identified in Part 1:
-
-### 1. Tacit Knowledge (Week 7)
-
-Benchmarks can only test explicit knowledge. How do you benchmark "this design pattern usually causes timing issues in the place-and-route stage"?
-
-The MCTS paper partially addresses this by incorporating synthesis feedback into the search process. But it still requires that knowledge to be learnable from the reward signal.
-
-### 2. Co-design Reasoning (Week 8)
-
-Remember the [circular dependencies in hardware-software co-design](/blog/2024/10/22/week-8-mapping-codesign/)? RTL design has similar circular dependencies:
-- Clock frequency depends on critical path
-- Critical path depends on implementation choices
-- Implementation choices depend on timing constraints
-- Timing constraints depend on target frequency
-
-Good benchmarks need to test this co-design reasoning, not just isolated module generation.
-
-### 3. Irrevocability Constraints
-
-Software can be patched. Hardware cannot. This fundamentally changes the verification requirements.
-
-In software testing, we often accept "good enough" coverage and fix bugs in production. In hardware, this isn't an option. How do benchmarks capture this higher bar for correctness?
-
 ## The Data Problem: Quality vs. Quantity
 
 Mark Ren mentioned last week that EDA tools have detailed logs but limited data diversity. This creates a fundamental tension for benchmark creation.
@@ -265,6 +239,32 @@ Consider this analogy from earlier on:
 A human chip designer looking at "design a FIFO" immediately asks contextual questions. What's this FIFO used for? That determines width and depth. What are the read/write patterns? That drives implementation choices. What's the timing budget? That affects pipelining decisions. What's the area budget? That determines memory style.
 
 These questions come from experience and understanding of the broader system context. An AI that just pattern-matches on "FIFO" will miss this reasoning.
+
+## Connecting to Our Course Themes
+
+We've identified multiple challenges with benchmarking AI for hardware. Let's pause to connect these back to the reasoning challenges we identified in Part 1:
+
+### 1. Tacit Knowledge (Week 7)
+
+Benchmarks can only test explicit knowledge. How do you benchmark "this design pattern usually causes timing issues in the place-and-route stage"?
+
+The MCTS paper partially addresses this by incorporating synthesis feedback into the search process. But it still requires that knowledge to be learnable from the reward signal.
+
+### 2. Co-design Reasoning (Week 8)
+
+Remember the [circular dependencies in hardware-software co-design](/blog/2024/10/22/week-8-mapping-codesign/)? RTL design has similar circular dependencies:
+- Clock frequency depends on critical path
+- Critical path depends on implementation choices
+- Implementation choices depend on timing constraints
+- Timing constraints depend on target frequency
+
+Good benchmarks need to test this co-design reasoning, not just isolated module generation.
+
+### 3. Irrevocability Constraints
+
+Software can be patched. Hardware cannot. This fundamentally changes the verification requirements.
+
+In software testing, we often accept "good enough" coverage and fix bugs in production. In hardware, this isn't an option. How do benchmarks capture this higher bar for correctness?
 
 ## Looking Forward: What Would Better Benchmarks Look Like?
 
