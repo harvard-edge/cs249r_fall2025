@@ -173,11 +173,11 @@ Learn which patterns work → Focus on promising directions
 
 The MCTS approach explicitly models the fact that **early design decisions have far-reaching consequences** that aren't immediately apparent.
 
-## The Deeper Tension: Benchmarks vs. Reality
+## The Benchmark-Reality Gap
 
-Here's the uncomfortable truth: **good benchmarks might not reflect real design tasks**.
+Even with better datasets and smarter search strategies, deeper questions remain. Here's the uncomfortable truth: **good benchmarks might not reflect real design tasks**. Let's examine four fundamental mismatches between benchmark evaluation and real-world chip design.
 
-### The Training Data Contamination Problem
+### 1. Training Data Contamination
 
 We discussed this back in [Week 3 with code generation](/blog/2024/09/17/week-3-code-optimization-paradox/). LLMs are trained on massive amounts of text from the internet: GitHub repositories with Verilog code, academic papers with RTL examples, documentation with common design patterns, Stack Overflow discussions about HDL quirks. All of this becomes part of the model's knowledge.
 
@@ -185,7 +185,7 @@ When you create a benchmark, how do you ensure it's testing true design capabili
 
 For software, this is already a problem. For hardware, it's worse. There's less open-source HDL code available online since most professional designs are proprietary. The design space is more constrained - you can't just try random things and see what works. And verification is much harder to automate, making it difficult to validate novel approaches quickly.
 
-### The Spec Quality Problem
+### 2. Spec Quality Mismatch
 
 In [Week 2](/blog/2024/09/08/week-2-fundamental-challenges/), we talked about the challenge of unclear specifications. Real-world design specs are often incomplete, missing critical corner cases. They're ambiguous, with multiple valid interpretations. They evolve as requirements change during the design process. And they're deeply context-dependent, relying on unwritten assumptions about the broader system.
 
@@ -201,13 +201,13 @@ But benchmark problems need clear, unambiguous specifications to enable automati
 
 An AI that performs well on benchmarks might struggle with the messy reality of actual chip design.
 
-### The Human-in-the-Loop Problem
+### 3. Missing Human Collaboration
 
 Real hardware design is iterative and collaborative. Designers consult with verification engineers about corner cases. Architects provide feedback on microarchitecture choices. Physical design teams push back on unrealistic timing constraints. Customers clarify requirements as they better understand what's possible.
 
 None of this appears in current benchmarks. We're testing **individual capability** when the real task requires **collaborative problem-solving**.
 
-## The Data Problem: Quality vs. Quantity
+### 4. The Quality vs. Quantity Dilemma
 
 Mark Ren mentioned last week that EDA tools have detailed logs but limited data diversity. This creates a fundamental tension for benchmark creation.
 
@@ -219,9 +219,11 @@ The comprehensive benchmark paper argues for quality, but then how do you get en
 
 This is similar to the challenge we saw in [Week 10 with LLM serving](/blog/2024/11/05/optimizing-optimizers-llm-adaptation/). Systems need diverse, representative workloads to learn good policies. But hardware design workloads are inherently less diverse than software workloads because physical constraints limit the design space.
 
-## The Meta-Question: What Are We Actually Measuring?
+These four gaps - contamination, specification mismatch, missing collaboration, and data scarcity - reveal that the problem isn't just "how do we build better benchmarks?" but rather "what are benchmarks actually measuring?"
 
-When we evaluate LLMs on RTL generation, what capability are we really testing?
+## What Are We Actually Measuring?
+
+Given these benchmark-reality gaps, when we evaluate LLMs on RTL generation, what capability are we really testing?
 
 **Pattern matching?**
 "I've seen similar designs in training data, let me adapt them."
