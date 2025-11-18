@@ -7,15 +7,17 @@ categories: [hardware, eda, benchmarks, datasets]
 permalink: /blog/2024/11/14/week-11-part-2-benchmarking-llms-hardware/
 ---
 
-*Note: I wasn't in class this week, but the papers you read raise fundamental questions about how we evaluate AI systems for chip design. This post explores the challenges of creating meaningful benchmarks for hardware generation.*
+*Note: I wasn't in class this week, but the papers you read raise fundamental questions about how we evaluate AI systems for chip design. This post uses benchmarking as a lens to understand what makes Phase 3 fundamentally different from the earlier phases of our course.*
 
-## The Evaluation Problem
+## The Evaluation Problem: A Window into Phase 3
 
-Last week, Mark Ren told us about the scaling crisis in chip design and why AI might help. This week's papers ask a more fundamental question: **How do we actually know if AI is getting better at chip design?**
+Last week, we entered Phase 3 - AI for Chip Design. Mark Ren told us about the scaling crisis and why AI might help. But before diving deep into techniques, this week's papers force us to confront a more fundamental question: **How do we actually know if AI is getting better at chip design?**
 
-For code generation in software, we have benchmarks like HumanEval, MBPP, and SWE-bench. You give the model a problem description, it generates code, you run tests, and you get a pass/fail result. Simple, right?
+This isn't just about benchmarking methodology. It's about understanding what makes Phase 3 different from Phase 1 (AI for Software) and Phase 2 (AI for Architecture).
 
-Hardware design is different. And the differences matter.
+In Phase 1, we had benchmarks like HumanEval and MBPP. You give the model a problem description, it generates code, you run tests, and you get a pass/fail result. The iteration cycle is fast - seconds to minutes. The verification is straightforward - does it work?
+
+Phase 3 breaks all these assumptions. And examining why reveals the core challenges of applying AI to chip design.
 
 ## Why Hardware Benchmarks Are Hard
 
@@ -322,21 +324,25 @@ Remember from [Week 4](/blog/2024/09/24/week-4-production-reality/) the differen
 
 **The deeper question:** Are we trying to automate the wrong thing? Should we focus on AI assistants that help human designers, rather than autonomous AI designers?
 
-## Synthesis
+## Synthesis: What Benchmarking Reveals About Phase 3
 
-The papers this week highlight a crucial truth: **evaluation methodology shapes research direction**.
+We started by asking how to evaluate AI for chip design. But the journey through these papers reveals something deeper: **why Phase 3 is fundamentally different from what came before**.
 
-If our benchmarks only test simple pattern matching, we'll build systems that excel at pattern matching. If we want AI that can reason about design trade-offs, handle ambiguity, and verify correctness rigorously, we need benchmarks that test those capabilities.
+In Phase 1 (AI for Software), we could evaluate with fast iteration cycles and clear correctness criteria. Write code, run tests, get feedback in seconds. The problems were self-contained.
 
-The MCTS paper shows that incorporating richer feedback (synthesis results, not just functional tests) enables better search strategies. This suggests a path forward: **benchmarks that capture the full design flow, not just code generation**.
+In Phase 2 (AI for Architecture), we added complexity - tacit knowledge, co-design reasoning, performance prediction. But we could still measure results relatively quickly and iterate based on profiling data.
 
-But we should also recognize the limits. Some aspects of chip design - the tacit knowledge, the engineering judgment, the system-level reasoning - might be fundamentally hard to benchmark because they require human interaction and contextual understanding.
+Phase 3 adds irrevocability. The feedback loops we diagrammed - hours to days per iteration. The multi-stage verification before you can know if a design really works. The manufacturing costs that make mistakes catastrophically expensive. This changes everything about how AI can help.
 
-Perhaps the goal shouldn't be "autonomous RTL generation" but rather "AI-assisted design exploration." Not replacing human designers, but augmenting their capabilities to explore larger design spaces and identify promising approaches faster.
+The papers this week highlight a crucial truth: **evaluation methodology shapes research direction**. If our benchmarks only test pattern matching, we'll build systems that excel at pattern matching. The MCTS paper shows that incorporating richer feedback (synthesis results, not just functional tests) enables better search strategies. This suggests a path forward: **benchmarks that capture the full design flow, not just code generation**.
+
+But we should also recognize the limits. The three reasoning challenges from [Part 1](/blog/2024/11/12/eda-fundamentals-code-to-silicon/) - tacit knowledge, co-design reasoning, and irrevocability - might be fundamentally hard to benchmark because they require human interaction and contextual understanding.
+
+Perhaps the goal for Phase 3 shouldn't be "autonomous RTL generation" like we might aim for in Phase 1's code generation. Instead, maybe it's "AI-assisted design exploration." Not replacing human designers, but augmenting their capabilities to explore larger design spaces and identify promising approaches faster, while humans provide the judgment and context that's hard to encode.
 
 That would require different benchmarks. Not "can the AI generate a correct module?" but "can the AI help a human designer explore options, identify problems, and make informed trade-offs?"
 
-This is a much harder problem to benchmark. But it might be the right problem to solve.
+This reframing - from autonomous generation to augmented exploration - might be what distinguishes successful AI for chip design from approaches that simply try to scale up what worked for code generation.
 
 ---
 
