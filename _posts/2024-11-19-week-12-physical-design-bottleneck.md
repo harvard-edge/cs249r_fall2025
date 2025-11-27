@@ -2,7 +2,7 @@
 layout: post
 title: "Week 12: When Physics Becomes the Bottleneck - Physical Design and the Architecture Constraint Problem"
 date: 2024-11-19
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [hardware, physical-design, chip-design]
 permalink: /blog/2024/11/19/week-12-physical-design-bottleneck/
 ---
@@ -162,6 +162,11 @@ The RL formulation treats placement as a Markov Decision Process. At each step, 
 
 The goal: learn a policy—a neural network mapping states to actions—that maximizes cumulative reward across many different chip designs. The implementation represents the floorplan as a grid, uses graph neural networks to encode the netlist structure (which gates connect to which), and trains with policy gradients on diverse designs.
 
+<figure class="post-figure">
+<img src="{{ site.baseurl }}/assets/images/blog_images/week_12/google_rl.png" alt="RL agent placing macros sequentially, followed by force-directed standard cell placement and reward calculation">
+<figcaption><em>The RL agent places macros sequentially, after which a force-directed method places standard cells. A combined wirelength and congestion reward is then used to optimize the agent's policy for the next iteration. (Mirhoseini et al.)</em></figcaption>
+</figure>
+
 The promise is compelling. Once trained, the policy places new designs in hours instead of weeks. Architects get rapid feedback about whether their ideas will meet timing, power, and area targets. The system learns from experience, potentially discovering placement strategies human experts would never consider. It handles complex multi-objective optimization—balancing timing, power, and area simultaneously. And inference is fast.
 
 But the technical challenges are formidable. The reward function must capture timing on thousands of paths, congestion, power delivery, thermal constraints, and hundreds of design rules. Miss a critical constraint, and your learned policy might optimize brilliantly for the wrong objective. Transfer learning is uncertain—policies trained on CPUs might fail spectacularly on GPUs or custom accelerators, and different design styles have fundamentally different placement characteristics. The black-box nature means when placement fails, you get no insight into what went wrong or what architectural changes might help. And validation poses a chicken-and-egg problem: you must run complete flows to verify placement quality, which undermines the speed advantage that motivated using RL in the first place.
@@ -177,6 +182,11 @@ DREAMPlace takes three key technical steps. First, it makes placement differenti
 <span class="margin-note">**PyTorch Without Deep Learning**: As Alex observed in class, DREAMPlace uses PyTorch not for neural networks, but to leverage its automatic differentiation engine and stochastic gradient descent optimizers. This is a clever architectural choice—PyTorch provides mature, GPU-accelerated implementations of gradient computation and optimization algorithms that would take years to build from scratch. DREAMPlace essentially treats placement as a massive optimization problem and uses PyTorch's infrastructure to solve it. This highlights how ML frameworks have become general-purpose optimization toolkits, useful far beyond training neural networks.</span>
 
 Second, it exploits GPU parallelism. Instead of placing macros sequentially on a CPU, DREAMPlace structures all its computations—wirelength calculations, density gradients, legalization steps—to run in parallel across thousands of GPU cores. This is the key to its speed advantage.
+
+<figure class="post-figure">
+<img src="{{ site.baseurl }}/assets/images/blog_images/week_12/dreamplace.png" alt="Software architecture and flow for DREAMPlace">
+<figcaption><em>Software architecture for placement implementation using deep learning toolkits and Dreamplace flow. (Lin et al.)</em></figcaption>
+</figure>
 
 Third, it maintains an analytical formulation. The objective function explicitly encodes what's being optimized: minimize total wirelength while respecting density constraints and alignment requirements. This isn't a black-box neural network. It's transparent optimization where you can see exactly what's happening.
 
@@ -337,6 +347,11 @@ This is the deepest form of co-design reasoning: simultaneous optimization acros
 ### Why This Is Hard
 
 Of course, most chip designers don't control both sides. You're building a general-purpose CPU or GPU that must run diverse workloads, many not known at design time.
+
+<figure class="post-figure">
+<img src="{{ site.baseurl }}/assets/images/blog_images/week_12/hw_sw_codesign.png" alt="Hardware-software co-design feedback loop">
+<figcaption><em>Codesign the software and hardware relies on an understanding of the workload execution patterns and how to exploit these patterns in hardware for better performance. In next generation ML systems, chip designers must predict upcoming model trends and design the systems to support them. (University of Victoria)</em></figcaption>
+</figure>
 
 But the principle still applies: **Starting from physical constraints and working up might be more effective than starting from architecture and working down.**
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Week 11 Part 2: Why You Can't Benchmark AI for Hardware Like You Do for Software"
 date: 2024-11-14
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [hardware, eda, benchmarks, datasets]
 permalink: /blog/2024/11/14/week-11-part-2-benchmarking-llms-hardware/
 ---
@@ -351,6 +351,11 @@ Perhaps the goal for Phase 3 shouldn't be "autonomous RTL generation" like we mi
 That would require different benchmarks. Not "can the AI generate a correct module?" but "can the AI help a human designer explore options, identify problems, and make informed trade-offs?"
 
 This reframing - from autonomous generation to augmented exploration - might be what distinguishes successful AI for chip design from approaches that simply try to scale up what worked for code generation.
+
+<figure class="post-figure">
+<img src="{{ site.baseurl }}/assets/images/blog_images/week_11/ai_rtl_copilot.jpg" alt="AI-assisted design exploration with human-in-the-loop">
+<figcaption><em>How can we design AI agents to assist humans in hardware design and implementation? Humans should be responsible for broader domain expertise and high level decision making, and AI agents should take care of low level implementation.</em></figcaption>
+</figure>
 
 ---
 
