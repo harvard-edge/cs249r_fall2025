@@ -7,7 +7,7 @@ categories: [architecture, memory]
 permalink: /blog/2024/10/29/memory-systems-prediction/
 ---
 
-[Last week](/blog/2024/10/22/mapping-codesign-reasoning/), we examined co-design reasoning: the ability to reason about interdependent constraints simultaneously, where optimizing one aspect requires considering how it affects everything else. We saw how mapping hardware and software creates circular dependencies that resist sequential decomposition.
+[Last week](/cs249r_fall2025/blog/2024/10/22/mapping-codesign-reasoning/), we examined co-design reasoning: the ability to reason about interdependent constraints simultaneously, where optimizing one aspect requires considering how it affects everything else. We saw how mapping hardware and software creates circular dependencies that resist sequential decomposition.
 
 This week, we encounter a different type of architectural reasoning challenge. Not interdependence, but **uncertainty**.
 
@@ -399,5 +399,5 @@ The question isn't whether AI will replace human architects. It's whether we can
 
 ---
 
-*For detailed readings, slides, and materials for this week, see [Week 9 in the course schedule]({{ site.baseurl }}/course/schedule/#week-9---memory-systems--data-management).*
+*For detailed readings, slides, and materials for this week, see [Week 9 in the course schedule](/cs249r_fall2025/course/schedule/#week-9---memory-systems--data-management).*
 

@@ -7,7 +7,7 @@ categories: [architecture, systems]
 permalink: /blog/2024/11/05/optimizing-optimizers-llm-adaptation/
 ---
 
-[Last week](/blog/2024/10/29/memory-systems-prediction/), we examined predictive reasoning: the ability to design systems for patterns you can't fully observe or characterize. Architects designing memory systems must predict access patterns from sparse signals, across heterogeneous workloads, with fundamentally incomplete information.
+[Last week](/cs249r_fall2025/blog/2024/10/29/memory-systems-prediction/), we examined predictive reasoning: the ability to design systems for patterns you can't fully observe or characterize. Architects designing memory systems must predict access patterns from sparse signals, across heterogeneous workloads, with fundamentally incomplete information.
 
 But what if the patterns don't just resist characterization? What if they actively *change* while your system is running?
 
@@ -325,5 +325,5 @@ The journey from code to chips reveals not just technical challenges, but fundam
 
 ---
 
-*For detailed readings, slides, and materials for this week, see [Week 10 in the course schedule]({{ site.baseurl }}/course/schedule/#week-10---llm-systems--ai-workload-scheduling).*
+*For detailed readings, slides, and materials for this week, see [Week 10 in the course schedule](/cs249r_fall2025/course/schedule/#week-10---llm-systems--ai-workload-scheduling).*
 

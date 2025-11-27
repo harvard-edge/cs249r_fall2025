@@ -23,7 +23,7 @@ Phase 3 breaks all these assumptions. And examining why reveals the core challen
 
 ### The Specification Problem
 
-In [Part 1](/blog/2024/11/12/eda-fundamentals-code-to-silicon/), we saw that RTL design involves translating architectural intent into precise hardware descriptions. But what constitutes a "correct" specification?
+In [Part 1](/cs249r_fall2025/blog/2024/11/12/eda-fundamentals-code-to-silicon/), we saw that RTL design involves translating architectural intent into precise hardware descriptions. But what constitutes a "correct" specification?
 
 Consider this simple request: "Design a FIFO buffer."
 
@@ -110,7 +110,7 @@ What makes a good RTL benchmark problem?
 4. **Quality metrics**: Not just correctness, but PPA (Power, Performance, Area)
 5. **Multi-step reasoning**: Tasks requiring design, verification, and debugging
 
-Think back to [Week 7's discussion of tacit knowledge](/blog/2024/11/05/week-7-tacit-knowledge-architecture/). Many aspects of hardware design involve experience-based judgment. How do you encode that into a benchmark?
+Think back to [Week 7's discussion of tacit knowledge](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/). Many aspects of hardware design involve experience-based judgment. How do you encode that into a benchmark?
 
 ### Paper 2: Make Every Move Count - MCTS for RTL Generation
 
@@ -179,7 +179,7 @@ Even with better datasets and smarter search strategies, deeper questions remain
 
 ### 1. Training Data Contamination
 
-We discussed this back in [Week 3 with code generation](/blog/2024/09/17/week-3-code-optimization-paradox/). LLMs are trained on massive amounts of text from the internet: GitHub repositories with Verilog code, academic papers with RTL examples, documentation with common design patterns, Stack Overflow discussions about HDL quirks. All of this becomes part of the model's knowledge.
+We discussed this back in [Week 3 with code generation](/cs249r_fall2025/blog/2024/09/17/week-3-code-optimization-paradox/). LLMs are trained on massive amounts of text from the internet: GitHub repositories with Verilog code, academic papers with RTL examples, documentation with common design patterns, Stack Overflow discussions about HDL quirks. All of this becomes part of the model's knowledge.
 
 When you create a benchmark, how do you ensure it's testing true design capability rather than memorization?
 
@@ -187,7 +187,7 @@ For software, this is already a problem. For hardware, it's worse. There's less 
 
 ### 2. Spec Quality Mismatch
 
-In [Week 2](/blog/2024/09/08/week-2-fundamental-challenges/), we talked about the challenge of unclear specifications. Real-world design specs are often incomplete, missing critical corner cases. They're ambiguous, with multiple valid interpretations. They evolve as requirements change during the design process. And they're deeply context-dependent, relying on unwritten assumptions about the broader system.
+In [Week 2](/cs249r_fall2025/blog/2024/09/08/week-2-fundamental-challenges/), we talked about the challenge of unclear specifications. Real-world design specs are often incomplete, missing critical corner cases. They're ambiguous, with multiple valid interpretations. They evolve as requirements change during the design process. And they're deeply context-dependent, relying on unwritten assumptions about the broader system.
 
 But benchmark problems need clear, unambiguous specifications to enable automatic evaluation. This creates a fundamental gap:
 
@@ -217,7 +217,7 @@ Or you could prioritize quality: carefully curate high-quality, verified designs
 
 The comprehensive benchmark paper argues for quality, but then how do you get enough examples to train modern LLMs?
 
-This is similar to the challenge we saw in [Week 10 with LLM serving](/blog/2024/11/05/optimizing-optimizers-llm-adaptation/). Systems need diverse, representative workloads to learn good policies. But hardware design workloads are inherently less diverse than software workloads because physical constraints limit the design space.
+This is similar to the challenge we saw in [Week 10 with LLM serving](/cs249r_fall2025/blog/2024/11/05/optimizing-optimizers-llm-adaptation/). Systems need diverse, representative workloads to learn good policies. But hardware design workloads are inherently less diverse than software workloads because physical constraints limit the design space.
 
 These four gaps - contamination, specification mismatch, missing collaboration, and data scarcity - reveal that the problem isn't just "how do we build better benchmarks?" but rather "what are benchmarks actually measuring?"
 
@@ -254,7 +254,7 @@ The MCTS paper partially addresses this by incorporating synthesis feedback into
 
 ### 2. Co-design Reasoning (Week 8)
 
-Remember the [circular dependencies in hardware-software co-design](/blog/2024/10/22/week-8-mapping-codesign/)? RTL design has similar circular dependencies:
+Remember the [circular dependencies in hardware-software co-design](/cs249r_fall2025/blog/2024/10/22/mapping-codesign-reasoning/)? RTL design has similar circular dependencies:
 - Clock frequency depends on critical path
 - Critical path depends on implementation choices
 - Implementation choices depend on timing constraints
@@ -316,7 +316,7 @@ Not because the technical approaches are wrong. The MCTS paper shows genuine imp
 
 But because the gap between "generate a module that passes tests" and "design a chip that works reliably in production" is enormous.
 
-Remember from [Week 4](/blog/2024/09/24/week-4-production-reality/) the difference between proof-of-concept systems and production-ready systems? RTL generation faces an even higher bar. Hardware can't be patched post-deployment. Verification must be exhaustive, not probabilistic. Manufacturing costs make mistakes extremely expensive. And system integration requires deep contextual understanding that goes far beyond the module specification.
+Remember from [Week 4](/cs249r_fall2025/blog/2024/09/24/week-4-production-reality/) the difference between proof-of-concept systems and production-ready systems? RTL generation faces an even higher bar. Hardware can't be patched post-deployment. Verification must be exhaustive, not probabilistic. Manufacturing costs make mistakes extremely expensive. And system integration requires deep contextual understanding that goes far beyond the module specification.
 
 This reality raises important questions for us to consider:
 
@@ -344,7 +344,7 @@ Phase 3 adds irrevocability. The feedback loops we diagrammed - hours to days pe
 
 The papers this week highlight a crucial truth: **evaluation methodology shapes research direction**. If our benchmarks only test pattern matching, we'll build systems that excel at pattern matching. The MCTS paper shows that incorporating richer feedback (synthesis results, not just functional tests) enables better search strategies. This suggests a path forward: **benchmarks that capture the full design flow, not just code generation**.
 
-But we should also recognize the limits. The three reasoning challenges from [Part 1](/blog/2024/11/12/eda-fundamentals-code-to-silicon/) - tacit knowledge, co-design reasoning, and irrevocability - might be fundamentally hard to benchmark because they require human interaction and contextual understanding.
+But we should also recognize the limits. The three reasoning challenges from [Part 1](/cs249r_fall2025/blog/2024/11/12/eda-fundamentals-code-to-silicon/) - tacit knowledge, co-design reasoning, and irrevocability - might be fundamentally hard to benchmark because they require human interaction and contextual understanding.
 
 Perhaps the goal for Phase 3 shouldn't be "autonomous RTL generation" like we might aim for in Phase 1's code generation. Instead, maybe it's "AI-assisted design exploration." Not replacing human designers, but augmenting their capabilities to explore larger design spaces and identify promising approaches faster, while humans provide the judgment and context that's hard to encode.
 
@@ -361,5 +361,5 @@ This reframing - from autonomous generation to augmented exploration - might be 
 
 *Next week: Physical Design and Layout - where the rubber meets the silicon. Guest speaker: Richard Ho from OpenAI on co-optimizing ML models and hardware.*
 
-*For detailed readings, slides, and materials for this week, see [Week 11 in the course schedule]({{ site.baseurl }}/course/schedule/#week-11---rtl-design--logic-synthesis).*
+*For detailed readings, slides, and materials for this week, see [Week 11 in the course schedule](/cs249r_fall2025/course/schedule/#week-11---rtl-design--logic-synthesis).*
 
