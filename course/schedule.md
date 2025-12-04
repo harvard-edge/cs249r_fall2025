@@ -342,7 +342,7 @@ Introduction to Architecture 2.0 and the paradigm shift from human-designed heur
 
 Student project synthesis.
 
-**📝 Projects Due: December 1**
+**📝 Projects Due: December 10**
 
 ---
 
