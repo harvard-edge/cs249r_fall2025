@@ -2,7 +2,7 @@
 layout: post
 title: "Week 14: Course Synthesis — The Architecture 2.0 Roadmap"
 date: 2024-12-03
-author: "Vijay Janapa Reddi and Arya Tschand"
+author: "Vijay Janapa Reddi"
 categories: [synthesis, architecture, systems]
 permalink: /blog/2024/12/03/architecture-20-roadmap-synthesis/
 ---
@@ -499,67 +499,35 @@ Humility matters. There are questions we can't answer yet:
 
 These aren't just open research questions. They're foundational questions about the nature of design, the limits of learning, and the role of human expertise.
 
-## The Frontier Models vs. Small Language Models Question
+## What We Heard from Industry
 
-Throughout the course, we've implicitly assumed frontier models—the largest, most capable LLMs—would drive progress. But is this assumption warranted?
+One of the privileges of teaching this course was bringing in practitioners who live these challenges daily. Nine industry experts joined us across the semester, and their perspectives consistently reinforced one theme: **the gap between research papers and production reality is vast**.
 
-### The Case for Frontier Models
+[Amir Yazdanbakhsh](/cs249r_fall2025/blog/2024/09/24/performance-engineering/) from Google DeepMind told us that ECO's infrastructure for deploying optimizations safely was more complex than the optimization algorithms themselves. Every AI-generated change required human expert review. The lesson: production isn't about clever algorithms. It's about trust, validation, and integration with existing workflows.
 
-Frontier models (GPT-4, Claude, Gemini) have clear advantages:
-- **Broader knowledge**: Trained on vast corpora spanning multiple domains  
-- **Better reasoning**: Chain-of-thought, multi-step reasoning, cross-domain synthesis
-- **Few-shot learning**: Adapt to new tasks with minimal examples
-- **Code understanding**: Trained on enormous codebases
+[Martin Maas](/cs249r_fall2025/blog/2024/10/08/ai-co-design-distributed-systems/) from Google DeepMind emphasized that distributed systems require *continuous adaptation*, not one-shot optimization. The environment changes. Workloads shift. What worked yesterday might fail tomorrow. AI for systems can't just find good solutions—it needs to keep finding them as conditions evolve.
 
-For systems design, these capabilities matter. Generating RTL from natural language specifications benefits from understanding both hardware concepts and natural language nuance. Debugging requires reasoning across multiple abstraction layers. Verification needs semantic understanding of specifications.
+[Suvinay Subramanian](/cs249r_fall2025/blog/2024/10/15/tacit-knowledge-architecture/) from Google's TPU team articulated something we rarely see in papers: hardware design involves "subjective bets" about where to locate complexity. Google's philosophy—simpler hardware, more complex software—isn't mathematically derived. It's a bet about organizational capabilities and future flexibility. How does an AI agent learn these philosophical frameworks?
 
-### The Case for Small Language Models (SLMs)
+[Milad Hashemi](/cs249r_fall2025/blog/2024/10/29/week-9-memory-systems-prediction/) explained why learned prefetchers that look great in papers struggle in production. The patterns are too sparse, too noisy, and too time-sensitive. When you need predictions in nanoseconds and accuracy in the 99th percentile, the gap between "works in simulation" and "works in silicon" becomes a chasm.
 
-But there are compelling reasons to question frontier model dependence:
+[Esha Choukse](/cs249r_fall2025/blog/2024/11/05/week-10-optimizing-optimizers/) from Microsoft Research grounded our discussion of LLM serving in the reality of operating at scale. The KV-cache grows with every token. Memory becomes the bottleneck. Request patterns are unpredictable. The neat abstractions in papers dissolve when you're running inference for millions of users.
 
-**Latency**: Prefetching decisions must happen in nanoseconds. Scheduling decisions in microseconds. Frontier model inference takes milliseconds. This timing gap is fundamental.
+[Mark Ren](/cs249r_fall2025/blog/2024/11/14/week-11-part-2-benchmarking-llms-hardware/) from NVIDIA painted a picture of an EDA industry at an inflection point. Traditional tools encode decades of expertise, but they're struggling with modern design complexity. The opportunity for AI isn't replacing that expertise—it's augmenting it, using differentiable optimization where analytical models exist and RL where the search space is too large for hand-crafted heuristics.
 
-**Cost**: Running frontier models at datacenter scale for system optimization is prohibitively expensive. A 70B parameter model inference costs ~100x more than a 7B model. At scale, this matters.
+[Kartik Hegde](/cs249r_fall2025/blog/2024/11/26/week-13-verification-trust-problem/) from ChipStack brought the verification perspective: AI can lower barriers to formal methods by generating assertions from natural language. But generated assertions must still be validated, and validation requires expertise. AI augments verification engineers; it doesn't replace them.
 
-**Specialization**: Do you need to understand Shakespeare and quantum physics to optimize memory system access patterns? SLMs fine-tuned on domain-specific data might outperform generalist frontier models.
+The consistent message across all these conversations: **AI for systems is about collaboration, not automation**. The practitioners who are actually deploying these techniques aren't trying to remove humans from the loop. They're trying to make humans more effective by handling the tedious parts, exploring spaces humans can't search, and providing decision support rather than decisions.
 
-**Deployment**: Edge devices, embedded systems, and resource-constrained environments can't run 175B parameter models. If AI-assisted optimization only works with frontier models, it's inaccessible where needed most.
+## A Note on Model Size: Frontier vs. Specialized
 
-**Control**: Frontier models are black boxes controlled by a few companies. SLMs can be fully understood, audited, and customized for specific needs.
+One question we didn't fully resolve: do you need GPT-4 to design chips, or would a fine-tuned 7B model work better?
 
-### The Hybrid Path
+The honest answer is "it depends." Frontier models bring broad knowledge and cross-domain reasoning—useful when translating natural language specs to formal properties or debugging across abstraction layers. But they're slow (milliseconds when prefetching needs nanoseconds), expensive (prohibitive at datacenter scale), and opaque (hard to audit for safety-critical applications).
 
-The answer probably isn't "frontier models only" or "SLMs only." It's knowing which tool suits which task:
+Specialized smaller models trained on domain-specific data might outperform frontier models for narrow tasks. Do you really need to understand Shakespeare to optimize memory access patterns? Probably not.
 
-**Use frontier models for**:
-- Specification understanding (natural language → formal properties)
-- Cross-domain reasoning (connecting algorithms, architecture, and physical design)
-- Rare/novel scenarios (where broad knowledge helps)
-- Interactive design assistance (human-in-the-loop where latency matters less)
-
-**Use specialized SLMs for**:
-- Real-time decisions (scheduling, prefetching, power management)
-- Domain-specific optimization (trained on hardware-specific patterns)
-- Production deployment (cost/latency/control requirements)
-- Safety-critical applications (where auditability is essential)
-
-**Use ensemble approaches for**:
-- Verification (multiple models cross-check for diversity)  
-- Exploration (frontier model generates hypotheses, SLMs evaluate rapidly)
-- Transfer learning (frontier model initializes, fine-tune to specialized SLM)
-
-The insight: **match model capacity to task requirements**. Using GPT-4 to schedule threads is overkill. Using a 7B model to understand complex architectural specifications might be insufficient. The art is choosing appropriately.
-
-### The Distillation Opportunity
-
-A particularly promising direction: use frontier models to distill specialized SLMs:
-1. Frontier model generates explanations, examples, and reasoning traces
-2. These become training data for specialized SLMs
-3. Specialized SLMs learn domain-specific reasoning without needing massive general knowledge
-
-This separates "understanding broadly" (frontier model strength) from "executing efficiently" (SLM strength). You get the best of both: broad reasoning capabilities distilled into efficient specialized models.
-
-The key question: can we distill not just pattern matching but the types of reasoning we identified—co-design reasoning, predictive reasoning under uncertainty, adaptive reasoning? Or do these reasoning types require model scale that makes real-time application impossible?
+The practical path forward: use frontier models where their breadth matters (specification understanding, novel scenarios, interactive assistance), specialized models where latency and cost matter (real-time decisions, production deployment), and distillation to transfer frontier model reasoning into efficient specialized models. Match the tool to the task.
 
 ## A Roadmap for the Field: The Next Five Years
 
