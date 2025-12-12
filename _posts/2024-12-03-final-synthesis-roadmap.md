@@ -288,112 +288,6 @@ Current AI research often conflates these. Papers show offline learning on fixed
 
 **The path forward**: Recognize which type of problem you're solving and design AI approaches accordingly. Don't apply static optimization techniques to dynamic adaptation domains. Don't require continuous adaptation when static optimization suffices. Match the AI approach to the problem structure.
 
-## Synthesizing Insights: What Makes This Hard?
-
-Stepping back from specific technical challenges, what fundamental properties of computer systems make AI-assisted design genuinely difficult?
-
-<div class="mermaid">
-graph TD
-    A[Why AI for Systems<br/>is Fundamentally Hard] --> B[1. Circular<br/>Dependencies]
-    A --> C[2. Emergent<br/>Behavior]
-    A --> D[3. Multi-Objective<br/>Optimization]
-    A --> E[4. Incomplete<br/>Information]
-    A --> F[5. Temporal<br/>Dynamics]
-    A --> G[6. Scale<br/>Dependence]
-    A --> H[7. Irrevocability]
-    
-    style A fill:#1a365d,color:#fff
-    style B fill:#dc2626,color:#fff
-    style C fill:#7c3aed,color:#fff
-    style D fill:#059669,color:#fff
-    style E fill:#d97706,color:#fff
-    style F fill:#2563eb,color:#fff
-    style G fill:#db2777,color:#fff
-    style H fill:#0891b2,color:#fff
-</div>
-
-### Property 1: Circular Dependencies
-
-Traditional optimization assumes you can decompose problems into independent subproblems, optimize each, and combine the results. But many systems problems don't decompose:
-- Compiler design: register allocation ↔ instruction scheduling  
-- Database systems: index design ↔ query optimization
-- Hardware mapping: tile sizes ↔ memory hierarchy ↔ access patterns ↔ dataflow
-- Chip design: architecture ↔ physical layout ↔ workload characteristics
-
-Each decision constrains and is constrained by every other decision. You cannot fix one variable and optimize the rest. The circular structure means traditional optimization techniques fail. You need approaches that reason about the coupled space simultaneously.
-
-**This is fundamentally different from the pattern matching tasks that current ML excels at.** Image classification doesn't have circular dependencies—a cat is a cat regardless of other objects in the image. System design has deep interdependencies where optimal choices for one component depend on choices for all other components.
-
-### Property 2: Emergent Behavior
-
-System behavior emerges from interactions between components in ways you cannot predict from local information:
-- Distributed systems: throughput emerges from workload placement, network topology, congestion patterns
-- Memory hierarchies: performance emerges from cache design, access patterns, prefetching strategies  
-- Physical design: timing closure emerges from placement, routing, power delivery, thermal effects
-
-You need global understanding to predict system-level properties. But global understanding requires simulating or analyzing the complete system, which is expensive.
-
-**Current ML typically learns from local patterns.** Transformers have attention mechanisms that consider context, but they're designed for sequences with relatively local dependencies (language, time series). System behavior can have long-range, non-obvious dependencies where changes in one module affect seemingly unrelated modules through subtle interaction chains.
-
-### Property 3: Multi-Objective Optimization
-
-Systems never optimize for a single metric:
-- Performance vs power vs area (the "PPA" tradeoff)  
-- Throughput vs latency vs fairness (distributed systems)
-- Accuracy vs speed vs memory footprint (ML inference)
-- Functionality vs verifiability vs maintainability (software)
-
-Worse, objectives often conflict. The highest-performance solution wastes power. The most general design sacrifices efficiency. Objectives have different units and importance depends on context.
-
-**Standard ML loss functions don't capture this.** You can't just weight objectives and sum them—the relative importance changes with constraints that aren't known until later. And there's rarely a single "optimal" solution—there's a Pareto frontier of tradeoffs where improving one objective hurts others.
-
-Human designers navigate these tradeoffs through judgment, philosophical preferences, and organizational constraints. Can AI learn this kind of meta-reasoning? Or will humans always make the final tradeoff decisions while AI explores the feasible space?
-
-### Property 4: Incomplete Information
-
-System designers face irreducible uncertainty:
-- Workloads that don't exist yet (designing hardware for ML models that won't be invented for 3 years)
-- Emergent application patterns (who predicted transformers would dominate in 2024 back in 2020?)
-- Manufacturing variation (each chip slightly different despite same design)
-- Deployment conditions (datacenters in different climates, network conditions that vary)
-
-You cannot optimize for known requirements. You must make informed bets about uncertain futures.
-
-**ML typically assumes train and test distributions match.** When distributions shift, learned models fail. But system design is inherently about designing for distributions you haven't seen. The robustness challenge isn't handling outliers in a known distribution—it's handling entirely new distributions.
-
-### Property 5: Temporal Dynamics
-
-Systems exist in time in ways that complicate optimization:
-- Timing constraints: prefetching is useless if predictions arrive nanoseconds too late
-- Temporal dependencies: decisions made early affect what's possible later (path dependence)
-- Adaptation timescales: some decisions change slowly (architecture), others continuously (scheduling)
-- Learning from delayed feedback: actions taken now have consequences hours or months later
-
-**Most ML treats time as just another feature.** But time is fundamental to whether optimizations work. In systems, timing isn't a property you can model approximately—it's a hard constraint that determines whether solutions are viable.
-
-### Property 6: Scale Dependence
-
-What works at small scale fails at large scale:
-- Algorithms with good asymptotic complexity but high constants (fine for n=100, terrible for n=10^9)
-- Designs that function correctly but don't meet timing at scale (too much wire delay)
-- Protocols that work in simulations but create congestion cascades in production
-
-**Worse, scale changes which problems matter.** At small scale, algorithm choice dominates. At large scale, data movement dominates. At datacenter scale, energy dominates. The optimization objective changes with scale.
-
-ML models trained on small examples don't automatically generalize to scale. And you can't just train on large examples—simulation is too expensive and real data is scarce.
-
-### Property 7: Irrevocability
-
-Some decisions can't be undone:
-- Tape out a chip with bugs: costly recall or live with issues  
-- Deploy hardware architecture: no patching silicon
-- Set ISA: decades of software compatibility depend on it
-- Choose process node: committed for 2-3 year design cycle
-
-**This changes the risk calculus entirely.** In software, you can ship fast and fix bugs later. In hardware, you get one shot. This demands higher confidence before committing, more validation, and conservative design margins.
-
-AI must not just optimize for expected value. It must bound worst-case behavior and understand the cost of different failure modes. Being wrong about software optimization might waste compute. Being wrong about hardware design wastes millions of dollars and years of time.
-
 ## Rethinking AI for Systems: A Methodological Framework
 
 Given these challenges, what would it mean to design AI approaches specifically for system design, rather than adapting techniques from other domains?
@@ -744,7 +638,7 @@ The choice is yours. The tools are emerging. The challenges are clear.
 
 **Architecture 2.0 isn't about AI replacing architects. It's about architects who understand AI becoming more capable than any individual could be alone.**
 
-Go build it.
+Now let's go build it. 🚀
 
 ---
 
