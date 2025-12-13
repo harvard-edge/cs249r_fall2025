@@ -397,13 +397,31 @@ The consistent message across all these conversations: **AI for systems is about
 
 ## A Note on Model Size: Frontier vs. Specialized
 
-One question we didn't fully resolve: do you need GPT-4 to design chips, or would a fine-tuned 7B model work better?
+This came up repeatedly throughout the course, and I want to address it directly because I see students make this mistake often: **not everything needs a frontier model**.
 
-The honest answer is "it depends." Frontier models bring broad knowledge and cross-domain reasoning—useful when translating natural language specs to formal properties or debugging across abstraction layers. But they're slow (milliseconds when prefetching needs nanoseconds), expensive (prohibitive at datacenter scale), and opaque (hard to audit for safety-critical applications).
+There's a natural tendency to assume bigger is better. GPT-4 is more capable than GPT-3.5, which was more capable than GPT-3. The scaling laws suggest more parameters and more data lead to better performance. So why wouldn't you always use the biggest model available?
 
-Specialized smaller models trained on domain-specific data might outperform frontier models for narrow tasks. Do you really need to understand Shakespeare to optimize memory access patterns? Probably not.
+Because systems have constraints that benchmarks don't capture.
 
-The practical path forward: use frontier models where their breadth matters (specification understanding, novel scenarios, interactive assistance), specialized models where latency and cost matter (real-time decisions, production deployment), and distillation to transfer frontier model reasoning into efficient specialized models. Match the tool to the task.
+**Latency matters.** A prefetcher needs predictions in nanoseconds. A scheduler needs decisions in microseconds. Frontier model inference takes milliseconds at best. That's a 1000x gap. You cannot close it by making the model faster—you need a fundamentally smaller model that runs on specialized hardware close to where decisions happen.
+
+**Cost matters at scale.** Running GPT-4 for every optimization decision in a datacenter would cost more than the savings from the optimizations. A 70B model costs roughly 100x more per inference than a 7B model. When you're making millions of decisions per day, that multiplier is the difference between viable and absurd.
+
+**You often don't need general knowledge.** Do you really need a model that understands Shakespeare, quantum physics, and medieval history to optimize memory access patterns? The knowledge required is narrow and deep, not broad. A small model trained specifically on memory system traces might outperform a frontier model that has to retrieve relevant knowledge from a vast parameter space.
+
+**Auditability matters for safety-critical applications.** Frontier models are black boxes—you can't fully inspect why they made a decision. For chip design, where bugs cost millions, you might prefer a simpler model whose behavior you can characterize and bound, even if its average performance is lower.
+
+**Control matters.** Frontier models are controlled by a handful of companies. They can change, deprecate, or restrict access. For production systems with long lifetimes, depending on an external API is a risk. A specialized model you train and own gives you control over its lifecycle.
+
+The practical path forward isn't choosing one or the other—it's knowing when to use which:
+
+Use frontier models for tasks where breadth matters: understanding natural language specifications, debugging across abstraction layers, handling novel scenarios you haven't trained for, interactive assistance where latency is human-scale (seconds, not microseconds).
+
+Use specialized models for tasks where efficiency matters: real-time decisions, production deployment at scale, safety-critical applications requiring auditability, domains with abundant training data and narrow scope.
+
+Use distillation to get the best of both: have frontier models generate reasoning traces, explanations, and training data, then distill that knowledge into efficient specialized models. You get frontier-level reasoning compressed into deployable form.
+
+The students who will have the most impact aren't those who can prompt GPT-4 effectively—that skill will commoditize quickly. It's those who understand when a 7B model trained on the right data will outperform a 700B model trained on everything, and know how to build that specialized model.
 
 ## Where Does the Field Go From Here?
 
