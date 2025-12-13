@@ -646,11 +646,11 @@ Now let's go build it. 🚀
 
 Thank you for being part of this journey. I know this class was a little different from what you might have expected. We weren't just reviewing established papers and techniques that have stood the test of time. We were reading work that's still evolving, sometimes just months old, trying to understand not just where the field *is* but where it *needs to go*.
 
-That's uncomfortable. There aren't always clean answers. The papers sometimes contradict each other. The techniques that look promising today might be obsolete by the time you graduate. But that discomfort is the point. You're not here to memorize solutions—you're here to develop the judgment to navigate uncertainty.
+That's uncomfortable. There aren't always clean answers. The papers sometimes contradict each other. The techniques that look promising today might be obsolete by the time you graduate. But that discomfort is the point. You're not here to memorize solutions. You're here to develop the judgment to navigate uncertainty.
 
-What made this class special was your willingness to engage with that uncertainty. To ask hard questions. To push back when things didn't make sense. To bring your own perspectives from different domains. The best insights often came from your discussions, not my lectures.
+What made this class special was your willingness to engage with that uncertainty. To ask hard questions. To reconsider things that didn't make sense. To bring your own perspectives from different domains. The best insights often came from some of our discussions, so thank you for that 🙏
 
-The future of computer systems will be shaped by people who can think across boundaries—who understand both the algorithms and the silicon, both the ML techniques and the systems constraints, both what's possible today and what the field needs tomorrow. That's what we were practicing here.
+The future of computer systems will be shaped by people who can think across boundaries—who understand both algorithms and silicon, both ML techniques and systems constraints, both what's possible today and what the field needs tomorrow. That's what we were practicing here.
 
 I hope you leave with more questions than answers. That's how it should be.
 
