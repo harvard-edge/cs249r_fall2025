@@ -9,7 +9,7 @@ permalink: /blog/2024/12/03/architecture-20-roadmap-synthesis/
 
 We set out thirteen weeks ago with an ambitious question: Can AI agents become co-designers of computer systems? Not just tools that optimize within fixed constraints, but true collaborators that reason across the full computing stack—from code to silicon, from algorithms to physical layout, from specifications to verified implementations.
 
-The answer, as is often the case with profound questions, is both simpler and more complex than we anticipated.
+The answer is yes—and also no. It depends on what you mean by "co-designer."
 
 **The simple part**: Yes, AI can meaningfully contribute to system design in ways that were impossible even two years ago. We've seen concrete examples at every layer of the stack.
 
@@ -170,11 +170,11 @@ At every layer, slow feedback loops limit iteration:
 - **Architecture**: Physical design feedback takes months
 - **Verification**: Bugs discovered late are exponentially expensive
 
-The common pattern: critical information arrives too late to inform decisions. Architecture decisions made without knowing physical realizability. Design choices made without verification feedback. Optimizations deployed without understanding production impact.
+The pattern is the same everywhere: critical information arrives too late. Architecture decisions get made without knowing if they'll physically realize. Design choices get locked in without verification feedback. Optimizations ship without understanding production impact.
 
-**AI's opportunity**: Close feedback loops by predicting outcomes faster. Not perfect accuracy—directional correctness is often sufficient. If a fast model can predict "Design A will likely meet timing but Design B won't," that's actionable guidance even if the frequency predictions are imprecise.
+AI can help by predicting outcomes faster. You don't need perfect accuracy—directional correctness is often enough. If a fast model can say "Design A will probably meet timing but Design B won't," that's useful even if the frequency predictions are off.
 
-But there's a deeper insight: maybe we're optimizing the wrong thing. Instead of making slow processes faster, should we redesign processes to provide continuous feedback? Verification-in-the-loop rather than verification-at-the-end. Physical-awareness during architectural design rather than discovering constraints months later. Systems designed for AI-assisted workflows rather than AI retrofitted into human workflows.
+But here's the thing: maybe we're optimizing the wrong problem. Instead of making slow processes faster, should we redesign processes to provide continuous feedback? Verification-in-the-loop rather than verification-at-the-end. Physical-awareness during architectural design rather than discovering constraints months later. Systems designed for AI-assisted workflows rather than AI retrofitted into human workflows.
 
 ### Challenge 2: The Tacit Knowledge Problem
 
@@ -218,7 +218,7 @@ graph LR
 
 Current AI approaches struggle with all three. Supervised learning can't easily learn reasoning that experts can't articulate. Reinforcement learning requires expensive exploration and struggles with sparse rewards. Analytical models work when we can codify relationships but miss emergent behaviors.
 
-**The path forward**: Hybrid approaches that combine structure and learning. Concorde shows how to compose analytical models (first principles) with ML (empirical corrections). Kevin demonstrates learning iterative refinement strategies rather than one-shot generation. Text-to-text regression reveals semantic understanding beating numerical feature engineering.
+What works? Hybrid approaches. Concorde composes analytical models with ML. Kevin learns iterative refinement rather than one-shot generation. Text-to-text regression shows semantic understanding beating numerical features. The pattern: combine what you can articulate with what you can only learn from data.
 
 But there's a humbling realization: some knowledge may remain tacit. The philosophical frameworks about where to locate complexity, the intuitions about which design patterns will age well, the judgment calls under uncertainty—these may always require human architects. Architecture 2.0 isn't about eliminating human expertise. It's about creating interfaces for human-AI collaboration where agents handle systematic exploration and humans provide philosophical guidance.
 
@@ -234,11 +234,7 @@ The irrevocability constraint makes this existential. Software bugs are fixable.
 
 **Black-box reasoning**: When an RL agent places macros or a learned policy schedules requests, we see outputs but not reasoning. This makes debugging hard and trust harder. If something goes wrong, we don't know why or how to fix it.
 
-The approaches that work:
-- **Diversity**: Use multiple independent tools, different AI models, different approaches. Cross-check for consistency. If multiple independent methods agree, confidence increases.
-- **Transparency**: Analytical methods (DREAMPlace) are auditable—you can inspect the objective function. Learned policies (RL placement) are black boxes. For production deployment, transparency often trumps raw performance.
-- **Bounded domains**: Apply AI assistance only for well-defined, limited-scope tasks where validation is straightforward. Use it for non-critical modules while using traditional methods for critical paths.
-- **Empirical validation**: Ultimately, trust comes from building systems and testing them extensively. No amount of modeling eliminates this final step.
+What works? Diversity—use multiple independent tools and cross-check for consistency. If three different approaches agree, you're probably okay. Transparency matters too: analytical methods like DREAMPlace are auditable (you can inspect the objective function), while RL-based placement is a black box. For production, transparency often beats raw performance. And ultimately, there's no substitute for building systems and testing them. Models help guide exploration, but silicon is the final arbiter.
 
 But here's the insight that matters: **trust isn't binary**. You don't need perfect confidence to make progress. You need enough confidence to make the next decision. If AI can provide "Design A is probably better than Design B" with 80% confidence, that's sufficient to guide exploration even if you'll validate thoroughly before committing.
 
@@ -266,27 +262,13 @@ This suggests we need new optimization frameworks that handle coupled objectives
 
 The progression from Phase 1 to Phase 2 to Phase 3 traced an arc from deterministic (software, where code either works or doesn't) to probabilistic (distributed systems, where behavior emerges from interactions) to irrevocable (hardware, where mistakes are permanent).
 
-But there's another dimension: from static optimization (find the best solution once) to continuous adaptation (adjust as conditions change). This distinction matters because it determines what role AI can play:
+But there's another dimension that matters: some problems are about finding a good solution once (compiler optimization, physical design, RTL generation), while others require continuous adaptation (distributed scheduling, LLM serving, power management). These need fundamentally different AI approaches.
 
-**Static optimization domains**:
-- Compiler optimization: analyze code, apply transformations, emit binary
-- Physical design: place macros, route nets, verify timing
-- RTL generation: translate specification to hardware description
-
-**Here**, AI augments human expertise by exploring vast design spaces and suggesting optimizations humans might miss. Success means finding better solutions faster. The goal is a better static artifact.
-
-**Dynamic adaptation domains**:
-- Distributed system scheduling: workload patterns shift continuously
-- LLM serving: resource needs emerge during execution, optimal strategies evolve
-- Power management: voltage/frequency decisions depend on thermal state and workload
-
-**Here**, AI must learn and adapt continuously. Success means maintaining performance as conditions change. The goal isn't a static solution but a policy that adjusts.
-
-The insight: these domains need fundamentally different AI approaches. Static optimization benefits from analytical methods, careful search, and extensive validation. Dynamic adaptation requires online learning, safe exploration, and graceful degradation.
+For static optimization, AI explores design spaces and suggests things humans would miss. You run it once, get a better artifact, done. For dynamic adaptation, AI must keep learning as conditions change—workloads shift, resource needs emerge, optimal strategies evolve. The goal isn't a solution but a policy that adjusts. Static optimization benefits from analytical methods, careful search, and extensive validation. Dynamic adaptation requires online learning, safe exploration, and graceful degradation.
 
 Current AI research often conflates these. Papers show offline learning on fixed datasets, then claim the approach will work for online adaptation. But online adaptation faces exploration-exploitation tradeoffs, distribution shift, delayed rewards, and safety constraints that offline learning never encounters.
 
-**The path forward**: Recognize which type of problem you're solving and design AI approaches accordingly. Don't apply static optimization techniques to dynamic adaptation domains. Don't require continuous adaptation when static optimization suffices. Match the AI approach to the problem structure.
+The lesson: know which type of problem you're solving. Don't apply static optimization techniques to dynamic adaptation domains, and don't require continuous adaptation when static optimization suffices. Match the approach to the problem.
 
 ## Rethinking AI for Systems: A Methodological Framework
 
@@ -302,7 +284,7 @@ The dichotomy between "analytical models" and "learned policies" is false. Real 
 
 **For adaptive reasoning**: Use RL for exploration but provide structure through action spaces, reward shaping, and safety constraints informed by domain knowledge. Learning to rank combines learned preferences with explicit constraints about fairness and safety.
 
-The pattern: **use structure when you have it, learn when you don't**. Don't force every problem into pure learning or pure analytical modeling. The art is knowing which representation suits which aspect of the problem.
+The principle is simple: **use structure when you have it, learn when you don't**. The art is knowing which is which.
 
 ### Principle 2: Design for Continuous Feedback
 
@@ -423,116 +405,25 @@ Specialized smaller models trained on domain-specific data might outperform fron
 
 The practical path forward: use frontier models where their breadth matters (specification understanding, novel scenarios, interactive assistance), specialized models where latency and cost matter (real-time decisions, production deployment), and distillation to transfer frontier model reasoning into efficient specialized models. Match the tool to the task.
 
-## A Roadmap for the Field: The Next Five Years
+## Where Does the Field Go From Here?
 
-Given what we've learned, what should the research community prioritize? Where are the highest-leverage opportunities?
+If I had to bet on what will matter most over the next five years, here's how I'd think about it.
 
-<div class="mermaid">
-graph LR
-    subgraph Near["Near-Term (1-2 Years)"]
-    N1[Benchmarks]
-    N2[Surrogate Models]
-    N3[Collaboration Interfaces]
-    end
-    
-    subgraph Medium["Medium-Term (2-4 Years)"]
-    M1[Circular Dependency<br/>Methods]
-    M2[Compositional<br/>Frameworks]
-    M3[Trust & Validation]
-    end
-    
-    subgraph Long["Long-Term (4+ Years)"]
-    L1[Learning<br/>Reasoning Types]
-    L2[Verification<br/>at Scale]
-    L3[Self-Improving<br/>Systems]
-    end
-    
-    Near --> Medium --> Long
-    
-    style Near fill:#e8f5e9
-    style Medium fill:#fff3e0
-    style Long fill:#ffebee
-</div>
+**The immediate bottleneck is evaluation.** We don't yet have good ways to measure whether AI is actually getting better at system design. Current benchmarks reward pattern matching and memorization. We need evaluations that test genuine understanding—can the system design something novel, not just recombine things it's seen? [Week 11](/cs249r_fall2025/blog/2024/11/14/week-11-part-2-benchmarking-llms-hardware/) and [Week 13](/cs249r_fall2025/blog/2024/11/26/week-13-verification-trust-problem/) kept returning to this theme: what you measure shapes what you build. Get the benchmarks wrong and the whole field optimizes for the wrong thing.
 
-### Near-Term (1-2 Years): Building Foundations
+**The feedback loop crisis won't solve itself.** Physical design takes months. Verification takes weeks. Architecture decisions get made without knowing if they'll physically realize. The obvious answer is faster surrogate models—predict timing without full place-and-route, estimate performance without cycle-accurate simulation. But the harder question is knowing when to trust those predictions. A model that's 90% accurate sounds good until you realize the 10% it gets wrong might be exactly the designs you care about.
 
-**1. Benchmarks that measure genuine understanding, not memorization**
-- End-to-end flows from specification to validated implementation
-- Novel designs sufficiently different from training data to test generalization
-- Metrics that predict real-world success, not just academic scores
-- Open datasets for architectural exploration, physical design, and verification
+**Human-AI collaboration needs new interfaces.** Current tools assume binary control: either the human does everything or the AI does everything. Real design is more fluid than that. Sometimes you want AI to explore freely. Sometimes you want to take the wheel. Sometimes you want to jointly reason through a tradeoff. We don't have good tools for that spectrum yet. Building them requires understanding not just the AI capabilities but the cognitive needs of designers.
 
-[Week 11](/cs249r_fall2025/blog/2024/11/14/week-11-part-2-benchmarking-llms-hardware/) and [Week 13](/cs249r_fall2025/blog/2024/11/26/week-13-verification-trust-problem/) emphasized: evaluation methodology determines what progress looks like. Bad benchmarks lead research astray.
+Looking further out—and this is where PhD students should pay attention—the problems that will matter in 4-5 years aren't the ones getting the most attention today.
 
-**2. Fast surrogate models for expensive simulations**
-- Physical design: predict timing/routing without full place-and-route
-- Performance: estimate behavior without cycle-accurate simulation  
-- Power: model energy consumption from high-level descriptions
+**Can AI learn to reason, not just match patterns?** We identified three types of reasoning that define architectural expertise: co-design reasoning (handling circular dependencies), predictive reasoning (making bets about uncertain futures), and adaptive reasoning (continuous adjustment as conditions change). Current ML has fragments of these capabilities but doesn't integrate them. Whether AI can develop genuine reasoning—or whether these capabilities require something fundamentally different—is an open question. It's also, I think, the most important one.
 
-The feedback loop crisis demands faster evaluation. But fast models must be validated against ground truth continuously. The research question isn't just "can we build fast models?" but "how do we know when to trust them?"
+**Verification will become the ultimate constraint.** As AI generates more of the design, who verifies it? [Week 13](/cs249r_fall2025/blog/2024/11/26/week-13-verification-trust-problem/) showed us the state space explosion—a simple processor has more states than atoms in the universe. You can't test your way to correctness. Formal methods help but don't scale. If AI helps both design and verify, you risk circular validation where correlated errors pass undetected. Someone needs to solve this. Maybe that someone is you.
 
-**3. Human-AI collaboration interfaces**
-- Tools designed for fluid control-sharing between human and AI
-- Visualization of AI reasoning to support human oversight
-- Mechanisms for humans to guide AI exploration toward meaningful regions
-- Workflows that make AI assistance feel natural, not bolted-on
+**The biggest opportunity might be closing the loop from deployment back to design.** Right now, we design systems, deploy them, and that's it. The silicon never learns from how it's actually used. What if it could? Not just adapting runtime behavior—[Week 10](/cs249r_fall2025/blog/2024/11/05/week-10-optimizing-optimizers/) explored that—but feeding field experience back into the next generation of designs. Systems that get better over their lifetime. We're not there yet, but it feels like the natural endpoint of everything we've discussed.
 
-Current tools assume binary control: either human does everything or AI does everything. We need interfaces that support the spectrum between these extremes.
-
-### Medium-Term (2-4 Years): Solving Core Challenges
-
-**4. Methods for reasoning about circular dependencies**
-- Differentiable co-design frameworks that handle coupled objectives
-- Game-theoretic approaches for multi-agent system design
-- Meta-learning to discover optimization strategies rather than just solutions
-
-[Week 8's co-design reasoning](/cs249r_fall2025/blog/2024/10/22/mapping-codesign-reasoning/) showed circular dependencies are fundamental. Current optimization methods assume decomposability. We need new frameworks that match the problem structure.
-
-**5. Compositional approaches that blend structure and learning**
-- Frameworks that make it easy to encode domain knowledge where you have it
-- Learning architectures that incorporate physical constraints, conservation laws, causality
-- Methods that explain *why* optimizations work, not just *that* they work
-
-Concorde and similar work show the power of composition. We need to systematize this rather than treating each instance as a custom one-off.
-
-**6. Trust and validation frameworks for AI-assisted design**
-- Diverse ensemble approaches to reduce correlated errors
-- Formal methods for verifying learned components
-- Methodologies for validating that AI assistance improves rather than harms quality
-
-The trust problem will determine adoption. Technical capabilities mean nothing if practitioners don't trust the results.
-
-### Long-Term (4+ Years): Transformative Capabilities
-
-**A note to PhD students**: If you're starting your PhD now, these "long-term" problems aren't abstract future concerns—they're *your* problems. In 4-5 years when you graduate, industry and academia will need people who have deeply thought about these challenges. The near-term problems will be solved (or at least well-understood) by then. The researchers who will have the most impact are those working today on what the field will need tomorrow. These are the dissertation topics that will matter when you're on the job market.
-
-**7. AI systems that learn types of reasoning, not just patterns**
-- Co-design reasoning: handle circular dependencies
-- Predictive reasoning: make informed bets about uncertain futures  
-- Adaptive reasoning: continuous learning under distribution shift
-
-We've characterized what these reasoning types require. Can we build AI systems that develop these capabilities? Or are they fundamentally beyond current ML paradigms?
-
-**8. Verification and synthesis at scale**
-- Formal verification that scales to billion-transistor designs
-- Synthesis that optimizes across the full stack simultaneously  
-- Proof techniques that work for AI-generated designs
-
-[Week 13](/cs249r_fall2025/blog/2024/11/26/week-13-verification-trust-problem/) showed verification is the ultimate bottleneck. State space explosion is fundamental. Can we make breakthroughs in formal methods, or must we accept probabilistic guarantees?
-
-**9. Self-improving systems that learn from deployment**
-- Production systems that adapt based on actual workload behavior
-- Designs that get better through field experience
-- Feedback loops from silicon back to architecture  
-
-Currently, we design once and deploy forever. What if systems could learn from deployment? Not just adapting runtime behavior (which [Week 10](/cs249r_fall2025/blog/2024/11/05/week-10-optimizing-optimizers/) explored) but feeding insights back into future design iterations?
-
-**10. Democratization: making AI-assisted design accessible**
-- Open-source tools competitive with commercial EDA
-- Educational platforms that teach AI-assisted design methodology
-- Frameworks that work without requiring Google-scale infrastructure
-
-Currently, only a few companies have the resources to effectively use AI for systems design. How do we broaden access without requiring massive infrastructure investment?
+Finally, there's the question of access. Right now, only a handful of companies have the resources, data, and infrastructure to seriously pursue AI for systems. How do we democratize this? Open-source tools, educational platforms, frameworks that don't require Google-scale compute. If Architecture 2.0 remains the province of a few large players, we'll have failed at something important.
 
 ## Closing Thoughts: What Have We Actually Learned?
 
@@ -554,11 +445,7 @@ The answer is yes—but with critical qualifications that reshape the question i
 - Verify its own work without risking circular validation
 - Design for radically uncertain futures where patterns from the past don't apply
 
-**The frontier isn't autonomous AI designing systems alone**. It's human-AI collaboration where:
-- AI explores, humans guide
-- AI optimizes locally, humans reason globally  
-- AI handles systematic search, humans apply judgment
-- AI generates artifacts, humans validate and decide
+**The frontier isn't autonomous AI designing systems alone**. It's collaboration: AI explores while humans guide, AI optimizes locally while humans reason globally, AI handles systematic search while humans apply judgment. AI generates; humans validate and decide.
 
 This isn't a disappointing compromise. It's recognition that system design is fundamentally about judgment under uncertainty, tradeoffs among conflicting objectives, and bets about unknowable futures—domains where human cognition remains essential.
 
@@ -576,12 +463,7 @@ But the partnership is transformative. An architect working with AI assistance c
 
 5. **The right abstraction for the problem matters**: Static optimization, dynamic adaptation, and co-design under uncertainty need fundamentally different AI approaches.
 
-These insights point toward a future where:
-- **Design tools** are built for AI-assisted workflows from first principles
-- **Abstraction boundaries** become porous, allowing optimization across traditional layers
-- **Feedback loops** operate at timescales matching decision-making  
-- **Validation** is continuous and integrated, not staged and separate
-- **Expertise** is amplified and democratized, not replaced or gatekept
+Where does this point? Toward design tools built for AI collaboration from the start, not retrofitted. Toward abstraction boundaries that become porous, letting us optimize across layers we used to treat as separate. Toward feedback loops that operate at the timescale of decisions. Toward validation that's continuous rather than staged. And toward expertise that's amplified and democratized rather than replaced or gatekept.
 
 ## What We Didn't Cover
 
