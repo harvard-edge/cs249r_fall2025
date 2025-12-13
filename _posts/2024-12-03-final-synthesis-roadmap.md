@@ -642,6 +642,22 @@ Now let's go build it. 🚀
 
 ---
 
+**A personal note to the class:**
+
+Thank you for being part of this journey. I know this class was a little different from what you might have expected. We weren't just reviewing established papers and techniques that have stood the test of time. We were reading work that's still evolving, sometimes just months old, trying to understand not just where the field *is* but where it *needs to go*.
+
+That's uncomfortable. There aren't always clean answers. The papers sometimes contradict each other. The techniques that look promising today might be obsolete by the time you graduate. But that discomfort is the point. You're not here to memorize solutions—you're here to develop the judgment to navigate uncertainty.
+
+What made this class special was your willingness to engage with that uncertainty. To ask hard questions. To push back when things didn't make sense. To bring your own perspectives from different domains. The best insights often came from your discussions, not my lectures.
+
+The future of computer systems will be shaped by people who can think across boundaries—who understand both the algorithms and the silicon, both the ML techniques and the systems constraints, both what's possible today and what the field needs tomorrow. That's what we were practicing here.
+
+I hope you leave with more questions than answers. That's how it should be.
+
+—Vijay
+
+---
+
 *This synthesis reflects on the thirteen-week journey through AI for software, architecture, and chip design. For detailed technical content, see the individual week posts linked throughout. For course materials and future updates, see the [course schedule](/cs249r_fall2025/course/schedule/).*
 
 *A note on timing: This was written in Fall 2024. The field of AI for systems is evolving rapidly—some techniques discussed here may already be outdated, while new capabilities may have emerged that weren't possible when this was written. The conceptual frameworks (types of reasoning, trust through diversity, hybrid approaches) should age better than specific technical approaches. If you're reading this in the future, use the frameworks to evaluate whatever new techniques have emerged.*
