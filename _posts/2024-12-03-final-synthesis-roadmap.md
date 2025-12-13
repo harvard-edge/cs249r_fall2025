@@ -399,7 +399,7 @@ The consistent message across all these conversations: **AI for systems is about
 
 This came up repeatedly throughout the course, and I want to address it directly because I see students make this mistake often: **not everything needs a frontier model**.
 
-There's a natural tendency to assume bigger is better. GPT-4 is more capable than GPT-3.5, which was more capable than GPT-3. The scaling laws suggest more parameters and more data lead to better performance. So why wouldn't you always use the biggest model available?
+There's a natural tendency to assume bigger is better. GPT-5 is more capable than GPT-4, which was more capable than GPT-3. The scaling laws suggest more parameters and more data lead to better performance. So why wouldn't you always use the biggest model available?
 
 Because systems have constraints that benchmarks don't capture.
 
@@ -421,7 +421,7 @@ Use specialized models for tasks where efficiency matters: real-time decisions, 
 
 Use distillation to get the best of both: have frontier models generate reasoning traces, explanations, and training data, then distill that knowledge into efficient specialized models. You get frontier-level reasoning compressed into deployable form.
 
-The students who will have the most impact aren't those who can prompt GPT-4 effectively—that skill will commoditize quickly. It's those who understand when a 7B model trained on the right data will outperform a 700B model trained on everything, and know how to build that specialized model.
+The students who will have the most impact aren't those who can prompt GPT-4 effectively. I believe that skill will commoditize quickly. It's those who understand when a 7B model trained on the right data will outperform a 700B model trained on everything, and know how to build that specialized model.
 
 ## Where Does the Field Go From Here?
 
