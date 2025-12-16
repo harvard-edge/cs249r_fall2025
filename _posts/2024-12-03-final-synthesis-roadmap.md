@@ -2,7 +2,7 @@
 layout: post
 title: "Week 14: Course Synthesis — The Architecture 2.0 Roadmap"
 date: 2024-12-03
-author: "Vijay Janapa Reddi"
+author: "Vijay Janapa Reddi and Arya Tschand"
 categories: [synthesis, architecture, systems]
 permalink: /blog/2024/12/03/architecture-20-roadmap-synthesis/
 ---
